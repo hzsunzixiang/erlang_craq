@@ -3,7 +3,8 @@
 all: deps compile
 
 compile: deps
-	 rebar3 compile
+	rebar3 compile
+	cp -rf  _build/default/lib/erlang_craq/ebin/* ebin/
 
 deps:
 	test -d deps || rebar3 get-deps
