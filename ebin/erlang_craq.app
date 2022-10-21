@@ -20,5 +20,5 @@
                         erlang_craq_validate]},
               {registered,[eh_sup,eh_system_sup,eh_system_server,eh_event,
                            eh_data_server]},
-              {applications,[kernel,stdlib]},
+              {applications,[kernel,stdlib,lager,recon]},
               {mod,{eh_app,[]}}]}.

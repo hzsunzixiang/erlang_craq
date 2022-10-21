@@ -11,6 +11,7 @@ deps:
 
 clean:
 	rebar3 clean
+	rm ebin/*.beam
 
 distclean: clean
 	   rebar3 delete-deps
