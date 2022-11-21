@@ -3053,7 +3053,7 @@ init([]) ->
 % 结束 eh_data_server
 
 % 开始 eh_system_server
-%start_link(AppConfig) ->
+%start_link(AppConfig) -> 在这里保存了服务器状态
 %  gen_server:start_link({local, ?SERVER}, ?MODULE, [AppConfig], []).
 
 1:40:55.434149 <0.400.0> eh_system_server:start_link({eh_app_config,'ec_n1@centos7-dev',sorted,eh_failure_detector_api,
