@@ -55,10 +55,29 @@ handle_call(_Msg, _From, State) ->
   {reply, ok, State}.
 
 
+
+%1:52:51.047604 <0.222.0> eh_system_server:handle_cast({eh_setup_repl,['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev']}, 
+%                 {eh_system_state,eh_ready,
+%                 0,
+%                 ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'],
+%                 ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'],
+%                 'ec_n3@centos7-dev','ec_n2@centos7-dev',#{},#{},
+%                 {set,0,16,16,8,80,48,
+%                      {[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]},
+%                      {{[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]}}},
+%                 #{},#{},undefined,
+%                 {eh_app_config,'ec_n1@centos7-dev',sorted,
+%                                eh_failure_detector_api,
+%                                eh_repl_data_manager_api,eh_storage_data_api,
+%                                eh_write_conflict_resolver_api,
+%                                eh_unique_id_generator_api,
+%                                eh_wait_query_handler_api,lager_event,10000,
+%                                "./","0000000000","ec_n1_repl.data",
+%                                standard_io,true,100,1,2000}})
 handle_cast({?EH_SETUP_REPL, ReplRing}, 
             #eh_system_state{app_config=AppConfig}=State) ->
-  NodeId = eh_system_config:get_node_id(AppConfig),
-  NodeOrder = eh_system_config:get_node_order(AppConfig),
+  NodeId = eh_system_config:get_node_id(AppConfig),   % 获取 node_id 比如: 'ec_n1@centos7-dev'
+  NodeOrder = eh_system_config:get_node_order(AppConfig), % 返回: sorted
   {ReplRing1, ReplRingOrder1, Pred, Succ} = eh_repl_ring:get_ordered_list_pred_succ(NodeId, ReplRing, ReplRing, NodeOrder),
   FailureDetector = eh_system_config:get_failure_detector(AppConfig),
   ReplDataManager = eh_system_config:get_repl_data_manager(AppConfig),

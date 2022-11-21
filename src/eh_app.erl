@@ -24,6 +24,8 @@
 
 -include("erlang_craq.hrl").
 
+% 3:14:48.788516 <0.289.0> eh_app:start(normal, [])
+
 -spec start(StartType :: atom(), StartArgs :: term()) -> {ok, pid()} | {error, term()}.
 start(_StartType, _StartArgs) ->
   {ok, Pid} = eh_sup:start_link(),

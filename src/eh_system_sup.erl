@@ -48,3 +48,24 @@ init([]) ->
 
   {ok, {RestartStrategy, Childern}}.
 
+%9:10:49.564114 <0.350.0> eh_system_sup:init/1 --> {ok,{{rest_for_one,100,1},
+%     [{eh_data_server,
+%          {eh_data_server,start_link,
+%              [{eh_app_config,'ec_n1@centos7-dev',sorted,
+%                   eh_failure_detector_api,eh_repl_data_manager_api,
+%                   eh_storage_data_api,eh_write_conflict_resolver_api,
+%                   eh_unique_id_generator_api,eh_wait_query_handler_api,
+%                   lager_event,10000,"./","0000000000","ec_n1_repl.data",
+%                   standard_io,true,100,1,2000}]},
+%          permanent,2000,worker,
+%          [eh_data_server]},
+%      {eh_system_server,
+%          {eh_system_server,start_link,
+%              [{eh_app_config,'ec_n1@centos7-dev',sorted,
+%                   eh_failure_detector_api,eh_repl_data_manager_api,
+%                   eh_storage_data_api,eh_write_conflict_resolver_api,
+%                   eh_unique_id_generator_api,eh_wait_query_handler_api,
+%                   lager_event,10000,"./","0000000000","ec_n1_repl.data",
+%                   standard_io,true,100,1,2000}]},
+%          permanent,2000,worker,
+%          [eh_system_server]}]}}

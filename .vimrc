@@ -1,7 +1,7 @@
 "let myvar=system('pwd')
 "let dirname=$myvar . '/cscope_source.out'
 "echo $dirname
-silent cs add /home/ericksun/program/erlang_craq1/cscope_source.out
+silent cs add /home/ericksun/program/erlang_craq/cscope_source.out
 "silent cs add $myvar
 "silent !find -name "*.erl" -o -name "*.hrl" |xargs ctags -R
 

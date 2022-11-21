@@ -58,6 +58,11 @@
 -define(SUP_RESTART_PERIOD,        5).
 -define(SUP_CHILD_SHUTDOWN,        2000).
 
+%3:19:08.096900 <0.311.0> eh_system_config:get_env/0 --> {eh_app_config,'ec_n1@centos7-dev',sorted,eh_failure_detector_api,
+%               eh_repl_data_manager_api,eh_storage_data_api,
+%               eh_write_conflict_resolver_api,eh_unique_id_generator_api,
+%               eh_wait_query_handler_api,lager_event,10000,"./","0000000000",
+%               "ec_n1_repl.data",standard_io,true,100,1,2000}
 -spec get_env() -> #eh_app_config{}.
 get_env() ->
   Node         = node(),

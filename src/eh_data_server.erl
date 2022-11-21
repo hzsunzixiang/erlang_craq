@@ -31,6 +31,18 @@
 start_link(AppConfig) ->
   gen_server:start_link({local, ?SERVER}, ?MODULE, [AppConfig], []).
 
+% 9:24:12.570246 <0.375.0> eh_data_server:start_link({eh_app_config,'ec_n1@centos7-dev',sorted,eh_failure_detector_api,
+%                eh_repl_data_manager_api,eh_storage_data_api,
+%                eh_write_conflict_resolver_api,eh_unique_id_generator_api,
+%                eh_wait_query_handler_api,lager_event,10000,"./","0000000000",
+%                "ec_n1_repl.data",standard_io,true,100,1,2000})
+% 
+% 9:24:12.570395 <0.376.0> eh_data_server:init([{eh_app_config,'ec_n1@centos7-dev',sorted,eh_failure_detector_api,
+%                 eh_repl_data_manager_api,eh_storage_data_api,
+%                 eh_write_conflict_resolver_api,eh_unique_id_generator_api,
+%                 eh_wait_query_handler_api,lager_event,10000,"./","0000000000",
+%                 "ec_n1_repl.data",standard_io,true,100,1,2000}])
+
 init([AppConfig]) ->
   DataDir = eh_system_config:get_data_dir(AppConfig),
   FileName = eh_system_config:get_file_repl_data(AppConfig),
