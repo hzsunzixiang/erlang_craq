@@ -1,0 +1,12 @@
+
+3:28:09.215241 <0.4240.0> erlang_craq:setup_repl(['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'])
+
+3:28:09.216689 <0.4240.0> erlang_craq:setup_repl/1 --> abcast
+
+3:28:09.216803 <0.4240.0>  '--> erl_eval:do_apply/7
+
+4:9:45.376560 <0.4240.0> erlang_craq:setup_repl(['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'])
+
+4:9:45.377146 <0.4240.0> erlang_craq:setup_repl/1 --> abcast
+
+4:9:45.377680 <0.4240.0>  '--> erl_eval:do_apply/7
