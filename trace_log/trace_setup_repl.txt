@@ -47,6 +47,12 @@
 %   event_state("setup_repl.99", NewState2, AppConfig),
 %   {noreply, NewState2};
 
+% get_ordered_list_pred_succ(Node, NodeList, NodeOrderList, NodeOrder) ->
+%   {NodeList1, NodeOrderList1} = get_ordered_list(NodeList, NodeOrderList, NodeOrder),
+%   Pred = predecessor(Node, NodeList, NodeOrderList, NodeOrder),
+%   Succ = successor(Node, NodeList, NodeOrderList, NodeOrder),
+%   {NodeList1, NodeOrderList1, Pred, Succ}.
+
 4:9:45.378216 <0.222.0> eh_repl_ring:get_ordered_list_pred_succ('ec_n1@centos7-dev', ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'], ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'], sorted)
 4:9:45.378381 <0.222.0> eh_repl_ring:get_ordered_list(['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'], ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'], sorted)
 4:9:45.378561 <0.222.0> eh_repl_ring:get_ordered_list(['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'], ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'], user_defined)
@@ -67,8 +73,30 @@
 4:9:45.380095 <0.222.0> eh_repl_ring:get_ordered_list/3 --> {['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'],
  ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev']}
 4:9:45.380354 <0.222.0>  '--> eh_repl_ring:get_ordered_list_pred_succ/4
+
+
+% predecessor(Node, NodeList, NodeOrderList, NodeOrder) ->
+%   {NewNodeList, _} = add(Node, NodeList, NodeOrderList, NodeOrder),
+%   {L1, L2} = lists:splitwith(fun(N) -> N =/= Node end, NewNodeList),
+%   case {length(L1), length(L2)} of
+%     {0, 0} -> 
+%       undefined;
+%     {0, 1} ->
+%       undefined;
+%     {0, _} ->
+%       lists:last(L2);
+%     {_, _} ->
+%       lists:last(L1)
+%   end.
+
 4:9:45.380515 <0.222.0> eh_repl_ring:predecessor('ec_n1@centos7-dev', ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'], ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'], sorted)
+
+
+% add(Node, NodeList, NodeOrderList, NodeOrder) ->
+%   get_ordered_list([Node | lists:delete(Node, NodeList)], NodeOrderList, NodeOrder).
+  
 4:9:45.380764 <0.222.0> eh_repl_ring:add('ec_n1@centos7-dev', ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'], ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'], sorted)
+
 4:9:45.380959 <0.222.0> eh_repl_ring:get_ordered_list(['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'], ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'], sorted)
 4:9:45.381105 <0.222.0> eh_repl_ring:get_ordered_list(['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'], ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'], user_defined)
 4:9:45.381260 <0.222.0> eh_repl_ring:make_ordered_list(['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'], ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'])
@@ -90,11 +118,33 @@
 4:9:45.383183 <0.222.0> eh_repl_ring:add/4 --> {['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'],
  ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev']}
 4:9:45.383431 <0.222.0>  '--> eh_repl_ring:predecessor/4
+% add 返回
+
+
+%predecessor(Node, NodeList, NodeOrderList, NodeOrder) ->
+%  {NewNodeList, _} = add(Node, NodeList, NodeOrderList, NodeOrder),
+%  {L1, L2} = lists:splitwith(fun(N) -> N =/= Node end, NewNodeList),
+%  case {length(L1), length(L2)} of
+%    {0, 0} -> 
+%      undefined;
+%    {0, 1} ->
+%      undefined;
+%    {0, _} ->
+%      lists:last(L2);
+%    {_, _} ->
+%      lists:last(L1)
+%  end.
+
 4:9:45.383562 <0.222.0> eh_repl_ring:'-predecessor/4-fun-0-'('ec_n1@centos7-dev', 'ec_n1@centos7-dev')
 4:9:45.383754 <0.222.0> eh_repl_ring:'-predecessor/4-fun-0-'/2 --> false
 4:9:45.383857 <0.222.0>  '--> lists:splitwith_1/3
 4:9:45.383973 <0.222.0> eh_repl_ring:predecessor/4 --> 'ec_n3@centos7-dev'
+
+% 找到了 前继节点
 4:9:45.384079 <0.222.0>  '--> eh_repl_ring:get_ordered_list_pred_succ/4
+
+
+% 开始找后继节点
 4:9:45.384146 <0.222.0> eh_repl_ring:successor('ec_n1@centos7-dev', ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'], ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'], sorted)
 4:9:45.384386 <0.222.0> eh_repl_ring:add('ec_n1@centos7-dev', ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'], ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'], sorted)
 4:9:45.384603 <0.222.0> eh_repl_ring:get_ordered_list(['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'], ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'], sorted)
