@@ -207,9 +207,9 @@ handle_cast({?EH_UPDATE, {From, Ref, ObjectList}},
 handle_cast({?EH_PRED_PRE_UPDATE, {UMsgList, CompletedSet}}, State) ->
   NewState1 = process_msg(?EH_PRED_PRE_UPDATE,
                           fun eh_node_timestamp:valid_pre_update_msg/2,   % 判断是否应该继续往前传播
-                          fun send_update_msg/4,                          % 如果不需要往前传播, 则需要发送 send_update_msg
+                          fun send_update_msg/4,                          % 尾部节点，如果不需要往前传播, 则需要发送 send_update_msg
                           fun eh_persist_data:persist_data/2,
-                          fun send_pre_update_msg/4,                      % 如果需要往前传播，则继续传播
+                          fun send_pre_update_msg/4,                      % 中间节点，如果需要往前传播，则继续传播
                           fun eh_persist_data:no_persist_data/2,
                           UMsgList,
                           CompletedSet,
@@ -218,10 +218,10 @@ handle_cast({?EH_PRED_PRE_UPDATE, {UMsgList, CompletedSet}}, State) ->
 handle_cast({?EH_SUCC_UPDATE, {UMsgList, CompletedSet}}, State) ->
   NewState1 = process_msg(?EH_SUCC_UPDATE,
                           fun eh_node_timestamp:valid_update_msg/2,      % 判断是否应该更新信息, 逆时针往前传播
-                          fun reply_to_client/4,                         % 如果不需要继续逆时针往前传播，返回给客户端 reply_to_client 
+                          fun reply_to_client/4,                         % 头部节点 如果不需要继续逆时针往前传播，返回给客户端 reply_to_client 
                           fun eh_persist_data:persist_data/2,
-                          fun send_update_msg/4,                         % 如果继续往前传播，则继续传播
-                          fun eh_persist_data:persist_data/2,
+                          fun send_update_msg/4,                         % 中间节点，如果继续往前传播，则继续传播
+                          fun eh_persist_data:persist_data/2,            % 只有来自 EH_SUCC_UPDATE 的方向，更新之后才会持久化
                           UMsgList,
                           CompletedSet,
                           State),
@@ -303,8 +303,9 @@ reply_to_client(PersistFun,
                 UMsgList,
                 _CompletedSet,
                 State) -> 
-  State1 = PersistFun(UMsgList, State),
+  State1 = PersistFun(UMsgList, State),   % 持久化数据
   {_, ClientId, _, Ref, DataList} = eh_update_msg:get_data_list(UMsgList),
+  % 持久化数据之后，返回客户端
   eh_query_handler:reply(ClientId, Ref, eh_query_handler:updated(DataList)),
   eh_node_timestamp:update_state_client_reply(UMsgList, State1).
 
@@ -314,7 +315,7 @@ send_msg(Tag,
          UMsgList,
          CompletedSet,
          #eh_system_state{predecessor=Pred, successor=Succ}=State) ->
-  State1 = PersistFun(UMsgList, State),
+  State1 = PersistFun(UMsgList, State),   %% 在这里持久化数据
   %2:11:31.474708 <0.222.0> eh_node_timestamp:update_state_new_msg(eh_pred_pre_update, [{{eh_update_msg_key,3,candidate,10},
   State2 = eh_node_timestamp:update_state_new_msg(Tag, UMsgList, State1),
   Dest = case Tag of
@@ -324,7 +325,7 @@ send_msg(Tag,
              Pred
          end,
   % {Name :: atom(), Node :: atom()} 
-  % Dest 就是要发往的下一个节点
+  % Dest 就是要发往的下一个节点, 上面持久化数据之后就发往下一个节点
   gen_server:cast({?EH_SYSTEM_SERVER, Dest}, {Tag, {UMsgList, CompletedSet}}),
   State2.  
 
@@ -342,6 +343,22 @@ send_update_msg(PersistFun,
 		State) ->
   send_msg(?EH_SUCC_UPDATE, PersistFun, UMsgList, CompletedSet, State).
 
+%% 节点3
+%4:30:54.398282 <0.222.0> eh_node_timestamp:valid_pre_update_msg/2 --> {true,eh_tail_msg,
+%    {eh_system_state,eh_ready,4,
+%        ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'],
+%        ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'],
+%        'ec_n2@centos7-dev','ec_n1@centos7-dev',#{},
+%
+%4:30:54.399267 <0.222.0>  '--> eh_system_server:process_msg/9
+%
+%
+%% 对比节点2
+%3:50:15.776078 <0.302.0> eh_node_timestamp:valid_pre_update_msg/2 --> {true,eh_ring_msg,
+%    {eh_system_state,eh_ready,3,
+%        ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'],
+%        ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'],
+%        'ec_n1@centos7-dev','ec_n3@centos7-dev',#{},
 process_msg(Tag,
             ValidateMsgFun,
             ReturnedMsgFun,
