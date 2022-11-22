@@ -1,0 +1,2819 @@
+
+23:16:00.233052 <0.222.0> eh_system_server:handle_cast({eh_update,
+    {<18723.452.0>,#Ref<18723.3896970053.3661103105.102449>,
+     [{'ec_n1@centos7-dev',
+          [{person,10,[{name,1,john_smith},{age,1,40}]},
+           {candidate,10,[{name,1,donald_trump},{party,1,republican}]}]}]}}, {eh_system_state,eh_ready,0,
+                 ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'],
+                 ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'],
+                 'ec_n3@centos7-dev','ec_n2@centos7-dev',#{},#{},
+                 {set,0,16,16,8,80,48,
+                      {[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]},
+                      {{[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]}}},
+                 #{},#{},undefined,
+                 {eh_app_config,'ec_n1@centos7-dev',sorted,
+                                eh_failure_detector_api,
+                                eh_repl_data_manager_api,eh_storage_data_api,
+                                eh_write_conflict_resolver_api,
+                                eh_unique_id_generator_api,
+                                eh_wait_query_handler_api,lager_event,10000,
+                                "./","0000000000","ec_n1_repl.data",
+                                standard_io,true,100,1,2000}})
+
+23:16:00.233738 <0.222.0> eh_system_config:get_node_id({eh_app_config,'ec_n1@centos7-dev',sorted,eh_failure_detector_api,
+               eh_repl_data_manager_api,eh_storage_data_api,
+               eh_write_conflict_resolver_api,eh_unique_id_generator_api,
+               eh_wait_query_handler_api,lager_event,10000,"./","0000000000",
+               "ec_n1_repl.data",standard_io,true,100,1,2000})
+
+23:16:00.233920 <0.222.0> eh_system_config:get_node_id/1 --> 'ec_n1@centos7-dev'
+
+23:16:00.233991 <0.222.0>  '--> eh_system_server:handle_cast/2
+
+23:16:00.234049 <0.222.0> eh_node_state:client_state({eh_system_state,eh_ready,0,
+                 ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'],
+                 ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'],
+                 'ec_n3@centos7-dev','ec_n2@centos7-dev',#{},#{},
+                 {set,0,16,16,8,80,48,
+                      {[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]},
+                      {{[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]}}},
+                 #{},#{},undefined,
+                 {eh_app_config,'ec_n1@centos7-dev',sorted,
+                                eh_failure_detector_api,
+                                eh_repl_data_manager_api,eh_storage_data_api,
+                                eh_write_conflict_resolver_api,
+                                eh_unique_id_generator_api,
+                                eh_wait_query_handler_api,lager_event,10000,
+                                "./","0000000000","ec_n1_repl.data",
+                                standard_io,true,100,1,2000}})
+
+23:16:00.234953 <0.222.0> eh_node_state:client_state/1 --> eh_ready
+
+23:16:00.235141 <0.222.0>  '--> eh_system_server:handle_cast/2
+
+23:16:00.236364 <0.222.0> eh_node_state:update_state_msg({eh_system_state,eh_ready,1,
+                 ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'],
+                 ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'],
+                 'ec_n3@centos7-dev','ec_n2@centos7-dev',#{},#{},
+                 {set,0,16,16,8,80,48,
+                      {[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]},
+                      {{[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]}}},
+                 #{},#{},undefined,
+                 {eh_app_config,'ec_n1@centos7-dev',sorted,
+                                eh_failure_detector_api,
+                                eh_repl_data_manager_api,eh_storage_data_api,
+                                eh_write_conflict_resolver_api,
+                                eh_unique_id_generator_api,
+                                eh_wait_query_handler_api,lager_event,10000,
+                                "./","0000000000","ec_n1_repl.data",
+                                standard_io,true,100,1,2000}})
+
+23:16:00.236801 <0.222.0> eh_node_state:update_state_msg/1 --> {eh_system_state,eh_ready,1,
+                 ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'],
+                 ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'],
+                 'ec_n3@centos7-dev','ec_n2@centos7-dev',#{},#{},
+                 {set,0,16,16,8,80,48,
+                      {[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]},
+                      {{[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]}}},
+                 #{},#{},undefined,
+                 {eh_app_config,'ec_n1@centos7-dev',sorted,
+                                eh_failure_detector_api,
+                                eh_repl_data_manager_api,eh_storage_data_api,
+                                eh_write_conflict_resolver_api,
+                                eh_unique_id_generator_api,
+                                eh_wait_query_handler_api,lager_event,10000,
+                                "./","0000000000","ec_n1_repl.data",
+                                standard_io,true,100,1,2000}}
+
+23:16:00.237339 <0.222.0>  '--> eh_system_server:handle_cast/2
+
+23:16:00.237729 <0.222.0> eh_system_server:send_pre_update_msg(fun eh_persist_data:no_persist_data/2, [{{eh_update_msg_key,1,candidate,10},
+  {eh_update_msg_data,[{name,1,donald_trump},{party,1,republican}],
+                      <18723.452.0>,'ec_n1@centos7-dev',
+                      #Ref<18723.3896970053.3661103105.102449>}},
+ {{eh_update_msg_key,1,person,10},
+  {eh_update_msg_data,[{name,1,john_smith},{age,1,40}],
+                      <18723.452.0>,'ec_n1@centos7-dev',
+                      #Ref<18723.3896970053.3661103105.102449>}}], {set,0,16,16,8,80,48,
+     {[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]},
+     {{[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]}}}, {eh_system_state,eh_ready,1,
+                 ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'],
+                 ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'],
+                 'ec_n3@centos7-dev','ec_n2@centos7-dev',#{},#{},
+                 {set,0,16,16,8,80,48,
+                      {[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]},
+                      {{[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]}}},
+                 #{},#{},undefined,
+                 {eh_app_config,'ec_n1@centos7-dev',sorted,
+                                eh_failure_detector_api,
+                                eh_repl_data_manager_api,eh_storage_data_api,
+                                eh_write_conflict_resolver_api,
+                                eh_unique_id_generator_api,
+                                eh_wait_query_handler_api,lager_event,10000,
+                                "./","0000000000","ec_n1_repl.data",
+                                standard_io,true,100,1,2000}})
+
+23:16:00.238807 <0.222.0> eh_system_server:send_msg(eh_pred_pre_update, fun eh_persist_data:no_persist_data/2, [{{eh_update_msg_key,1,candidate,10},
+  {eh_update_msg_data,[{name,1,donald_trump},{party,1,republican}],
+                      <18723.452.0>,'ec_n1@centos7-dev',
+                      #Ref<18723.3896970053.3661103105.102449>}},
+ {{eh_update_msg_key,1,person,10},
+  {eh_update_msg_data,[{name,1,john_smith},{age,1,40}],
+                      <18723.452.0>,'ec_n1@centos7-dev',
+                      #Ref<18723.3896970053.3661103105.102449>}}], {set,0,16,16,8,80,48,
+     {[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]},
+     {{[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]}}}, {eh_system_state,eh_ready,1,
+                 ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'],
+                 ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'],
+                 'ec_n3@centos7-dev','ec_n2@centos7-dev',#{},#{},
+                 {set,0,16,16,8,80,48,
+                      {[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]},
+                      {{[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]}}},
+                 #{},#{},undefined,
+                 {eh_app_config,'ec_n1@centos7-dev',sorted,
+                                eh_failure_detector_api,
+                                eh_repl_data_manager_api,eh_storage_data_api,
+                                eh_write_conflict_resolver_api,
+                                eh_unique_id_generator_api,
+                                eh_wait_query_handler_api,lager_event,10000,
+                                "./","0000000000","ec_n1_repl.data",
+                                standard_io,true,100,1,2000}})
+
+23:16:00.239787 <0.222.0> eh_system_util:add_map({eh_update_msg_key,1,candidate,10}, {eh_update_msg_data,[{name,1,donald_trump},{party,1,republican}],
+                    <18723.452.0>,'ec_n1@centos7-dev',
+                    #Ref<18723.3896970053.3661103105.102449>}, #{})
+
+23:16:00.239933 <0.222.0> eh_system_util:add_map/3 --> #{{eh_update_msg_key,1,candidate,10}=>{eh_update_msg_data,[{name,1,donald_trump},{party,1,republican}],
+                    <18723.452.0>,'ec_n1@centos7-dev',
+                    #Ref<18723.3896970053.3661103105.102449>}}
+
+23:16:00.240072 <0.222.0>  '--> lists:foldl/3
+
+23:16:00.240247 <0.222.0> eh_system_util:add_map({eh_update_msg_key,1,person,10}, {eh_update_msg_data,[{name,1,john_smith},{age,1,40}],
+                    <18723.452.0>,'ec_n1@centos7-dev',
+                    #Ref<18723.3896970053.3661103105.102449>}, #{{eh_update_msg_key,1,candidate,10}=>{eh_update_msg_data,[{name,1,donald_trump},{party,1,republican}],
+                    <18723.452.0>,'ec_n1@centos7-dev',
+                    #Ref<18723.3896970053.3661103105.102449>}})
+
+23:16:00.240454 <0.222.0> eh_system_util:add_map/3 --> #{{eh_update_msg_key,1,candidate,10}=>{eh_update_msg_data,[{name,1,donald_trump},{party,1,republican}],
+                    <18723.452.0>,'ec_n1@centos7-dev',
+                    #Ref<18723.3896970053.3661103105.102449>}, {eh_update_msg_key,1,person,10}=>{eh_update_msg_data,[{name,1,john_smith},{age,1,40}],
+                    <18723.452.0>,'ec_n1@centos7-dev',
+                    #Ref<18723.3896970053.3661103105.102449>}}
+
+23:16:00.241930 <0.222.0>  '--> lists:foldl_1/3
+
+23:16:00.242084 <0.222.0> eh_system_server:send_msg/5 --> {eh_system_state,eh_ready,1,
+    ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'],
+    ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'],
+    'ec_n3@centos7-dev','ec_n2@centos7-dev',
+    #{{eh_update_msg_key,1,candidate,10} =>
+          {eh_update_msg_data,
+              [{name,1,donald_trump},{party,1,republican}],
+              <18723.452.0>,'ec_n1@centos7-dev',
+              #Ref<18723.3896970053.3661103105.102449>},
+      {eh_update_msg_key,1,person,10} =>
+          {eh_update_msg_data,
+              [{name,1,john_smith},{age,1,40}],
+              <18723.452.0>,'ec_n1@centos7-dev',
+              #Ref<18723.3896970053.3661103105.102449>}},
+    #{},
+    {set,0,16,16,8,80,48,
+        {[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]},
+        {{[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]}}},
+    #{},#{},undefined,
+    {eh_app_config,'ec_n1@centos7-dev',sorted,eh_failure_detector_api,
+        eh_repl_data_manager_api,eh_storage_data_api,
+        eh_write_conflict_resolver_api,eh_unique_id_generator_api,
+        eh_wait_query_handler_api,lager_event,10000,"./","0000000000",
+        "ec_n1_repl.data",standard_io,true,100,1,2000}}
+
+23:16:00.242537 <0.222.0> eh_system_server:send_pre_update_msg/4 --> {eh_system_state,eh_ready,1,
+    ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'],
+    ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'],
+    'ec_n3@centos7-dev','ec_n2@centos7-dev',
+    #{{eh_update_msg_key,1,candidate,10} =>
+          {eh_update_msg_data,
+              [{name,1,donald_trump},{party,1,republican}],
+              <18723.452.0>,'ec_n1@centos7-dev',
+              #Ref<18723.3896970053.3661103105.102449>},
+      {eh_update_msg_key,1,person,10} =>
+          {eh_update_msg_data,
+              [{name,1,john_smith},{age,1,40}],
+              <18723.452.0>,'ec_n1@centos7-dev',
+              #Ref<18723.3896970053.3661103105.102449>}},
+    #{},
+    {set,0,16,16,8,80,48,
+        {[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]},
+        {{[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]}}},
+    #{},#{},undefined,
+    {eh_app_config,'ec_n1@centos7-dev',sorted,eh_failure_detector_api,
+        eh_repl_data_manager_api,eh_storage_data_api,
+        eh_write_conflict_resolver_api,eh_unique_id_generator_api,
+        eh_wait_query_handler_api,lager_event,10000,"./","0000000000",
+        "ec_n1_repl.data",standard_io,true,100,1,2000}}
+
+23:16:00.243323 <0.222.0>  '--> eh_system_server:handle_cast/2
+
+23:16:00.243383 <0.222.0> eh_system_server:event_state("update.99", {eh_system_state,eh_ready,1,
+    ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'],
+    ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'],
+    'ec_n3@centos7-dev','ec_n2@centos7-dev',
+    #{{eh_update_msg_key,1,candidate,10} =>
+          {eh_update_msg_data,
+              [{name,1,donald_trump},{party,1,republican}],
+              <18723.452.0>,'ec_n1@centos7-dev',
+              #Ref<18723.3896970053.3661103105.102449>},
+      {eh_update_msg_key,1,person,10} =>
+          {eh_update_msg_data,
+              [{name,1,john_smith},{age,1,40}],
+              <18723.452.0>,'ec_n1@centos7-dev',
+              #Ref<18723.3896970053.3661103105.102449>}},
+    #{},
+    {set,0,16,16,8,80,48,
+        {[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]},
+        {{[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]}}},
+    #{},#{},undefined,
+    {eh_app_config,'ec_n1@centos7-dev',sorted,eh_failure_detector_api,
+        eh_repl_data_manager_api,eh_storage_data_api,
+        eh_write_conflict_resolver_api,eh_unique_id_generator_api,
+        eh_wait_query_handler_api,lager_event,10000,"./","0000000000",
+        "ec_n1_repl.data",standard_io,true,100,1,2000}}, {eh_app_config,'ec_n1@centos7-dev',sorted,eh_failure_detector_api,
+               eh_repl_data_manager_api,eh_storage_data_api,
+               eh_write_conflict_resolver_api,eh_unique_id_generator_api,
+               eh_wait_query_handler_api,lager_event,10000,"./","0000000000",
+               "ec_n1_repl.data",standard_io,true,100,1,2000})
+
+23:16:00.244143 <0.222.0> eh_event:state(eh_system_server, "update.99", {eh_system_state,eh_ready,1,
+    ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'],
+    ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'],
+    'ec_n3@centos7-dev','ec_n2@centos7-dev',
+    #{{eh_update_msg_key,1,candidate,10} =>
+          {eh_update_msg_data,
+              [{name,1,donald_trump},{party,1,republican}],
+              <18723.452.0>,'ec_n1@centos7-dev',
+              #Ref<18723.3896970053.3661103105.102449>},
+      {eh_update_msg_key,1,person,10} =>
+          {eh_update_msg_data,
+              [{name,1,john_smith},{age,1,40}],
+              <18723.452.0>,'ec_n1@centos7-dev',
+              #Ref<18723.3896970053.3661103105.102449>}},
+    #{},
+    {set,0,16,16,8,80,48,
+        {[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]},
+        {{[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]}}},
+    #{},#{},undefined,
+    {eh_app_config,'ec_n1@centos7-dev',sorted,eh_failure_detector_api,
+        eh_repl_data_manager_api,eh_storage_data_api,
+        eh_write_conflict_resolver_api,eh_unique_id_generator_api,
+        eh_wait_query_handler_api,lager_event,10000,"./","0000000000",
+        "ec_n1_repl.data",standard_io,true,100,1,2000}}, {eh_app_config,'ec_n1@centos7-dev',sorted,eh_failure_detector_api,
+               eh_repl_data_manager_api,eh_storage_data_api,
+               eh_write_conflict_resolver_api,eh_unique_id_generator_api,
+               eh_wait_query_handler_api,lager_event,10000,"./","0000000000",
+               "ec_n1_repl.data",standard_io,true,100,1,2000})
+
+23:16:00.244625 <0.222.0> eh_event:event_notify(state, {eh_system_server,"update.99",
+    {eh_system_state,eh_ready,1,
+        ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'],
+        ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'],
+        'ec_n3@centos7-dev','ec_n2@centos7-dev',
+        #{{eh_update_msg_key,1,candidate,10} =>
+              {eh_update_msg_data,
+                  [{name,1,donald_trump},{party,1,republican}],
+                  <18723.452.0>,'ec_n1@centos7-dev',
+                  #Ref<18723.3896970053.3661103105.102449>},
+          {eh_update_msg_key,1,person,10} =>
+              {eh_update_msg_data,
+                  [{name,1,john_smith},{age,1,40}],
+                  <18723.452.0>,'ec_n1@centos7-dev',
+                  #Ref<18723.3896970053.3661103105.102449>}},
+        #{},
+        {set,0,16,16,8,80,48,
+            {[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]},
+            {{[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]}}},
+        #{},#{},undefined,
+        {eh_app_config,'ec_n1@centos7-dev',sorted,eh_failure_detector_api,
+            eh_repl_data_manager_api,eh_storage_data_api,
+            eh_write_conflict_resolver_api,eh_unique_id_generator_api,
+            eh_wait_query_handler_api,lager_event,10000,"./","0000000000",
+            "ec_n1_repl.data",standard_io,true,100,1,2000}}}, {eh_app_config,'ec_n1@centos7-dev',sorted,eh_failure_detector_api,
+               eh_repl_data_manager_api,eh_storage_data_api,
+               eh_write_conflict_resolver_api,eh_unique_id_generator_api,
+               eh_wait_query_handler_api,lager_event,10000,"./","0000000000",
+               "ec_n1_repl.data",standard_io,true,100,1,2000})
+
+23:16:00.245317 <0.222.0> eh_event_handler:get_msg_data({state,
+    {eh_system_server,"update.99",
+        {eh_system_state,eh_ready,1,
+            ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'],
+            ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'],
+            'ec_n3@centos7-dev','ec_n2@centos7-dev',
+            #{{eh_update_msg_key,1,candidate,10} =>
+                  {eh_update_msg_data,
+                      [{name,1,donald_trump},{party,1,republican}],
+                      <18723.452.0>,'ec_n1@centos7-dev',
+                      #Ref<18723.3896970053.3661103105.102449>},
+              {eh_update_msg_key,1,person,10} =>
+                  {eh_update_msg_data,
+                      [{name,1,john_smith},{age,1,40}],
+                      <18723.452.0>,'ec_n1@centos7-dev',
+                      #Ref<18723.3896970053.3661103105.102449>}},
+            #{},
+            {set,0,16,16,8,80,48,
+                {[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]},
+                {{[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]}}},
+            #{},#{},undefined,
+            {eh_app_config,'ec_n1@centos7-dev',sorted,
+                eh_failure_detector_api,eh_repl_data_manager_api,
+                eh_storage_data_api,eh_write_conflict_resolver_api,
+                eh_unique_id_generator_api,eh_wait_query_handler_api,
+                lager_event,10000,"./","0000000000","ec_n1_repl.data",
+                standard_io,true,100,1,2000}}}})
+
+23:16:00.246000 <0.222.0> eh_system_util:get_node_name('ec_n1@centos7-dev')
+
+23:16:00.246164 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(101)
+
+23:16:00.246269 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+23:16:00.246379 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.246480 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(99)
+
+23:16:00.246575 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+23:16:00.246691 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.246784 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(95)
+
+23:16:00.246878 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+23:16:00.246971 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.247114 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(110)
+
+23:16:00.247209 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+23:16:00.247297 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.247378 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(49)
+
+23:16:00.247468 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+23:16:00.247563 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.247648 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(64)
+
+23:16:00.247735 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> false
+
+23:16:00.247844 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.247925 <0.222.0> eh_system_util:get_node_name/1 --> "ec_n1"
+
+23:16:00.248068 <0.222.0>  '--> eh_event_handler:get_msg_data/1
+
+23:16:00.248177 <0.222.0> eh_system_util:get_node_name('ec_n3@centos7-dev')
+
+23:16:00.248950 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(101)
+
+23:16:00.249772 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+23:16:00.250052 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.250174 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(99)
+
+23:16:00.251106 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+23:16:00.251334 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.251432 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(95)
+
+23:16:00.251532 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+23:16:00.251620 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.251695 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(110)
+
+23:16:00.251756 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+23:16:00.251830 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.251973 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(51)
+
+23:16:00.252106 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+23:16:00.252193 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.252267 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(64)
+
+23:16:00.252350 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> false
+
+23:16:00.252436 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.252507 <0.222.0> eh_system_util:get_node_name/1 --> "ec_n3"
+
+23:16:00.252583 <0.222.0>  '--> eh_event_handler:get_msg_data/1
+
+23:16:00.252665 <0.222.0> eh_system_util:get_node_name('ec_n2@centos7-dev')
+
+23:16:00.252744 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(101)
+
+23:16:00.252809 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+23:16:00.252860 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.252909 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(99)
+
+23:16:00.252979 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+23:16:00.253103 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.253177 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(95)
+
+23:16:00.253295 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+23:16:00.253398 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.253505 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(110)
+
+23:16:00.253581 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+23:16:00.253665 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.253720 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(50)
+
+23:16:00.253787 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+23:16:00.253884 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.253986 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(64)
+
+23:16:00.254088 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> false
+
+23:16:00.254171 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.254244 <0.222.0> eh_system_util:get_node_name/1 --> "ec_n2"
+
+23:16:00.254340 <0.222.0>  '--> eh_event_handler:get_msg_data/1
+
+23:16:00.254436 <0.222.0> eh_node_state:display_state({eh_system_state,eh_ready,1,
+    ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'],
+    ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'],
+    'ec_n3@centos7-dev','ec_n2@centos7-dev',
+    #{{eh_update_msg_key,1,candidate,10} =>
+          {eh_update_msg_data,
+              [{name,1,donald_trump},{party,1,republican}],
+              <18723.452.0>,'ec_n1@centos7-dev',
+              #Ref<18723.3896970053.3661103105.102449>},
+      {eh_update_msg_key,1,person,10} =>
+          {eh_update_msg_data,
+              [{name,1,john_smith},{age,1,40}],
+              <18723.452.0>,'ec_n1@centos7-dev',
+              #Ref<18723.3896970053.3661103105.102449>}},
+    #{},
+    {set,0,16,16,8,80,48,
+        {[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]},
+        {{[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]}}},
+    #{},#{},undefined,
+    {eh_app_config,'ec_n1@centos7-dev',sorted,eh_failure_detector_api,
+        eh_repl_data_manager_api,eh_storage_data_api,
+        eh_write_conflict_resolver_api,eh_unique_id_generator_api,
+        eh_wait_query_handler_api,lager_event,10000,"./","0000000000",
+        "ec_n1_repl.data",standard_io,true,100,1,2000}})
+
+23:16:00.254903 <0.222.0> eh_system_util:display_atom_to_list(eh_ready)
+
+23:16:00.255020 <0.222.0> eh_system_util:display_atom_to_list/1 --> "ready"
+
+23:16:00.255144 <0.222.0> eh_node_state:display_state/1 --> "ready"
+
+23:16:00.255278 <0.222.0>  '--> eh_event_handler:get_msg_data/1
+
+23:16:00.255425 <0.222.0> eh_system_util:make_list_to_string(fun eh_system_util:get_node_name/1, ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'])
+
+23:16:00.255593 <0.222.0> eh_system_util:'-make_list_to_string/2-fun-0-'('ec_n1@centos7-dev', [], fun eh_system_util:get_node_name/1)
+
+23:16:00.255767 <0.222.0> eh_system_util:get_node_name('ec_n1@centos7-dev')
+
+23:16:00.255848 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(101)
+
+23:16:00.255978 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+23:16:00.256142 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.256273 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(99)
+
+23:16:00.256404 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+23:16:00.256547 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.256650 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(95)
+
+23:16:00.256726 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+23:16:00.256818 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.256877 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(110)
+
+23:16:00.256926 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+23:16:00.257001 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.257155 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(49)
+
+23:16:00.257288 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+23:16:00.257426 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.257559 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(64)
+
+23:16:00.257682 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> false
+
+23:16:00.257800 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.257874 <0.222.0> eh_system_util:get_node_name/1 --> "ec_n1"
+
+23:16:00.257963 <0.222.0>  '--> eh_system_util:'-make_list_to_string/2-fun-0-'/3
+
+23:16:00.258019 <0.222.0> eh_system_util:'-make_list_to_string/2-fun-0-'/3 --> "ec_n1"
+
+23:16:00.258152 <0.222.0>  '--> lists:foldl/3
+
+23:16:00.258283 <0.222.0> eh_system_util:'-make_list_to_string/2-fun-0-'('ec_n2@centos7-dev', "ec_n1", fun eh_system_util:get_node_name/1)
+
+23:16:00.258439 <0.222.0> eh_system_util:get_node_name('ec_n2@centos7-dev')
+
+23:16:00.258577 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(101)
+
+23:16:00.258699 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+23:16:00.258832 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.258979 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(99)
+
+23:16:00.259135 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+23:16:00.259222 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.259273 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(95)
+
+23:16:00.259322 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+23:16:00.259401 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.259531 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(110)
+
+23:16:00.259616 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+23:16:00.259859 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.259993 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(50)
+
+23:16:00.260715 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+23:16:00.261144 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.261362 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(64)
+
+23:16:00.261485 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> false
+
+23:16:00.262133 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.262253 <0.222.0> eh_system_util:get_node_name/1 --> "ec_n2"
+
+23:16:00.262370 <0.222.0>  '--> eh_system_util:'-make_list_to_string/2-fun-0-'/3
+
+23:16:00.262454 <0.222.0> eh_system_util:'-make_list_to_string/2-fun-0-'/3 --> "ec_n1,ec_n2"
+
+23:16:00.262571 <0.222.0>  '--> lists:foldl_1/3
+
+23:16:00.262683 <0.222.0> eh_system_util:'-make_list_to_string/2-fun-0-'('ec_n3@centos7-dev', "ec_n1,ec_n2", fun eh_system_util:get_node_name/1)
+
+23:16:00.262829 <0.222.0> eh_system_util:get_node_name('ec_n3@centos7-dev')
+
+23:16:00.262910 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(101)
+
+23:16:00.263017 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+23:16:00.263189 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.263320 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(99)
+
+23:16:00.263452 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+23:16:00.263551 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.263628 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(95)
+
+23:16:00.263735 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+23:16:00.263810 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.263879 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(110)
+
+23:16:00.263994 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+23:16:00.264175 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.264288 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(51)
+
+23:16:00.264434 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+23:16:00.264575 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.264709 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(64)
+
+23:16:00.264855 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> false
+
+23:16:00.264989 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.265162 <0.222.0> eh_system_util:get_node_name/1 --> "ec_n3"
+
+23:16:00.265305 <0.222.0>  '--> eh_system_util:'-make_list_to_string/2-fun-0-'/3
+
+23:16:00.265432 <0.222.0> eh_system_util:'-make_list_to_string/2-fun-0-'/3 --> "ec_n1,ec_n2,ec_n3"
+
+23:16:00.265577 <0.222.0>  '--> lists:foldl_1/3
+
+23:16:00.265708 <0.222.0> eh_system_util:make_list_to_string/2 --> "ec_n1,ec_n2,ec_n3"
+
+23:16:00.265841 <0.222.0>  '--> eh_event_handler:get_msg_data/1
+
+23:16:00.265969 <0.222.0> eh_event_handler:list_msg_map(#{{eh_update_msg_key,1,candidate,10}=>{eh_update_msg_data,[{name,1,donald_trump},{party,1,republican}],
+                    <18723.452.0>,'ec_n1@centos7-dev',
+                    #Ref<18723.3896970053.3661103105.102449>}, {eh_update_msg_key,1,person,10}=>{eh_update_msg_data,[{name,1,john_smith},{age,1,40}],
+                    <18723.452.0>,'ec_n1@centos7-dev',
+                    #Ref<18723.3896970053.3661103105.102449>}})
+
+23:16:00.266341 <0.222.0> eh_system_util:fold_map(#Fun<eh_event_handler.1.20189961>, [], #{{eh_update_msg_key,1,candidate,10}=>{eh_update_msg_data,[{name,1,donald_trump},{party,1,republican}],
+                    <18723.452.0>,'ec_n1@centos7-dev',
+                    #Ref<18723.3896970053.3661103105.102449>}, {eh_update_msg_key,1,person,10}=>{eh_update_msg_data,[{name,1,john_smith},{age,1,40}],
+                    <18723.452.0>,'ec_n1@centos7-dev',
+                    #Ref<18723.3896970053.3661103105.102449>}})
+
+23:16:00.266607 <0.222.0> eh_event_handler:'-list_msg_map/1-fun-0-'({eh_update_msg_key,1,candidate,10}, {eh_update_msg_data,[{name,1,donald_trump},{party,1,republican}],
+                    <18723.452.0>,'ec_n1@centos7-dev',
+                    #Ref<18723.3896970053.3661103105.102449>}, [])
+
+23:16:00.266806 <0.222.0> eh_event_handler:list_msg({eh_update_msg_key,1,candidate,10}, 'ec_n1@centos7-dev')
+
+23:16:00.266918 <0.222.0> eh_event_handler:list_msg_key({eh_update_msg_key,1,candidate,10})
+
+23:16:00.267045 <0.222.0> eh_event_handler:is_listable_msg_key({eh_update_msg_key,1,candidate,10})
+
+23:16:00.267144 <0.222.0> eh_event_handler:is_listable_value(1)
+
+23:16:00.267202 <0.222.0> eh_event_handler:is_listable_value/1 --> true
+
+23:16:00.267253 <0.222.0>  '--> eh_event_handler:is_listable_msg_key/1
+
+23:16:00.267330 <0.222.0> eh_event_handler:is_listable_value(candidate)
+
+23:16:00.267421 <0.222.0> eh_event_handler:is_listable_value/1 --> true
+
+23:16:00.267525 <0.222.0>  '--> eh_event_handler:is_listable_msg_key/1
+
+23:16:00.267603 <0.222.0> eh_event_handler:is_listable_value(10)
+
+23:16:00.267707 <0.222.0> eh_event_handler:is_listable_value/1 --> true
+
+23:16:00.267785 <0.222.0> eh_event_handler:is_listable_msg_key/1 --> true
+
+23:16:00.267864 <0.222.0>  '--> eh_event_handler:list_msg_key/1
+
+23:16:00.267925 <0.222.0> eh_event_handler:list_value(1)
+
+23:16:00.267982 <0.222.0> eh_event_handler:list_value/1 --> "1"
+
+23:16:00.268084 <0.222.0>  '--> eh_event_handler:list_msg_key/1
+
+23:16:00.268161 <0.222.0> eh_event_handler:list_value(candidate)
+
+23:16:00.268262 <0.222.0> eh_event_handler:list_value/1 --> "candidate"
+
+23:16:00.268381 <0.222.0>  '--> eh_event_handler:list_msg_key/1
+
+23:16:00.268455 <0.222.0> eh_event_handler:list_value(10)
+
+23:16:00.268530 <0.222.0> eh_event_handler:list_value/1 --> "10"
+
+23:16:00.268613 <0.222.0>  '--> eh_event_handler:list_msg_key/1
+
+23:16:00.268666 <0.222.0> eh_event_handler:list_msg_key/1 --> "{1,candidate,10}"
+
+23:16:00.268741 <0.222.0>  '--> eh_event_handler:list_msg/2
+
+23:16:00.268810 <0.222.0> eh_event_handler:list_node_msg('ec_n1@centos7-dev', "{1,candidate,10}")
+
+23:16:00.268913 <0.222.0> eh_system_util:get_node_name('ec_n1@centos7-dev')
+
+23:16:00.268980 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(101)
+
+23:16:00.269069 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+23:16:00.269148 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.269210 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(99)
+
+23:16:00.269320 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+23:16:00.269381 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.269441 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(95)
+
+23:16:00.269491 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+23:16:00.269557 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.269606 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(110)
+
+23:16:00.269676 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+23:16:00.269776 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.269861 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(49)
+
+23:16:00.269975 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+23:16:00.270131 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.270216 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(64)
+
+23:16:00.270317 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> false
+
+23:16:00.270430 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.270508 <0.222.0> eh_system_util:get_node_name/1 --> "ec_n1"
+
+23:16:00.270609 <0.222.0>  '--> eh_event_handler:list_node_msg/2
+
+23:16:00.270691 <0.222.0> eh_event_handler:list_node_msg/2 --> "ec_n1=>{1,candidate,10}"
+
+23:16:00.270803 <0.222.0> eh_event_handler:list_msg/2 --> "ec_n1=>{1,candidate,10}"
+
+23:16:00.270884 <0.222.0>  '--> eh_event_handler:'-list_msg_map/1-fun-0-'/3
+
+23:16:00.271004 <0.222.0> eh_event_handler:add_list("ec_n1=>{1,candidate,10}", [])
+
+23:16:00.271146 <0.222.0> eh_event_handler:add_list/2 --> "ec_n1=>{1,candidate,10}"
+
+23:16:00.272151 <0.222.0> eh_event_handler:'-list_msg_map/1-fun-0-'/3 --> "ec_n1=>{1,candidate,10}"
+
+23:16:00.272674 <0.222.0>  '--> maps:fold_1/3
+
+23:16:00.272899 <0.222.0> eh_event_handler:'-list_msg_map/1-fun-0-'({eh_update_msg_key,1,person,10}, {eh_update_msg_data,[{name,1,john_smith},{age,1,40}],
+                    <18723.452.0>,'ec_n1@centos7-dev',
+                    #Ref<18723.3896970053.3661103105.102449>}, "ec_n1=>{1,candidate,10}")
+
+23:16:00.273206 <0.222.0> eh_event_handler:list_msg({eh_update_msg_key,1,person,10}, 'ec_n1@centos7-dev')
+
+23:16:00.273354 <0.222.0> eh_event_handler:list_msg_key({eh_update_msg_key,1,person,10})
+
+23:16:00.273651 <0.222.0> eh_event_handler:is_listable_msg_key({eh_update_msg_key,1,person,10})
+
+23:16:00.273784 <0.222.0> eh_event_handler:is_listable_value(1)
+
+23:16:00.273873 <0.222.0> eh_event_handler:is_listable_value/1 --> true
+
+23:16:00.274237 <0.222.0>  '--> eh_event_handler:is_listable_msg_key/1
+
+23:16:00.274387 <0.222.0> eh_event_handler:is_listable_value(person)
+
+23:16:00.274474 <0.222.0> eh_event_handler:is_listable_value/1 --> true
+
+23:16:00.274526 <0.222.0>  '--> eh_event_handler:is_listable_msg_key/1
+
+23:16:00.274573 <0.222.0> eh_event_handler:is_listable_value(10)
+
+23:16:00.274652 <0.222.0> eh_event_handler:is_listable_value/1 --> true
+
+23:16:00.274766 <0.222.0> eh_event_handler:is_listable_msg_key/1 --> true
+
+23:16:00.274853 <0.222.0>  '--> eh_event_handler:list_msg_key/1
+
+23:16:00.274908 <0.222.0> eh_event_handler:list_value(1)
+
+23:16:00.274961 <0.222.0> eh_event_handler:list_value/1 --> "1"
+
+23:16:00.275088 <0.222.0>  '--> eh_event_handler:list_msg_key/1
+
+23:16:00.275159 <0.222.0> eh_event_handler:list_value(person)
+
+23:16:00.275246 <0.222.0> eh_event_handler:list_value/1 --> "person"
+
+23:16:00.275321 <0.222.0>  '--> eh_event_handler:list_msg_key/1
+
+23:16:00.275396 <0.222.0> eh_event_handler:list_value(10)
+
+23:16:00.275490 <0.222.0> eh_event_handler:list_value/1 --> "10"
+
+23:16:00.275594 <0.222.0>  '--> eh_event_handler:list_msg_key/1
+
+23:16:00.275678 <0.222.0> eh_event_handler:list_msg_key/1 --> "{1,person,10}"
+
+23:16:00.275808 <0.222.0>  '--> eh_event_handler:list_msg/2
+
+23:16:00.275931 <0.222.0> eh_event_handler:list_node_msg('ec_n1@centos7-dev', "{1,person,10}")
+
+23:16:00.276126 <0.222.0> eh_system_util:get_node_name('ec_n1@centos7-dev')
+
+23:16:00.276248 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(101)
+
+23:16:00.276368 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+23:16:00.276475 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.276535 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(99)
+
+23:16:00.276619 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+23:16:00.276748 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.276829 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(95)
+
+23:16:00.276957 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+23:16:00.277216 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.277279 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(110)
+
+23:16:00.277350 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+23:16:00.277403 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.277457 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(49)
+
+23:16:00.277544 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+23:16:00.277673 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.277788 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(64)
+
+23:16:00.277905 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> false
+
+23:16:00.278066 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.278166 <0.222.0> eh_system_util:get_node_name/1 --> "ec_n1"
+
+23:16:00.278307 <0.222.0>  '--> eh_event_handler:list_node_msg/2
+
+23:16:00.278438 <0.222.0> eh_event_handler:list_node_msg/2 --> "ec_n1=>{1,person,10}"
+
+23:16:00.278541 <0.222.0> eh_event_handler:list_msg/2 --> "ec_n1=>{1,person,10}"
+
+23:16:00.278640 <0.222.0>  '--> eh_event_handler:'-list_msg_map/1-fun-0-'/3
+
+23:16:00.278725 <0.222.0> eh_event_handler:add_list("ec_n1=>{1,person,10}", "ec_n1=>{1,candidate,10}")
+
+23:16:00.278856 <0.222.0> eh_event_handler:add_list/2 --> "ec_n1=>{1,candidate,10},ec_n1=>{1,person,10}"
+
+23:16:00.279089 <0.222.0> eh_event_handler:'-list_msg_map/1-fun-0-'/3 --> "ec_n1=>{1,candidate,10},ec_n1=>{1,person,10}"
+
+23:16:00.279235 <0.222.0>  '--> maps:fold_1/3
+
+23:16:00.279327 <0.222.0> eh_system_util:fold_map/3 --> "ec_n1=>{1,candidate,10},ec_n1=>{1,person,10}"
+
+23:16:00.279492 <0.222.0> eh_event_handler:list_msg_map/1 --> "ec_n1=>{1,candidate,10},ec_n1=>{1,person,10}"
+
+23:16:00.279626 <0.222.0>  '--> eh_event_handler:get_msg_data/1
+
+23:16:00.279710 <0.222.0> eh_event_handler:list_msg_map(#{})
+
+23:16:00.279769 <0.222.0> eh_system_util:fold_map(#Fun<eh_event_handler.1.20189961>, [], #{})
+
+23:16:00.279865 <0.222.0> eh_system_util:fold_map/3 --> []
+
+23:16:00.280042 <0.222.0> eh_event_handler:list_msg_map/1 --> []
+
+23:16:00.280152 <0.222.0>  '--> eh_event_handler:get_msg_data/1
+
+23:16:00.280215 <0.222.0> eh_event_handler:list_msg_set_value({set,0,16,16,8,80,48,
+     {[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]},
+     {{[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]}}})
+
+23:16:00.280365 <0.222.0> eh_system_util:fold_set(#Fun<eh_event_handler.0.20189961>, [], {set,0,16,16,8,80,48,
+     {[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]},
+     {{[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]}}})
+
+23:16:00.280535 <0.222.0> eh_system_util:fold_set/3 --> []
+
+23:16:00.280644 <0.222.0> eh_event_handler:list_msg_set_value/1 --> []
+
+23:16:00.280793 <0.222.0>  '--> eh_event_handler:get_msg_data/1
+
+23:16:00.280909 <0.222.0> eh_event_handler:get_msg_data/1 --> {"[~p] ~p node_status=~p, node_id=~p, repl_ring=~p, pred=~p, succ=~p, timestamp=~p, pre_msg_data=~p, msg_data=~p, completed_set=~p~n",
+ [eh_system_server,"update.99","ready","ec_n1","ec_n1,ec_n2,ec_n3","ec_n3",
+  "ec_n2",1,"ec_n1=>{1,candidate,10},ec_n1=>{1,person,10}",[],[]]}
+
+23:16:00.281130 <0.222.0>  '--> eh_event:event_notify/3
+
+23:16:00.281215 <0.222.0> eh_system_config:get_event_logger({eh_app_config,'ec_n1@centos7-dev',sorted,eh_failure_detector_api,
+               eh_repl_data_manager_api,eh_storage_data_api,
+               eh_write_conflict_resolver_api,eh_unique_id_generator_api,
+               eh_wait_query_handler_api,lager_event,10000,"./","0000000000",
+               "ec_n1_repl.data",standard_io,true,100,1,2000})
+
+23:16:00.281419 <0.222.0> eh_system_config:get_event_logger/1 --> lager_event
+
+23:16:00.281540 <0.222.0>  '--> eh_event:event_notify/3
+
+23:16:00.281612 <0.222.0> eh_event:event_notify/3 --> ok
+
+23:16:00.281723 <0.222.0> eh_event:state/4 --> ok
+
+23:16:00.281830 <0.222.0> eh_system_server:event_state/3 --> ok
+
+23:16:00.281907 <0.222.0>  '--> eh_system_server:handle_cast/2
+
+23:16:00.281958 <0.222.0> eh_system_server:handle_cast/2 --> {noreply,
+    {eh_system_state,eh_ready,1,
+        ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'],
+        ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'],
+        'ec_n3@centos7-dev','ec_n2@centos7-dev',
+        #{{eh_update_msg_key,1,candidate,10} =>
+              {eh_update_msg_data,
+                  [{name,1,donald_trump},{party,1,republican}],
+                  <18723.452.0>,'ec_n1@centos7-dev',
+                  #Ref<18723.3896970053.3661103105.102449>},
+          {eh_update_msg_key,1,person,10} =>
+              {eh_update_msg_data,
+                  [{name,1,john_smith},{age,1,40}],
+                  <18723.452.0>,'ec_n1@centos7-dev',
+                  #Ref<18723.3896970053.3661103105.102449>}},
+        #{},
+        {set,0,16,16,8,80,48,
+            {[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]},
+            {{[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]}}},
+        #{},#{},undefined,
+        {eh_app_config,'ec_n1@centos7-dev',sorted,eh_failure_detector_api,
+            eh_repl_data_manager_api,eh_storage_data_api,
+            eh_write_conflict_resolver_api,eh_unique_id_generator_api,
+            eh_wait_query_handler_api,lager_event,10000,"./","0000000000",
+            "ec_n1_repl.data",standard_io,true,100,1,2000}}}
+
+23:16:00.282546 <0.222.0>  '--> gen_server:try_dispatch/4
+
+23:16:00.377858 <0.222.0> eh_system_server:handle_cast({eh_succ_update,
+    {[{{eh_update_msg_key,1,candidate,10},
+       {eh_update_msg_data,
+           [{name,1,donald_trump},{party,1,republican}],
+           <18723.452.0>,'ec_n1@centos7-dev',
+           #Ref<18723.3896970053.3661103105.102449>}},
+      {{eh_update_msg_key,1,person,10},
+       {eh_update_msg_data,
+           [{name,1,john_smith},{age,1,40}],
+           <18723.452.0>,'ec_n1@centos7-dev',
+           #Ref<18723.3896970053.3661103105.102449>}}],
+     {set,0,16,16,8,80,48,
+         {[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]},
+         {{[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]}}}}}, {eh_system_state,eh_ready,1,
+    ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'],
+    ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'],
+    'ec_n3@centos7-dev','ec_n2@centos7-dev',
+    #{{eh_update_msg_key,1,candidate,10} =>
+          {eh_update_msg_data,
+              [{name,1,donald_trump},{party,1,republican}],
+              <18723.452.0>,'ec_n1@centos7-dev',
+              #Ref<18723.3896970053.3661103105.102449>},
+      {eh_update_msg_key,1,person,10} =>
+          {eh_update_msg_data,
+              [{name,1,john_smith},{age,1,40}],
+              <18723.452.0>,'ec_n1@centos7-dev',
+              #Ref<18723.3896970053.3661103105.102449>}},
+    #{},
+    {set,0,16,16,8,80,48,
+        {[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]},
+        {{[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]}}},
+    #{},#{},undefined,
+    {eh_app_config,'ec_n1@centos7-dev',sorted,eh_failure_detector_api,
+        eh_repl_data_manager_api,eh_storage_data_api,
+        eh_write_conflict_resolver_api,eh_unique_id_generator_api,
+        eh_wait_query_handler_api,lager_event,10000,"./","0000000000",
+        "ec_n1_repl.data",standard_io,true,100,1,2000}})
+
+23:16:00.379096 <0.222.0> eh_system_server:process_msg(eh_succ_update, fun eh_node_timestamp:valid_update_msg/2, #Fun<eh_system_server.0.81093313>, fun eh_persist_data:persist_data/2, #Fun<eh_system_server.1.81093313>, fun eh_persist_data:persist_data/2, [{{eh_update_msg_key,1,candidate,10},
+  {eh_update_msg_data,[{name,1,donald_trump},{party,1,republican}],
+                      <18723.452.0>,'ec_n1@centos7-dev',
+                      #Ref<18723.3896970053.3661103105.102449>}},
+ {{eh_update_msg_key,1,person,10},
+  {eh_update_msg_data,[{name,1,john_smith},{age,1,40}],
+                      <18723.452.0>,'ec_n1@centos7-dev',
+                      #Ref<18723.3896970053.3661103105.102449>}}], {set,0,16,16,8,80,48,
+     {[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]},
+     {{[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]}}}, {eh_system_state,eh_ready,1,
+    ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'],
+    ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'],
+    'ec_n3@centos7-dev','ec_n2@centos7-dev',
+    #{{eh_update_msg_key,1,candidate,10} =>
+          {eh_update_msg_data,
+              [{name,1,donald_trump},{party,1,republican}],
+              <18723.452.0>,'ec_n1@centos7-dev',
+              #Ref<18723.3896970053.3661103105.102449>},
+      {eh_update_msg_key,1,person,10} =>
+          {eh_update_msg_data,
+              [{name,1,john_smith},{age,1,40}],
+              <18723.452.0>,'ec_n1@centos7-dev',
+              #Ref<18723.3896970053.3661103105.102449>}},
+    #{},
+    {set,0,16,16,8,80,48,
+        {[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]},
+        {{[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]}}},
+    #{},#{},undefined,
+    {eh_app_config,'ec_n1@centos7-dev',sorted,eh_failure_detector_api,
+        eh_repl_data_manager_api,eh_storage_data_api,
+        eh_write_conflict_resolver_api,eh_unique_id_generator_api,
+        eh_wait_query_handler_api,lager_event,10000,"./","0000000000",
+        "ec_n1_repl.data",standard_io,true,100,1,2000}})
+
+23:16:00.379965 <0.222.0> eh_system_util:display_atom_to_list(eh_succ_update)
+
+23:16:00.380047 <0.222.0> eh_system_util:display_atom_to_list/1 --> "succ_update"
+
+23:16:00.380109 <0.222.0>  '--> eh_system_server:process_msg/9
+
+23:16:00.380157 <0.222.0> eh_node_state:msg_state({eh_system_state,eh_ready,1,
+    ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'],
+    ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'],
+    'ec_n3@centos7-dev','ec_n2@centos7-dev',
+    #{{eh_update_msg_key,1,candidate,10} =>
+          {eh_update_msg_data,
+              [{name,1,donald_trump},{party,1,republican}],
+              <18723.452.0>,'ec_n1@centos7-dev',
+              #Ref<18723.3896970053.3661103105.102449>},
+      {eh_update_msg_key,1,person,10} =>
+          {eh_update_msg_data,
+              [{name,1,john_smith},{age,1,40}],
+              <18723.452.0>,'ec_n1@centos7-dev',
+              #Ref<18723.3896970053.3661103105.102449>}},
+    #{},
+    {set,0,16,16,8,80,48,
+        {[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]},
+        {{[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]}}},
+    #{},#{},undefined,
+    {eh_app_config,'ec_n1@centos7-dev',sorted,eh_failure_detector_api,
+        eh_repl_data_manager_api,eh_storage_data_api,
+        eh_write_conflict_resolver_api,eh_unique_id_generator_api,
+        eh_wait_query_handler_api,lager_event,10000,"./","0000000000",
+        "ec_n1_repl.data",standard_io,true,100,1,2000}})
+
+23:16:00.380732 <0.222.0> eh_node_state:msg_state/1 --> eh_ready
+
+23:16:00.380821 <0.222.0>  '--> eh_system_server:process_msg/9
+
+23:16:00.380874 <0.222.0> eh_system_util:size_map(#{})
+
+23:16:00.380938 <0.222.0> eh_system_util:size_map/1 --> 0
+
+23:16:00.380995 <0.222.0>  '--> eh_node_timestamp:process_pending_pre_msg_data/2
+
+23:16:00.381045 <0.222.0> eh_system_util:partition_map(#Fun<eh_update_msg.6.130090961>, #{})
+
+23:16:00.381107 <0.222.0> eh_system_util:new_map()
+
+23:16:00.381192 <0.222.0> eh_system_util:new_map/0 --> #{}
+
+23:16:00.381265 <0.222.0>  '--> eh_system_util:partition_map/2
+
+23:16:00.381316 <0.222.0> eh_system_util:new_map()
+
+23:16:00.381365 <0.222.0> eh_system_util:new_map/0 --> #{}
+
+23:16:00.381417 <0.222.0>  '--> eh_system_util:partition_map/2
+
+23:16:00.381583 <0.222.0> eh_system_util:partition_map/2 --> {#{},#{}}
+
+23:16:00.381651 <0.222.0>  '--> eh_node_timestamp:check_map/2
+
+23:16:00.381694 <0.222.0> eh_system_util:size_map(#{})
+
+23:16:00.381746 <0.222.0> eh_system_util:size_map/1 --> 0
+
+23:16:00.381884 <0.222.0>  '--> eh_node_timestamp:check_map/2
+
+23:16:00.382527 <0.222.0> eh_system_util:is_key_set({eh_update_msg_key,1,candidate,10}, {set,0,16,16,8,80,48,
+     {[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]},
+     {{[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]}}})
+
+23:16:00.383112 <0.222.0> eh_system_util:is_key_set/2 --> false
+
+23:16:00.383265 <0.222.0>  '--> lists:any/2
+
+23:16:00.383325 <0.222.0> eh_system_util:is_key_set({eh_update_msg_key,1,person,10}, {set,0,16,16,8,80,48,
+     {[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]},
+     {{[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]}}})
+
+23:16:00.383472 <0.222.0> eh_system_util:is_key_set/2 --> false
+
+23:16:00.383606 <0.222.0>  '--> lists:any_1/2
+
+23:16:00.383682 <0.222.0> eh_system_config:get_repl_data_manager({eh_app_config,'ec_n1@centos7-dev',sorted,eh_failure_detector_api,
+               eh_repl_data_manager_api,eh_storage_data_api,
+               eh_write_conflict_resolver_api,eh_unique_id_generator_api,
+               eh_wait_query_handler_api,lager_event,10000,"./","0000000000",
+               "ec_n1_repl.data",standard_io,true,100,1,2000})
+
+23:16:00.383877 <0.222.0> eh_system_config:get_repl_data_manager/1 --> eh_repl_data_manager_api
+
+23:16:00.383948 <0.222.0>  '--> eh_node_timestamp:check_data/2
+
+23:16:00.383995 <0.222.0> eh_repl_data_manager_api:check_data({1,
+ [{person,10,[{name,1,john_smith},{age,1,40}]},
+  {candidate,10,[{name,1,donald_trump},{party,1,republican}]}]})
+
+23:16:00.384084 <0.221.0> eh_data_server:handle_call({eh_check_data,{1,
+                [{person,10,[{name,1,john_smith},{age,1,40}]},
+                 {candidate,10,
+                            [{name,1,donald_trump},{party,1,republican}]}]}}, {<0.222.0>,[alias|#Ref<0.2863178779.3660644354.205411>]}, {eh_data_state,0,0,[],#{},
+               {[],[]},
+               0,22,
+               {file_descriptor,prim_file,
+                                #{handle =>
+                                      #Ref<0.2863178779.3660709906.203405>,
+                                  owner => <0.221.0>,r_ahead_size => 0,
+                                  r_buffer =>
+                                      #Ref<0.2863178779.3660709889.203449>}},
+               {eh_app_config,'ec_n1@centos7-dev',sorted,
+                              eh_failure_detector_api,
+                              eh_repl_data_manager_api,eh_storage_data_api,
+                              eh_write_conflict_resolver_api,
+                              eh_unique_id_generator_api,
+                              eh_wait_query_handler_api,lager_event,10000,
+                              "./","0000000000","ec_n1_repl.data",standard_io,
+                              true,100,1,2000}})
+
+23:16:00.384905 <0.221.0> eh_data_server:handle_call/3 --> {reply,false,
+    {eh_data_state,0,0,[],#{},
+        {[],[]},
+        0,22,
+        {file_descriptor,prim_file,
+            #{handle => #Ref<0.2863178779.3660709906.203405>,
+              owner => <0.221.0>,r_ahead_size => 0,
+              r_buffer => #Ref<0.2863178779.3660709889.203449>}},
+        {eh_app_config,'ec_n1@centos7-dev',sorted,eh_failure_detector_api,
+            eh_repl_data_manager_api,eh_storage_data_api,
+            eh_write_conflict_resolver_api,eh_unique_id_generator_api,
+            eh_wait_query_handler_api,lager_event,10000,"./","0000000000",
+            "ec_n1_repl.data",standard_io,true,100,1,2000}}}
+
+23:16:00.385202 <0.221.0>  '--> gen_server:try_handle_call/4
+
+23:16:00.385290 <0.222.0> eh_repl_data_manager_api:check_data/1 --> false
+
+23:16:00.385375 <0.222.0>  '--> eh_node_timestamp:valid_msg/6
+
+23:16:00.385599 <0.222.0> eh_system_util:find_map({eh_update_msg_key,1,candidate,10}, #{{eh_update_msg_key,1,candidate,10}=>{eh_update_msg_data,[{name,1,donald_trump},{party,1,republican}],
+                    <18723.452.0>,'ec_n1@centos7-dev',
+                    #Ref<18723.3896970053.3661103105.102449>}, {eh_update_msg_key,1,person,10}=>{eh_update_msg_data,[{name,1,john_smith},{age,1,40}],
+                    <18723.452.0>,'ec_n1@centos7-dev',
+                    #Ref<18723.3896970053.3661103105.102449>}})
+
+23:16:00.385844 <0.222.0> eh_system_util:find_map/2 --> {ok,{eh_update_msg_data,[{name,1,donald_trump},{party,1,republican}],
+                        <18723.452.0>,'ec_n1@centos7-dev',
+                        #Ref<18723.3896970053.3661103105.102449>}}
+
+23:16:00.385960 <0.222.0>  '--> eh_update_msg:exist_msg_key/2
+
+23:16:00.386042 <0.222.0> eh_system_config:get_node_id({eh_app_config,'ec_n1@centos7-dev',sorted,eh_failure_detector_api,
+               eh_repl_data_manager_api,eh_storage_data_api,
+               eh_write_conflict_resolver_api,eh_unique_id_generator_api,
+               eh_wait_query_handler_api,lager_event,10000,"./","0000000000",
+               "ec_n1_repl.data",standard_io,true,100,1,2000})
+
+23:16:00.386181 <0.222.0> eh_system_config:get_node_id/1 --> 'ec_n1@centos7-dev'
+
+23:16:00.386247 <0.222.0>  '--> eh_node_timestamp:msg_status/2
+
+23:16:00.386301 <0.222.0> eh_system_config:get_node_order({eh_app_config,'ec_n1@centos7-dev',sorted,eh_failure_detector_api,
+               eh_repl_data_manager_api,eh_storage_data_api,
+               eh_write_conflict_resolver_api,eh_unique_id_generator_api,
+               eh_wait_query_handler_api,lager_event,10000,"./","0000000000",
+               "ec_n1_repl.data",standard_io,true,100,1,2000})
+
+23:16:00.386486 <0.222.0> eh_system_config:get_node_order/1 --> sorted
+
+23:16:00.386587 <0.222.0>  '--> eh_node_timestamp:msg_status/2
+
+23:16:00.386652 <0.222.0> eh_repl_ring:effective_tail_node_id('ec_n1@centos7-dev', ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'], ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'], sorted)
+
+23:16:00.386791 <0.222.0> eh_repl_ring:predecessor('ec_n1@centos7-dev', ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'], ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'], sorted)
+
+23:16:00.386925 <0.222.0> eh_repl_ring:add('ec_n1@centos7-dev', ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'], ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'], sorted)
+
+23:16:00.387077 <0.222.0> eh_repl_ring:get_ordered_list(['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'], ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'], sorted)
+
+23:16:00.387186 <0.222.0> eh_repl_ring:get_ordered_list(['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'], ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'], user_defined)
+
+23:16:00.387289 <0.222.0> eh_repl_ring:make_ordered_list(['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'], ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'])
+
+23:16:00.387369 <0.222.0> eh_repl_ring:'-make_ordered_list/2-fun-0-'('ec_n1@centos7-dev', ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'])
+
+23:16:00.387495 <0.222.0> eh_repl_ring:'-make_ordered_list/2-fun-0-'/2 --> true
+
+23:16:00.387581 <0.222.0>  '--> lists:'-filter/2-lc$^0/1-0-'/2
+
+23:16:00.387646 <0.222.0> eh_repl_ring:'-make_ordered_list/2-fun-0-'('ec_n2@centos7-dev', ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'])
+
+23:16:00.387760 <0.222.0> eh_repl_ring:'-make_ordered_list/2-fun-0-'/2 --> true
+
+23:16:00.387842 <0.222.0>  '--> lists:'-filter/2-lc$^0/1-0-'/2
+
+23:16:00.387923 <0.222.0> eh_repl_ring:'-make_ordered_list/2-fun-0-'('ec_n3@centos7-dev', ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'])
+
+23:16:00.388075 <0.222.0> eh_repl_ring:'-make_ordered_list/2-fun-0-'/2 --> true
+
+23:16:00.388162 <0.222.0>  '--> lists:'-filter/2-lc$^0/1-0-'/2
+
+23:16:00.388273 <0.222.0> eh_repl_ring:make_ordered_list/2 --> ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev']
+
+23:16:00.388556 <0.222.0>  '--> eh_repl_ring:get_ordered_list/3
+
+23:16:00.388652 <0.222.0> eh_repl_ring:get_ordered_list/3 --> {['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'],
+ ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev']}
+
+23:16:00.388853 <0.222.0> eh_repl_ring:get_ordered_list/3 --> {['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'],
+ ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev']}
+
+23:16:00.388995 <0.222.0> eh_repl_ring:add/4 --> {['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'],
+ ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev']}
+
+23:16:00.389126 <0.222.0>  '--> eh_repl_ring:predecessor/4
+
+23:16:00.389197 <0.222.0> eh_repl_ring:'-predecessor/4-fun-0-'('ec_n1@centos7-dev', 'ec_n1@centos7-dev')
+
+23:16:00.389266 <0.222.0> eh_repl_ring:'-predecessor/4-fun-0-'/2 --> false
+
+23:16:00.389328 <0.222.0>  '--> lists:splitwith_1/3
+
+23:16:00.389436 <0.222.0> eh_repl_ring:predecessor/4 --> 'ec_n3@centos7-dev'
+
+23:16:00.389534 <0.222.0> eh_repl_ring:effective_tail_node_id/4 --> 'ec_n3@centos7-dev'
+
+23:16:00.389594 <0.222.0>  '--> eh_node_timestamp:msg_status/2
+
+23:16:00.389691 <0.222.0> eh_repl_ring:effective_head_node_id('ec_n1@centos7-dev', ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'], ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'], sorted)
+
+23:16:00.389835 <0.222.0> eh_repl_ring:effective_head_node_id/4 --> 'ec_n1@centos7-dev'
+
+23:16:00.389914 <0.222.0>  '--> eh_node_timestamp:msg_status/2
+
+23:16:00.390000 <0.222.0> eh_system_server:event_message("succ_update.valid_head_msg", [{{eh_update_msg_key,1,candidate,10},
+  {eh_update_msg_data,[{name,1,donald_trump},{party,1,republican}],
+                      <18723.452.0>,'ec_n1@centos7-dev',
+                      #Ref<18723.3896970053.3661103105.102449>}},
+ {{eh_update_msg_key,1,person,10},
+  {eh_update_msg_data,[{name,1,john_smith},{age,1,40}],
+                      <18723.452.0>,'ec_n1@centos7-dev',
+                      #Ref<18723.3896970053.3661103105.102449>}}], {set,0,16,16,8,80,48,
+     {[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]},
+     {{[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]}}}, {eh_app_config,'ec_n1@centos7-dev',sorted,eh_failure_detector_api,
+               eh_repl_data_manager_api,eh_storage_data_api,
+               eh_write_conflict_resolver_api,eh_unique_id_generator_api,
+               eh_wait_query_handler_api,lager_event,10000,"./","0000000000",
+               "ec_n1_repl.data",standard_io,true,100,1,2000})
+
+23:16:00.390426 <0.222.0> eh_event:message(eh_system_server, "succ_update.valid_head_msg", {[{{eh_update_msg_key,1,candidate,10},
+   {eh_update_msg_data,[{name,1,donald_trump},{party,1,republican}],
+                       <18723.452.0>,'ec_n1@centos7-dev',
+                       #Ref<18723.3896970053.3661103105.102449>}},
+  {{eh_update_msg_key,1,person,10},
+   {eh_update_msg_data,[{name,1,john_smith},{age,1,40}],
+                       <18723.452.0>,'ec_n1@centos7-dev',
+                       #Ref<18723.3896970053.3661103105.102449>}}],
+ {set,0,16,16,8,80,48,
+      {[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]},
+      {{[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]}}}}, {eh_app_config,'ec_n1@centos7-dev',sorted,eh_failure_detector_api,
+               eh_repl_data_manager_api,eh_storage_data_api,
+               eh_write_conflict_resolver_api,eh_unique_id_generator_api,
+               eh_wait_query_handler_api,lager_event,10000,"./","0000000000",
+               "ec_n1_repl.data",standard_io,true,100,1,2000})
+
+23:16:00.390842 <0.222.0> eh_event:event_notify(message, {eh_system_server,"succ_update.valid_head_msg",
+    {[{{eh_update_msg_key,1,candidate,10},
+       {eh_update_msg_data,
+           [{name,1,donald_trump},{party,1,republican}],
+           <18723.452.0>,'ec_n1@centos7-dev',
+           #Ref<18723.3896970053.3661103105.102449>}},
+      {{eh_update_msg_key,1,person,10},
+       {eh_update_msg_data,
+           [{name,1,john_smith},{age,1,40}],
+           <18723.452.0>,'ec_n1@centos7-dev',
+           #Ref<18723.3896970053.3661103105.102449>}}],
+     {set,0,16,16,8,80,48,
+         {[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]},
+         {{[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]}}}}}, {eh_app_config,'ec_n1@centos7-dev',sorted,eh_failure_detector_api,
+               eh_repl_data_manager_api,eh_storage_data_api,
+               eh_write_conflict_resolver_api,eh_unique_id_generator_api,
+               eh_wait_query_handler_api,lager_event,10000,"./","0000000000",
+               "ec_n1_repl.data",standard_io,true,100,1,2000})
+
+23:16:00.391146 <0.222.0> eh_event_handler:get_msg_data({message,
+    {eh_system_server,"succ_update.valid_head_msg",
+        {[{{eh_update_msg_key,1,candidate,10},
+           {eh_update_msg_data,
+               [{name,1,donald_trump},{party,1,republican}],
+               <18723.452.0>,'ec_n1@centos7-dev',
+               #Ref<18723.3896970053.3661103105.102449>}},
+          {{eh_update_msg_key,1,person,10},
+           {eh_update_msg_data,
+               [{name,1,john_smith},{age,1,40}],
+               <18723.452.0>,'ec_n1@centos7-dev',
+               #Ref<18723.3896970053.3661103105.102449>}}],
+         {set,0,16,16,8,80,48,
+             {[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]},
+             {{[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]}}}}}})
+
+23:16:00.391374 <0.222.0> eh_event_handler:list_msg_set_value({set,0,16,16,8,80,48,
+     {[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]},
+     {{[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]}}})
+
+23:16:00.391501 <0.222.0> eh_system_util:fold_set(#Fun<eh_event_handler.0.20189961>, [], {set,0,16,16,8,80,48,
+     {[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]},
+     {{[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]}}})
+
+23:16:00.391611 <0.222.0> eh_system_util:fold_set/3 --> []
+
+23:16:00.391710 <0.222.0> eh_event_handler:list_msg_set_value/1 --> []
+
+23:16:00.391816 <0.222.0>  '--> eh_event_handler:get_msg_data/1
+
+23:16:00.391870 <0.222.0> eh_event_handler:list_msg_list([{{eh_update_msg_key,1,candidate,10},
+  {eh_update_msg_data,[{name,1,donald_trump},{party,1,republican}],
+                      <18723.452.0>,'ec_n1@centos7-dev',
+                      #Ref<18723.3896970053.3661103105.102449>}},
+ {{eh_update_msg_key,1,person,10},
+  {eh_update_msg_data,[{name,1,john_smith},{age,1,40}],
+                      <18723.452.0>,'ec_n1@centos7-dev',
+                      #Ref<18723.3896970053.3661103105.102449>}}])
+
+23:16:00.392024 <0.222.0> eh_event_handler:'-list_msg_list/1-fun-0-'({{eh_update_msg_key,1,candidate,10},
+ {eh_update_msg_data,[{name,1,donald_trump},{party,1,republican}],
+                     <18723.452.0>,'ec_n1@centos7-dev',
+                     #Ref<18723.3896970053.3661103105.102449>}}, [])
+
+23:16:00.392206 <0.222.0> eh_event_handler:list_msg({eh_update_msg_key,1,candidate,10}, 'ec_n1@centos7-dev')
+
+23:16:00.392298 <0.222.0> eh_event_handler:list_msg_key({eh_update_msg_key,1,candidate,10})
+
+23:16:00.392353 <0.222.0> eh_event_handler:is_listable_msg_key({eh_update_msg_key,1,candidate,10})
+
+23:16:00.392425 <0.222.0> eh_event_handler:is_listable_value(1)
+
+23:16:00.392502 <0.222.0> eh_event_handler:is_listable_value/1 --> true
+
+23:16:00.392584 <0.222.0>  '--> eh_event_handler:is_listable_msg_key/1
+
+23:16:00.392639 <0.222.0> eh_event_handler:is_listable_value(candidate)
+
+23:16:00.392706 <0.222.0> eh_event_handler:is_listable_value/1 --> true
+
+23:16:00.392759 <0.222.0>  '--> eh_event_handler:is_listable_msg_key/1
+
+23:16:00.392823 <0.222.0> eh_event_handler:is_listable_value(10)
+
+23:16:00.392904 <0.222.0> eh_event_handler:is_listable_value/1 --> true
+
+23:16:00.392985 <0.222.0> eh_event_handler:is_listable_msg_key/1 --> true
+
+23:16:00.393078 <0.222.0>  '--> eh_event_handler:list_msg_key/1
+
+23:16:00.393136 <0.222.0> eh_event_handler:list_value(1)
+
+23:16:00.393179 <0.222.0> eh_event_handler:list_value/1 --> "1"
+
+23:16:00.393245 <0.222.0>  '--> eh_event_handler:list_msg_key/1
+
+23:16:00.393310 <0.222.0> eh_event_handler:list_value(candidate)
+
+23:16:00.393355 <0.222.0> eh_event_handler:list_value/1 --> "candidate"
+
+23:16:00.393419 <0.222.0>  '--> eh_event_handler:list_msg_key/1
+
+23:16:00.393498 <0.222.0> eh_event_handler:list_value(10)
+
+23:16:00.393547 <0.222.0> eh_event_handler:list_value/1 --> "10"
+
+23:16:00.393610 <0.222.0>  '--> eh_event_handler:list_msg_key/1
+
+23:16:00.393672 <0.222.0> eh_event_handler:list_msg_key/1 --> "{1,candidate,10}"
+
+23:16:00.393757 <0.222.0>  '--> eh_event_handler:list_msg/2
+
+23:16:00.393800 <0.222.0> eh_event_handler:list_node_msg('ec_n1@centos7-dev', "{1,candidate,10}")
+
+23:16:00.393870 <0.222.0> eh_system_util:get_node_name('ec_n1@centos7-dev')
+
+23:16:00.393950 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(101)
+
+23:16:00.394038 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+23:16:00.394093 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.394308 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(99)
+
+23:16:00.394381 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+23:16:00.394443 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.394497 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(95)
+
+23:16:00.394541 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+23:16:00.394586 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.394646 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(110)
+
+23:16:00.394736 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+23:16:00.394819 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.394866 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(49)
+
+23:16:00.394917 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+23:16:00.394964 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.395029 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(64)
+
+23:16:00.395102 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> false
+
+23:16:00.395154 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.395194 <0.222.0> eh_system_util:get_node_name/1 --> "ec_n1"
+
+23:16:00.395239 <0.222.0>  '--> eh_event_handler:list_node_msg/2
+
+23:16:00.395303 <0.222.0> eh_event_handler:list_node_msg/2 --> "ec_n1=>{1,candidate,10}"
+
+23:16:00.395448 <0.222.0> eh_event_handler:list_msg/2 --> "ec_n1=>{1,candidate,10}"
+
+23:16:00.395527 <0.222.0>  '--> eh_event_handler:'-list_msg_list/1-fun-0-'/2
+
+23:16:00.395623 <0.222.0> eh_event_handler:add_list("ec_n1=>{1,candidate,10}", [])
+
+23:16:00.395741 <0.222.0> eh_event_handler:add_list/2 --> "ec_n1=>{1,candidate,10}"
+
+23:16:00.395830 <0.222.0> eh_event_handler:'-list_msg_list/1-fun-0-'/2 --> "ec_n1=>{1,candidate,10}"
+
+23:16:00.395912 <0.222.0>  '--> lists:foldl/3
+
+23:16:00.395977 <0.222.0> eh_event_handler:'-list_msg_list/1-fun-0-'({{eh_update_msg_key,1,person,10},
+ {eh_update_msg_data,[{name,1,john_smith},{age,1,40}],
+                     <18723.452.0>,'ec_n1@centos7-dev',
+                     #Ref<18723.3896970053.3661103105.102449>}}, "ec_n1=>{1,candidate,10}")
+
+23:16:00.396136 <0.222.0> eh_event_handler:list_msg({eh_update_msg_key,1,person,10}, 'ec_n1@centos7-dev')
+
+23:16:00.396249 <0.222.0> eh_event_handler:list_msg_key({eh_update_msg_key,1,person,10})
+
+23:16:00.396324 <0.222.0> eh_event_handler:is_listable_msg_key({eh_update_msg_key,1,person,10})
+
+23:16:00.396441 <0.222.0> eh_event_handler:is_listable_value(1)
+
+23:16:00.396522 <0.222.0> eh_event_handler:is_listable_value/1 --> true
+
+23:16:00.396616 <0.222.0>  '--> eh_event_handler:is_listable_msg_key/1
+
+23:16:00.396665 <0.222.0> eh_event_handler:is_listable_value(person)
+
+23:16:00.396730 <0.222.0> eh_event_handler:is_listable_value/1 --> true
+
+23:16:00.396791 <0.222.0>  '--> eh_event_handler:is_listable_msg_key/1
+
+23:16:00.396855 <0.222.0> eh_event_handler:is_listable_value(10)
+
+23:16:00.397530 <0.222.0> eh_event_handler:is_listable_value/1 --> true
+
+23:16:00.398026 <0.222.0> eh_event_handler:is_listable_msg_key/1 --> true
+
+23:16:00.398404 <0.222.0>  '--> eh_event_handler:list_msg_key/1
+
+23:16:00.398548 <0.222.0> eh_event_handler:list_value(1)
+
+23:16:00.398627 <0.222.0> eh_event_handler:list_value/1 --> "1"
+
+23:16:00.398794 <0.222.0>  '--> eh_event_handler:list_msg_key/1
+
+23:16:00.398873 <0.222.0> eh_event_handler:list_value(person)
+
+23:16:00.398933 <0.222.0> eh_event_handler:list_value/1 --> "person"
+
+23:16:00.399004 <0.222.0>  '--> eh_event_handler:list_msg_key/1
+
+23:16:00.399069 <0.222.0> eh_event_handler:list_value(10)
+
+23:16:00.399141 <0.222.0> eh_event_handler:list_value/1 --> "10"
+
+23:16:00.399208 <0.222.0>  '--> eh_event_handler:list_msg_key/1
+
+23:16:00.399270 <0.222.0> eh_event_handler:list_msg_key/1 --> "{1,person,10}"
+
+23:16:00.399364 <0.222.0>  '--> eh_event_handler:list_msg/2
+
+23:16:00.399430 <0.222.0> eh_event_handler:list_node_msg('ec_n1@centos7-dev', "{1,person,10}")
+
+23:16:00.399524 <0.222.0> eh_system_util:get_node_name('ec_n1@centos7-dev')
+
+23:16:00.399598 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(101)
+
+23:16:00.399707 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+23:16:00.399787 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.399835 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(99)
+
+23:16:00.399880 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+23:16:00.399950 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.399998 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(95)
+
+23:16:00.400042 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+23:16:00.400088 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.400131 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(110)
+
+23:16:00.400212 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+23:16:00.400280 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.400320 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(49)
+
+23:16:00.400370 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+23:16:00.400417 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.400455 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(64)
+
+23:16:00.400536 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> false
+
+23:16:00.400635 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.400715 <0.222.0> eh_system_util:get_node_name/1 --> "ec_n1"
+
+23:16:00.400770 <0.222.0>  '--> eh_event_handler:list_node_msg/2
+
+23:16:00.400811 <0.222.0> eh_event_handler:list_node_msg/2 --> "ec_n1=>{1,person,10}"
+
+23:16:00.400887 <0.222.0> eh_event_handler:list_msg/2 --> "ec_n1=>{1,person,10}"
+
+23:16:00.400990 <0.222.0>  '--> eh_event_handler:'-list_msg_list/1-fun-0-'/2
+
+23:16:00.401046 <0.222.0> eh_event_handler:add_list("ec_n1=>{1,person,10}", "ec_n1=>{1,candidate,10}")
+
+23:16:00.401131 <0.222.0> eh_event_handler:add_list/2 --> "ec_n1=>{1,candidate,10},ec_n1=>{1,person,10}"
+
+23:16:00.401281 <0.222.0> eh_event_handler:'-list_msg_list/1-fun-0-'/2 --> "ec_n1=>{1,candidate,10},ec_n1=>{1,person,10}"
+
+23:16:00.401367 <0.222.0>  '--> lists:foldl_1/3
+
+23:16:00.401442 <0.222.0> eh_event_handler:list_msg_list/1 --> "ec_n1=>{1,candidate,10},ec_n1=>{1,person,10}"
+
+23:16:00.401522 <0.222.0>  '--> eh_event_handler:get_msg_data/1
+
+23:16:00.401573 <0.222.0> eh_event_handler:get_msg_data/1 --> {"[~p] ~p message=~p, completed_set=~p~n",
+ [eh_system_server,"succ_update.valid_head_msg",
+  "ec_n1=>{1,candidate,10},ec_n1=>{1,person,10}",[]]}
+
+23:16:00.401702 <0.222.0>  '--> eh_event:event_notify/3
+
+23:16:00.401757 <0.222.0> eh_system_config:get_event_logger({eh_app_config,'ec_n1@centos7-dev',sorted,eh_failure_detector_api,
+               eh_repl_data_manager_api,eh_storage_data_api,
+               eh_write_conflict_resolver_api,eh_unique_id_generator_api,
+               eh_wait_query_handler_api,lager_event,10000,"./","0000000000",
+               "ec_n1_repl.data",standard_io,true,100,1,2000})
+
+23:16:00.401969 <0.222.0> eh_system_config:get_event_logger/1 --> lager_event
+
+23:16:00.402031 <0.222.0>  '--> eh_event:event_notify/3
+
+23:16:00.402101 <0.222.0> eh_event:event_notify/3 --> ok
+
+23:16:00.402178 <0.222.0> eh_event:message/4 --> ok
+
+23:16:00.402225 <0.222.0> eh_system_server:event_message/4 --> ok
+
+23:16:00.402268 <0.222.0>  '--> eh_system_server:process_msg/9
+
+23:16:00.402316 <0.222.0> eh_node_state:update_state_msg({eh_system_state,eh_ready,1,
+    ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'],
+    ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'],
+    'ec_n3@centos7-dev','ec_n2@centos7-dev',
+    #{{eh_update_msg_key,1,candidate,10} =>
+          {eh_update_msg_data,
+              [{name,1,donald_trump},{party,1,republican}],
+              <18723.452.0>,'ec_n1@centos7-dev',
+              #Ref<18723.3896970053.3661103105.102449>},
+      {eh_update_msg_key,1,person,10} =>
+          {eh_update_msg_data,
+              [{name,1,john_smith},{age,1,40}],
+              <18723.452.0>,'ec_n1@centos7-dev',
+              #Ref<18723.3896970053.3661103105.102449>}},
+    #{},
+    {set,0,16,16,8,80,48,
+        {[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]},
+        {{[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]}}},
+    #{},#{},undefined,
+    {eh_app_config,'ec_n1@centos7-dev',sorted,eh_failure_detector_api,
+        eh_repl_data_manager_api,eh_storage_data_api,
+        eh_write_conflict_resolver_api,eh_unique_id_generator_api,
+        eh_wait_query_handler_api,lager_event,10000,"./","0000000000",
+        "ec_n1_repl.data",standard_io,true,100,1,2000}})
+
+23:16:00.402799 <0.222.0> eh_node_state:update_state_msg/1 --> {eh_system_state,eh_ready,1,
+    ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'],
+    ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'],
+    'ec_n3@centos7-dev','ec_n2@centos7-dev',
+    #{{eh_update_msg_key,1,candidate,10} =>
+          {eh_update_msg_data,
+              [{name,1,donald_trump},{party,1,republican}],
+              <18723.452.0>,'ec_n1@centos7-dev',
+              #Ref<18723.3896970053.3661103105.102449>},
+      {eh_update_msg_key,1,person,10} =>
+          {eh_update_msg_data,
+              [{name,1,john_smith},{age,1,40}],
+              <18723.452.0>,'ec_n1@centos7-dev',
+              #Ref<18723.3896970053.3661103105.102449>}},
+    #{},
+    {set,0,16,16,8,80,48,
+        {[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]},
+        {{[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]}}},
+    #{},#{},undefined,
+    {eh_app_config,'ec_n1@centos7-dev',sorted,eh_failure_detector_api,
+        eh_repl_data_manager_api,eh_storage_data_api,
+        eh_write_conflict_resolver_api,eh_unique_id_generator_api,
+        eh_wait_query_handler_api,lager_event,10000,"./","0000000000",
+        "ec_n1_repl.data",standard_io,true,100,1,2000}}
+
+23:16:00.403243 <0.222.0>  '--> eh_system_server:process_msg/9
+
+23:16:00.403301 <0.222.0> eh_system_util:subtract_set({set,0,16,16,8,80,48,
+     {[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]},
+     {{[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]}}}, {set,0,16,16,8,80,48,
+     {[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]},
+     {{[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]}}})
+
+23:16:00.403469 <0.222.0> eh_system_util:subtract_set/2 --> {set,0,16,16,8,80,48,
+     {[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]},
+     {{[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]}}}
+
+23:16:00.403583 <0.222.0>  '--> eh_node_timestamp:update_state_completed_set/2
+
+23:16:00.403674 <0.222.0> eh_system_server:reply_to_client(fun eh_persist_data:persist_data/2, [{{eh_update_msg_key,1,candidate,10},
+  {eh_update_msg_data,[{name,1,donald_trump},{party,1,republican}],
+                      <18723.452.0>,'ec_n1@centos7-dev',
+                      #Ref<18723.3896970053.3661103105.102449>}},
+ {{eh_update_msg_key,1,person,10},
+  {eh_update_msg_data,[{name,1,john_smith},{age,1,40}],
+                      <18723.452.0>,'ec_n1@centos7-dev',
+                      #Ref<18723.3896970053.3661103105.102449>}}], {set,0,16,16,8,80,48,
+     {[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]},
+     {{[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]}}}, {eh_system_state,eh_ready,1,
+    ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'],
+    ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'],
+    'ec_n3@centos7-dev','ec_n2@centos7-dev',
+    #{{eh_update_msg_key,1,candidate,10} =>
+          {eh_update_msg_data,
+              [{name,1,donald_trump},{party,1,republican}],
+              <18723.452.0>,'ec_n1@centos7-dev',
+              #Ref<18723.3896970053.3661103105.102449>},
+      {eh_update_msg_key,1,person,10} =>
+          {eh_update_msg_data,
+              [{name,1,john_smith},{age,1,40}],
+              <18723.452.0>,'ec_n1@centos7-dev',
+              #Ref<18723.3896970053.3661103105.102449>}},
+    #{},
+    {set,0,16,16,8,80,48,
+        {[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]},
+        {{[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]}}},
+    #{},#{},undefined,
+    {eh_app_config,'ec_n1@centos7-dev',sorted,eh_failure_detector_api,
+        eh_repl_data_manager_api,eh_storage_data_api,
+        eh_write_conflict_resolver_api,eh_unique_id_generator_api,
+        eh_wait_query_handler_api,lager_event,10000,"./","0000000000",
+        "ec_n1_repl.data",standard_io,true,100,1,2000}})
+
+23:16:00.404325 <0.222.0> eh_system_config:get_repl_data_manager({eh_app_config,'ec_n1@centos7-dev',sorted,eh_failure_detector_api,
+               eh_repl_data_manager_api,eh_storage_data_api,
+               eh_write_conflict_resolver_api,eh_unique_id_generator_api,
+               eh_wait_query_handler_api,lager_event,10000,"./","0000000000",
+               "ec_n1_repl.data",standard_io,true,100,1,2000})
+
+23:16:00.404483 <0.222.0> eh_system_config:get_repl_data_manager/1 --> eh_repl_data_manager_api
+
+23:16:00.404558 <0.222.0>  '--> eh_persist_data:persist_data/2
+
+23:16:00.404605 <0.222.0> eh_node_state:snapshot_state({eh_system_state,eh_ready,1,
+    ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'],
+    ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'],
+    'ec_n3@centos7-dev','ec_n2@centos7-dev',
+    #{{eh_update_msg_key,1,candidate,10} =>
+          {eh_update_msg_data,
+              [{name,1,donald_trump},{party,1,republican}],
+              <18723.452.0>,'ec_n1@centos7-dev',
+              #Ref<18723.3896970053.3661103105.102449>},
+      {eh_update_msg_key,1,person,10} =>
+          {eh_update_msg_data,
+              [{name,1,john_smith},{age,1,40}],
+              <18723.452.0>,'ec_n1@centos7-dev',
+              #Ref<18723.3896970053.3661103105.102449>}},
+    #{},
+    {set,0,16,16,8,80,48,
+        {[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]},
+        {{[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]}}},
+    #{},#{},undefined,
+    {eh_app_config,'ec_n1@centos7-dev',sorted,eh_failure_detector_api,
+        eh_repl_data_manager_api,eh_storage_data_api,
+        eh_write_conflict_resolver_api,eh_unique_id_generator_api,
+        eh_wait_query_handler_api,lager_event,10000,"./","0000000000",
+        "ec_n1_repl.data",standard_io,true,100,1,2000}})
+
+23:16:00.405019 <0.222.0> eh_node_state:snapshot_state/1 --> eh_ready
+
+23:16:00.405113 <0.222.0>  '--> eh_persist_data:persist_data/2
+
+23:16:00.405169 <0.222.0> eh_repl_data_manager_api:update(eh_ready, 1, [{person,10,[{name,1,john_smith},{age,1,40}]},
+ {candidate,10,[{name,1,donald_trump},{party,1,republican}]}])
+
+23:16:00.405281 <0.221.0> eh_data_server:handle_call({eh_update,{eh_ready,1,
+                     [{person,10,[{name,1,john_smith},{age,1,40}]},
+                      {candidate,10,
+                                 [{name,1,donald_trump},
+                                  {party,1,republican}]}]}}, {<0.222.0>,[alias|#Ref<0.2863178779.3660644353.204252>]}, {eh_data_state,0,0,[],#{},
+               {[],[]},
+               0,22,
+               {file_descriptor,prim_file,
+                                #{handle =>
+                                      #Ref<0.2863178779.3660709906.203405>,
+                                  owner => <0.221.0>,r_ahead_size => 0,
+                                  r_buffer =>
+                                      #Ref<0.2863178779.3660709889.203449>}},
+               {eh_app_config,'ec_n1@centos7-dev',sorted,
+                              eh_failure_detector_api,
+                              eh_repl_data_manager_api,eh_storage_data_api,
+                              eh_write_conflict_resolver_api,
+                              eh_unique_id_generator_api,
+                              eh_wait_query_handler_api,lager_event,10000,
+                              "./","0000000000","ec_n1_repl.data",standard_io,
+                              true,100,1,2000}})
+
+23:16:00.405719 <0.221.0> eh_data_server:write_data(1, [{{candidate,10},2},{{person,10},2}], #{{eh_storage_key,candidate,10}=>{[{eh_storage_value,1,2,1,party,republican}],
+ [{eh_storage_value,1,1,1,name,donald_trump}]}, {eh_storage_key,person,10}=>{[{eh_storage_value,1,2,1,age,40}],[{eh_storage_value,1,1,1,name,john_smith}]}}, {[{eh_storage_data,candidate,10,1,2,1,party,republican},
+  {eh_storage_data,candidate,10,1,1,1,name,donald_trump},
+  {eh_storage_data,person,10,1,2,1,age,40}],
+ [{eh_storage_data,person,10,1,1,1,name,john_smith}]}, {eh_data_state,0,0,[],#{},
+               {[],[]},
+               0,22,
+               {file_descriptor,prim_file,
+                                #{handle =>
+                                      #Ref<0.2863178779.3660709906.203405>,
+                                  owner => <0.221.0>,r_ahead_size => 0,
+                                  r_buffer =>
+                                      #Ref<0.2863178779.3660709889.203449>}},
+               {eh_app_config,'ec_n1@centos7-dev',sorted,
+                              eh_failure_detector_api,
+                              eh_repl_data_manager_api,eh_storage_data_api,
+                              eh_write_conflict_resolver_api,
+                              eh_unique_id_generator_api,
+                              eh_wait_query_handler_api,lager_event,10000,
+                              "./","0000000000","ec_n1_repl.data",standard_io,
+                              true,100,1,2000}})
+
+23:16:00.406165 <0.221.0> eh_storage_data_operation_api:write({eh_app_config,'ec_n1@centos7-dev',sorted,eh_failure_detector_api,
+               eh_repl_data_manager_api,eh_storage_data_api,
+               eh_write_conflict_resolver_api,eh_unique_id_generator_api,
+               eh_wait_query_handler_api,lager_event,10000,"./","0000000000",
+               "ec_n1_repl.data",standard_io,true,100,1,2000}, {file_descriptor,prim_file,
+                 #{handle => #Ref<0.2863178779.3660709906.203405>,
+                   owner => <0.221.0>,r_ahead_size => 0,
+                   r_buffer => #Ref<0.2863178779.3660709889.203449>}}, {[{eh_storage_data,candidate,10,1,2,1,party,republican},
+  {eh_storage_data,candidate,10,1,1,1,name,donald_trump},
+  {eh_storage_data,person,10,1,2,1,age,40}],
+ [{eh_storage_data,person,10,1,1,1,name,john_smith}]}, 22, 0)
+
+23:16:00.406472 <0.221.0> eh_system_config:get_storage_data({eh_app_config,'ec_n1@centos7-dev',sorted,eh_failure_detector_api,
+               eh_repl_data_manager_api,eh_storage_data_api,
+               eh_write_conflict_resolver_api,eh_unique_id_generator_api,
+               eh_wait_query_handler_api,lager_event,10000,"./","0000000000",
+               "ec_n1_repl.data",standard_io,true,100,1,2000})
+
+23:16:00.406701 <0.221.0> eh_system_config:get_storage_data/1 --> eh_storage_data_api
+
+23:16:00.406787 <0.221.0>  '--> eh_storage_data_operation_api:write/5
+
+23:16:00.406832 <0.221.0> eh_storage_data_operation_api:write_entries(eh_storage_data_api, {file_descriptor,prim_file,
+                 #{handle => #Ref<0.2863178779.3660709906.203405>,
+                   owner => <0.221.0>,r_ahead_size => 0,
+                   r_buffer => #Ref<0.2863178779.3660709889.203449>}}, {[{eh_storage_data,candidate,10,1,2,1,party,republican},
+  {eh_storage_data,candidate,10,1,1,1,name,donald_trump},
+  {eh_storage_data,person,10,1,2,1,age,40}],
+ [{eh_storage_data,person,10,1,1,1,name,john_smith}]})
+
+23:16:00.407073 <0.221.0> eh_storage_data_operation_api:write_entry(eh_storage_data_api, {file_descriptor,prim_file,
+                 #{handle => #Ref<0.2863178779.3660709906.203405>,
+                   owner => <0.221.0>,r_ahead_size => 0,
+                   r_buffer => #Ref<0.2863178779.3660709889.203449>}}, {eh_storage_data,person,10,1,1,1,name,john_smith})
+
+23:16:00.407244 <0.221.0> eh_storage_data_api:entry_to_binary({eh_storage_data,person,10,1,1,1,name,john_smith})
+
+23:16:00.407334 <0.221.0> eh_storage_data_api:compute_hash(58, <<131,104,8,100,0,15,101,104,95,115,116,111,114,97,103,101,95,100,97,116,97,
+  100,0,6,112,101,114,115,111,110,97,10,97,1,97,1,97,1,100,0,4,110,97,109,101,
+  100,0,10,106,111,104,110,95,115,109,105,116,104>>)
+
+23:16:00.432037 <0.221.0> eh_storage_data_api:compute_hash/2 --> <<184,178,106,153,187,191,62,48,117,85,49,68,90,30,99,175,239,23,47,80>>
+
+23:16:00.432318 <0.221.0>  '--> eh_storage_data_api:entry_to_binary/1
+
+23:16:00.432502 <0.221.0> eh_storage_data_api:entry_to_binary/1 --> <<184,178,106,153,187,191,62,48,117,85,49,68,90,30,99,175,239,23,47,80,0,0,0,
+  58,131,104,8,100,0,15,101,104,95,115,116,111,114,97,103,101,95,100,97,116,97,
+  100,0,6,112,101,114,115,111,110,97,10,97,1,97,1,97,1,100,0,4,110,97,109,101,
+  100,0,10,106,111,104,110,95,115,109,105,116,104>>
+
+23:16:00.432738 <0.221.0>  '--> eh_storage_data_operation_api:write_entry/3
+
+23:16:00.432839 <0.221.0> eh_persist_storage_data:write_data({file_descriptor,prim_file,
+                 #{handle => #Ref<0.2863178779.3660709906.203405>,
+                   owner => <0.221.0>,r_ahead_size => 0,
+                   r_buffer => #Ref<0.2863178779.3660709889.203449>}}, <<184,178,106,153,187,191,62,48,117,85,49,68,90,30,99,175,239,23,47,80,0,0,0,
+  58,131,104,8,100,0,15,101,104,95,115,116,111,114,97,103,101,95,100,97,116,97,
+  100,0,6,112,101,114,115,111,110,97,10,97,1,97,1,97,1,100,0,4,110,97,109,101,
+  100,0,10,106,111,104,110,95,115,109,105,116,104>>)
+
+23:16:00.433153 <0.221.0> eh_persist_storage_data:write_data/2 --> ok
+
+23:16:00.433249 <0.221.0> eh_storage_data_operation_api:write_entry/3 --> ok
+
+23:16:00.433300 <0.221.0>  '--> eh_storage_data_operation_api:write_entries/3
+
+23:16:00.433340 <0.221.0> eh_storage_data_operation_api:write_entries(eh_storage_data_api, {file_descriptor,prim_file,
+                 #{handle => #Ref<0.2863178779.3660709906.203405>,
+                   owner => <0.221.0>,r_ahead_size => 0,
+                   r_buffer => #Ref<0.2863178779.3660709889.203449>}}, {[{eh_storage_data,candidate,10,1,2,1,party,republican}],
+ [{eh_storage_data,person,10,1,2,1,age,40},
+  {eh_storage_data,candidate,10,1,1,1,name,donald_trump}]})
+
+23:16:00.433652 <0.221.0> eh_storage_data_operation_api:write_entry(eh_storage_data_api, {file_descriptor,prim_file,
+                 #{handle => #Ref<0.2863178779.3660709906.203405>,
+                   owner => <0.221.0>,r_ahead_size => 0,
+                   r_buffer => #Ref<0.2863178779.3660709889.203449>}}, {eh_storage_data,person,10,1,2,1,age,40})
+
+23:16:00.433848 <0.221.0> eh_storage_data_api:entry_to_binary({eh_storage_data,person,10,1,2,1,age,40})
+
+23:16:00.433959 <0.221.0> eh_storage_data_api:compute_hash(46, <<131,104,8,100,0,15,101,104,95,115,116,111,114,97,103,101,95,100,97,116,97,
+  100,0,6,112,101,114,115,111,110,97,10,97,1,97,2,97,1,100,0,3,97,103,101,97,40>>)
+
+23:16:00.434100 <0.221.0> eh_storage_data_api:compute_hash/2 --> <<170,237,251,234,31,204,209,171,217,233,213,131,215,250,0,213,1,104,147,60>>
+
+23:16:00.434205 <0.221.0>  '--> eh_storage_data_api:entry_to_binary/1
+
+23:16:00.434277 <0.221.0> eh_storage_data_api:entry_to_binary/1 --> <<170,237,251,234,31,204,209,171,217,233,213,131,215,250,0,213,1,104,147,60,0,
+  0,0,46,131,104,8,100,0,15,101,104,95,115,116,111,114,97,103,101,95,100,97,
+  116,97,100,0,6,112,101,114,115,111,110,97,10,97,1,97,2,97,1,100,0,3,97,103,
+  101,97,40>>
+
+23:16:00.434554 <0.221.0>  '--> eh_storage_data_operation_api:write_entry/3
+
+23:16:00.434663 <0.221.0> eh_persist_storage_data:write_data({file_descriptor,prim_file,
+                 #{handle => #Ref<0.2863178779.3660709906.203405>,
+                   owner => <0.221.0>,r_ahead_size => 0,
+                   r_buffer => #Ref<0.2863178779.3660709889.203449>}}, <<170,237,251,234,31,204,209,171,217,233,213,131,215,250,0,213,1,104,147,60,0,
+  0,0,46,131,104,8,100,0,15,101,104,95,115,116,111,114,97,103,101,95,100,97,
+  116,97,100,0,6,112,101,114,115,111,110,97,10,97,1,97,2,97,1,100,0,3,97,103,
+  101,97,40>>)
+
+23:16:00.435257 <0.221.0> eh_persist_storage_data:write_data/2 --> ok
+
+23:16:00.435360 <0.221.0> eh_storage_data_operation_api:write_entry/3 --> ok
+
+23:16:00.435432 <0.221.0>  '--> eh_storage_data_operation_api:write_entries/3
+
+23:16:00.435494 <0.221.0> eh_storage_data_operation_api:write_entries(eh_storage_data_api, {file_descriptor,prim_file,
+                 #{handle => #Ref<0.2863178779.3660709906.203405>,
+                   owner => <0.221.0>,r_ahead_size => 0,
+                   r_buffer => #Ref<0.2863178779.3660709889.203449>}}, {[{eh_storage_data,candidate,10,1,2,1,party,republican}],
+ [{eh_storage_data,candidate,10,1,1,1,name,donald_trump}]})
+
+23:16:00.435696 <0.221.0> eh_storage_data_operation_api:write_entry(eh_storage_data_api, {file_descriptor,prim_file,
+                 #{handle => #Ref<0.2863178779.3660709906.203405>,
+                   owner => <0.221.0>,r_ahead_size => 0,
+                   r_buffer => #Ref<0.2863178779.3660709889.203449>}}, {eh_storage_data,candidate,10,1,1,1,name,donald_trump})
+
+23:16:00.435879 <0.221.0> eh_storage_data_api:entry_to_binary({eh_storage_data,candidate,10,1,1,1,name,donald_trump})
+
+23:16:00.435975 <0.221.0> eh_storage_data_api:compute_hash(63, <<131,104,8,100,0,15,101,104,95,115,116,111,114,97,103,101,95,100,97,116,97,
+  100,0,9,99,97,110,100,105,100,97,116,101,97,10,97,1,97,1,97,1,100,0,4,110,97,
+  109,101,100,0,12,100,111,110,97,108,100,95,116,114,117,109,112>>)
+
+23:16:00.436126 <0.221.0> eh_storage_data_api:compute_hash/2 --> <<16,251,171,117,41,198,214,30,52,251,170,144,85,59,253,22,16,158,127,195>>
+
+23:16:00.436232 <0.221.0>  '--> eh_storage_data_api:entry_to_binary/1
+
+23:16:00.436301 <0.221.0> eh_storage_data_api:entry_to_binary/1 --> <<16,251,171,117,41,198,214,30,52,251,170,144,85,59,253,22,16,158,127,195,0,0,
+  0,63,131,104,8,100,0,15,101,104,95,115,116,111,114,97,103,101,95,100,97,116,
+  97,100,0,9,99,97,110,100,105,100,97,116,101,97,10,97,1,97,1,97,1,100,0,4,110,
+  97,109,101,100,0,12,100,111,110,97,108,100,95,116,114,117,109,112>>
+
+23:16:00.436495 <0.221.0>  '--> eh_storage_data_operation_api:write_entry/3
+
+23:16:00.436546 <0.221.0> eh_persist_storage_data:write_data({file_descriptor,prim_file,
+                 #{handle => #Ref<0.2863178779.3660709906.203405>,
+                   owner => <0.221.0>,r_ahead_size => 0,
+                   r_buffer => #Ref<0.2863178779.3660709889.203449>}}, <<16,251,171,117,41,198,214,30,52,251,170,144,85,59,253,22,16,158,127,195,0,0,
+  0,63,131,104,8,100,0,15,101,104,95,115,116,111,114,97,103,101,95,100,97,116,
+  97,100,0,9,99,97,110,100,105,100,97,116,101,97,10,97,1,97,1,97,1,100,0,4,110,
+  97,109,101,100,0,12,100,111,110,97,108,100,95,116,114,117,109,112>>)
+
+23:16:00.436784 <0.221.0> eh_persist_storage_data:write_data/2 --> ok
+
+23:16:00.436873 <0.221.0> eh_storage_data_operation_api:write_entry/3 --> ok
+
+23:16:00.436939 <0.221.0>  '--> eh_storage_data_operation_api:write_entries/3
+
+23:16:00.437007 <0.221.0> eh_storage_data_operation_api:write_entries(eh_storage_data_api, {file_descriptor,prim_file,
+                 #{handle => #Ref<0.2863178779.3660709906.203405>,
+                   owner => <0.221.0>,r_ahead_size => 0,
+                   r_buffer => #Ref<0.2863178779.3660709889.203449>}}, {[],[{eh_storage_data,candidate,10,1,2,1,party,republican}]})
+
+23:16:00.437167 <0.221.0> eh_storage_data_operation_api:write_entry(eh_storage_data_api, {file_descriptor,prim_file,
+                 #{handle => #Ref<0.2863178779.3660709906.203405>,
+                   owner => <0.221.0>,r_ahead_size => 0,
+                   r_buffer => #Ref<0.2863178779.3660709889.203449>}}, {eh_storage_data,candidate,10,1,2,1,party,republican})
+
+23:16:00.437312 <0.221.0> eh_storage_data_api:entry_to_binary({eh_storage_data,candidate,10,1,2,1,party,republican})
+
+23:16:00.437415 <0.221.0> eh_storage_data_api:compute_hash(62, <<131,104,8,100,0,15,101,104,95,115,116,111,114,97,103,101,95,100,97,116,97,
+  100,0,9,99,97,110,100,105,100,97,116,101,97,10,97,1,97,2,97,1,100,0,5,112,97,
+  114,116,121,100,0,10,114,101,112,117,98,108,105,99,97,110>>)
+
+23:16:00.437549 <0.221.0> eh_storage_data_api:compute_hash/2 --> <<57,174,147,33,60,191,133,194,240,237,240,25,240,32,72,202,57,131,178,50>>
+
+23:16:00.437670 <0.221.0>  '--> eh_storage_data_api:entry_to_binary/1
+
+23:16:00.437741 <0.221.0> eh_storage_data_api:entry_to_binary/1 --> <<57,174,147,33,60,191,133,194,240,237,240,25,240,32,72,202,57,131,178,50,0,0,
+  0,62,131,104,8,100,0,15,101,104,95,115,116,111,114,97,103,101,95,100,97,116,
+  97,100,0,9,99,97,110,100,105,100,97,116,101,97,10,97,1,97,2,97,1,100,0,5,112,
+  97,114,116,121,100,0,10,114,101,112,117,98,108,105,99,97,110>>
+
+23:16:00.437893 <0.221.0>  '--> eh_storage_data_operation_api:write_entry/3
+
+23:16:00.437966 <0.221.0> eh_persist_storage_data:write_data({file_descriptor,prim_file,
+                 #{handle => #Ref<0.2863178779.3660709906.203405>,
+                   owner => <0.221.0>,r_ahead_size => 0,
+                   r_buffer => #Ref<0.2863178779.3660709889.203449>}}, <<57,174,147,33,60,191,133,194,240,237,240,25,240,32,72,202,57,131,178,50,0,0,
+  0,62,131,104,8,100,0,15,101,104,95,115,116,111,114,97,103,101,95,100,97,116,
+  97,100,0,9,99,97,110,100,105,100,97,116,101,97,10,97,1,97,2,97,1,100,0,5,112,
+  97,114,116,121,100,0,10,114,101,112,117,98,108,105,99,97,110>>)
+
+23:16:00.438167 <0.221.0> eh_persist_storage_data:write_data/2 --> ok
+
+23:16:00.438234 <0.221.0> eh_storage_data_operation_api:write_entry/3 --> ok
+
+23:16:00.438317 <0.221.0>  '--> eh_storage_data_operation_api:write_entries/3
+
+23:16:00.438380 <0.221.0> eh_storage_data_operation_api:write_entries(eh_storage_data_api, {file_descriptor,prim_file,
+                 #{handle => #Ref<0.2863178779.3660709906.203405>,
+                   owner => <0.221.0>,r_ahead_size => 0,
+                   r_buffer => #Ref<0.2863178779.3660709889.203449>}}, {[],[]})
+
+23:16:00.438513 <0.221.0> eh_storage_data_operation_api:write_entries/3 --> ok
+
+23:16:00.438649 <0.221.0> eh_storage_data_operation_api:write_entries/3 --> ok
+
+23:16:00.438718 <0.221.0> eh_storage_data_operation_api:write_entries/3 --> ok
+
+23:16:00.438798 <0.221.0> eh_storage_data_operation_api:write_entries/3 --> ok
+
+23:16:00.438873 <0.221.0> eh_storage_data_operation_api:write_entries/3 --> ok
+
+23:16:00.438968 <0.221.0>  '--> eh_storage_data_operation_api:write/5
+
+23:16:00.439015 <0.221.0> eh_system_config:get_data_checkpoint({eh_app_config,'ec_n1@centos7-dev',sorted,eh_failure_detector_api,
+               eh_repl_data_manager_api,eh_storage_data_api,
+               eh_write_conflict_resolver_api,eh_unique_id_generator_api,
+               eh_wait_query_handler_api,lager_event,10000,"./","0000000000",
+               "ec_n1_repl.data",standard_io,true,100,1,2000})
+
+23:16:00.439194 <0.221.0> eh_system_config:get_data_checkpoint/1 --> 10000
+
+23:16:00.439285 <0.221.0>  '--> eh_storage_data_operation_api:write/5
+
+23:16:00.439336 <0.221.0> eh_storage_data_operation_api:write/5 --> {ok,{file_descriptor,prim_file,
+                     #{handle => #Ref<0.2863178779.3660709906.203405>,
+                       owner => <0.221.0>,r_ahead_size => 0,
+                       r_buffer => #Ref<0.2863178779.3660709889.203449>}},
+    22,1}
+
+23:16:00.439466 <0.221.0>  '--> eh_data_server:write_data/5
+
+23:16:00.439552 <0.221.0> eh_data_server:write_data/5 --> {reply,ok,
+    {eh_data_state,1,0,
+        [{{candidate,10},2},{{person,10},2}],
+        #{{eh_storage_key,candidate,10} =>
+              {[{eh_storage_value,1,2,1,party,republican}],
+               [{eh_storage_value,1,1,1,name,donald_trump}]},
+          {eh_storage_key,person,10} =>
+              {[{eh_storage_value,1,2,1,age,40}],
+               [{eh_storage_value,1,1,1,name,john_smith}]}},
+        {[],[]},
+        1,22,
+        {file_descriptor,prim_file,
+            #{handle => #Ref<0.2863178779.3660709906.203405>,
+              owner => <0.221.0>,r_ahead_size => 0,
+              r_buffer => #Ref<0.2863178779.3660709889.203449>}},
+        {eh_app_config,'ec_n1@centos7-dev',sorted,eh_failure_detector_api,
+            eh_repl_data_manager_api,eh_storage_data_api,
+            eh_write_conflict_resolver_api,eh_unique_id_generator_api,
+            eh_wait_query_handler_api,lager_event,10000,"./","0000000000",
+            "ec_n1_repl.data",standard_io,true,100,1,2000}}}
+
+23:16:00.439953 <0.221.0> eh_data_server:handle_call/3 --> {reply,ok,
+    {eh_data_state,1,0,
+        [{{candidate,10},2},{{person,10},2}],
+        #{{eh_storage_key,candidate,10} =>
+              {[{eh_storage_value,1,2,1,party,republican}],
+               [{eh_storage_value,1,1,1,name,donald_trump}]},
+          {eh_storage_key,person,10} =>
+              {[{eh_storage_value,1,2,1,age,40}],
+               [{eh_storage_value,1,1,1,name,john_smith}]}},
+        {[],[]},
+        1,22,
+        {file_descriptor,prim_file,
+            #{handle => #Ref<0.2863178779.3660709906.203405>,
+              owner => <0.221.0>,r_ahead_size => 0,
+              r_buffer => #Ref<0.2863178779.3660709889.203449>}},
+        {eh_app_config,'ec_n1@centos7-dev',sorted,eh_failure_detector_api,
+            eh_repl_data_manager_api,eh_storage_data_api,
+            eh_write_conflict_resolver_api,eh_unique_id_generator_api,
+            eh_wait_query_handler_api,lager_event,10000,"./","0000000000",
+            "ec_n1_repl.data",standard_io,true,100,1,2000}}}
+
+23:16:00.440486 <0.221.0>  '--> gen_server:try_handle_call/4
+
+23:16:00.440603 <0.222.0> eh_repl_data_manager_api:update/3 --> ok
+
+23:16:00.440686 <0.222.0>  '--> eh_persist_data:persist_data/2
+
+23:16:00.440805 <0.222.0> eh_system_util:find_map({person,10}, #{})
+
+23:16:00.440899 <0.222.0> eh_system_util:find_map/2 --> error
+
+23:16:00.440975 <0.222.0>  '--> eh_query_handler:process_pending/3
+
+23:16:00.441052 <0.222.0> eh_system_util:remove_map({person,10}, #{})
+
+23:16:00.441145 <0.222.0> eh_system_util:remove_map/2 --> #{}
+
+23:16:00.441235 <0.222.0>  '--> eh_node_timestamp:update_state_remove_query_data/3
+
+23:16:00.441298 <0.222.0> eh_system_util:find_map({candidate,10}, #{})
+
+23:16:00.441381 <0.222.0> eh_system_util:find_map/2 --> error
+
+23:16:00.441476 <0.222.0>  '--> eh_query_handler:process_pending/3
+
+23:16:00.441544 <0.222.0> eh_system_util:remove_map({candidate,10}, #{})
+
+23:16:00.441658 <0.222.0> eh_system_util:remove_map/2 --> #{}
+
+23:16:00.441728 <0.222.0>  '--> eh_node_timestamp:update_state_remove_query_data/3
+
+23:16:00.441819 <0.222.0> eh_system_util:remove_map({eh_update_msg_key,1,candidate,10}, #{{eh_update_msg_key,1,candidate,10}=>{eh_update_msg_data,[{name,1,donald_trump},{party,1,republican}],
+                    <18723.452.0>,'ec_n1@centos7-dev',
+                    #Ref<18723.3896970053.3661103105.102449>}, {eh_update_msg_key,1,person,10}=>{eh_update_msg_data,[{name,1,john_smith},{age,1,40}],
+                    <18723.452.0>,'ec_n1@centos7-dev',
+                    #Ref<18723.3896970053.3661103105.102449>}})
+
+23:16:00.442076 <0.222.0> eh_system_util:remove_map/2 --> #{{eh_update_msg_key,1,person,10}=>{eh_update_msg_data,[{name,1,john_smith},{age,1,40}],
+                    <18723.452.0>,'ec_n1@centos7-dev',
+                    #Ref<18723.3896970053.3661103105.102449>}}
+
+23:16:00.442218 <0.222.0>  '--> eh_node_timestamp:'-update_state_client_reply/2-fun-0-'/2
+
+23:16:00.442270 <0.222.0> eh_system_util:add_set({eh_update_msg_key,1,candidate,10}, {set,0,16,16,8,80,48,
+     {[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]},
+     {{[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]}}})
+
+23:16:00.442391 <0.222.0> eh_system_util:add_set/2 --> {set,1,16,16,8,80,48,
+     {[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]},
+     {{[],[],[],[],[],
+       [{eh_update_msg_key,1,candidate,10}],
+       [],[],[],[],[],[],[],[],[],[]}}}
+
+23:16:00.442523 <0.222.0>  '--> eh_node_timestamp:'-update_state_client_reply/2-fun-0-'/2
+
+23:16:00.442602 <0.222.0> eh_system_util:remove_map({eh_update_msg_key,1,person,10}, #{{eh_update_msg_key,1,person,10}=>{eh_update_msg_data,[{name,1,john_smith},{age,1,40}],
+                    <18723.452.0>,'ec_n1@centos7-dev',
+                    #Ref<18723.3896970053.3661103105.102449>}})
+
+23:16:00.442756 <0.222.0> eh_system_util:remove_map/2 --> #{}
+
+23:16:00.442825 <0.222.0>  '--> eh_node_timestamp:'-update_state_client_reply/2-fun-0-'/2
+
+23:16:00.442900 <0.222.0> eh_system_util:add_set({eh_update_msg_key,1,person,10}, {set,1,16,16,8,80,48,
+     {[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]},
+     {{[],[],[],[],[],
+       [{eh_update_msg_key,1,candidate,10}],
+       [],[],[],[],[],[],[],[],[],[]}}})
+
+23:16:00.443054 <0.222.0> eh_system_util:add_set/2 --> {set,2,16,16,8,80,48,
+     {[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]},
+     {{[],[],[],[],[],
+       [{eh_update_msg_key,1,candidate,10}],
+       [],[],[],[],[],[],[],[],
+       [{eh_update_msg_key,1,person,10}],
+       []}}}
+
+23:16:00.443192 <0.222.0>  '--> eh_node_timestamp:'-update_state_client_reply/2-fun-0-'/2
+
+23:16:00.443281 <0.222.0> eh_system_util:remove_map({eh_update_msg_key,1,candidate,10}, #{})
+
+23:16:00.443357 <0.222.0> eh_system_util:remove_map/2 --> #{}
+
+23:16:00.443399 <0.222.0>  '--> eh_node_timestamp:'-update_state_client_reply/2-fun-1-'/2
+
+23:16:00.443474 <0.222.0> eh_system_util:add_set({eh_update_msg_key,1,candidate,10}, {set,2,16,16,8,80,48,
+     {[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]},
+     {{[],[],[],[],[],
+       [{eh_update_msg_key,1,candidate,10}],
+       [],[],[],[],[],[],[],[],
+       [{eh_update_msg_key,1,person,10}],
+       []}}})
+
+23:16:00.443644 <0.222.0> eh_system_util:add_set/2 --> {set,2,16,16,8,80,48,
+     {[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]},
+     {{[],[],[],[],[],
+       [{eh_update_msg_key,1,candidate,10}],
+       [],[],[],[],[],[],[],[],
+       [{eh_update_msg_key,1,person,10}],
+       []}}}
+
+23:16:00.443787 <0.222.0>  '--> eh_node_timestamp:'-update_state_client_reply/2-fun-1-'/2
+
+23:16:00.443861 <0.222.0> eh_system_util:remove_map({eh_update_msg_key,1,person,10}, #{})
+
+23:16:00.443950 <0.222.0> eh_system_util:remove_map/2 --> #{}
+
+23:16:00.444035 <0.222.0>  '--> eh_node_timestamp:'-update_state_client_reply/2-fun-1-'/2
+
+23:16:00.444115 <0.222.0> eh_system_util:add_set({eh_update_msg_key,1,person,10}, {set,2,16,16,8,80,48,
+     {[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]},
+     {{[],[],[],[],[],
+       [{eh_update_msg_key,1,candidate,10}],
+       [],[],[],[],[],[],[],[],
+       [{eh_update_msg_key,1,person,10}],
+       []}}})
+
+23:16:00.444274 <0.222.0> eh_system_util:add_set/2 --> {set,2,16,16,8,80,48,
+     {[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]},
+     {{[],[],[],[],[],
+       [{eh_update_msg_key,1,candidate,10}],
+       [],[],[],[],[],[],[],[],
+       [{eh_update_msg_key,1,person,10}],
+       []}}}
+
+23:16:00.444413 <0.222.0>  '--> eh_node_timestamp:'-update_state_client_reply/2-fun-1-'/2
+
+23:16:00.444509 <0.222.0> eh_system_server:reply_to_client/4 --> {eh_system_state,eh_ready,1,
+                 ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'],
+                 ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'],
+                 'ec_n3@centos7-dev','ec_n2@centos7-dev',#{},#{},
+                 {set,2,16,16,8,80,48,
+                      {[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]},
+                      {{[],[],[],[],[],
+                        [{eh_update_msg_key,1,candidate,10}],
+                        [],[],[],[],[],[],[],[],
+                        [{eh_update_msg_key,1,person,10}],
+                        []}}},
+                 #{},#{},undefined,
+                 {eh_app_config,'ec_n1@centos7-dev',sorted,
+                                eh_failure_detector_api,
+                                eh_repl_data_manager_api,eh_storage_data_api,
+                                eh_write_conflict_resolver_api,
+                                eh_unique_id_generator_api,
+                                eh_wait_query_handler_api,lager_event,10000,
+                                "./","0000000000","ec_n1_repl.data",
+                                standard_io,true,100,1,2000}}
+
+23:16:00.444918 <0.222.0>  '--> eh_system_server:process_msg/9
+
+23:16:00.445004 <0.222.0> eh_system_server:event_state("succ_update.99", {eh_system_state,eh_ready,1,
+                 ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'],
+                 ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'],
+                 'ec_n3@centos7-dev','ec_n2@centos7-dev',#{},#{},
+                 {set,2,16,16,8,80,48,
+                      {[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]},
+                      {{[],[],[],[],[],
+                        [{eh_update_msg_key,1,candidate,10}],
+                        [],[],[],[],[],[],[],[],
+                        [{eh_update_msg_key,1,person,10}],
+                        []}}},
+                 #{},#{},undefined,
+                 {eh_app_config,'ec_n1@centos7-dev',sorted,
+                                eh_failure_detector_api,
+                                eh_repl_data_manager_api,eh_storage_data_api,
+                                eh_write_conflict_resolver_api,
+                                eh_unique_id_generator_api,
+                                eh_wait_query_handler_api,lager_event,10000,
+                                "./","0000000000","ec_n1_repl.data",
+                                standard_io,true,100,1,2000}}, {eh_app_config,'ec_n1@centos7-dev',sorted,eh_failure_detector_api,
+               eh_repl_data_manager_api,eh_storage_data_api,
+               eh_write_conflict_resolver_api,eh_unique_id_generator_api,
+               eh_wait_query_handler_api,lager_event,10000,"./","0000000000",
+               "ec_n1_repl.data",standard_io,true,100,1,2000})
+
+23:16:00.445475 <0.222.0> eh_event:state(eh_system_server, "succ_update.99", {eh_system_state,eh_ready,1,
+                 ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'],
+                 ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'],
+                 'ec_n3@centos7-dev','ec_n2@centos7-dev',#{},#{},
+                 {set,2,16,16,8,80,48,
+                      {[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]},
+                      {{[],[],[],[],[],
+                        [{eh_update_msg_key,1,candidate,10}],
+                        [],[],[],[],[],[],[],[],
+                        [{eh_update_msg_key,1,person,10}],
+                        []}}},
+                 #{},#{},undefined,
+                 {eh_app_config,'ec_n1@centos7-dev',sorted,
+                                eh_failure_detector_api,
+                                eh_repl_data_manager_api,eh_storage_data_api,
+                                eh_write_conflict_resolver_api,
+                                eh_unique_id_generator_api,
+                                eh_wait_query_handler_api,lager_event,10000,
+                                "./","0000000000","ec_n1_repl.data",
+                                standard_io,true,100,1,2000}}, {eh_app_config,'ec_n1@centos7-dev',sorted,eh_failure_detector_api,
+               eh_repl_data_manager_api,eh_storage_data_api,
+               eh_write_conflict_resolver_api,eh_unique_id_generator_api,
+               eh_wait_query_handler_api,lager_event,10000,"./","0000000000",
+               "ec_n1_repl.data",standard_io,true,100,1,2000})
+
+23:16:00.445976 <0.222.0> eh_event:event_notify(state, {eh_system_server,"succ_update.99",
+    {eh_system_state,eh_ready,1,
+        ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'],
+        ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'],
+        'ec_n3@centos7-dev','ec_n2@centos7-dev',#{},#{},
+        {set,2,16,16,8,80,48,
+            {[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]},
+            {{[],[],[],[],[],
+              [{eh_update_msg_key,1,candidate,10}],
+              [],[],[],[],[],[],[],[],
+              [{eh_update_msg_key,1,person,10}],
+              []}}},
+        #{},#{},undefined,
+        {eh_app_config,'ec_n1@centos7-dev',sorted,eh_failure_detector_api,
+            eh_repl_data_manager_api,eh_storage_data_api,
+            eh_write_conflict_resolver_api,eh_unique_id_generator_api,
+            eh_wait_query_handler_api,lager_event,10000,"./","0000000000",
+            "ec_n1_repl.data",standard_io,true,100,1,2000}}}, {eh_app_config,'ec_n1@centos7-dev',sorted,eh_failure_detector_api,
+               eh_repl_data_manager_api,eh_storage_data_api,
+               eh_write_conflict_resolver_api,eh_unique_id_generator_api,
+               eh_wait_query_handler_api,lager_event,10000,"./","0000000000",
+               "ec_n1_repl.data",standard_io,true,100,1,2000})
+
+23:16:00.446413 <0.222.0> eh_event_handler:get_msg_data({state,
+    {eh_system_server,"succ_update.99",
+        {eh_system_state,eh_ready,1,
+            ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'],
+            ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'],
+            'ec_n3@centos7-dev','ec_n2@centos7-dev',#{},#{},
+            {set,2,16,16,8,80,48,
+                {[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]},
+                {{[],[],[],[],[],
+                  [{eh_update_msg_key,1,candidate,10}],
+                  [],[],[],[],[],[],[],[],
+                  [{eh_update_msg_key,1,person,10}],
+                  []}}},
+            #{},#{},undefined,
+            {eh_app_config,'ec_n1@centos7-dev',sorted,
+                eh_failure_detector_api,eh_repl_data_manager_api,
+                eh_storage_data_api,eh_write_conflict_resolver_api,
+                eh_unique_id_generator_api,eh_wait_query_handler_api,
+                lager_event,10000,"./","0000000000","ec_n1_repl.data",
+                standard_io,true,100,1,2000}}}})
+
+23:16:00.446841 <0.222.0> eh_system_util:get_node_name('ec_n1@centos7-dev')
+
+23:16:00.446942 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(101)
+
+23:16:00.447024 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+23:16:00.447116 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.447180 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(99)
+
+23:16:00.447270 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+23:16:00.447341 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.447402 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(95)
+
+23:16:00.447470 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+23:16:00.447541 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.447614 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(110)
+
+23:16:00.447682 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+23:16:00.447770 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.447846 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(49)
+
+23:16:00.447936 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+23:16:00.448041 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.448105 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(64)
+
+23:16:00.448181 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> false
+
+23:16:00.448254 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.448337 <0.222.0> eh_system_util:get_node_name/1 --> "ec_n1"
+
+23:16:00.448442 <0.222.0>  '--> eh_event_handler:get_msg_data/1
+
+23:16:00.448493 <0.222.0> eh_system_util:get_node_name('ec_n3@centos7-dev')
+
+23:16:00.448555 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(101)
+
+23:16:00.449248 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+23:16:00.449810 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.450158 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(99)
+
+23:16:00.450321 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+23:16:00.450553 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.450642 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(95)
+
+23:16:00.450720 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+23:16:00.450816 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.450879 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(110)
+
+23:16:00.450945 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+23:16:00.451036 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.451097 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(51)
+
+23:16:00.451183 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+23:16:00.451236 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.451294 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(64)
+
+23:16:00.451380 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> false
+
+23:16:00.451470 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.451546 <0.222.0> eh_system_util:get_node_name/1 --> "ec_n3"
+
+23:16:00.451608 <0.222.0>  '--> eh_event_handler:get_msg_data/1
+
+23:16:00.451653 <0.222.0> eh_system_util:get_node_name('ec_n2@centos7-dev')
+
+23:16:00.451723 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(101)
+
+23:16:00.451790 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+23:16:00.451882 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.452014 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(99)
+
+23:16:00.452092 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+23:16:00.452164 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.452243 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(95)
+
+23:16:00.452311 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+23:16:00.452394 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.452443 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(110)
+
+23:16:00.452503 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+23:16:00.452603 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.452753 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(50)
+
+23:16:00.452804 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+23:16:00.452854 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.452890 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(64)
+
+23:16:00.452948 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> false
+
+23:16:00.453035 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.453111 <0.222.0> eh_system_util:get_node_name/1 --> "ec_n2"
+
+23:16:00.453181 <0.222.0>  '--> eh_event_handler:get_msg_data/1
+
+23:16:00.453220 <0.222.0> eh_node_state:display_state({eh_system_state,eh_ready,1,
+                 ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'],
+                 ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'],
+                 'ec_n3@centos7-dev','ec_n2@centos7-dev',#{},#{},
+                 {set,2,16,16,8,80,48,
+                      {[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]},
+                      {{[],[],[],[],[],
+                        [{eh_update_msg_key,1,candidate,10}],
+                        [],[],[],[],[],[],[],[],
+                        [{eh_update_msg_key,1,person,10}],
+                        []}}},
+                 #{},#{},undefined,
+                 {eh_app_config,'ec_n1@centos7-dev',sorted,
+                                eh_failure_detector_api,
+                                eh_repl_data_manager_api,eh_storage_data_api,
+                                eh_write_conflict_resolver_api,
+                                eh_unique_id_generator_api,
+                                eh_wait_query_handler_api,lager_event,10000,
+                                "./","0000000000","ec_n1_repl.data",
+                                standard_io,true,100,1,2000}})
+
+23:16:00.453592 <0.222.0> eh_system_util:display_atom_to_list(eh_ready)
+
+23:16:00.453671 <0.222.0> eh_system_util:display_atom_to_list/1 --> "ready"
+
+23:16:00.453746 <0.222.0> eh_node_state:display_state/1 --> "ready"
+
+23:16:00.453790 <0.222.0>  '--> eh_event_handler:get_msg_data/1
+
+23:16:00.453849 <0.222.0> eh_system_util:make_list_to_string(fun eh_system_util:get_node_name/1, ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'])
+
+23:16:00.453962 <0.222.0> eh_system_util:'-make_list_to_string/2-fun-0-'('ec_n1@centos7-dev', [], fun eh_system_util:get_node_name/1)
+
+23:16:00.454062 <0.222.0> eh_system_util:get_node_name('ec_n1@centos7-dev')
+
+23:16:00.454135 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(101)
+
+23:16:00.454198 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+23:16:00.454281 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.454338 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(99)
+
+23:16:00.454418 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+23:16:00.454504 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.454599 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(95)
+
+23:16:00.454671 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+23:16:00.454757 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.454821 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(110)
+
+23:16:00.454898 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+23:16:00.454970 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.455116 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(49)
+
+23:16:00.455198 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+23:16:00.455265 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.455351 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(64)
+
+23:16:00.455421 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> false
+
+23:16:00.455553 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.455639 <0.222.0> eh_system_util:get_node_name/1 --> "ec_n1"
+
+23:16:00.455930 <0.222.0>  '--> eh_system_util:'-make_list_to_string/2-fun-0-'/3
+
+23:16:00.456026 <0.222.0> eh_system_util:'-make_list_to_string/2-fun-0-'/3 --> "ec_n1"
+
+23:16:00.456116 <0.222.0>  '--> lists:foldl/3
+
+23:16:00.456174 <0.222.0> eh_system_util:'-make_list_to_string/2-fun-0-'('ec_n2@centos7-dev', "ec_n1", fun eh_system_util:get_node_name/1)
+
+23:16:00.456276 <0.222.0> eh_system_util:get_node_name('ec_n2@centos7-dev')
+
+23:16:00.456344 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(101)
+
+23:16:00.456449 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+23:16:00.456546 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.456611 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(99)
+
+23:16:00.456681 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+23:16:00.456759 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.456838 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(95)
+
+23:16:00.456908 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+23:16:00.457000 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.457072 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(110)
+
+23:16:00.457162 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+23:16:00.457232 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.457294 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(50)
+
+23:16:00.457382 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+23:16:00.457435 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.457497 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(64)
+
+23:16:00.457603 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> false
+
+23:16:00.457675 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.457756 <0.222.0> eh_system_util:get_node_name/1 --> "ec_n2"
+
+23:16:00.457847 <0.222.0>  '--> eh_system_util:'-make_list_to_string/2-fun-0-'/3
+
+23:16:00.457911 <0.222.0> eh_system_util:'-make_list_to_string/2-fun-0-'/3 --> "ec_n1,ec_n2"
+
+23:16:00.457994 <0.222.0>  '--> lists:foldl_1/3
+
+23:16:00.458059 <0.222.0> eh_system_util:'-make_list_to_string/2-fun-0-'('ec_n3@centos7-dev', "ec_n1,ec_n2", fun eh_system_util:get_node_name/1)
+
+23:16:00.458158 <0.222.0> eh_system_util:get_node_name('ec_n3@centos7-dev')
+
+23:16:00.458228 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(101)
+
+23:16:00.458300 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+23:16:00.458396 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.458483 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(99)
+
+23:16:00.458571 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+23:16:00.458627 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.458688 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(95)
+
+23:16:00.458760 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+23:16:00.458819 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.458859 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(110)
+
+23:16:00.458914 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+23:16:00.458978 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.459406 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(51)
+
+23:16:00.459571 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+23:16:00.459633 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.459705 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(64)
+
+23:16:00.459945 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> false
+
+23:16:00.460055 <0.222.0>  '--> lists:takewhile_1/2
+
+23:16:00.460109 <0.222.0> eh_system_util:get_node_name/1 --> "ec_n3"
+
+23:16:00.460161 <0.222.0>  '--> eh_system_util:'-make_list_to_string/2-fun-0-'/3
+
+23:16:00.460222 <0.222.0> eh_system_util:'-make_list_to_string/2-fun-0-'/3 --> "ec_n1,ec_n2,ec_n3"
+
+23:16:00.460310 <0.222.0>  '--> lists:foldl_1/3
+
+23:16:00.460373 <0.222.0> eh_system_util:make_list_to_string/2 --> "ec_n1,ec_n2,ec_n3"
+
+23:16:00.460460 <0.222.0>  '--> eh_event_handler:get_msg_data/1
+
+23:16:00.460506 <0.222.0> eh_event_handler:list_msg_map(#{})
+
+23:16:00.460636 <0.222.0> eh_system_util:fold_map(#Fun<eh_event_handler.1.20189961>, [], #{})
+
+23:16:00.460708 <0.222.0> eh_system_util:fold_map/3 --> []
+
+23:16:00.460792 <0.222.0> eh_event_handler:list_msg_map/1 --> []
+
+23:16:00.460848 <0.222.0>  '--> eh_event_handler:get_msg_data/1
+
+23:16:00.460886 <0.222.0> eh_event_handler:list_msg_map(#{})
+
+23:16:00.460926 <0.222.0> eh_system_util:fold_map(#Fun<eh_event_handler.1.20189961>, [], #{})
+
+23:16:00.460997 <0.222.0> eh_system_util:fold_map/3 --> []
+
+23:16:00.461082 <0.222.0> eh_event_handler:list_msg_map/1 --> []
+
+23:16:00.461158 <0.222.0>  '--> eh_event_handler:get_msg_data/1
+
+23:16:00.461208 <0.222.0> eh_event_handler:list_msg_set_value({set,2,16,16,8,80,48,
+     {[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]},
+     {{[],[],[],[],[],
+       [{eh_update_msg_key,1,candidate,10}],
+       [],[],[],[],[],[],[],[],
+       [{eh_update_msg_key,1,person,10}],
+       []}}})
+
+23:16:00.461382 <0.222.0> eh_system_util:fold_set(#Fun<eh_event_handler.0.20189961>, [], {set,2,16,16,8,80,48,
+     {[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]},
+     {{[],[],[],[],[],
+       [{eh_update_msg_key,1,candidate,10}],
+       [],[],[],[],[],[],[],[],
+       [{eh_update_msg_key,1,person,10}],
+       []}}})
+
+23:16:00.461571 <0.222.0> eh_event_handler:'-list_msg_set_value/1-fun-0-'({eh_update_msg_key,1,person,10}, [])
+
+23:16:00.461667 <0.222.0> eh_event_handler:list_msg_key({eh_update_msg_key,1,person,10})
+
+23:16:00.461743 <0.222.0> eh_event_handler:is_listable_msg_key({eh_update_msg_key,1,person,10})
+
+23:16:00.461836 <0.222.0> eh_event_handler:is_listable_value(1)
+
+23:16:00.461906 <0.222.0> eh_event_handler:is_listable_value/1 --> true
+
+23:16:00.462001 <0.222.0>  '--> eh_event_handler:is_listable_msg_key/1
+
+23:16:00.462069 <0.222.0> eh_event_handler:is_listable_value(person)
+
+23:16:00.462150 <0.222.0> eh_event_handler:is_listable_value/1 --> true
+
+23:16:00.462206 <0.222.0>  '--> eh_event_handler:is_listable_msg_key/1
+
+23:16:00.462273 <0.222.0> eh_event_handler:is_listable_value(10)
+
+23:16:00.462345 <0.222.0> eh_event_handler:is_listable_value/1 --> true
+
+23:16:00.462430 <0.222.0> eh_event_handler:is_listable_msg_key/1 --> true
+
+23:16:00.462494 <0.222.0>  '--> eh_event_handler:list_msg_key/1
+
+23:16:00.462615 <0.222.0> eh_event_handler:list_value(1)
+
+23:16:00.462685 <0.222.0> eh_event_handler:list_value/1 --> "1"
+
+23:16:00.462775 <0.222.0>  '--> eh_event_handler:list_msg_key/1
+
+23:16:00.462873 <0.222.0> eh_event_handler:list_value(person)
+
+23:16:00.462947 <0.222.0> eh_event_handler:list_value/1 --> "person"
+
+23:16:00.463037 <0.222.0>  '--> eh_event_handler:list_msg_key/1
+
+23:16:00.463101 <0.222.0> eh_event_handler:list_value(10)
+
+23:16:00.463168 <0.222.0> eh_event_handler:list_value/1 --> "10"
+
+23:16:00.463265 <0.222.0>  '--> eh_event_handler:list_msg_key/1
+
+23:16:00.463332 <0.222.0> eh_event_handler:list_msg_key/1 --> "{1,person,10}"
+
+23:16:00.463421 <0.222.0>  '--> eh_event_handler:'-list_msg_set_value/1-fun-0-'/2
+
+23:16:00.463539 <0.222.0> eh_event_handler:add_list("{1,person,10}", [])
+
+23:16:00.463709 <0.222.0> eh_event_handler:add_list/2 --> "{1,person,10}"
+
+23:16:00.463821 <0.222.0> eh_event_handler:'-list_msg_set_value/1-fun-0-'/2 --> "{1,person,10}"
+
+23:16:00.463929 <0.222.0>  '--> sets:fold_bucket/3
+
+23:16:00.463986 <0.222.0> eh_event_handler:'-list_msg_set_value/1-fun-0-'({eh_update_msg_key,1,candidate,10}, "{1,person,10}")
+
+23:16:00.464107 <0.222.0> eh_event_handler:list_msg_key({eh_update_msg_key,1,candidate,10})
+
+23:16:00.464204 <0.222.0> eh_event_handler:is_listable_msg_key({eh_update_msg_key,1,candidate,10})
+
+23:16:00.464284 <0.222.0> eh_event_handler:is_listable_value(1)
+
+23:16:00.464373 <0.222.0> eh_event_handler:is_listable_value/1 --> true
+
+23:16:00.464448 <0.222.0>  '--> eh_event_handler:is_listable_msg_key/1
+
+23:16:00.464599 <0.222.0> eh_event_handler:is_listable_value(candidate)
+
+23:16:00.464690 <0.222.0> eh_event_handler:is_listable_value/1 --> true
+
+23:16:00.464766 <0.222.0>  '--> eh_event_handler:is_listable_msg_key/1
+
+23:16:00.464849 <0.222.0> eh_event_handler:is_listable_value(10)
+
+23:16:00.464922 <0.222.0> eh_event_handler:is_listable_value/1 --> true
+
+23:16:00.465022 <0.222.0> eh_event_handler:is_listable_msg_key/1 --> true
+
+23:16:00.465102 <0.222.0>  '--> eh_event_handler:list_msg_key/1
+
+23:16:00.465185 <0.222.0> eh_event_handler:list_value(1)
+
+23:16:00.465253 <0.222.0> eh_event_handler:list_value/1 --> "1"
+
+23:16:00.465345 <0.222.0>  '--> eh_event_handler:list_msg_key/1
+
+23:16:00.465396 <0.222.0> eh_event_handler:list_value(candidate)
+
+23:16:00.465463 <0.222.0> eh_event_handler:list_value/1 --> "candidate"
+
+23:16:00.465574 <0.222.0>  '--> eh_event_handler:list_msg_key/1
+
+23:16:00.465644 <0.222.0> eh_event_handler:list_value(10)
+
+23:16:00.465736 <0.222.0> eh_event_handler:list_value/1 --> "10"
+
+23:16:00.465805 <0.222.0>  '--> eh_event_handler:list_msg_key/1
+
+23:16:00.465868 <0.222.0> eh_event_handler:list_msg_key/1 --> "{1,candidate,10}"
+
+23:16:00.465966 <0.222.0>  '--> eh_event_handler:'-list_msg_set_value/1-fun-0-'/2
+
+23:16:00.466043 <0.222.0> eh_event_handler:add_list("{1,candidate,10}", "{1,person,10}")
+
+23:16:00.466141 <0.222.0> eh_event_handler:add_list/2 --> "{1,person,10},{1,candidate,10}"
+
+23:16:00.466230 <0.222.0> eh_event_handler:'-list_msg_set_value/1-fun-0-'/2 --> "{1,person,10},{1,candidate,10}"
+
+23:16:00.466308 <0.222.0>  '--> sets:fold_bucket/3
+
+23:16:00.466372 <0.222.0> eh_system_util:fold_set/3 --> "{1,person,10},{1,candidate,10}"
+
+23:16:00.466483 <0.222.0> eh_event_handler:list_msg_set_value/1 --> "{1,person,10},{1,candidate,10}"
+
+23:16:00.466626 <0.222.0>  '--> eh_event_handler:get_msg_data/1
+
+23:16:00.466731 <0.222.0> eh_event_handler:get_msg_data/1 --> {"[~p] ~p node_status=~p, node_id=~p, repl_ring=~p, pred=~p, succ=~p, timestamp=~p, pre_msg_data=~p, msg_data=~p, completed_set=~p~n",
+ [eh_system_server,"succ_update.99","ready","ec_n1","ec_n1,ec_n2,ec_n3",
+  "ec_n3","ec_n2",1,[],[],"{1,person,10},{1,candidate,10}"]}
+
+23:16:00.466883 <0.222.0>  '--> eh_event:event_notify/3
+
+23:16:00.466952 <0.222.0> eh_system_config:get_event_logger({eh_app_config,'ec_n1@centos7-dev',sorted,eh_failure_detector_api,
+               eh_repl_data_manager_api,eh_storage_data_api,
+               eh_write_conflict_resolver_api,eh_unique_id_generator_api,
+               eh_wait_query_handler_api,lager_event,10000,"./","0000000000",
+               "ec_n1_repl.data",standard_io,true,100,1,2000})
+
+23:16:00.467148 <0.222.0> eh_system_config:get_event_logger/1 --> lager_event
+
+23:16:00.467247 <0.222.0>  '--> eh_event:event_notify/3
+
+23:16:00.467301 <0.222.0> eh_event:event_notify/3 --> ok
+
+23:16:00.467389 <0.222.0> eh_event:state/4 --> ok
+
+23:16:00.467458 <0.222.0> eh_system_server:event_state/3 --> ok
+
+23:16:00.467576 <0.222.0>  '--> eh_system_server:process_msg/9
+
+23:16:00.467629 <0.222.0> eh_system_server:process_msg/9 --> {eh_system_state,eh_ready,1,
+                 ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'],
+                 ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'],
+                 'ec_n3@centos7-dev','ec_n2@centos7-dev',#{},#{},
+                 {set,2,16,16,8,80,48,
+                      {[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]},
+                      {{[],[],[],[],[],
+                        [{eh_update_msg_key,1,candidate,10}],
+                        [],[],[],[],[],[],[],[],
+                        [{eh_update_msg_key,1,person,10}],
+                        []}}},
+                 #{},#{},undefined,
+                 {eh_app_config,'ec_n1@centos7-dev',sorted,
+                                eh_failure_detector_api,
+                                eh_repl_data_manager_api,eh_storage_data_api,
+                                eh_write_conflict_resolver_api,
+                                eh_unique_id_generator_api,
+                                eh_wait_query_handler_api,lager_event,10000,
+                                "./","0000000000","ec_n1_repl.data",
+                                standard_io,true,100,1,2000}}
+
+23:16:00.467992 <0.222.0>  '--> eh_system_server:handle_cast/2
+
+23:16:00.468085 <0.222.0> eh_system_server:handle_cast/2 --> {noreply,
+    {eh_system_state,eh_ready,1,
+        ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'],
+        ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'],
+        'ec_n3@centos7-dev','ec_n2@centos7-dev',#{},#{},
+        {set,2,16,16,8,80,48,
+            {[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]},
+            {{[],[],[],[],[],
+              [{eh_update_msg_key,1,candidate,10}],
+              [],[],[],[],[],[],[],[],
+              [{eh_update_msg_key,1,person,10}],
+              []}}},
+        #{},#{},undefined,
+        {eh_app_config,'ec_n1@centos7-dev',sorted,eh_failure_detector_api,
+            eh_repl_data_manager_api,eh_storage_data_api,
+            eh_write_conflict_resolver_api,eh_unique_id_generator_api,
+            eh_wait_query_handler_api,lager_event,10000,"./","0000000000",
+            "ec_n1_repl.data",standard_io,true,100,1,2000}}}
+
+23:16:00.468437 <0.222.0>  '--> gen_server:try_dispatch/4
