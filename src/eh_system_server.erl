@@ -194,7 +194,7 @@ handle_cast({?EH_UPDATE, {From, Ref, ObjectList}},
                                                    NodeId,
                                                    Ref),
                   NewState1 = eh_node_timestamp:update_state_timestamp(Timestamp1, State),
-                  case Succ of 
+                case Succ of 
                     undefined ->
                       reply_to_client(fun eh_persist_data:persist_data/2, UMsgList, CompletedSet, NewState1);
                     _         -> 
@@ -206,22 +206,21 @@ handle_cast({?EH_UPDATE, {From, Ref, ObjectList}},
 
 handle_cast({?EH_PRED_PRE_UPDATE, {UMsgList, CompletedSet}}, State) ->
   NewState1 = process_msg(?EH_PRED_PRE_UPDATE,
-                          fun eh_node_timestamp:valid_pre_update_msg/2,
-                          fun send_update_msg/4,
+                          fun eh_node_timestamp:valid_pre_update_msg/2,   % 判断是否应该继续往前传播
+                          fun send_update_msg/4,                          % 如果不需要往前传播, 则需要发送 send_update_msg
                           fun eh_persist_data:persist_data/2,
-                          fun send_pre_update_msg/4,
+                          fun send_pre_update_msg/4,                      % 如果需要往前传播，则继续传播
                           fun eh_persist_data:no_persist_data/2,
                           UMsgList,
                           CompletedSet,
                           State),
-  {noreply, NewState1};
-
+  {noreply, NewState1};% 正向确认
 handle_cast({?EH_SUCC_UPDATE, {UMsgList, CompletedSet}}, State) ->
   NewState1 = process_msg(?EH_SUCC_UPDATE,
-                          fun eh_node_timestamp:valid_update_msg/2,
-                          fun reply_to_client/4,
+                          fun eh_node_timestamp:valid_update_msg/2,      % 判断是否应该更新信息, 逆时针往前传播
+                          fun reply_to_client/4,                         % 如果不需要继续逆时针往前传播，返回给客户端 reply_to_client 
                           fun eh_persist_data:persist_data/2,
-                          fun send_update_msg/4,
+                          fun send_update_msg/4,                         % 如果继续往前传播，则继续传播
                           fun eh_persist_data:persist_data/2,
                           UMsgList,
                           CompletedSet,
@@ -309,12 +308,14 @@ reply_to_client(PersistFun,
   eh_query_handler:reply(ClientId, Ref, eh_query_handler:updated(DataList)),
   eh_node_timestamp:update_state_client_reply(UMsgList, State1).
 
+% 2:11:31.473152 <0.222.0> eh_system_server:send_msg(eh_pred_pre_update, fun eh_persist_data:no_persist_data/2, [{{eh_update_msg_key,3,candidate,10},
 send_msg(Tag, 
          PersistFun,
          UMsgList,
          CompletedSet,
          #eh_system_state{predecessor=Pred, successor=Succ}=State) ->
   State1 = PersistFun(UMsgList, State),
+  %2:11:31.474708 <0.222.0> eh_node_timestamp:update_state_new_msg(eh_pred_pre_update, [{{eh_update_msg_key,3,candidate,10},
   State2 = eh_node_timestamp:update_state_new_msg(Tag, UMsgList, State1),
   Dest = case Tag of
            ?EH_PRED_PRE_UPDATE ->
@@ -322,15 +323,19 @@ send_msg(Tag,
            ?EH_SUCC_UPDATE     ->
              Pred
          end,
+  % {Name :: atom(), Node :: atom()} 
+  % Dest 就是要发往的下一个节点
   gen_server:cast({?EH_SYSTEM_SERVER, Dest}, {Tag, {UMsgList, CompletedSet}}),
   State2.  
 
+% 正向确认
 send_pre_update_msg(PersistFun,
                     UMsgList,
                     CompletedSet,
                     State) ->
   send_msg(?EH_PRED_PRE_UPDATE, PersistFun, UMsgList, CompletedSet, State).
  
+% 更新成功之后，反向确认
 send_update_msg(PersistFun,
                 UMsgList,
                 CompletedSet,
