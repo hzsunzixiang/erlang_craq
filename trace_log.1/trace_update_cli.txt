@@ -2878,3 +2878,2307 @@
 5:45:42.903602 <0.452.0> erlang_craq:update/2 --> [{ok,{[{candidate,10},{person,10}],updated}}]
 
 5:45:42.903735 <0.452.0>  '--> erl_eval:do_apply/7
+
+6:14:13.251122 <0.452.0> erlang_craq:update('ec_n1@centos7-dev', [{candidate,10,[{name,donald_trump},{party,republican}]},
+ {person,10,[{name,john_smith},{age,40}]}])
+
+6:14:13.251409 <0.452.0> erlang_craq:get_update_list([{candidate,10,[{name,donald_trump},{party,republican}]},
+ {person,10,[{name,john_smith},{age,40}]}], [])
+
+6:14:13.251659 <0.452.0> erlang_craq:combine_columns([{name,donald_trump},{party,republican}], [])
+
+6:14:13.251787 <0.452.0> erlang_craq:get_columns([], [])
+
+6:14:13.252987 <0.452.0> erlang_craq:get_columns/2 --> []
+
+6:14:13.253058 <0.452.0>  '--> erlang_craq:combine_columns/2
+
+6:14:13.253152 <0.452.0> erlang_craq:get_columns([{party,republican},{name,donald_trump}], [])
+
+6:14:13.253315 <0.452.0> erlang_craq:get_columns([{name,donald_trump}], [{party,1,republican}])
+
+6:14:13.253427 <0.452.0> erlang_craq:get_columns([], [{name,1,donald_trump},{party,1,republican}])
+
+6:14:13.253817 <0.452.0> erlang_craq:get_columns/2 --> [{name,1,donald_trump},{party,1,republican}]
+
+6:14:13.254188 <0.452.0> erlang_craq:get_columns/2 --> [{name,1,donald_trump},{party,1,republican}]
+
+6:14:13.254335 <0.452.0> erlang_craq:get_columns/2 --> [{name,1,donald_trump},{party,1,republican}]
+
+6:14:13.254420 <0.452.0> erlang_craq:combine_columns/2 --> [{name,1,donald_trump},{party,1,republican}]
+
+6:14:13.254515 <0.452.0>  '--> erlang_craq:get_update_list/2
+
+6:14:13.254572 <0.452.0> erlang_craq:get_update_list([{person,10,[{name,john_smith},{age,40}]}], [{candidate,10,[{name,1,donald_trump},{party,1,republican}]}])
+
+6:14:13.254665 <0.452.0> erlang_craq:combine_columns([{name,john_smith},{age,40}], [])
+
+6:14:13.254759 <0.452.0> erlang_craq:get_columns([], [])
+
+6:14:13.254820 <0.452.0> erlang_craq:get_columns/2 --> []
+
+6:14:13.254873 <0.452.0>  '--> erlang_craq:combine_columns/2
+
+6:14:13.254957 <0.452.0> erlang_craq:get_columns([{age,40},{name,john_smith}], [])
+
+6:14:13.255029 <0.452.0> erlang_craq:get_columns([{name,john_smith}], [{age,1,40}])
+
+6:14:13.255482 <0.452.0> erlang_craq:get_columns([], [{name,1,john_smith},{age,1,40}])
+
+6:14:13.255633 <0.452.0> erlang_craq:get_columns/2 --> [{name,1,john_smith},{age,1,40}]
+
+6:14:13.255708 <0.452.0> erlang_craq:get_columns/2 --> [{name,1,john_smith},{age,1,40}]
+
+6:14:13.255790 <0.452.0> erlang_craq:get_columns/2 --> [{name,1,john_smith},{age,1,40}]
+
+6:14:13.255972 <0.452.0> erlang_craq:combine_columns/2 --> [{name,1,john_smith},{age,1,40}]
+
+6:14:13.256043 <0.452.0>  '--> erlang_craq:get_update_list/2
+
+6:14:13.256096 <0.452.0> erlang_craq:get_update_list([], [{person,10,[{name,1,john_smith},{age,1,40}]},
+ {candidate,10,[{name,1,donald_trump},{party,1,republican}]}])
+
+6:14:13.256322 <0.452.0> erlang_craq:get_update_list/2 --> [{person,10,[{name,1,john_smith},{age,1,40}]},
+ {candidate,10,[{name,1,donald_trump},{party,1,republican}]}]
+
+6:14:13.256721 <0.452.0> erlang_craq:get_update_list/2 --> [{person,10,[{name,1,john_smith},{age,1,40}]},
+ {candidate,10,[{name,1,donald_trump},{party,1,republican}]}]
+
+6:14:13.257007 <0.452.0> erlang_craq:get_update_list/2 --> [{person,10,[{name,1,john_smith},{age,1,40}]},
+ {candidate,10,[{name,1,donald_trump},{party,1,republican}]}]
+
+6:14:13.257944 <0.452.0>  '--> erlang_craq:update/2
+
+6:14:13.258458 <0.452.0> erlang_craq:send_update('ec_n1@centos7-dev', [{person,10,[{name,1,john_smith},{age,1,40}]},
+ {candidate,10,[{name,1,donald_trump},{party,1,republican}]}])
+
+6:14:13.259097 <0.452.0> erlang_craq:send(['ec_n1@centos7-dev'], eh_update, [{'ec_n1@centos7-dev',[{person,10,[{name,1,john_smith},{age,1,40}]},
+                       {candidate,10,
+                                  [{name,1,donald_trump},
+                                   {party,1,republican}]}]}], 1000)
+
+6:14:13.259688 <0.452.0> erlang_craq:flush_msg()
+
+6:14:13.260194 <0.452.0> erlang_craq:flush_msg/0 --> ok
+
+6:14:13.261952 <0.452.0>  '--> erlang_craq:send/4
+
+6:14:13.262035 <0.452.0> eh_system_config:get_env()
+
+6:14:13.262250 <0.452.0> eh_system_util:get_node_name('ec_n4@centos7-dev')
+
+6:14:13.262499 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'(101)
+
+6:14:13.262589 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+6:14:13.262744 <0.452.0>  '--> lists:takewhile_1/2
+
+6:14:13.262944 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'(99)
+
+6:14:13.263084 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+6:14:13.263295 <0.452.0>  '--> lists:takewhile_1/2
+
+6:14:13.263493 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'(95)
+
+6:14:13.263603 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+6:14:13.263748 <0.452.0>  '--> lists:takewhile_1/2
+
+6:14:13.264038 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'(110)
+
+6:14:13.264292 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+6:14:13.264543 <0.452.0>  '--> lists:takewhile_1/2
+
+6:14:13.265019 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'(52)
+
+6:14:13.265311 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+6:14:13.265503 <0.452.0>  '--> lists:takewhile_1/2
+
+6:14:13.265595 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'(64)
+
+6:14:13.265796 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> false
+
+6:14:13.266019 <0.452.0>  '--> lists:takewhile_1/2
+
+6:14:13.266310 <0.452.0> eh_system_util:get_node_name/1 --> "ec_n4"
+
+6:14:13.266490 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:14:13.266785 <0.452.0> eh_config:get_env(erlang_craq, data_dir, "./")
+
+6:14:13.266961 <0.452.0> eh_config:get_env/3 --> "./"
+
+6:14:13.267173 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:14:13.267373 <0.452.0> eh_config:get_env(erlang_craq, file_repl_data, "_repl.data")
+
+6:14:13.267668 <0.452.0> eh_config:get_env/3 --> "_repl.data"
+
+6:14:13.268050 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:14:13.268308 <0.452.0> eh_config:get_env(erlang_craq, file_repl_log, standard_io)
+
+6:14:13.268526 <0.452.0> eh_config:get_env/3 --> standard_io
+
+6:14:13.268837 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:14:13.269210 <0.452.0> eh_config:get_env(erlang_craq, node_order, sorted)
+
+6:14:13.269274 <0.452.0> eh_config:get_env/3 --> sorted
+
+6:14:13.269562 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:14:13.269650 <0.452.0> eh_config:get_env(erlang_craq, failure_detector, eh_failure_detector_api)
+
+6:14:13.269748 <0.452.0> eh_config:get_env/3 --> eh_failure_detector_api
+
+6:14:13.269797 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:14:13.269852 <0.452.0> eh_config:get_env(erlang_craq, repl_data_manager, eh_repl_data_manager_api)
+
+6:14:13.269953 <0.452.0> eh_config:get_env/3 --> eh_repl_data_manager_api
+
+6:14:13.270174 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:14:13.270478 <0.452.0> eh_config:get_env(erlang_craq, storage_data, eh_storage_data_api)
+
+6:14:13.270559 <0.452.0> eh_config:get_env/3 --> eh_storage_data_api
+
+6:14:13.270661 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:14:13.270840 <0.452.0> eh_config:get_env(erlang_craq, write_conflict_resolver, eh_write_conflict_resolver_api)
+
+6:14:13.271099 <0.452.0> eh_config:get_env/3 --> eh_write_conflict_resolver_api
+
+6:14:13.271333 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:14:13.271609 <0.452.0> eh_config:get_env(erlang_craq, unique_id_generator, eh_unique_id_generator_api)
+
+6:14:13.271790 <0.452.0> eh_config:get_env/3 --> eh_unique_id_generator_api
+
+6:14:13.272071 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:14:13.272263 <0.452.0> eh_config:get_env(erlang_craq, query_handler, eh_no_wait_query_handler_api)
+
+6:14:13.272440 <0.452.0> eh_config:get_env/3 --> eh_wait_query_handler_api
+
+6:14:13.272652 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:14:13.272818 <0.452.0> eh_config:get_env(erlang_craq, event_logger, lager_event)
+
+6:14:13.273213 <0.452.0> eh_config:get_env/3 --> lager_event
+
+6:14:13.273451 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:14:13.273707 <0.452.0> eh_config:get_env(erlang_craq, data_checkpoint, 10000)
+
+6:14:13.273978 <0.452.0> eh_config:get_env/3 --> 10000
+
+6:14:13.274166 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:14:13.274324 <0.452.0> eh_config:get_env(erlang_craq, file_repl_data_suffix, "0000000000")
+
+6:14:13.274778 <0.452.0> eh_config:get_env/3 --> "0000000000"
+
+6:14:13.275152 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:14:13.275535 <0.452.0> eh_file_name:get_file_name("ec_n4", "_repl.data")
+
+6:14:13.276002 <0.452.0> eh_file_name:get_file_name/2 --> "ec_n4_repl.data"
+
+6:14:13.276246 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:14:13.276535 <0.452.0> eh_file_name:get_file_name("ec_n4", standard_io)
+
+6:14:13.276836 <0.452.0> eh_file_name:get_file_name/2 --> standard_io
+
+6:14:13.277352 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:14:13.277679 <0.452.0> eh_file_name:get_full_file_name("./", standard_io)
+
+6:14:13.278160 <0.452.0> eh_file_name:get_full_file_name/2 --> standard_io
+
+6:14:13.278470 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:14:13.278972 <0.452.0> eh_config:get_env(erlang_craq, debug_mode, false)
+
+6:14:13.279441 <0.452.0> eh_config:get_env/3 --> true
+
+6:14:13.279967 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:14:13.280400 <0.452.0> eh_config:get_env(erlang_craq, sup_restart_intensity, 1)
+
+6:14:13.281180 <0.452.0> eh_config:get_env/3 --> 100
+
+6:14:13.281582 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:14:13.282057 <0.452.0> eh_config:get_env(erlang_craq, sup_restart_period, 5)
+
+6:14:13.282419 <0.452.0> eh_config:get_env/3 --> 1
+
+6:14:13.282513 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:14:13.282613 <0.452.0> eh_config:get_env(erlang_craq, sup_child_shutdown, 2000)
+
+6:14:13.282859 <0.452.0> eh_config:get_env/3 --> 2000
+
+6:14:13.283112 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:14:13.283406 <0.452.0> eh_system_config:get_env/0 --> {eh_app_config,'ec_n4@centos7-dev',sorted,eh_failure_detector_api,
+               eh_repl_data_manager_api,eh_storage_data_api,
+               eh_write_conflict_resolver_api,eh_unique_id_generator_api,
+               eh_wait_query_handler_api,lager_event,10000,"./","0000000000",
+               "ec_n4_repl.data",standard_io,true,100,1,2000}
+
+6:14:13.283929 <0.452.0>  '--> erlang_craq:send/4
+
+6:14:13.284227 <0.452.0> eh_system_config:get_unique_id_generator({eh_app_config,'ec_n4@centos7-dev',sorted,eh_failure_detector_api,
+               eh_repl_data_manager_api,eh_storage_data_api,
+               eh_write_conflict_resolver_api,eh_unique_id_generator_api,
+               eh_wait_query_handler_api,lager_event,10000,"./","0000000000",
+               "ec_n4_repl.data",standard_io,true,100,1,2000})
+
+6:14:13.284361 <0.452.0> eh_system_config:get_unique_id_generator/1 --> eh_unique_id_generator_api
+
+6:14:13.284449 <0.452.0>  '--> erlang_craq:send/4
+
+6:14:13.284591 <0.452.0> eh_unique_id_generator_api:unique_id()
+
+6:14:13.284929 <0.452.0> eh_unique_id_generator_api:unique_id/0 --> #Ref<0.3896970053.3661103105.105076>
+
+6:14:13.285006 <0.452.0>  '--> erlang_craq:send/4
+
+6:14:13.285062 <0.452.0> erlang_craq:receive_msg(#Ref<0.3896970053.3661103105.105076>, 1000, ['ec_n1@centos7-dev'], [])
+
+6:14:13.285311 <0.452.0> erlang_craq:receive_msg(#Ref<0.3896970053.3661103105.105076>, 1000, [], [{ok,{[{candidate,10},{person,10}],updated}}])
+
+6:14:13.285419 <0.452.0> erlang_craq:receive_msg/4 --> [{ok,{[{candidate,10},{person,10}],updated}}]
+
+6:14:13.285505 <0.452.0> erlang_craq:receive_msg/4 --> [{ok,{[{candidate,10},{person,10}],updated}}]
+
+6:14:13.285675 <0.452.0> erlang_craq:send/4 --> [{ok,{[{candidate,10},{person,10}],updated}}]
+
+6:14:13.285792 <0.452.0> erlang_craq:send_update/2 --> [{ok,{[{candidate,10},{person,10}],updated}}]
+
+6:14:13.285997 <0.452.0> erlang_craq:update/2 --> [{ok,{[{candidate,10},{person,10}],updated}}]
+
+6:14:13.286124 <0.452.0>  '--> erl_eval:do_apply/7
+
+6:15:59.639813 <0.452.0> erlang_craq:update('ec_n1@centos7-dev', [{candidate,10,[{name,donald_trump},{party,republican}]},
+ {person,10,[{name,john_smith},{age,40}]}])
+
+6:15:59.640035 <0.452.0> erlang_craq:get_update_list([{candidate,10,[{name,donald_trump},{party,republican}]},
+ {person,10,[{name,john_smith},{age,40}]}], [])
+
+6:15:59.640218 <0.452.0> erlang_craq:combine_columns([{name,donald_trump},{party,republican}], [])
+
+6:15:59.641056 <0.452.0> erlang_craq:get_columns([], [])
+
+6:15:59.641701 <0.452.0> erlang_craq:get_columns/2 --> []
+
+6:15:59.641760 <0.452.0>  '--> erlang_craq:combine_columns/2
+
+6:15:59.641827 <0.452.0> erlang_craq:get_columns([{party,republican},{name,donald_trump}], [])
+
+6:15:59.641900 <0.452.0> erlang_craq:get_columns([{name,donald_trump}], [{party,1,republican}])
+
+6:15:59.642015 <0.452.0> erlang_craq:get_columns([], [{name,1,donald_trump},{party,1,republican}])
+
+6:15:59.642173 <0.452.0> erlang_craq:get_columns/2 --> [{name,1,donald_trump},{party,1,republican}]
+
+6:15:59.642297 <0.452.0> erlang_craq:get_columns/2 --> [{name,1,donald_trump},{party,1,republican}]
+
+6:15:59.642423 <0.452.0> erlang_craq:get_columns/2 --> [{name,1,donald_trump},{party,1,republican}]
+
+6:15:59.642507 <0.452.0> erlang_craq:combine_columns/2 --> [{name,1,donald_trump},{party,1,republican}]
+
+6:15:59.642588 <0.452.0>  '--> erlang_craq:get_update_list/2
+
+6:15:59.643276 <0.452.0> erlang_craq:get_update_list([{person,10,[{name,john_smith},{age,40}]}], [{candidate,10,[{name,1,donald_trump},{party,1,republican}]}])
+
+6:15:59.643712 <0.452.0> erlang_craq:combine_columns([{name,john_smith},{age,40}], [])
+
+6:15:59.643881 <0.452.0> erlang_craq:get_columns([], [])
+
+6:15:59.643941 <0.452.0> erlang_craq:get_columns/2 --> []
+
+6:15:59.643987 <0.452.0>  '--> erlang_craq:combine_columns/2
+
+6:15:59.644125 <0.452.0> erlang_craq:get_columns([{age,40},{name,john_smith}], [])
+
+6:15:59.644183 <0.452.0> erlang_craq:get_columns([{name,john_smith}], [{age,1,40}])
+
+6:15:59.644355 <0.452.0> erlang_craq:get_columns([], [{name,1,john_smith},{age,1,40}])
+
+6:15:59.644524 <0.452.0> erlang_craq:get_columns/2 --> [{name,1,john_smith},{age,1,40}]
+
+6:15:59.644716 <0.452.0> erlang_craq:get_columns/2 --> [{name,1,john_smith},{age,1,40}]
+
+6:15:59.644851 <0.452.0> erlang_craq:get_columns/2 --> [{name,1,john_smith},{age,1,40}]
+
+6:15:59.645026 <0.452.0> erlang_craq:combine_columns/2 --> [{name,1,john_smith},{age,1,40}]
+
+6:15:59.645159 <0.452.0>  '--> erlang_craq:get_update_list/2
+
+6:15:59.645250 <0.452.0> erlang_craq:get_update_list([], [{person,10,[{name,1,john_smith},{age,1,40}]},
+ {candidate,10,[{name,1,donald_trump},{party,1,republican}]}])
+
+6:15:59.645353 <0.452.0> erlang_craq:get_update_list/2 --> [{person,10,[{name,1,john_smith},{age,1,40}]},
+ {candidate,10,[{name,1,donald_trump},{party,1,republican}]}]
+
+6:15:59.645933 <0.452.0> erlang_craq:get_update_list/2 --> [{person,10,[{name,1,john_smith},{age,1,40}]},
+ {candidate,10,[{name,1,donald_trump},{party,1,republican}]}]
+
+6:15:59.646538 <0.452.0> erlang_craq:get_update_list/2 --> [{person,10,[{name,1,john_smith},{age,1,40}]},
+ {candidate,10,[{name,1,donald_trump},{party,1,republican}]}]
+
+6:15:59.646895 <0.452.0>  '--> erlang_craq:update/2
+
+6:15:59.646998 <0.452.0> erlang_craq:send_update('ec_n1@centos7-dev', [{person,10,[{name,1,john_smith},{age,1,40}]},
+ {candidate,10,[{name,1,donald_trump},{party,1,republican}]}])
+
+6:15:59.647173 <0.452.0> erlang_craq:send(['ec_n1@centos7-dev'], eh_update, [{'ec_n1@centos7-dev',[{person,10,[{name,1,john_smith},{age,1,40}]},
+                       {candidate,10,
+                                  [{name,1,donald_trump},
+                                   {party,1,republican}]}]}], 1000)
+
+6:15:59.647560 <0.452.0> erlang_craq:flush_msg()
+
+6:15:59.647656 <0.452.0> erlang_craq:flush_msg/0 --> ok
+
+6:15:59.647783 <0.452.0>  '--> erlang_craq:send/4
+
+6:15:59.647875 <0.452.0> eh_system_config:get_env()
+
+6:15:59.647928 <0.452.0> eh_system_util:get_node_name('ec_n4@centos7-dev')
+
+6:15:59.648085 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'(101)
+
+6:15:59.648146 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+6:15:59.648216 <0.452.0>  '--> lists:takewhile_1/2
+
+6:15:59.648316 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'(99)
+
+6:15:59.648457 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+6:15:59.648520 <0.452.0>  '--> lists:takewhile_1/2
+
+6:15:59.648590 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'(95)
+
+6:15:59.648658 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+6:15:59.648869 <0.452.0>  '--> lists:takewhile_1/2
+
+6:15:59.648923 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'(110)
+
+6:15:59.648997 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+6:15:59.649200 <0.452.0>  '--> lists:takewhile_1/2
+
+6:15:59.649294 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'(52)
+
+6:15:59.649420 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+6:15:59.649607 <0.452.0>  '--> lists:takewhile_1/2
+
+6:15:59.649666 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'(64)
+
+6:15:59.649730 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> false
+
+6:15:59.649917 <0.452.0>  '--> lists:takewhile_1/2
+
+6:15:59.649969 <0.452.0> eh_system_util:get_node_name/1 --> "ec_n4"
+
+6:15:59.650202 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:15:59.650321 <0.452.0> eh_config:get_env(erlang_craq, data_dir, "./")
+
+6:15:59.650409 <0.452.0> eh_config:get_env/3 --> "./"
+
+6:15:59.650504 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:15:59.650621 <0.452.0> eh_config:get_env(erlang_craq, file_repl_data, "_repl.data")
+
+6:15:59.650700 <0.452.0> eh_config:get_env/3 --> "_repl.data"
+
+6:15:59.650802 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:15:59.650971 <0.452.0> eh_config:get_env(erlang_craq, file_repl_log, standard_io)
+
+6:15:59.651082 <0.452.0> eh_config:get_env/3 --> standard_io
+
+6:15:59.651188 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:15:59.651256 <0.452.0> eh_config:get_env(erlang_craq, node_order, sorted)
+
+6:15:59.651332 <0.452.0> eh_config:get_env/3 --> sorted
+
+6:15:59.651486 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:15:59.651537 <0.452.0> eh_config:get_env(erlang_craq, failure_detector, eh_failure_detector_api)
+
+6:15:59.651609 <0.452.0> eh_config:get_env/3 --> eh_failure_detector_api
+
+6:15:59.651698 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:15:59.651858 <0.452.0> eh_config:get_env(erlang_craq, repl_data_manager, eh_repl_data_manager_api)
+
+6:15:59.652004 <0.452.0> eh_config:get_env/3 --> eh_repl_data_manager_api
+
+6:15:59.652076 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:15:59.652202 <0.452.0> eh_config:get_env(erlang_craq, storage_data, eh_storage_data_api)
+
+6:15:59.652316 <0.452.0> eh_config:get_env/3 --> eh_storage_data_api
+
+6:15:59.652473 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:15:59.652530 <0.452.0> eh_config:get_env(erlang_craq, write_conflict_resolver, eh_write_conflict_resolver_api)
+
+6:15:59.652637 <0.452.0> eh_config:get_env/3 --> eh_write_conflict_resolver_api
+
+6:15:59.652766 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:15:59.653133 <0.452.0> eh_config:get_env(erlang_craq, unique_id_generator, eh_unique_id_generator_api)
+
+6:15:59.653217 <0.452.0> eh_config:get_env/3 --> eh_unique_id_generator_api
+
+6:15:59.653273 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:15:59.653424 <0.452.0> eh_config:get_env(erlang_craq, query_handler, eh_no_wait_query_handler_api)
+
+6:15:59.653526 <0.452.0> eh_config:get_env/3 --> eh_wait_query_handler_api
+
+6:15:59.653606 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:15:59.653753 <0.452.0> eh_config:get_env(erlang_craq, event_logger, lager_event)
+
+6:15:59.653834 <0.452.0> eh_config:get_env/3 --> lager_event
+
+6:15:59.653970 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:15:59.654160 <0.452.0> eh_config:get_env(erlang_craq, data_checkpoint, 10000)
+
+6:15:59.654238 <0.452.0> eh_config:get_env/3 --> 10000
+
+6:15:59.654401 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:15:59.654457 <0.452.0> eh_config:get_env(erlang_craq, file_repl_data_suffix, "0000000000")
+
+6:15:59.654548 <0.452.0> eh_config:get_env/3 --> "0000000000"
+
+6:15:59.654754 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:15:59.654820 <0.452.0> eh_file_name:get_file_name("ec_n4", "_repl.data")
+
+6:15:59.654961 <0.452.0> eh_file_name:get_file_name/2 --> "ec_n4_repl.data"
+
+6:15:59.655039 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:15:59.655103 <0.452.0> eh_file_name:get_file_name("ec_n4", standard_io)
+
+6:15:59.655241 <0.452.0> eh_file_name:get_file_name/2 --> standard_io
+
+6:15:59.655346 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:15:59.655466 <0.452.0> eh_file_name:get_full_file_name("./", standard_io)
+
+6:15:59.655542 <0.452.0> eh_file_name:get_full_file_name/2 --> standard_io
+
+6:15:59.655619 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:15:59.655868 <0.452.0> eh_config:get_env(erlang_craq, debug_mode, false)
+
+6:15:59.655932 <0.452.0> eh_config:get_env/3 --> true
+
+6:15:59.656083 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:15:59.656139 <0.452.0> eh_config:get_env(erlang_craq, sup_restart_intensity, 1)
+
+6:15:59.656206 <0.452.0> eh_config:get_env/3 --> 100
+
+6:15:59.656279 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:15:59.656370 <0.452.0> eh_config:get_env(erlang_craq, sup_restart_period, 5)
+
+6:15:59.656472 <0.452.0> eh_config:get_env/3 --> 1
+
+6:15:59.656573 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:15:59.656704 <0.452.0> eh_config:get_env(erlang_craq, sup_child_shutdown, 2000)
+
+6:15:59.656782 <0.452.0> eh_config:get_env/3 --> 2000
+
+6:15:59.656885 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:15:59.656984 <0.452.0> eh_system_config:get_env/0 --> {eh_app_config,'ec_n4@centos7-dev',sorted,eh_failure_detector_api,
+               eh_repl_data_manager_api,eh_storage_data_api,
+               eh_write_conflict_resolver_api,eh_unique_id_generator_api,
+               eh_wait_query_handler_api,lager_event,10000,"./","0000000000",
+               "ec_n4_repl.data",standard_io,true,100,1,2000}
+
+6:15:59.657130 <0.452.0>  '--> erlang_craq:send/4
+
+6:15:59.657180 <0.452.0> eh_system_config:get_unique_id_generator({eh_app_config,'ec_n4@centos7-dev',sorted,eh_failure_detector_api,
+               eh_repl_data_manager_api,eh_storage_data_api,
+               eh_write_conflict_resolver_api,eh_unique_id_generator_api,
+               eh_wait_query_handler_api,lager_event,10000,"./","0000000000",
+               "ec_n4_repl.data",standard_io,true,100,1,2000})
+
+6:15:59.657353 <0.452.0> eh_system_config:get_unique_id_generator/1 --> eh_unique_id_generator_api
+
+6:15:59.657481 <0.452.0>  '--> erlang_craq:send/4
+
+6:15:59.657537 <0.452.0> eh_unique_id_generator_api:unique_id()
+
+6:15:59.657580 <0.452.0> eh_unique_id_generator_api:unique_id/0 --> #Ref<0.3896970053.3661103105.105352>
+
+6:15:59.657634 <0.452.0>  '--> erlang_craq:send/4
+
+6:15:59.657674 <0.452.0> erlang_craq:receive_msg(#Ref<0.3896970053.3661103105.105352>, 1000, ['ec_n1@centos7-dev'], [])
+
+6:15:59.657734 <0.452.0> erlang_craq:receive_msg(#Ref<0.3896970053.3661103105.105352>, 1000, [], [{ok,{[{candidate,10},{person,10}],updated}}])
+
+6:15:59.657806 <0.452.0> erlang_craq:receive_msg/4 --> [{ok,{[{candidate,10},{person,10}],updated}}]
+
+6:15:59.657864 <0.452.0> erlang_craq:receive_msg/4 --> [{ok,{[{candidate,10},{person,10}],updated}}]
+
+6:15:59.657921 <0.452.0> erlang_craq:send/4 --> [{ok,{[{candidate,10},{person,10}],updated}}]
+
+6:15:59.657977 <0.452.0> erlang_craq:send_update/2 --> [{ok,{[{candidate,10},{person,10}],updated}}]
+
+6:15:59.658038 <0.452.0> erlang_craq:update/2 --> [{ok,{[{candidate,10},{person,10}],updated}}]
+
+6:15:59.658147 <0.452.0>  '--> erl_eval:do_apply/7
+
+6:17:15.333012 <0.452.0> erlang_craq:update('ec_n1@centos7-dev', [{candidate,10,[{name,donald_trump},{party,republican}]},
+ {person,10,[{name,john_smith},{age,40}]}])
+
+6:17:15.334099 <0.452.0> erlang_craq:get_update_list([{candidate,10,[{name,donald_trump},{party,republican}]},
+ {person,10,[{name,john_smith},{age,40}]}], [])
+
+6:17:15.337041 <0.452.0> erlang_craq:combine_columns([{name,donald_trump},{party,republican}], [])
+
+6:17:15.337132 <0.452.0> erlang_craq:get_columns([], [])
+
+6:17:15.337201 <0.452.0> erlang_craq:get_columns/2 --> []
+
+6:17:15.337262 <0.452.0>  '--> erlang_craq:combine_columns/2
+
+6:17:15.337320 <0.452.0> erlang_craq:get_columns([{party,republican},{name,donald_trump}], [])
+
+6:17:15.337379 <0.452.0> erlang_craq:get_columns([{name,donald_trump}], [{party,1,republican}])
+
+6:17:15.337490 <0.452.0> erlang_craq:get_columns([], [{name,1,donald_trump},{party,1,republican}])
+
+6:17:15.337578 <0.452.0> erlang_craq:get_columns/2 --> [{name,1,donald_trump},{party,1,republican}]
+
+6:17:15.337687 <0.452.0> erlang_craq:get_columns/2 --> [{name,1,donald_trump},{party,1,republican}]
+
+6:17:15.337755 <0.452.0> erlang_craq:get_columns/2 --> [{name,1,donald_trump},{party,1,republican}]
+
+6:17:15.337829 <0.452.0> erlang_craq:combine_columns/2 --> [{name,1,donald_trump},{party,1,republican}]
+
+6:17:15.337905 <0.452.0>  '--> erlang_craq:get_update_list/2
+
+6:17:15.337954 <0.452.0> erlang_craq:get_update_list([{person,10,[{name,john_smith},{age,40}]}], [{candidate,10,[{name,1,donald_trump},{party,1,republican}]}])
+
+6:17:15.338044 <0.452.0> erlang_craq:combine_columns([{name,john_smith},{age,40}], [])
+
+6:17:15.338122 <0.452.0> erlang_craq:get_columns([], [])
+
+6:17:15.338171 <0.452.0> erlang_craq:get_columns/2 --> []
+
+6:17:15.338233 <0.452.0>  '--> erlang_craq:combine_columns/2
+
+6:17:15.338278 <0.452.0> erlang_craq:get_columns([{age,40},{name,john_smith}], [])
+
+6:17:15.338349 <0.452.0> erlang_craq:get_columns([{name,john_smith}], [{age,1,40}])
+
+6:17:15.338420 <0.452.0> erlang_craq:get_columns([], [{name,1,john_smith},{age,1,40}])
+
+6:17:15.338481 <0.452.0> erlang_craq:get_columns/2 --> [{name,1,john_smith},{age,1,40}]
+
+6:17:15.338550 <0.452.0> erlang_craq:get_columns/2 --> [{name,1,john_smith},{age,1,40}]
+
+6:17:15.338660 <0.452.0> erlang_craq:get_columns/2 --> [{name,1,john_smith},{age,1,40}]
+
+6:17:15.338724 <0.452.0> erlang_craq:combine_columns/2 --> [{name,1,john_smith},{age,1,40}]
+
+6:17:15.338798 <0.452.0>  '--> erlang_craq:get_update_list/2
+
+6:17:15.338844 <0.452.0> erlang_craq:get_update_list([], [{person,10,[{name,1,john_smith},{age,1,40}]},
+ {candidate,10,[{name,1,donald_trump},{party,1,republican}]}])
+
+6:17:15.338938 <0.452.0> erlang_craq:get_update_list/2 --> [{person,10,[{name,1,john_smith},{age,1,40}]},
+ {candidate,10,[{name,1,donald_trump},{party,1,republican}]}]
+
+6:17:15.339031 <0.452.0> erlang_craq:get_update_list/2 --> [{person,10,[{name,1,john_smith},{age,1,40}]},
+ {candidate,10,[{name,1,donald_trump},{party,1,republican}]}]
+
+6:17:15.339105 <0.452.0> erlang_craq:get_update_list/2 --> [{person,10,[{name,1,john_smith},{age,1,40}]},
+ {candidate,10,[{name,1,donald_trump},{party,1,republican}]}]
+
+6:17:15.339592 <0.452.0>  '--> erlang_craq:update/2
+
+6:17:15.339695 <0.452.0> erlang_craq:send_update('ec_n1@centos7-dev', [{person,10,[{name,1,john_smith},{age,1,40}]},
+ {candidate,10,[{name,1,donald_trump},{party,1,republican}]}])
+
+6:17:15.339794 <0.452.0> erlang_craq:send(['ec_n1@centos7-dev'], eh_update, [{'ec_n1@centos7-dev',[{person,10,[{name,1,john_smith},{age,1,40}]},
+                       {candidate,10,
+                                  [{name,1,donald_trump},
+                                   {party,1,republican}]}]}], 1000)
+
+6:17:15.339929 <0.452.0> erlang_craq:flush_msg()
+
+6:17:15.339975 <0.452.0> erlang_craq:flush_msg/0 --> ok
+
+6:17:15.340021 <0.452.0>  '--> erlang_craq:send/4
+
+6:17:15.340067 <0.452.0> eh_system_config:get_env()
+
+6:17:15.340124 <0.452.0> eh_system_util:get_node_name('ec_n4@centos7-dev')
+
+6:17:15.340174 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'(101)
+
+6:17:15.340220 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+6:17:15.340291 <0.452.0>  '--> lists:takewhile_1/2
+
+6:17:15.340340 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'(99)
+
+6:17:15.340386 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+6:17:15.340434 <0.452.0>  '--> lists:takewhile_1/2
+
+6:17:15.340642 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'(95)
+
+6:17:15.340700 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+6:17:15.340749 <0.452.0>  '--> lists:takewhile_1/2
+
+6:17:15.340808 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'(110)
+
+6:17:15.340873 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+6:17:15.340935 <0.452.0>  '--> lists:takewhile_1/2
+
+6:17:15.340978 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'(52)
+
+6:17:15.341037 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+6:17:15.341089 <0.452.0>  '--> lists:takewhile_1/2
+
+6:17:15.341143 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'(64)
+
+6:17:15.341190 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> false
+
+6:17:15.341250 <0.452.0>  '--> lists:takewhile_1/2
+
+6:17:15.341296 <0.452.0> eh_system_util:get_node_name/1 --> "ec_n4"
+
+6:17:15.341356 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:17:15.341400 <0.452.0> eh_config:get_env(erlang_craq, data_dir, "./")
+
+6:17:15.341464 <0.452.0> eh_config:get_env/3 --> "./"
+
+6:17:15.341514 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:17:15.341568 <0.452.0> eh_config:get_env(erlang_craq, file_repl_data, "_repl.data")
+
+6:17:15.341650 <0.452.0> eh_config:get_env/3 --> "_repl.data"
+
+6:17:15.341722 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:17:15.341766 <0.452.0> eh_config:get_env(erlang_craq, file_repl_log, standard_io)
+
+6:17:15.341831 <0.452.0> eh_config:get_env/3 --> standard_io
+
+6:17:15.341878 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:17:15.341936 <0.452.0> eh_config:get_env(erlang_craq, node_order, sorted)
+
+6:17:15.341987 <0.452.0> eh_config:get_env/3 --> sorted
+
+6:17:15.342045 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:17:15.342088 <0.452.0> eh_config:get_env(erlang_craq, failure_detector, eh_failure_detector_api)
+
+6:17:15.342156 <0.452.0> eh_config:get_env/3 --> eh_failure_detector_api
+
+6:17:15.342217 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:17:15.342261 <0.452.0> eh_config:get_env(erlang_craq, repl_data_manager, eh_repl_data_manager_api)
+
+6:17:15.342330 <0.452.0> eh_config:get_env/3 --> eh_repl_data_manager_api
+
+6:17:15.342378 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:17:15.342433 <0.452.0> eh_config:get_env(erlang_craq, storage_data, eh_storage_data_api)
+
+6:17:15.342486 <0.452.0> eh_config:get_env/3 --> eh_storage_data_api
+
+6:17:15.342553 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:17:15.342628 <0.452.0> eh_config:get_env(erlang_craq, write_conflict_resolver, eh_write_conflict_resolver_api)
+
+6:17:15.342713 <0.452.0> eh_config:get_env/3 --> eh_write_conflict_resolver_api
+
+6:17:15.342766 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:17:15.342825 <0.452.0> eh_config:get_env(erlang_craq, unique_id_generator, eh_unique_id_generator_api)
+
+6:17:15.342883 <0.452.0> eh_config:get_env/3 --> eh_unique_id_generator_api
+
+6:17:15.342934 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:17:15.342992 <0.452.0> eh_config:get_env(erlang_craq, query_handler, eh_no_wait_query_handler_api)
+
+6:17:15.343050 <0.452.0> eh_config:get_env/3 --> eh_wait_query_handler_api
+
+6:17:15.343096 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:17:15.343154 <0.452.0> eh_config:get_env(erlang_craq, event_logger, lager_event)
+
+6:17:15.343213 <0.452.0> eh_config:get_env/3 --> lager_event
+
+6:17:15.343259 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:17:15.343316 <0.452.0> eh_config:get_env(erlang_craq, data_checkpoint, 10000)
+
+6:17:15.343368 <0.452.0> eh_config:get_env/3 --> 10000
+
+6:17:15.343416 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:17:15.343458 <0.452.0> eh_config:get_env(erlang_craq, file_repl_data_suffix, "0000000000")
+
+6:17:15.343524 <0.452.0> eh_config:get_env/3 --> "0000000000"
+
+6:17:15.343574 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:17:15.343648 <0.452.0> eh_file_name:get_file_name("ec_n4", "_repl.data")
+
+6:17:15.343725 <0.452.0> eh_file_name:get_file_name/2 --> "ec_n4_repl.data"
+
+6:17:15.343775 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:17:15.343820 <0.452.0> eh_file_name:get_file_name("ec_n4", standard_io)
+
+6:17:15.343884 <0.452.0> eh_file_name:get_file_name/2 --> standard_io
+
+6:17:15.343932 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:17:15.343976 <0.452.0> eh_file_name:get_full_file_name("./", standard_io)
+
+6:17:15.344041 <0.452.0> eh_file_name:get_full_file_name/2 --> standard_io
+
+6:17:15.344094 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:17:15.344136 <0.452.0> eh_config:get_env(erlang_craq, debug_mode, false)
+
+6:17:15.344199 <0.452.0> eh_config:get_env/3 --> true
+
+6:17:15.344246 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:17:15.344291 <0.452.0> eh_config:get_env(erlang_craq, sup_restart_intensity, 1)
+
+6:17:15.344341 <0.452.0> eh_config:get_env/3 --> 100
+
+6:17:15.344398 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:17:15.344441 <0.452.0> eh_config:get_env(erlang_craq, sup_restart_period, 5)
+
+6:17:15.344493 <0.452.0> eh_config:get_env/3 --> 1
+
+6:17:15.344551 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:17:15.344614 <0.452.0> eh_config:get_env(erlang_craq, sup_child_shutdown, 2000)
+
+6:17:15.344675 <0.452.0> eh_config:get_env/3 --> 2000
+
+6:17:15.344720 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:17:15.344776 <0.452.0> eh_system_config:get_env/0 --> {eh_app_config,'ec_n4@centos7-dev',sorted,eh_failure_detector_api,
+               eh_repl_data_manager_api,eh_storage_data_api,
+               eh_write_conflict_resolver_api,eh_unique_id_generator_api,
+               eh_wait_query_handler_api,lager_event,10000,"./","0000000000",
+               "ec_n4_repl.data",standard_io,true,100,1,2000}
+
+6:17:15.344905 <0.452.0>  '--> erlang_craq:send/4
+
+6:17:15.344961 <0.452.0> eh_system_config:get_unique_id_generator({eh_app_config,'ec_n4@centos7-dev',sorted,eh_failure_detector_api,
+               eh_repl_data_manager_api,eh_storage_data_api,
+               eh_write_conflict_resolver_api,eh_unique_id_generator_api,
+               eh_wait_query_handler_api,lager_event,10000,"./","0000000000",
+               "ec_n4_repl.data",standard_io,true,100,1,2000})
+
+6:17:15.345080 <0.452.0> eh_system_config:get_unique_id_generator/1 --> eh_unique_id_generator_api
+
+6:17:15.345151 <0.452.0>  '--> erlang_craq:send/4
+
+6:17:15.345195 <0.452.0> eh_unique_id_generator_api:unique_id()
+
+6:17:15.345238 <0.452.0> eh_unique_id_generator_api:unique_id/0 --> #Ref<0.3896970053.3661103106.101666>
+
+6:17:15.345303 <0.452.0>  '--> erlang_craq:send/4
+
+6:17:15.345348 <0.452.0> erlang_craq:receive_msg(#Ref<0.3896970053.3661103106.101666>, 1000, ['ec_n1@centos7-dev'], [])
+
+6:17:15.345408 <0.452.0> erlang_craq:receive_msg(#Ref<0.3896970053.3661103106.101666>, 1000, [], [{ok,{[{candidate,10},{person,10}],updated}}])
+
+6:17:15.345496 <0.452.0> erlang_craq:receive_msg/4 --> [{ok,{[{candidate,10},{person,10}],updated}}]
+
+6:17:15.345561 <0.452.0> erlang_craq:receive_msg/4 --> [{ok,{[{candidate,10},{person,10}],updated}}]
+
+6:17:15.345697 <0.452.0> erlang_craq:send/4 --> [{ok,{[{candidate,10},{person,10}],updated}}]
+
+6:17:15.345774 <0.452.0> erlang_craq:send_update/2 --> [{ok,{[{candidate,10},{person,10}],updated}}]
+
+6:17:15.345850 <0.452.0> erlang_craq:update/2 --> [{ok,{[{candidate,10},{person,10}],updated}}]
+
+6:17:15.345923 <0.452.0>  '--> erl_eval:do_apply/7
+
+6:18:37.357705 <0.452.0> erlang_craq:update('ec_n1@centos7-dev', [{candidate,10,[{name,donald_trump},{party,republican}]},
+ {person,10,[{name,john_smith},{age,40}]}])
+
+6:18:37.358441 <0.452.0> erlang_craq:get_update_list([{candidate,10,[{name,donald_trump},{party,republican}]},
+ {person,10,[{name,john_smith},{age,40}]}], [])
+
+6:18:37.358601 <0.452.0> erlang_craq:combine_columns([{name,donald_trump},{party,republican}], [])
+
+6:18:37.358730 <0.452.0> erlang_craq:get_columns([], [])
+
+6:18:37.358839 <0.452.0> erlang_craq:get_columns/2 --> []
+
+6:18:37.358920 <0.452.0>  '--> erlang_craq:combine_columns/2
+
+6:18:37.358997 <0.452.0> erlang_craq:get_columns([{party,republican},{name,donald_trump}], [])
+
+6:18:37.359076 <0.452.0> erlang_craq:get_columns([{name,donald_trump}], [{party,1,republican}])
+
+6:18:37.359151 <0.452.0> erlang_craq:get_columns([], [{name,1,donald_trump},{party,1,republican}])
+
+6:18:37.359299 <0.452.0> erlang_craq:get_columns/2 --> [{name,1,donald_trump},{party,1,republican}]
+
+6:18:37.359382 <0.452.0> erlang_craq:get_columns/2 --> [{name,1,donald_trump},{party,1,republican}]
+
+6:18:37.359472 <0.452.0> erlang_craq:get_columns/2 --> [{name,1,donald_trump},{party,1,republican}]
+
+6:18:37.359589 <0.452.0> erlang_craq:combine_columns/2 --> [{name,1,donald_trump},{party,1,republican}]
+
+6:18:37.359700 <0.452.0>  '--> erlang_craq:get_update_list/2
+
+6:18:37.359812 <0.452.0> erlang_craq:get_update_list([{person,10,[{name,john_smith},{age,40}]}], [{candidate,10,[{name,1,donald_trump},{party,1,republican}]}])
+
+6:18:37.359971 <0.452.0> erlang_craq:combine_columns([{name,john_smith},{age,40}], [])
+
+6:18:37.360124 <0.452.0> erlang_craq:get_columns([], [])
+
+6:18:37.360263 <0.452.0> erlang_craq:get_columns/2 --> []
+
+6:18:37.360378 <0.452.0>  '--> erlang_craq:combine_columns/2
+
+6:18:37.360529 <0.452.0> erlang_craq:get_columns([{age,40},{name,john_smith}], [])
+
+6:18:37.360611 <0.452.0> erlang_craq:get_columns([{name,john_smith}], [{age,1,40}])
+
+6:18:37.360694 <0.452.0> erlang_craq:get_columns([], [{name,1,john_smith},{age,1,40}])
+
+6:18:37.360790 <0.452.0> erlang_craq:get_columns/2 --> [{name,1,john_smith},{age,1,40}]
+
+6:18:37.360879 <0.452.0> erlang_craq:get_columns/2 --> [{name,1,john_smith},{age,1,40}]
+
+6:18:37.360970 <0.452.0> erlang_craq:get_columns/2 --> [{name,1,john_smith},{age,1,40}]
+
+6:18:37.361072 <0.452.0> erlang_craq:combine_columns/2 --> [{name,1,john_smith},{age,1,40}]
+
+6:18:37.361183 <0.452.0>  '--> erlang_craq:get_update_list/2
+
+6:18:37.361326 <0.452.0> erlang_craq:get_update_list([], [{person,10,[{name,1,john_smith},{age,1,40}]},
+ {candidate,10,[{name,1,donald_trump},{party,1,republican}]}])
+
+6:18:37.361456 <0.452.0> erlang_craq:get_update_list/2 --> [{person,10,[{name,1,john_smith},{age,1,40}]},
+ {candidate,10,[{name,1,donald_trump},{party,1,republican}]}]
+
+6:18:37.361629 <0.452.0> erlang_craq:get_update_list/2 --> [{person,10,[{name,1,john_smith},{age,1,40}]},
+ {candidate,10,[{name,1,donald_trump},{party,1,republican}]}]
+
+6:18:37.361744 <0.452.0> erlang_craq:get_update_list/2 --> [{person,10,[{name,1,john_smith},{age,1,40}]},
+ {candidate,10,[{name,1,donald_trump},{party,1,republican}]}]
+
+6:18:37.361912 <0.452.0>  '--> erlang_craq:update/2
+
+6:18:37.362077 <0.452.0> erlang_craq:send_update('ec_n1@centos7-dev', [{person,10,[{name,1,john_smith},{age,1,40}]},
+ {candidate,10,[{name,1,donald_trump},{party,1,republican}]}])
+
+6:18:37.362310 <0.452.0> erlang_craq:send(['ec_n1@centos7-dev'], eh_update, [{'ec_n1@centos7-dev',[{person,10,[{name,1,john_smith},{age,1,40}]},
+                       {candidate,10,
+                                  [{name,1,donald_trump},
+                                   {party,1,republican}]}]}], 1000)
+
+6:18:37.362633 <0.452.0> erlang_craq:flush_msg()
+
+6:18:37.362733 <0.452.0> erlang_craq:flush_msg/0 --> ok
+
+6:18:37.362804 <0.452.0>  '--> erlang_craq:send/4
+
+6:18:37.362883 <0.452.0> eh_system_config:get_env()
+
+6:18:37.362960 <0.452.0> eh_system_util:get_node_name('ec_n4@centos7-dev')
+
+6:18:37.363065 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'(101)
+
+6:18:37.363156 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+6:18:37.363299 <0.452.0>  '--> lists:takewhile_1/2
+
+6:18:37.363387 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'(99)
+
+6:18:37.363531 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+6:18:37.363646 <0.452.0>  '--> lists:takewhile_1/2
+
+6:18:37.363754 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'(95)
+
+6:18:37.363873 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+6:18:37.364072 <0.452.0>  '--> lists:takewhile_1/2
+
+6:18:37.364180 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'(110)
+
+6:18:37.364267 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+6:18:37.364348 <0.452.0>  '--> lists:takewhile_1/2
+
+6:18:37.364428 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'(52)
+
+6:18:37.364580 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+6:18:37.364778 <0.452.0>  '--> lists:takewhile_1/2
+
+6:18:37.364893 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'(64)
+
+6:18:37.365058 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> false
+
+6:18:37.365192 <0.452.0>  '--> lists:takewhile_1/2
+
+6:18:37.365290 <0.452.0> eh_system_util:get_node_name/1 --> "ec_n4"
+
+6:18:37.365415 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:18:37.365564 <0.452.0> eh_config:get_env(erlang_craq, data_dir, "./")
+
+6:18:37.365690 <0.452.0> eh_config:get_env/3 --> "./"
+
+6:18:37.365802 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:18:37.365883 <0.452.0> eh_config:get_env(erlang_craq, file_repl_data, "_repl.data")
+
+6:18:37.366013 <0.452.0> eh_config:get_env/3 --> "_repl.data"
+
+6:18:37.366164 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:18:37.366264 <0.452.0> eh_config:get_env(erlang_craq, file_repl_log, standard_io)
+
+6:18:37.366362 <0.452.0> eh_config:get_env/3 --> standard_io
+
+6:18:37.366467 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:18:37.366550 <0.452.0> eh_config:get_env(erlang_craq, node_order, sorted)
+
+6:18:37.366800 <0.452.0> eh_config:get_env/3 --> sorted
+
+6:18:37.367354 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:18:37.367492 <0.452.0> eh_config:get_env(erlang_craq, failure_detector, eh_failure_detector_api)
+
+6:18:37.367687 <0.452.0> eh_config:get_env/3 --> eh_failure_detector_api
+
+6:18:37.368121 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:18:37.368283 <0.452.0> eh_config:get_env(erlang_craq, repl_data_manager, eh_repl_data_manager_api)
+
+6:18:37.368406 <0.452.0> eh_config:get_env/3 --> eh_repl_data_manager_api
+
+6:18:37.368500 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:18:37.368613 <0.452.0> eh_config:get_env(erlang_craq, storage_data, eh_storage_data_api)
+
+6:18:37.368768 <0.452.0> eh_config:get_env/3 --> eh_storage_data_api
+
+6:18:37.368861 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:18:37.368955 <0.452.0> eh_config:get_env(erlang_craq, write_conflict_resolver, eh_write_conflict_resolver_api)
+
+6:18:37.369078 <0.452.0> eh_config:get_env/3 --> eh_write_conflict_resolver_api
+
+6:18:37.369199 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:18:37.369349 <0.452.0> eh_config:get_env(erlang_craq, unique_id_generator, eh_unique_id_generator_api)
+
+6:18:37.369453 <0.452.0> eh_config:get_env/3 --> eh_unique_id_generator_api
+
+6:18:37.369557 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:18:37.369634 <0.452.0> eh_config:get_env(erlang_craq, query_handler, eh_no_wait_query_handler_api)
+
+6:18:37.369738 <0.452.0> eh_config:get_env/3 --> eh_wait_query_handler_api
+
+6:18:37.369868 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:18:37.369982 <0.452.0> eh_config:get_env(erlang_craq, event_logger, lager_event)
+
+6:18:37.370227 <0.452.0> eh_config:get_env/3 --> lager_event
+
+6:18:37.370405 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:18:37.370513 <0.452.0> eh_config:get_env(erlang_craq, data_checkpoint, 10000)
+
+6:18:37.370713 <0.452.0> eh_config:get_env/3 --> 10000
+
+6:18:37.370879 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:18:37.371067 <0.452.0> eh_config:get_env(erlang_craq, file_repl_data_suffix, "0000000000")
+
+6:18:37.371281 <0.452.0> eh_config:get_env/3 --> "0000000000"
+
+6:18:37.371443 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:18:37.371550 <0.452.0> eh_file_name:get_file_name("ec_n4", "_repl.data")
+
+6:18:37.371726 <0.452.0> eh_file_name:get_file_name/2 --> "ec_n4_repl.data"
+
+6:18:37.371938 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:18:37.372056 <0.452.0> eh_file_name:get_file_name("ec_n4", standard_io)
+
+6:18:37.372249 <0.452.0> eh_file_name:get_file_name/2 --> standard_io
+
+6:18:37.372348 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:18:37.372429 <0.452.0> eh_file_name:get_full_file_name("./", standard_io)
+
+6:18:37.372625 <0.452.0> eh_file_name:get_full_file_name/2 --> standard_io
+
+6:18:37.372805 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:18:37.372895 <0.452.0> eh_config:get_env(erlang_craq, debug_mode, false)
+
+6:18:37.373077 <0.452.0> eh_config:get_env/3 --> true
+
+6:18:37.373197 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:18:37.373330 <0.452.0> eh_config:get_env(erlang_craq, sup_restart_intensity, 1)
+
+6:18:37.373550 <0.452.0> eh_config:get_env/3 --> 100
+
+6:18:37.373640 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:18:37.373768 <0.452.0> eh_config:get_env(erlang_craq, sup_restart_period, 5)
+
+6:18:37.373950 <0.452.0> eh_config:get_env/3 --> 1
+
+6:18:37.374094 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:18:37.374159 <0.452.0> eh_config:get_env(erlang_craq, sup_child_shutdown, 2000)
+
+6:18:37.374220 <0.452.0> eh_config:get_env/3 --> 2000
+
+6:18:37.374271 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:18:37.374343 <0.452.0> eh_system_config:get_env/0 --> {eh_app_config,'ec_n4@centos7-dev',sorted,eh_failure_detector_api,
+               eh_repl_data_manager_api,eh_storage_data_api,
+               eh_write_conflict_resolver_api,eh_unique_id_generator_api,
+               eh_wait_query_handler_api,lager_event,10000,"./","0000000000",
+               "ec_n4_repl.data",standard_io,true,100,1,2000}
+
+6:18:37.374594 <0.452.0>  '--> erlang_craq:send/4
+
+6:18:37.374700 <0.452.0> eh_system_config:get_unique_id_generator({eh_app_config,'ec_n4@centos7-dev',sorted,eh_failure_detector_api,
+               eh_repl_data_manager_api,eh_storage_data_api,
+               eh_write_conflict_resolver_api,eh_unique_id_generator_api,
+               eh_wait_query_handler_api,lager_event,10000,"./","0000000000",
+               "ec_n4_repl.data",standard_io,true,100,1,2000})
+
+6:18:37.374971 <0.452.0> eh_system_config:get_unique_id_generator/1 --> eh_unique_id_generator_api
+
+6:18:37.375061 <0.452.0>  '--> erlang_craq:send/4
+
+6:18:37.375148 <0.452.0> eh_unique_id_generator_api:unique_id()
+
+6:18:37.375215 <0.452.0> eh_unique_id_generator_api:unique_id/0 --> #Ref<0.3896970053.3661103106.101941>
+
+6:18:37.375299 <0.452.0>  '--> erlang_craq:send/4
+
+6:18:37.375392 <0.452.0> erlang_craq:receive_msg(#Ref<0.3896970053.3661103106.101941>, 1000, ['ec_n1@centos7-dev'], [])
+
+6:18:37.375603 <0.452.0> erlang_craq:receive_msg(#Ref<0.3896970053.3661103106.101941>, 1000, [], [{ok,{[{candidate,10},{person,10}],updated}}])
+
+6:18:37.375861 <0.452.0> erlang_craq:receive_msg/4 --> [{ok,{[{candidate,10},{person,10}],updated}}]
+
+6:18:37.376028 <0.452.0> erlang_craq:receive_msg/4 --> [{ok,{[{candidate,10},{person,10}],updated}}]
+
+6:18:37.376228 <0.452.0> erlang_craq:send/4 --> [{ok,{[{candidate,10},{person,10}],updated}}]
+
+6:18:37.376437 <0.452.0> erlang_craq:send_update/2 --> [{ok,{[{candidate,10},{person,10}],updated}}]
+
+6:18:37.376627 <0.452.0> erlang_craq:update/2 --> [{ok,{[{candidate,10},{person,10}],updated}}]
+
+6:18:37.376855 <0.452.0>  '--> erl_eval:do_apply/7
+
+6:19:26.989320 <0.452.0> erlang_craq:update('ec_n1@centos7-dev', [{candidate,10,[{name,donald_trump},{party,republican}]},
+ {person,10,[{name,john_smith},{age,40}]}])
+
+6:19:26.989627 <0.452.0> erlang_craq:get_update_list([{candidate,10,[{name,donald_trump},{party,republican}]},
+ {person,10,[{name,john_smith},{age,40}]}], [])
+
+6:19:26.990286 <0.452.0> erlang_craq:combine_columns([{name,donald_trump},{party,republican}], [])
+
+6:19:26.991921 <0.452.0> erlang_craq:get_columns([], [])
+
+6:19:26.992043 <0.452.0> erlang_craq:get_columns/2 --> []
+
+6:19:26.992099 <0.452.0>  '--> erlang_craq:combine_columns/2
+
+6:19:26.992142 <0.452.0> erlang_craq:get_columns([{party,republican},{name,donald_trump}], [])
+
+6:19:26.992206 <0.452.0> erlang_craq:get_columns([{name,donald_trump}], [{party,1,republican}])
+
+6:19:26.992283 <0.452.0> erlang_craq:get_columns([], [{name,1,donald_trump},{party,1,republican}])
+
+6:19:26.992418 <0.452.0> erlang_craq:get_columns/2 --> [{name,1,donald_trump},{party,1,republican}]
+
+6:19:26.992485 <0.452.0> erlang_craq:get_columns/2 --> [{name,1,donald_trump},{party,1,republican}]
+
+6:19:26.992609 <0.452.0> erlang_craq:get_columns/2 --> [{name,1,donald_trump},{party,1,republican}]
+
+6:19:26.992740 <0.452.0> erlang_craq:combine_columns/2 --> [{name,1,donald_trump},{party,1,republican}]
+
+6:19:26.992989 <0.452.0>  '--> erlang_craq:get_update_list/2
+
+6:19:26.993082 <0.452.0> erlang_craq:get_update_list([{person,10,[{name,john_smith},{age,40}]}], [{candidate,10,[{name,1,donald_trump},{party,1,republican}]}])
+
+6:19:26.993211 <0.452.0> erlang_craq:combine_columns([{name,john_smith},{age,40}], [])
+
+6:19:26.993300 <0.452.0> erlang_craq:get_columns([], [])
+
+6:19:26.993456 <0.452.0> erlang_craq:get_columns/2 --> []
+
+6:19:26.993567 <0.452.0>  '--> erlang_craq:combine_columns/2
+
+6:19:26.993678 <0.452.0> erlang_craq:get_columns([{age,40},{name,john_smith}], [])
+
+6:19:26.993772 <0.452.0> erlang_craq:get_columns([{name,john_smith}], [{age,1,40}])
+
+6:19:26.993943 <0.452.0> erlang_craq:get_columns([], [{name,1,john_smith},{age,1,40}])
+
+6:19:26.994043 <0.452.0> erlang_craq:get_columns/2 --> [{name,1,john_smith},{age,1,40}]
+
+6:19:26.994107 <0.452.0> erlang_craq:get_columns/2 --> [{name,1,john_smith},{age,1,40}]
+
+6:19:26.994173 <0.452.0> erlang_craq:get_columns/2 --> [{name,1,john_smith},{age,1,40}]
+
+6:19:26.994344 <0.452.0> erlang_craq:combine_columns/2 --> [{name,1,john_smith},{age,1,40}]
+
+6:19:26.994429 <0.452.0>  '--> erlang_craq:get_update_list/2
+
+6:19:26.994578 <0.452.0> erlang_craq:get_update_list([], [{person,10,[{name,1,john_smith},{age,1,40}]},
+ {candidate,10,[{name,1,donald_trump},{party,1,republican}]}])
+
+6:19:26.994707 <0.452.0> erlang_craq:get_update_list/2 --> [{person,10,[{name,1,john_smith},{age,1,40}]},
+ {candidate,10,[{name,1,donald_trump},{party,1,republican}]}]
+
+6:19:26.994805 <0.452.0> erlang_craq:get_update_list/2 --> [{person,10,[{name,1,john_smith},{age,1,40}]},
+ {candidate,10,[{name,1,donald_trump},{party,1,republican}]}]
+
+6:19:26.994946 <0.452.0> erlang_craq:get_update_list/2 --> [{person,10,[{name,1,john_smith},{age,1,40}]},
+ {candidate,10,[{name,1,donald_trump},{party,1,republican}]}]
+
+6:19:26.995107 <0.452.0>  '--> erlang_craq:update/2
+
+6:19:26.995206 <0.452.0> erlang_craq:send_update('ec_n1@centos7-dev', [{person,10,[{name,1,john_smith},{age,1,40}]},
+ {candidate,10,[{name,1,donald_trump},{party,1,republican}]}])
+
+6:19:26.995359 <0.452.0> erlang_craq:send(['ec_n1@centos7-dev'], eh_update, [{'ec_n1@centos7-dev',[{person,10,[{name,1,john_smith},{age,1,40}]},
+                       {candidate,10,
+                                  [{name,1,donald_trump},
+                                   {party,1,republican}]}]}], 1000)
+
+6:19:26.995603 <0.452.0> erlang_craq:flush_msg()
+
+6:19:26.995689 <0.452.0> erlang_craq:flush_msg/0 --> ok
+
+6:19:26.995772 <0.452.0>  '--> erlang_craq:send/4
+
+6:19:26.995894 <0.452.0> eh_system_config:get_env()
+
+6:19:26.995997 <0.452.0> eh_system_util:get_node_name('ec_n4@centos7-dev')
+
+6:19:26.996095 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'(101)
+
+6:19:26.996213 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+6:19:26.996305 <0.452.0>  '--> lists:takewhile_1/2
+
+6:19:26.996368 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'(99)
+
+6:19:26.996462 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+6:19:26.996556 <0.452.0>  '--> lists:takewhile_1/2
+
+6:19:26.996624 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'(95)
+
+6:19:26.996697 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+6:19:26.996804 <0.452.0>  '--> lists:takewhile_1/2
+
+6:19:26.996909 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'(110)
+
+6:19:26.997014 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+6:19:26.997119 <0.452.0>  '--> lists:takewhile_1/2
+
+6:19:26.997205 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'(52)
+
+6:19:26.997307 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+6:19:26.997422 <0.452.0>  '--> lists:takewhile_1/2
+
+6:19:26.997491 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'(64)
+
+6:19:26.997715 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> false
+
+6:19:26.997844 <0.452.0>  '--> lists:takewhile_1/2
+
+6:19:26.997950 <0.452.0> eh_system_util:get_node_name/1 --> "ec_n4"
+
+6:19:26.998055 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:19:26.998139 <0.452.0> eh_config:get_env(erlang_craq, data_dir, "./")
+
+6:19:26.998230 <0.452.0> eh_config:get_env/3 --> "./"
+
+6:19:26.998315 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:19:26.998405 <0.452.0> eh_config:get_env(erlang_craq, file_repl_data, "_repl.data")
+
+6:19:26.998517 <0.452.0> eh_config:get_env/3 --> "_repl.data"
+
+6:19:26.998629 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:19:26.998766 <0.452.0> eh_config:get_env(erlang_craq, file_repl_log, standard_io)
+
+6:19:26.998952 <0.452.0> eh_config:get_env/3 --> standard_io
+
+6:19:26.999047 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:19:26.999138 <0.452.0> eh_config:get_env(erlang_craq, node_order, sorted)
+
+6:19:26.999199 <0.452.0> eh_config:get_env/3 --> sorted
+
+6:19:26.999265 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:19:26.999326 <0.452.0> eh_config:get_env(erlang_craq, failure_detector, eh_failure_detector_api)
+
+6:19:26.999404 <0.452.0> eh_config:get_env/3 --> eh_failure_detector_api
+
+6:19:26.999471 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:19:26.999542 <0.452.0> eh_config:get_env(erlang_craq, repl_data_manager, eh_repl_data_manager_api)
+
+6:19:26.999620 <0.452.0> eh_config:get_env/3 --> eh_repl_data_manager_api
+
+6:19:26.999686 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:19:26.999736 <0.452.0> eh_config:get_env(erlang_craq, storage_data, eh_storage_data_api)
+
+6:19:26.999793 <0.452.0> eh_config:get_env/3 --> eh_storage_data_api
+
+6:19:26.999888 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:19:27.000592 <0.452.0> eh_config:get_env(erlang_craq, write_conflict_resolver, eh_write_conflict_resolver_api)
+
+6:19:27.000770 <0.452.0> eh_config:get_env/3 --> eh_write_conflict_resolver_api
+
+6:19:27.001019 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:19:27.001076 <0.452.0> eh_config:get_env(erlang_craq, unique_id_generator, eh_unique_id_generator_api)
+
+6:19:27.001129 <0.452.0> eh_config:get_env/3 --> eh_unique_id_generator_api
+
+6:19:27.001179 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:19:27.001222 <0.452.0> eh_config:get_env(erlang_craq, query_handler, eh_no_wait_query_handler_api)
+
+6:19:27.001276 <0.452.0> eh_config:get_env/3 --> eh_wait_query_handler_api
+
+6:19:27.001319 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:19:27.001361 <0.452.0> eh_config:get_env(erlang_craq, event_logger, lager_event)
+
+6:19:27.001412 <0.452.0> eh_config:get_env/3 --> lager_event
+
+6:19:27.001495 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:19:27.001569 <0.452.0> eh_config:get_env(erlang_craq, data_checkpoint, 10000)
+
+6:19:27.001617 <0.452.0> eh_config:get_env/3 --> 10000
+
+6:19:27.001663 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:19:27.001740 <0.452.0> eh_config:get_env(erlang_craq, file_repl_data_suffix, "0000000000")
+
+6:19:27.001798 <0.452.0> eh_config:get_env/3 --> "0000000000"
+
+6:19:27.001841 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:19:27.001920 <0.452.0> eh_file_name:get_file_name("ec_n4", "_repl.data")
+
+6:19:27.001970 <0.452.0> eh_file_name:get_file_name/2 --> "ec_n4_repl.data"
+
+6:19:27.002016 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:19:27.002056 <0.452.0> eh_file_name:get_file_name("ec_n4", standard_io)
+
+6:19:27.002162 <0.452.0> eh_file_name:get_file_name/2 --> standard_io
+
+6:19:27.002238 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:19:27.002284 <0.452.0> eh_file_name:get_full_file_name("./", standard_io)
+
+6:19:27.002336 <0.452.0> eh_file_name:get_full_file_name/2 --> standard_io
+
+6:19:27.002384 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:19:27.002455 <0.452.0> eh_config:get_env(erlang_craq, debug_mode, false)
+
+6:19:27.002582 <0.452.0> eh_config:get_env/3 --> true
+
+6:19:27.002636 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:19:27.002677 <0.452.0> eh_config:get_env(erlang_craq, sup_restart_intensity, 1)
+
+6:19:27.002729 <0.452.0> eh_config:get_env/3 --> 100
+
+6:19:27.002822 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:19:27.002900 <0.452.0> eh_config:get_env(erlang_craq, sup_restart_period, 5)
+
+6:19:27.003006 <0.452.0> eh_config:get_env/3 --> 1
+
+6:19:27.003079 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:19:27.003160 <0.452.0> eh_config:get_env(erlang_craq, sup_child_shutdown, 2000)
+
+6:19:27.003221 <0.452.0> eh_config:get_env/3 --> 2000
+
+6:19:27.003294 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:19:27.003412 <0.452.0> eh_system_config:get_env/0 --> {eh_app_config,'ec_n4@centos7-dev',sorted,eh_failure_detector_api,
+               eh_repl_data_manager_api,eh_storage_data_api,
+               eh_write_conflict_resolver_api,eh_unique_id_generator_api,
+               eh_wait_query_handler_api,lager_event,10000,"./","0000000000",
+               "ec_n4_repl.data",standard_io,true,100,1,2000}
+
+6:19:27.003557 <0.452.0>  '--> erlang_craq:send/4
+
+6:19:27.003602 <0.452.0> eh_system_config:get_unique_id_generator({eh_app_config,'ec_n4@centos7-dev',sorted,eh_failure_detector_api,
+               eh_repl_data_manager_api,eh_storage_data_api,
+               eh_write_conflict_resolver_api,eh_unique_id_generator_api,
+               eh_wait_query_handler_api,lager_event,10000,"./","0000000000",
+               "ec_n4_repl.data",standard_io,true,100,1,2000})
+
+6:19:27.003711 <0.452.0> eh_system_config:get_unique_id_generator/1 --> eh_unique_id_generator_api
+
+6:19:27.003765 <0.452.0>  '--> erlang_craq:send/4
+
+6:19:27.003804 <0.452.0> eh_unique_id_generator_api:unique_id()
+
+6:19:27.003863 <0.452.0> eh_unique_id_generator_api:unique_id/0 --> #Ref<0.3896970053.3661103105.105555>
+
+6:19:27.003977 <0.452.0>  '--> erlang_craq:send/4
+
+6:19:27.004056 <0.452.0> erlang_craq:receive_msg(#Ref<0.3896970053.3661103105.105555>, 1000, ['ec_n1@centos7-dev'], [])
+
+6:19:27.004137 <0.452.0> erlang_craq:receive_msg(#Ref<0.3896970053.3661103105.105555>, 1000, [], [{ok,{[{candidate,10},{person,10}],updated}}])
+
+6:19:27.004281 <0.452.0> erlang_craq:receive_msg/4 --> [{ok,{[{candidate,10},{person,10}],updated}}]
+
+6:19:27.004351 <0.452.0> erlang_craq:receive_msg/4 --> [{ok,{[{candidate,10},{person,10}],updated}}]
+
+6:19:27.004474 <0.452.0> erlang_craq:send/4 --> [{ok,{[{candidate,10},{person,10}],updated}}]
+
+6:19:27.004578 <0.452.0> erlang_craq:send_update/2 --> [{ok,{[{candidate,10},{person,10}],updated}}]
+
+6:19:27.004668 <0.452.0> erlang_craq:update/2 --> [{ok,{[{candidate,10},{person,10}],updated}}]
+
+6:19:27.004733 <0.452.0>  '--> erl_eval:do_apply/7
+
+6:20:06.970713 <0.452.0> erlang_craq:update('ec_n1@centos7-dev', [{candidate,10,[{name,donald_trump},{party,republican}]},
+ {person,10,[{name,john_smith},{age,40}]}])
+
+6:20:06.971601 <0.452.0> erlang_craq:get_update_list([{candidate,10,[{name,donald_trump},{party,republican}]},
+ {person,10,[{name,john_smith},{age,40}]}], [])
+
+6:20:06.971815 <0.452.0> erlang_craq:combine_columns([{name,donald_trump},{party,republican}], [])
+
+6:20:06.971988 <0.452.0> erlang_craq:get_columns([], [])
+
+6:20:06.972612 <0.452.0> erlang_craq:get_columns/2 --> []
+
+6:20:06.973336 <0.452.0>  '--> erlang_craq:combine_columns/2
+
+6:20:06.973512 <0.452.0> erlang_craq:get_columns([{party,republican},{name,donald_trump}], [])
+
+6:20:06.973826 <0.452.0> erlang_craq:get_columns([{name,donald_trump}], [{party,1,republican}])
+
+6:20:06.974088 <0.452.0> erlang_craq:get_columns([], [{name,1,donald_trump},{party,1,republican}])
+
+6:20:06.974267 <0.452.0> erlang_craq:get_columns/2 --> [{name,1,donald_trump},{party,1,republican}]
+
+6:20:06.974936 <0.452.0> erlang_craq:get_columns/2 --> [{name,1,donald_trump},{party,1,republican}]
+
+6:20:06.975120 <0.452.0> erlang_craq:get_columns/2 --> [{name,1,donald_trump},{party,1,republican}]
+
+6:20:06.975827 <0.452.0> erlang_craq:combine_columns/2 --> [{name,1,donald_trump},{party,1,republican}]
+
+6:20:06.976558 <0.452.0>  '--> erlang_craq:get_update_list/2
+
+6:20:06.977029 <0.452.0> erlang_craq:get_update_list([{person,10,[{name,john_smith},{age,40}]}], [{candidate,10,[{name,1,donald_trump},{party,1,republican}]}])
+
+6:20:06.977581 <0.452.0> erlang_craq:combine_columns([{name,john_smith},{age,40}], [])
+
+6:20:06.978079 <0.452.0> erlang_craq:get_columns([], [])
+
+6:20:06.978568 <0.452.0> erlang_craq:get_columns/2 --> []
+
+6:20:06.979027 <0.452.0>  '--> erlang_craq:combine_columns/2
+
+6:20:06.979525 <0.452.0> erlang_craq:get_columns([{age,40},{name,john_smith}], [])
+
+6:20:06.980005 <0.452.0> erlang_craq:get_columns([{name,john_smith}], [{age,1,40}])
+
+6:20:06.980502 <0.452.0> erlang_craq:get_columns([], [{name,1,john_smith},{age,1,40}])
+
+6:20:06.981011 <0.452.0> erlang_craq:get_columns/2 --> [{name,1,john_smith},{age,1,40}]
+
+6:20:06.981568 <0.452.0> erlang_craq:get_columns/2 --> [{name,1,john_smith},{age,1,40}]
+
+6:20:06.982122 <0.452.0> erlang_craq:get_columns/2 --> [{name,1,john_smith},{age,1,40}]
+
+6:20:06.982608 <0.452.0> erlang_craq:combine_columns/2 --> [{name,1,john_smith},{age,1,40}]
+
+6:20:06.983071 <0.452.0>  '--> erlang_craq:get_update_list/2
+
+6:20:06.983658 <0.452.0> erlang_craq:get_update_list([], [{person,10,[{name,1,john_smith},{age,1,40}]},
+ {candidate,10,[{name,1,donald_trump},{party,1,republican}]}])
+
+6:20:06.984191 <0.452.0> erlang_craq:get_update_list/2 --> [{person,10,[{name,1,john_smith},{age,1,40}]},
+ {candidate,10,[{name,1,donald_trump},{party,1,republican}]}]
+
+6:20:06.984731 <0.452.0> erlang_craq:get_update_list/2 --> [{person,10,[{name,1,john_smith},{age,1,40}]},
+ {candidate,10,[{name,1,donald_trump},{party,1,republican}]}]
+
+6:20:06.985078 <0.452.0> erlang_craq:get_update_list/2 --> [{person,10,[{name,1,john_smith},{age,1,40}]},
+ {candidate,10,[{name,1,donald_trump},{party,1,republican}]}]
+
+6:20:06.985439 <0.452.0>  '--> erlang_craq:update/2
+
+6:20:06.985744 <0.452.0> erlang_craq:send_update('ec_n1@centos7-dev', [{person,10,[{name,1,john_smith},{age,1,40}]},
+ {candidate,10,[{name,1,donald_trump},{party,1,republican}]}])
+
+6:20:06.986128 <0.452.0> erlang_craq:send(['ec_n1@centos7-dev'], eh_update, [{'ec_n1@centos7-dev',[{person,10,[{name,1,john_smith},{age,1,40}]},
+                       {candidate,10,
+                                  [{name,1,donald_trump},
+                                   {party,1,republican}]}]}], 1000)
+
+6:20:06.986660 <0.452.0> erlang_craq:flush_msg()
+
+6:20:06.986906 <0.452.0> erlang_craq:flush_msg/0 --> ok
+
+6:20:06.987134 <0.452.0>  '--> erlang_craq:send/4
+
+6:20:06.987355 <0.452.0> eh_system_config:get_env()
+
+6:20:06.987563 <0.452.0> eh_system_util:get_node_name('ec_n4@centos7-dev')
+
+6:20:06.987824 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'(101)
+
+6:20:06.988020 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+6:20:06.988273 <0.452.0>  '--> lists:takewhile_1/2
+
+6:20:06.988476 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'(99)
+
+6:20:06.988706 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+6:20:06.988921 <0.452.0>  '--> lists:takewhile_1/2
+
+6:20:06.989125 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'(95)
+
+6:20:06.989391 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+6:20:06.989744 <0.452.0>  '--> lists:takewhile_1/2
+
+6:20:06.989993 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'(110)
+
+6:20:06.990234 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+6:20:06.990502 <0.452.0>  '--> lists:takewhile_1/2
+
+6:20:06.990744 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'(52)
+
+6:20:06.990988 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+6:20:06.991218 <0.452.0>  '--> lists:takewhile_1/2
+
+6:20:06.991442 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'(64)
+
+6:20:06.991739 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> false
+
+6:20:06.992054 <0.452.0>  '--> lists:takewhile_1/2
+
+6:20:06.992233 <0.452.0> eh_system_util:get_node_name/1 --> "ec_n4"
+
+6:20:06.992569 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:20:06.992833 <0.452.0> eh_config:get_env(erlang_craq, data_dir, "./")
+
+6:20:06.993132 <0.452.0> eh_config:get_env/3 --> "./"
+
+6:20:06.993398 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:20:06.993728 <0.452.0> eh_config:get_env(erlang_craq, file_repl_data, "_repl.data")
+
+6:20:06.993997 <0.452.0> eh_config:get_env/3 --> "_repl.data"
+
+6:20:06.994212 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:20:06.994459 <0.452.0> eh_config:get_env(erlang_craq, file_repl_log, standard_io)
+
+6:20:06.994897 <0.452.0> eh_config:get_env/3 --> standard_io
+
+6:20:06.995235 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:20:06.995498 <0.452.0> eh_config:get_env(erlang_craq, node_order, sorted)
+
+6:20:06.995799 <0.452.0> eh_config:get_env/3 --> sorted
+
+6:20:06.996024 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:20:06.996249 <0.452.0> eh_config:get_env(erlang_craq, failure_detector, eh_failure_detector_api)
+
+6:20:06.996511 <0.452.0> eh_config:get_env/3 --> eh_failure_detector_api
+
+6:20:06.996812 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:20:06.997017 <0.452.0> eh_config:get_env(erlang_craq, repl_data_manager, eh_repl_data_manager_api)
+
+6:20:06.997279 <0.452.0> eh_config:get_env/3 --> eh_repl_data_manager_api
+
+6:20:06.997501 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:20:06.997737 <0.452.0> eh_config:get_env(erlang_craq, storage_data, eh_storage_data_api)
+
+6:20:06.998014 <0.452.0> eh_config:get_env/3 --> eh_storage_data_api
+
+6:20:06.998259 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:20:06.998487 <0.452.0> eh_config:get_env(erlang_craq, write_conflict_resolver, eh_write_conflict_resolver_api)
+
+6:20:06.998941 <0.452.0> eh_config:get_env/3 --> eh_write_conflict_resolver_api
+
+6:20:06.999339 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:20:06.999740 <0.452.0> eh_config:get_env(erlang_craq, unique_id_generator, eh_unique_id_generator_api)
+
+6:20:07.000166 <0.452.0> eh_config:get_env/3 --> eh_unique_id_generator_api
+
+6:20:07.000573 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:20:07.000875 <0.452.0> eh_config:get_env(erlang_craq, query_handler, eh_no_wait_query_handler_api)
+
+6:20:07.001287 <0.452.0> eh_config:get_env/3 --> eh_wait_query_handler_api
+
+6:20:07.001638 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:20:07.001966 <0.452.0> eh_config:get_env(erlang_craq, event_logger, lager_event)
+
+6:20:07.002429 <0.452.0> eh_config:get_env/3 --> lager_event
+
+6:20:07.002850 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:20:07.003131 <0.452.0> eh_config:get_env(erlang_craq, data_checkpoint, 10000)
+
+6:20:07.003435 <0.452.0> eh_config:get_env/3 --> 10000
+
+6:20:07.003708 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:20:07.003976 <0.452.0> eh_config:get_env(erlang_craq, file_repl_data_suffix, "0000000000")
+
+6:20:07.004281 <0.452.0> eh_config:get_env/3 --> "0000000000"
+
+6:20:07.004538 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:20:07.004771 <0.452.0> eh_file_name:get_file_name("ec_n4", "_repl.data")
+
+6:20:07.005060 <0.452.0> eh_file_name:get_file_name/2 --> "ec_n4_repl.data"
+
+6:20:07.005368 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:20:07.005702 <0.452.0> eh_file_name:get_file_name("ec_n4", standard_io)
+
+6:20:07.005979 <0.452.0> eh_file_name:get_file_name/2 --> standard_io
+
+6:20:07.006204 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:20:07.006475 <0.452.0> eh_file_name:get_full_file_name("./", standard_io)
+
+6:20:07.006710 <0.452.0> eh_file_name:get_full_file_name/2 --> standard_io
+
+6:20:07.006973 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:20:07.007173 <0.452.0> eh_config:get_env(erlang_craq, debug_mode, false)
+
+6:20:07.007434 <0.452.0> eh_config:get_env/3 --> true
+
+6:20:07.007682 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:20:07.007923 <0.452.0> eh_config:get_env(erlang_craq, sup_restart_intensity, 1)
+
+6:20:07.008203 <0.452.0> eh_config:get_env/3 --> 100
+
+6:20:07.008459 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:20:07.008741 <0.452.0> eh_config:get_env(erlang_craq, sup_restart_period, 5)
+
+6:20:07.009008 <0.452.0> eh_config:get_env/3 --> 1
+
+6:20:07.009307 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:20:07.009570 <0.452.0> eh_config:get_env(erlang_craq, sup_child_shutdown, 2000)
+
+6:20:07.009832 <0.452.0> eh_config:get_env/3 --> 2000
+
+6:20:07.010052 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:20:07.010322 <0.452.0> eh_system_config:get_env/0 --> {eh_app_config,'ec_n4@centos7-dev',sorted,eh_failure_detector_api,
+               eh_repl_data_manager_api,eh_storage_data_api,
+               eh_write_conflict_resolver_api,eh_unique_id_generator_api,
+               eh_wait_query_handler_api,lager_event,10000,"./","0000000000",
+               "ec_n4_repl.data",standard_io,true,100,1,2000}
+
+6:20:07.010913 <0.452.0>  '--> erlang_craq:send/4
+
+6:20:07.011134 <0.452.0> eh_system_config:get_unique_id_generator({eh_app_config,'ec_n4@centos7-dev',sorted,eh_failure_detector_api,
+               eh_repl_data_manager_api,eh_storage_data_api,
+               eh_write_conflict_resolver_api,eh_unique_id_generator_api,
+               eh_wait_query_handler_api,lager_event,10000,"./","0000000000",
+               "ec_n4_repl.data",standard_io,true,100,1,2000})
+
+6:20:07.011718 <0.452.0> eh_system_config:get_unique_id_generator/1 --> eh_unique_id_generator_api
+
+6:20:07.011994 <0.452.0>  '--> erlang_craq:send/4
+
+6:20:07.012191 <0.452.0> eh_unique_id_generator_api:unique_id()
+
+6:20:07.012410 <0.452.0> eh_unique_id_generator_api:unique_id/0 --> #Ref<0.3896970053.3661103105.105830>
+
+6:20:07.012683 <0.452.0>  '--> erlang_craq:send/4
+
+6:20:07.012918 <0.452.0> erlang_craq:receive_msg(#Ref<0.3896970053.3661103105.105830>, 1000, ['ec_n1@centos7-dev'], [])
+
+6:20:07.013178 <0.452.0> erlang_craq:receive_msg(#Ref<0.3896970053.3661103105.105830>, 1000, [], [{ok,{[{candidate,10},{person,10}],updated}}])
+
+6:20:07.013310 <0.452.0> erlang_craq:receive_msg/4 --> [{ok,{[{candidate,10},{person,10}],updated}}]
+
+6:20:07.013462 <0.452.0> erlang_craq:receive_msg/4 --> [{ok,{[{candidate,10},{person,10}],updated}}]
+
+6:20:07.013593 <0.452.0> erlang_craq:send/4 --> [{ok,{[{candidate,10},{person,10}],updated}}]
+
+6:20:07.013686 <0.452.0> erlang_craq:send_update/2 --> [{ok,{[{candidate,10},{person,10}],updated}}]
+
+6:20:07.013797 <0.452.0> erlang_craq:update/2 --> [{ok,{[{candidate,10},{person,10}],updated}}]
+
+6:20:07.013907 <0.452.0>  '--> erl_eval:do_apply/7
+
+6:21:03.749560 <0.452.0> erlang_craq:update('ec_n1@centos7-dev', [{candidate,10,[{name,donald_trump},{party,republican}]},
+ {person,10,[{name,john_smith},{age,40}]}])
+
+6:21:03.749795 <0.452.0> erlang_craq:get_update_list([{candidate,10,[{name,donald_trump},{party,republican}]},
+ {person,10,[{name,john_smith},{age,40}]}], [])
+
+6:21:03.751656 <0.452.0> erlang_craq:combine_columns([{name,donald_trump},{party,republican}], [])
+
+6:21:03.752307 <0.452.0> erlang_craq:get_columns([], [])
+
+6:21:03.752552 <0.452.0> erlang_craq:get_columns/2 --> []
+
+6:21:03.752629 <0.452.0>  '--> erlang_craq:combine_columns/2
+
+6:21:03.752686 <0.452.0> erlang_craq:get_columns([{party,republican},{name,donald_trump}], [])
+
+6:21:03.752786 <0.452.0> erlang_craq:get_columns([{name,donald_trump}], [{party,1,republican}])
+
+6:21:03.752872 <0.452.0> erlang_craq:get_columns([], [{name,1,donald_trump},{party,1,republican}])
+
+6:21:03.752943 <0.452.0> erlang_craq:get_columns/2 --> [{name,1,donald_trump},{party,1,republican}]
+
+6:21:03.753019 <0.452.0> erlang_craq:get_columns/2 --> [{name,1,donald_trump},{party,1,republican}]
+
+6:21:03.753093 <0.452.0> erlang_craq:get_columns/2 --> [{name,1,donald_trump},{party,1,republican}]
+
+6:21:03.753169 <0.452.0> erlang_craq:combine_columns/2 --> [{name,1,donald_trump},{party,1,republican}]
+
+6:21:03.753240 <0.452.0>  '--> erlang_craq:get_update_list/2
+
+6:21:03.753306 <0.452.0> erlang_craq:get_update_list([{person,10,[{name,john_smith},{age,40}]}], [{candidate,10,[{name,1,donald_trump},{party,1,republican}]}])
+
+6:21:03.753440 <0.452.0> erlang_craq:combine_columns([{name,john_smith},{age,40}], [])
+
+6:21:03.753557 <0.452.0> erlang_craq:get_columns([], [])
+
+6:21:03.753628 <0.452.0> erlang_craq:get_columns/2 --> []
+
+6:21:03.753695 <0.452.0>  '--> erlang_craq:combine_columns/2
+
+6:21:03.753772 <0.452.0> erlang_craq:get_columns([{age,40},{name,john_smith}], [])
+
+6:21:03.753883 <0.452.0> erlang_craq:get_columns([{name,john_smith}], [{age,1,40}])
+
+6:21:03.753967 <0.452.0> erlang_craq:get_columns([], [{name,1,john_smith},{age,1,40}])
+
+6:21:03.754037 <0.452.0> erlang_craq:get_columns/2 --> [{name,1,john_smith},{age,1,40}]
+
+6:21:03.754120 <0.452.0> erlang_craq:get_columns/2 --> [{name,1,john_smith},{age,1,40}]
+
+6:21:03.754203 <0.452.0> erlang_craq:get_columns/2 --> [{name,1,john_smith},{age,1,40}]
+
+6:21:03.754273 <0.452.0> erlang_craq:combine_columns/2 --> [{name,1,john_smith},{age,1,40}]
+
+6:21:03.754352 <0.452.0>  '--> erlang_craq:get_update_list/2
+
+6:21:03.754439 <0.452.0> erlang_craq:get_update_list([], [{person,10,[{name,1,john_smith},{age,1,40}]},
+ {candidate,10,[{name,1,donald_trump},{party,1,republican}]}])
+
+6:21:03.754560 <0.452.0> erlang_craq:get_update_list/2 --> [{person,10,[{name,1,john_smith},{age,1,40}]},
+ {candidate,10,[{name,1,donald_trump},{party,1,republican}]}]
+
+6:21:03.754659 <0.452.0> erlang_craq:get_update_list/2 --> [{person,10,[{name,1,john_smith},{age,1,40}]},
+ {candidate,10,[{name,1,donald_trump},{party,1,republican}]}]
+
+6:21:03.754749 <0.452.0> erlang_craq:get_update_list/2 --> [{person,10,[{name,1,john_smith},{age,1,40}]},
+ {candidate,10,[{name,1,donald_trump},{party,1,republican}]}]
+
+6:21:03.754860 <0.452.0>  '--> erlang_craq:update/2
+
+6:21:03.754926 <0.452.0> erlang_craq:send_update('ec_n1@centos7-dev', [{person,10,[{name,1,john_smith},{age,1,40}]},
+ {candidate,10,[{name,1,donald_trump},{party,1,republican}]}])
+
+6:21:03.755024 <0.452.0> erlang_craq:send(['ec_n1@centos7-dev'], eh_update, [{'ec_n1@centos7-dev',[{person,10,[{name,1,john_smith},{age,1,40}]},
+                       {candidate,10,
+                                  [{name,1,donald_trump},
+                                   {party,1,republican}]}]}], 1000)
+
+6:21:03.755176 <0.452.0> erlang_craq:flush_msg()
+
+6:21:03.755227 <0.452.0> erlang_craq:flush_msg/0 --> ok
+
+6:21:03.755293 <0.452.0>  '--> erlang_craq:send/4
+
+6:21:03.755340 <0.452.0> eh_system_config:get_env()
+
+6:21:03.755442 <0.452.0> eh_system_util:get_node_name('ec_n4@centos7-dev')
+
+6:21:03.755513 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'(101)
+
+6:21:03.755570 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+6:21:03.755685 <0.452.0>  '--> lists:takewhile_1/2
+
+6:21:03.755733 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'(99)
+
+6:21:03.756038 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+6:21:03.756813 <0.452.0>  '--> lists:takewhile_1/2
+
+6:21:03.757008 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'(95)
+
+6:21:03.757298 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+6:21:03.757446 <0.452.0>  '--> lists:takewhile_1/2
+
+6:21:03.757553 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'(110)
+
+6:21:03.757654 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+6:21:03.757771 <0.452.0>  '--> lists:takewhile_1/2
+
+6:21:03.757893 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'(52)
+
+6:21:03.757973 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+6:21:03.758044 <0.452.0>  '--> lists:takewhile_1/2
+
+6:21:03.758101 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'(64)
+
+6:21:03.758223 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> false
+
+6:21:03.758327 <0.452.0>  '--> lists:takewhile_1/2
+
+6:21:03.758453 <0.452.0> eh_system_util:get_node_name/1 --> "ec_n4"
+
+6:21:03.758568 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:21:03.758643 <0.452.0> eh_config:get_env(erlang_craq, data_dir, "./")
+
+6:21:03.758752 <0.452.0> eh_config:get_env/3 --> "./"
+
+6:21:03.758814 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:21:03.758897 <0.452.0> eh_config:get_env(erlang_craq, file_repl_data, "_repl.data")
+
+6:21:03.759023 <0.452.0> eh_config:get_env/3 --> "_repl.data"
+
+6:21:03.759134 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:21:03.759229 <0.452.0> eh_config:get_env(erlang_craq, file_repl_log, standard_io)
+
+6:21:03.759341 <0.452.0> eh_config:get_env/3 --> standard_io
+
+6:21:03.759486 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:21:03.759603 <0.452.0> eh_config:get_env(erlang_craq, node_order, sorted)
+
+6:21:03.759696 <0.452.0> eh_config:get_env/3 --> sorted
+
+6:21:03.759793 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:21:03.759860 <0.452.0> eh_config:get_env(erlang_craq, failure_detector, eh_failure_detector_api)
+
+6:21:03.759990 <0.452.0> eh_config:get_env/3 --> eh_failure_detector_api
+
+6:21:03.760086 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:21:03.760172 <0.452.0> eh_config:get_env(erlang_craq, repl_data_manager, eh_repl_data_manager_api)
+
+6:21:03.760293 <0.452.0> eh_config:get_env/3 --> eh_repl_data_manager_api
+
+6:21:03.760411 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:21:03.760527 <0.452.0> eh_config:get_env(erlang_craq, storage_data, eh_storage_data_api)
+
+6:21:03.760649 <0.452.0> eh_config:get_env/3 --> eh_storage_data_api
+
+6:21:03.760764 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:21:03.760873 <0.452.0> eh_config:get_env(erlang_craq, write_conflict_resolver, eh_write_conflict_resolver_api)
+
+6:21:03.760999 <0.452.0> eh_config:get_env/3 --> eh_write_conflict_resolver_api
+
+6:21:03.761169 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:21:03.761326 <0.452.0> eh_config:get_env(erlang_craq, unique_id_generator, eh_unique_id_generator_api)
+
+6:21:03.761833 <0.452.0> eh_config:get_env/3 --> eh_unique_id_generator_api
+
+6:21:03.761957 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:21:03.762028 <0.452.0> eh_config:get_env(erlang_craq, query_handler, eh_no_wait_query_handler_api)
+
+6:21:03.762096 <0.452.0> eh_config:get_env/3 --> eh_wait_query_handler_api
+
+6:21:03.762158 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:21:03.762235 <0.452.0> eh_config:get_env(erlang_craq, event_logger, lager_event)
+
+6:21:03.762305 <0.452.0> eh_config:get_env/3 --> lager_event
+
+6:21:03.762358 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:21:03.762459 <0.452.0> eh_config:get_env(erlang_craq, data_checkpoint, 10000)
+
+6:21:03.762552 <0.452.0> eh_config:get_env/3 --> 10000
+
+6:21:03.762614 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:21:03.762664 <0.452.0> eh_config:get_env(erlang_craq, file_repl_data_suffix, "0000000000")
+
+6:21:03.762737 <0.452.0> eh_config:get_env/3 --> "0000000000"
+
+6:21:03.762815 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:21:03.762904 <0.452.0> eh_file_name:get_file_name("ec_n4", "_repl.data")
+
+6:21:03.763032 <0.452.0> eh_file_name:get_file_name/2 --> "ec_n4_repl.data"
+
+6:21:03.763144 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:21:03.763214 <0.452.0> eh_file_name:get_file_name("ec_n4", standard_io)
+
+6:21:03.763359 <0.452.0> eh_file_name:get_file_name/2 --> standard_io
+
+6:21:03.763461 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:21:03.763556 <0.452.0> eh_file_name:get_full_file_name("./", standard_io)
+
+6:21:03.763691 <0.452.0> eh_file_name:get_full_file_name/2 --> standard_io
+
+6:21:03.763787 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:21:03.763867 <0.452.0> eh_config:get_env(erlang_craq, debug_mode, false)
+
+6:21:03.763998 <0.452.0> eh_config:get_env/3 --> true
+
+6:21:03.764068 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:21:03.764152 <0.452.0> eh_config:get_env(erlang_craq, sup_restart_intensity, 1)
+
+6:21:03.764256 <0.452.0> eh_config:get_env/3 --> 100
+
+6:21:03.764362 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:21:03.764469 <0.452.0> eh_config:get_env(erlang_craq, sup_restart_period, 5)
+
+6:21:03.764561 <0.452.0> eh_config:get_env/3 --> 1
+
+6:21:03.764658 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:21:03.764780 <0.452.0> eh_config:get_env(erlang_craq, sup_child_shutdown, 2000)
+
+6:21:03.764875 <0.452.0> eh_config:get_env/3 --> 2000
+
+6:21:03.764981 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:21:03.765070 <0.452.0> eh_system_config:get_env/0 --> {eh_app_config,'ec_n4@centos7-dev',sorted,eh_failure_detector_api,
+               eh_repl_data_manager_api,eh_storage_data_api,
+               eh_write_conflict_resolver_api,eh_unique_id_generator_api,
+               eh_wait_query_handler_api,lager_event,10000,"./","0000000000",
+               "ec_n4_repl.data",standard_io,true,100,1,2000}
+
+6:21:03.765259 <0.452.0>  '--> erlang_craq:send/4
+
+6:21:03.765330 <0.452.0> eh_system_config:get_unique_id_generator({eh_app_config,'ec_n4@centos7-dev',sorted,eh_failure_detector_api,
+               eh_repl_data_manager_api,eh_storage_data_api,
+               eh_write_conflict_resolver_api,eh_unique_id_generator_api,
+               eh_wait_query_handler_api,lager_event,10000,"./","0000000000",
+               "ec_n4_repl.data",standard_io,true,100,1,2000})
+
+6:21:03.765537 <0.452.0> eh_system_config:get_unique_id_generator/1 --> eh_unique_id_generator_api
+
+6:21:03.765625 <0.452.0>  '--> erlang_craq:send/4
+
+6:21:03.765699 <0.452.0> eh_unique_id_generator_api:unique_id()
+
+6:21:03.765770 <0.452.0> eh_unique_id_generator_api:unique_id/0 --> #Ref<0.3896970053.3661103105.106106>
+
+6:21:03.765856 <0.452.0>  '--> erlang_craq:send/4
+
+6:21:03.765907 <0.452.0> erlang_craq:receive_msg(#Ref<0.3896970053.3661103105.106106>, 1000, ['ec_n1@centos7-dev'], [])
+
+6:21:03.766033 <0.452.0> erlang_craq:receive_msg(#Ref<0.3896970053.3661103105.106106>, 1000, [], [{ok,{[{candidate,10},{person,10}],updated}}])
+
+6:21:03.766181 <0.452.0> erlang_craq:receive_msg/4 --> [{ok,{[{candidate,10},{person,10}],updated}}]
+
+6:21:03.766301 <0.452.0> erlang_craq:receive_msg/4 --> [{ok,{[{candidate,10},{person,10}],updated}}]
+
+6:21:03.766434 <0.452.0> erlang_craq:send/4 --> [{ok,{[{candidate,10},{person,10}],updated}}]
+
+6:21:03.766566 <0.452.0> erlang_craq:send_update/2 --> [{ok,{[{candidate,10},{person,10}],updated}}]
+
+6:21:03.766656 <0.452.0> erlang_craq:update/2 --> [{ok,{[{candidate,10},{person,10}],updated}}]
+
+6:21:03.766770 <0.452.0>  '--> erl_eval:do_apply/7
+
+6:22:54.058481 <0.452.0> erlang_craq:update('ec_n1@centos7-dev', [{candidate,10,[{name,donald_trump},{party,republican}]},
+ {person,10,[{name,john_smith},{age,40}]}])
+
+6:22:54.058746 <0.452.0> erlang_craq:get_update_list([{candidate,10,[{name,donald_trump},{party,republican}]},
+ {person,10,[{name,john_smith},{age,40}]}], [])
+
+6:22:54.058925 <0.452.0> erlang_craq:combine_columns([{name,donald_trump},{party,republican}], [])
+
+6:22:54.059026 <0.452.0> erlang_craq:get_columns([], [])
+
+6:22:54.059152 <0.452.0> erlang_craq:get_columns/2 --> []
+
+6:22:54.059224 <0.452.0>  '--> erlang_craq:combine_columns/2
+
+6:22:54.059273 <0.452.0> erlang_craq:get_columns([{party,republican},{name,donald_trump}], [])
+
+6:22:54.059754 <0.452.0> erlang_craq:get_columns([{name,donald_trump}], [{party,1,republican}])
+
+6:22:54.059844 <0.452.0> erlang_craq:get_columns([], [{name,1,donald_trump},{party,1,republican}])
+
+6:22:54.059966 <0.452.0> erlang_craq:get_columns/2 --> [{name,1,donald_trump},{party,1,republican}]
+
+6:22:54.060050 <0.452.0> erlang_craq:get_columns/2 --> [{name,1,donald_trump},{party,1,republican}]
+
+6:22:54.060115 <0.452.0> erlang_craq:get_columns/2 --> [{name,1,donald_trump},{party,1,republican}]
+
+6:22:54.060503 <0.452.0> erlang_craq:combine_columns/2 --> [{name,1,donald_trump},{party,1,republican}]
+
+6:22:54.060715 <0.452.0>  '--> erlang_craq:get_update_list/2
+
+6:22:54.060902 <0.452.0> erlang_craq:get_update_list([{person,10,[{name,john_smith},{age,40}]}], [{candidate,10,[{name,1,donald_trump},{party,1,republican}]}])
+
+6:22:54.061916 <0.452.0> erlang_craq:combine_columns([{name,john_smith},{age,40}], [])
+
+6:22:54.062073 <0.452.0> erlang_craq:get_columns([], [])
+
+6:22:54.062211 <0.452.0> erlang_craq:get_columns/2 --> []
+
+6:22:54.062316 <0.452.0>  '--> erlang_craq:combine_columns/2
+
+6:22:54.062448 <0.452.0> erlang_craq:get_columns([{age,40},{name,john_smith}], [])
+
+6:22:54.062596 <0.452.0> erlang_craq:get_columns([{name,john_smith}], [{age,1,40}])
+
+6:22:54.062740 <0.452.0> erlang_craq:get_columns([], [{name,1,john_smith},{age,1,40}])
+
+6:22:54.062918 <0.452.0> erlang_craq:get_columns/2 --> [{name,1,john_smith},{age,1,40}]
+
+6:22:54.063099 <0.452.0> erlang_craq:get_columns/2 --> [{name,1,john_smith},{age,1,40}]
+
+6:22:54.063225 <0.452.0> erlang_craq:get_columns/2 --> [{name,1,john_smith},{age,1,40}]
+
+6:22:54.063314 <0.452.0> erlang_craq:combine_columns/2 --> [{name,1,john_smith},{age,1,40}]
+
+6:22:54.065698 <0.452.0>  '--> erlang_craq:get_update_list/2
+
+6:22:54.066509 <0.452.0> erlang_craq:get_update_list([], [{person,10,[{name,1,john_smith},{age,1,40}]},
+ {candidate,10,[{name,1,donald_trump},{party,1,republican}]}])
+
+6:22:54.066890 <0.452.0> erlang_craq:get_update_list/2 --> [{person,10,[{name,1,john_smith},{age,1,40}]},
+ {candidate,10,[{name,1,donald_trump},{party,1,republican}]}]
+
+6:22:54.067138 <0.452.0> erlang_craq:get_update_list/2 --> [{person,10,[{name,1,john_smith},{age,1,40}]},
+ {candidate,10,[{name,1,donald_trump},{party,1,republican}]}]
+
+6:22:54.067510 <0.452.0> erlang_craq:get_update_list/2 --> [{person,10,[{name,1,john_smith},{age,1,40}]},
+ {candidate,10,[{name,1,donald_trump},{party,1,republican}]}]
+
+6:22:54.067983 <0.452.0>  '--> erlang_craq:update/2
+
+6:22:54.068346 <0.452.0> erlang_craq:send_update('ec_n1@centos7-dev', [{person,10,[{name,1,john_smith},{age,1,40}]},
+ {candidate,10,[{name,1,donald_trump},{party,1,republican}]}])
+
+6:22:54.068613 <0.452.0> erlang_craq:send(['ec_n1@centos7-dev'], eh_update, [{'ec_n1@centos7-dev',[{person,10,[{name,1,john_smith},{age,1,40}]},
+                       {candidate,10,
+                                  [{name,1,donald_trump},
+                                   {party,1,republican}]}]}], 1000)
+
+6:22:54.069148 <0.452.0> erlang_craq:flush_msg()
+
+6:22:54.069421 <0.452.0> erlang_craq:flush_msg/0 --> ok
+
+6:22:54.069528 <0.452.0>  '--> erlang_craq:send/4
+
+6:22:54.069615 <0.452.0> eh_system_config:get_env()
+
+6:22:54.069686 <0.452.0> eh_system_util:get_node_name('ec_n4@centos7-dev')
+
+6:22:54.069766 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'(101)
+
+6:22:54.069854 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+6:22:54.069936 <0.452.0>  '--> lists:takewhile_1/2
+
+6:22:54.070006 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'(99)
+
+6:22:54.070097 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+6:22:54.070174 <0.452.0>  '--> lists:takewhile_1/2
+
+6:22:54.070243 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'(95)
+
+6:22:54.070339 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+6:22:54.070432 <0.452.0>  '--> lists:takewhile_1/2
+
+6:22:54.070551 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'(110)
+
+6:22:54.070643 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+6:22:54.070739 <0.452.0>  '--> lists:takewhile_1/2
+
+6:22:54.070823 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'(52)
+
+6:22:54.070912 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+6:22:54.071004 <0.452.0>  '--> lists:takewhile_1/2
+
+6:22:54.071090 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'(64)
+
+6:22:54.071179 <0.452.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> false
+
+6:22:54.071271 <0.452.0>  '--> lists:takewhile_1/2
+
+6:22:54.071345 <0.452.0> eh_system_util:get_node_name/1 --> "ec_n4"
+
+6:22:54.071438 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:22:54.071556 <0.452.0> eh_config:get_env(erlang_craq, data_dir, "./")
+
+6:22:54.071653 <0.452.0> eh_config:get_env/3 --> "./"
+
+6:22:54.071741 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:22:54.071817 <0.452.0> eh_config:get_env(erlang_craq, file_repl_data, "_repl.data")
+
+6:22:54.071913 <0.452.0> eh_config:get_env/3 --> "_repl.data"
+
+6:22:54.071990 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:22:54.072074 <0.452.0> eh_config:get_env(erlang_craq, file_repl_log, standard_io)
+
+6:22:54.072159 <0.452.0> eh_config:get_env/3 --> standard_io
+
+6:22:54.072249 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:22:54.072320 <0.452.0> eh_config:get_env(erlang_craq, node_order, sorted)
+
+6:22:54.072419 <0.452.0> eh_config:get_env/3 --> sorted
+
+6:22:54.072520 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:22:54.072609 <0.452.0> eh_config:get_env(erlang_craq, failure_detector, eh_failure_detector_api)
+
+6:22:54.072706 <0.452.0> eh_config:get_env/3 --> eh_failure_detector_api
+
+6:22:54.072808 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:22:54.072879 <0.452.0> eh_config:get_env(erlang_craq, repl_data_manager, eh_repl_data_manager_api)
+
+6:22:54.072976 <0.452.0> eh_config:get_env/3 --> eh_repl_data_manager_api
+
+6:22:54.073053 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:22:54.073138 <0.452.0> eh_config:get_env(erlang_craq, storage_data, eh_storage_data_api)
+
+6:22:54.073247 <0.452.0> eh_config:get_env/3 --> eh_storage_data_api
+
+6:22:54.073339 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:22:54.073423 <0.452.0> eh_config:get_env(erlang_craq, write_conflict_resolver, eh_write_conflict_resolver_api)
+
+6:22:54.073585 <0.452.0> eh_config:get_env/3 --> eh_write_conflict_resolver_api
+
+6:22:54.073680 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:22:54.073767 <0.452.0> eh_config:get_env(erlang_craq, unique_id_generator, eh_unique_id_generator_api)
+
+6:22:54.073869 <0.452.0> eh_config:get_env/3 --> eh_unique_id_generator_api
+
+6:22:54.073977 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:22:54.074050 <0.452.0> eh_config:get_env(erlang_craq, query_handler, eh_no_wait_query_handler_api)
+
+6:22:54.074147 <0.452.0> eh_config:get_env/3 --> eh_wait_query_handler_api
+
+6:22:54.074225 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:22:54.074301 <0.452.0> eh_config:get_env(erlang_craq, event_logger, lager_event)
+
+6:22:54.074401 <0.452.0> eh_config:get_env/3 --> lager_event
+
+6:22:54.074524 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:22:54.074612 <0.452.0> eh_config:get_env(erlang_craq, data_checkpoint, 10000)
+
+6:22:54.074706 <0.452.0> eh_config:get_env/3 --> 10000
+
+6:22:54.074794 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:22:54.074879 <0.452.0> eh_config:get_env(erlang_craq, file_repl_data_suffix, "0000000000")
+
+6:22:54.074974 <0.452.0> eh_config:get_env/3 --> "0000000000"
+
+6:22:54.075060 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:22:54.075133 <0.452.0> eh_file_name:get_file_name("ec_n4", "_repl.data")
+
+6:22:54.075227 <0.452.0> eh_file_name:get_file_name/2 --> "ec_n4_repl.data"
+
+6:22:54.075315 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:22:54.075388 <0.452.0> eh_file_name:get_file_name("ec_n4", standard_io)
+
+6:22:54.075508 <0.452.0> eh_file_name:get_file_name/2 --> standard_io
+
+6:22:54.075585 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:22:54.075670 <0.452.0> eh_file_name:get_full_file_name("./", standard_io)
+
+6:22:54.075747 <0.452.0> eh_file_name:get_full_file_name/2 --> standard_io
+
+6:22:54.075838 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:22:54.075907 <0.452.0> eh_config:get_env(erlang_craq, debug_mode, false)
+
+6:22:54.076002 <0.452.0> eh_config:get_env/3 --> true
+
+6:22:54.076089 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:22:54.076163 <0.452.0> eh_config:get_env(erlang_craq, sup_restart_intensity, 1)
+
+6:22:54.076242 <0.452.0> eh_config:get_env/3 --> 100
+
+6:22:54.076314 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:22:54.076397 <0.452.0> eh_config:get_env(erlang_craq, sup_restart_period, 5)
+
+6:22:54.076515 <0.452.0> eh_config:get_env/3 --> 1
+
+6:22:54.076590 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:22:54.076673 <0.452.0> eh_config:get_env(erlang_craq, sup_child_shutdown, 2000)
+
+6:22:54.076757 <0.452.0> eh_config:get_env/3 --> 2000
+
+6:22:54.076829 <0.452.0>  '--> eh_system_config:get_env/0
+
+6:22:54.076898 <0.452.0> eh_system_config:get_env/0 --> {eh_app_config,'ec_n4@centos7-dev',sorted,eh_failure_detector_api,
+               eh_repl_data_manager_api,eh_storage_data_api,
+               eh_write_conflict_resolver_api,eh_unique_id_generator_api,
+               eh_wait_query_handler_api,lager_event,10000,"./","0000000000",
+               "ec_n4_repl.data",standard_io,true,100,1,2000}
+
+6:22:54.077066 <0.452.0>  '--> erlang_craq:send/4
+
+6:22:54.077139 <0.452.0> eh_system_config:get_unique_id_generator({eh_app_config,'ec_n4@centos7-dev',sorted,eh_failure_detector_api,
+               eh_repl_data_manager_api,eh_storage_data_api,
+               eh_write_conflict_resolver_api,eh_unique_id_generator_api,
+               eh_wait_query_handler_api,lager_event,10000,"./","0000000000",
+               "ec_n4_repl.data",standard_io,true,100,1,2000})
+
+6:22:54.077301 <0.452.0> eh_system_config:get_unique_id_generator/1 --> eh_unique_id_generator_api
+
+6:22:54.077388 <0.452.0>  '--> erlang_craq:send/4
+
+6:22:54.077526 <0.452.0> eh_unique_id_generator_api:unique_id()
+
+6:22:54.077630 <0.452.0> eh_unique_id_generator_api:unique_id/0 --> #Ref<0.3896970053.3661103105.106381>
+
+6:22:54.077809 <0.452.0>  '--> erlang_craq:send/4
+
+6:22:54.077980 <0.452.0> erlang_craq:receive_msg(#Ref<0.3896970053.3661103105.106381>, 1000, ['ec_n1@centos7-dev'], [])
+
+6:22:54.078157 <0.452.0> erlang_craq:receive_msg(#Ref<0.3896970053.3661103105.106381>, 1000, [], [{ok,{[{candidate,10},{person,10}],updated}}])
+
+6:22:54.078342 <0.452.0> erlang_craq:receive_msg/4 --> [{ok,{[{candidate,10},{person,10}],updated}}]
+
+6:22:54.078529 <0.452.0> erlang_craq:receive_msg/4 --> [{ok,{[{candidate,10},{person,10}],updated}}]
+
+6:22:54.078737 <0.452.0> erlang_craq:send/4 --> [{ok,{[{candidate,10},{person,10}],updated}}]
+
+6:22:54.078902 <0.452.0> erlang_craq:send_update/2 --> [{ok,{[{candidate,10},{person,10}],updated}}]
+
+6:22:54.079074 <0.452.0> erlang_craq:update/2 --> [{ok,{[{candidate,10},{person,10}],updated}}]
+
+6:22:54.079321 <0.452.0>  '--> erl_eval:do_apply/7
