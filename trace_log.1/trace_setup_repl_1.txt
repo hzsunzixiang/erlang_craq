@@ -1,0 +1,487 @@
+
+21:32:46.759231 <0.222.0> eh_system_server:handle_cast({eh_setup_repl,['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev']}, {eh_system_state,eh_not_ready,0,[],[],undefined,undefined,#{},#{},
+                 {set,0,16,16,8,80,48,
+                      {[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]},
+                      {{[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]}}},
+                 #{},#{},undefined,
+                 {eh_app_config,'ec_n1@centos7-dev',sorted,
+                                eh_failure_detector_api,
+                                eh_repl_data_manager_api,eh_storage_data_api,
+                                eh_write_conflict_resolver_api,
+                                eh_unique_id_generator_api,
+                                eh_wait_query_handler_api,lager_event,10000,
+                                "./","0000000000","ec_n1_repl.data",
+                                standard_io,true,100,1,2000}})
+
+21:32:46.763284 <0.222.0> eh_system_config:get_node_id({eh_app_config,'ec_n1@centos7-dev',sorted,eh_failure_detector_api,
+               eh_repl_data_manager_api,eh_storage_data_api,
+               eh_write_conflict_resolver_api,eh_unique_id_generator_api,
+               eh_wait_query_handler_api,lager_event,10000,"./","0000000000",
+               "ec_n1_repl.data",standard_io,true,100,1,2000})
+
+21:32:46.763529 <0.222.0> eh_system_config:get_node_id/1 --> 'ec_n1@centos7-dev'
+
+21:32:46.763636 <0.222.0>  '--> eh_system_server:handle_cast/2
+
+21:32:46.763731 <0.222.0> eh_system_config:get_node_order({eh_app_config,'ec_n1@centos7-dev',sorted,eh_failure_detector_api,
+               eh_repl_data_manager_api,eh_storage_data_api,
+               eh_write_conflict_resolver_api,eh_unique_id_generator_api,
+               eh_wait_query_handler_api,lager_event,10000,"./","0000000000",
+               "ec_n1_repl.data",standard_io,true,100,1,2000})
+
+21:32:46.763984 <0.222.0> eh_system_config:get_node_order/1 --> sorted
+
+21:32:46.764070 <0.222.0>  '--> eh_system_server:handle_cast/2
+
+21:32:46.764668 <0.222.0> eh_system_config:get_failure_detector({eh_app_config,'ec_n1@centos7-dev',sorted,eh_failure_detector_api,
+               eh_repl_data_manager_api,eh_storage_data_api,
+               eh_write_conflict_resolver_api,eh_unique_id_generator_api,
+               eh_wait_query_handler_api,lager_event,10000,"./","0000000000",
+               "ec_n1_repl.data",standard_io,true,100,1,2000})
+
+21:32:46.764940 <0.222.0> eh_system_config:get_failure_detector/1 --> eh_failure_detector_api
+
+21:32:46.765511 <0.222.0>  '--> eh_system_server:handle_cast/2
+
+21:32:46.765619 <0.222.0> eh_system_config:get_repl_data_manager({eh_app_config,'ec_n1@centos7-dev',sorted,eh_failure_detector_api,
+               eh_repl_data_manager_api,eh_storage_data_api,
+               eh_write_conflict_resolver_api,eh_unique_id_generator_api,
+               eh_wait_query_handler_api,lager_event,10000,"./","0000000000",
+               "ec_n1_repl.data",standard_io,true,100,1,2000})
+
+21:32:46.765765 <0.222.0> eh_system_config:get_repl_data_manager/1 --> eh_repl_data_manager_api
+
+21:32:46.765841 <0.222.0>  '--> eh_system_server:handle_cast/2
+
+21:32:46.765936 <0.221.0> eh_data_server:handle_call(eh_timestamp, {<0.222.0>,[alias|#Ref<0.2863178779.3660644355.203298>]}, {eh_data_state,0,0,[],#{},
+               {[],[]},
+               0,22,
+               {file_descriptor,prim_file,
+                                #{handle =>
+                                      #Ref<0.2863178779.3660709906.203405>,
+                                  owner => <0.221.0>,r_ahead_size => 0,
+                                  r_buffer =>
+                                      #Ref<0.2863178779.3660709889.203449>}},
+               {eh_app_config,'ec_n1@centos7-dev',sorted,
+                              eh_failure_detector_api,
+                              eh_repl_data_manager_api,eh_storage_data_api,
+                              eh_write_conflict_resolver_api,
+                              eh_unique_id_generator_api,
+                              eh_wait_query_handler_api,lager_event,10000,
+                              "./","0000000000","ec_n1_repl.data",standard_io,
+                              true,100,1,2000}})
+
+21:32:46.766238 <0.221.0> eh_data_server:handle_call/3 --> {reply,
+    {0,[]},
+    {eh_data_state,0,0,[],#{},
+        {[],[]},
+        0,22,
+        {file_descriptor,prim_file,
+            #{handle => #Ref<0.2863178779.3660709906.203405>,
+              owner => <0.221.0>,r_ahead_size => 0,
+              r_buffer => #Ref<0.2863178779.3660709889.203449>}},
+        {eh_app_config,'ec_n1@centos7-dev',sorted,eh_failure_detector_api,
+            eh_repl_data_manager_api,eh_storage_data_api,
+            eh_write_conflict_resolver_api,eh_unique_id_generator_api,
+            eh_wait_query_handler_api,lager_event,10000,"./","0000000000",
+            "ec_n1_repl.data",standard_io,true,100,1,2000}}}
+
+21:32:46.766613 <0.221.0>  '--> gen_server:try_handle_call/4
+
+21:32:46.767367 <0.222.0> eh_system_server:event_state("setup_repl.99", {eh_system_state,eh_ready,0,
+                 ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'],
+                 ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'],
+                 'ec_n3@centos7-dev','ec_n2@centos7-dev',#{},#{},
+                 {set,0,16,16,8,80,48,
+                      {[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]},
+                      {{[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]}}},
+                 #{},#{},undefined,
+                 {eh_app_config,'ec_n1@centos7-dev',sorted,
+                                eh_failure_detector_api,
+                                eh_repl_data_manager_api,eh_storage_data_api,
+                                eh_write_conflict_resolver_api,
+                                eh_unique_id_generator_api,
+                                eh_wait_query_handler_api,lager_event,10000,
+                                "./","0000000000","ec_n1_repl.data",
+                                standard_io,true,100,1,2000}}, {eh_app_config,'ec_n1@centos7-dev',sorted,eh_failure_detector_api,
+               eh_repl_data_manager_api,eh_storage_data_api,
+               eh_write_conflict_resolver_api,eh_unique_id_generator_api,
+               eh_wait_query_handler_api,lager_event,10000,"./","0000000000",
+               "ec_n1_repl.data",standard_io,true,100,1,2000})
+
+21:32:46.768005 <0.222.0> eh_event:state(eh_system_server, "setup_repl.99", {eh_system_state,eh_ready,0,
+                 ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'],
+                 ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'],
+                 'ec_n3@centos7-dev','ec_n2@centos7-dev',#{},#{},
+                 {set,0,16,16,8,80,48,
+                      {[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]},
+                      {{[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]}}},
+                 #{},#{},undefined,
+                 {eh_app_config,'ec_n1@centos7-dev',sorted,
+                                eh_failure_detector_api,
+                                eh_repl_data_manager_api,eh_storage_data_api,
+                                eh_write_conflict_resolver_api,
+                                eh_unique_id_generator_api,
+                                eh_wait_query_handler_api,lager_event,10000,
+                                "./","0000000000","ec_n1_repl.data",
+                                standard_io,true,100,1,2000}}, {eh_app_config,'ec_n1@centos7-dev',sorted,eh_failure_detector_api,
+               eh_repl_data_manager_api,eh_storage_data_api,
+               eh_write_conflict_resolver_api,eh_unique_id_generator_api,
+               eh_wait_query_handler_api,lager_event,10000,"./","0000000000",
+               "ec_n1_repl.data",standard_io,true,100,1,2000})
+
+21:32:46.768425 <0.222.0> eh_event:event_notify(state, {eh_system_server,"setup_repl.99",
+    {eh_system_state,eh_ready,0,
+        ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'],
+        ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'],
+        'ec_n3@centos7-dev','ec_n2@centos7-dev',#{},#{},
+        {set,0,16,16,8,80,48,
+            {[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]},
+            {{[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]}}},
+        #{},#{},undefined,
+        {eh_app_config,'ec_n1@centos7-dev',sorted,eh_failure_detector_api,
+            eh_repl_data_manager_api,eh_storage_data_api,
+            eh_write_conflict_resolver_api,eh_unique_id_generator_api,
+            eh_wait_query_handler_api,lager_event,10000,"./","0000000000",
+            "ec_n1_repl.data",standard_io,true,100,1,2000}}}, {eh_app_config,'ec_n1@centos7-dev',sorted,eh_failure_detector_api,
+               eh_repl_data_manager_api,eh_storage_data_api,
+               eh_write_conflict_resolver_api,eh_unique_id_generator_api,
+               eh_wait_query_handler_api,lager_event,10000,"./","0000000000",
+               "ec_n1_repl.data",standard_io,true,100,1,2000})
+
+21:32:46.768797 <0.222.0> eh_system_util:get_node_name('ec_n1@centos7-dev')
+
+21:32:46.768865 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(101)
+
+21:32:46.768911 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+21:32:46.768959 <0.222.0>  '--> lists:takewhile_1/2
+
+21:32:46.769048 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(99)
+
+21:32:46.769140 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+21:32:46.769214 <0.222.0>  '--> lists:takewhile_1/2
+
+21:32:46.769266 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(95)
+
+21:32:46.769354 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+21:32:46.769592 <0.222.0>  '--> lists:takewhile_1/2
+
+21:32:46.769685 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(110)
+
+21:32:46.769745 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+21:32:46.769792 <0.222.0>  '--> lists:takewhile_1/2
+
+21:32:46.769861 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(49)
+
+21:32:46.769928 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+21:32:46.770008 <0.222.0>  '--> lists:takewhile_1/2
+
+21:32:46.770072 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(64)
+
+21:32:46.770133 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> false
+
+21:32:46.770489 <0.222.0>  '--> lists:takewhile_1/2
+
+21:32:46.770804 <0.222.0> eh_system_util:get_node_name/1 --> "ec_n1"
+
+21:32:46.770904 <0.222.0>  '--> eh_event_handler:get_msg_data/1
+
+21:32:46.770965 <0.222.0> eh_system_util:get_node_name('ec_n3@centos7-dev')
+
+21:32:46.771023 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(101)
+
+21:32:46.771126 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+21:32:46.771185 <0.222.0>  '--> lists:takewhile_1/2
+
+21:32:46.771235 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(99)
+
+21:32:46.771388 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+21:32:46.771551 <0.222.0>  '--> lists:takewhile_1/2
+
+21:32:46.771676 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(95)
+
+21:32:46.771744 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+21:32:46.771854 <0.222.0>  '--> lists:takewhile_1/2
+
+21:32:46.771930 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(110)
+
+21:32:46.772008 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+21:32:46.772149 <0.222.0>  '--> lists:takewhile_1/2
+
+21:32:46.772228 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(51)
+
+21:32:46.772310 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+21:32:46.772401 <0.222.0>  '--> lists:takewhile_1/2
+
+21:32:46.772490 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(64)
+
+21:32:46.772590 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> false
+
+21:32:46.772742 <0.222.0>  '--> lists:takewhile_1/2
+
+21:32:46.772847 <0.222.0> eh_system_util:get_node_name/1 --> "ec_n3"
+
+21:32:46.772937 <0.222.0>  '--> eh_event_handler:get_msg_data/1
+
+21:32:46.772986 <0.222.0> eh_system_util:get_node_name('ec_n2@centos7-dev')
+
+21:32:46.773039 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(101)
+
+21:32:46.773089 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+21:32:46.773188 <0.222.0>  '--> lists:takewhile_1/2
+
+21:32:46.773241 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(99)
+
+21:32:46.773289 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+21:32:46.773359 <0.222.0>  '--> lists:takewhile_1/2
+
+21:32:46.773427 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(95)
+
+21:32:46.773498 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+21:32:46.773587 <0.222.0>  '--> lists:takewhile_1/2
+
+21:32:46.773637 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(110)
+
+21:32:46.773746 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+21:32:46.773840 <0.222.0>  '--> lists:takewhile_1/2
+
+21:32:46.773919 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(50)
+
+21:32:46.774008 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+21:32:46.774098 <0.222.0>  '--> lists:takewhile_1/2
+
+21:32:46.774170 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(64)
+
+21:32:46.774274 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> false
+
+21:32:46.774362 <0.222.0>  '--> lists:takewhile_1/2
+
+21:32:46.774485 <0.222.0> eh_system_util:get_node_name/1 --> "ec_n2"
+
+21:32:46.774712 <0.222.0>  '--> eh_event_handler:get_msg_data/1
+
+21:32:46.774884 <0.222.0> eh_system_util:display_atom_to_list(eh_ready)
+
+21:32:46.774955 <0.222.0> eh_system_util:display_atom_to_list/1 --> "ready"
+
+21:32:46.775047 <0.222.0>  '--> eh_event_handler:get_msg_data/1
+
+21:32:46.775241 <0.222.0> eh_system_util:make_list_to_string(fun eh_system_util:get_node_name/1, ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'])
+
+21:32:46.775404 <0.222.0> eh_system_util:'-make_list_to_string/2-fun-0-'('ec_n1@centos7-dev', [], fun eh_system_util:get_node_name/1)
+
+21:32:46.775489 <0.222.0> eh_system_util:get_node_name('ec_n1@centos7-dev')
+
+21:32:46.775613 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(101)
+
+21:32:46.775665 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+21:32:46.775708 <0.222.0>  '--> lists:takewhile_1/2
+
+21:32:46.775781 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(99)
+
+21:32:46.775829 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+21:32:46.775886 <0.222.0>  '--> lists:takewhile_1/2
+
+21:32:46.775940 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(95)
+
+21:32:46.775999 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+21:32:46.776053 <0.222.0>  '--> lists:takewhile_1/2
+
+21:32:46.776089 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(110)
+
+21:32:46.776127 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+21:32:46.776182 <0.222.0>  '--> lists:takewhile_1/2
+
+21:32:46.776267 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(49)
+
+21:32:46.776453 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+21:32:46.776514 <0.222.0>  '--> lists:takewhile_1/2
+
+21:32:46.776552 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(64)
+
+21:32:46.776620 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> false
+
+21:32:46.776692 <0.222.0>  '--> lists:takewhile_1/2
+
+21:32:46.776790 <0.222.0> eh_system_util:get_node_name/1 --> "ec_n1"
+
+21:32:46.776876 <0.222.0>  '--> eh_system_util:'-make_list_to_string/2-fun-0-'/3
+
+21:32:46.776916 <0.222.0> eh_system_util:'-make_list_to_string/2-fun-0-'/3 --> "ec_n1"
+
+21:32:46.776973 <0.222.0>  '--> lists:foldl/3
+
+21:32:46.777025 <0.222.0> eh_system_util:'-make_list_to_string/2-fun-0-'('ec_n2@centos7-dev', "ec_n1", fun eh_system_util:get_node_name/1)
+
+21:32:46.777103 <0.222.0> eh_system_util:get_node_name('ec_n2@centos7-dev')
+
+21:32:46.777156 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(101)
+
+21:32:46.777196 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+21:32:46.777252 <0.222.0>  '--> lists:takewhile_1/2
+
+21:32:46.777365 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(99)
+
+21:32:46.777457 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+21:32:46.777507 <0.222.0>  '--> lists:takewhile_1/2
+
+21:32:46.777544 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(95)
+
+21:32:46.777603 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+21:32:46.777704 <0.222.0>  '--> lists:takewhile_1/2
+
+21:32:46.777757 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(110)
+
+21:32:46.777808 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+21:32:46.777918 <0.222.0>  '--> lists:takewhile_1/2
+
+21:32:46.777997 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(50)
+
+21:32:46.778053 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+21:32:46.778119 <0.222.0>  '--> lists:takewhile_1/2
+
+21:32:46.778177 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(64)
+
+21:32:46.778227 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> false
+
+21:32:46.778266 <0.222.0>  '--> lists:takewhile_1/2
+
+21:32:46.778318 <0.222.0> eh_system_util:get_node_name/1 --> "ec_n2"
+
+21:32:46.778376 <0.222.0>  '--> eh_system_util:'-make_list_to_string/2-fun-0-'/3
+
+21:32:46.778543 <0.222.0> eh_system_util:'-make_list_to_string/2-fun-0-'/3 --> "ec_n1,ec_n2"
+
+21:32:46.778598 <0.222.0>  '--> lists:foldl_1/3
+
+21:32:46.778636 <0.222.0> eh_system_util:'-make_list_to_string/2-fun-0-'('ec_n3@centos7-dev', "ec_n1,ec_n2", fun eh_system_util:get_node_name/1)
+
+21:32:46.778715 <0.222.0> eh_system_util:get_node_name('ec_n3@centos7-dev')
+
+21:32:46.778821 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(101)
+
+21:32:46.778879 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+21:32:46.778940 <0.222.0>  '--> lists:takewhile_1/2
+
+21:32:46.779076 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(99)
+
+21:32:46.779150 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+21:32:46.779217 <0.222.0>  '--> lists:takewhile_1/2
+
+21:32:46.779278 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(95)
+
+21:32:46.779340 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+21:32:46.779404 <0.222.0>  '--> lists:takewhile_1/2
+
+21:32:46.779464 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(110)
+
+21:32:46.779572 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+21:32:46.779677 <0.222.0>  '--> lists:takewhile_1/2
+
+21:32:46.779728 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(51)
+
+21:32:46.779786 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+
+21:32:46.779835 <0.222.0>  '--> lists:takewhile_1/2
+
+21:32:46.779869 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'(64)
+
+21:32:46.779906 <0.222.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> false
+
+21:32:46.779963 <0.222.0>  '--> lists:takewhile_1/2
+
+21:32:46.780014 <0.222.0> eh_system_util:get_node_name/1 --> "ec_n3"
+
+21:32:46.780132 <0.222.0>  '--> eh_system_util:'-make_list_to_string/2-fun-0-'/3
+
+21:32:46.780201 <0.222.0> eh_system_util:'-make_list_to_string/2-fun-0-'/3 --> "ec_n1,ec_n2,ec_n3"
+
+21:32:46.780277 <0.222.0>  '--> lists:foldl_1/3
+
+21:32:46.780324 <0.222.0> eh_system_util:make_list_to_string/2 --> "ec_n1,ec_n2,ec_n3"
+
+21:32:46.780383 <0.222.0>  '--> eh_event_handler:get_msg_data/1
+
+21:32:46.780437 <0.222.0> eh_system_util:fold_map(#Fun<eh_event_handler.1.20189961>, [], #{})
+
+21:32:46.780499 <0.222.0> eh_system_util:fold_map/3 --> []
+
+21:32:46.780538 <0.222.0>  '--> eh_event_handler:get_msg_data/1
+
+21:32:46.780593 <0.222.0> eh_system_util:fold_map(#Fun<eh_event_handler.1.20189961>, [], #{})
+
+21:32:46.780767 <0.222.0> eh_system_util:fold_map/3 --> []
+
+21:32:46.780829 <0.222.0>  '--> eh_event_handler:get_msg_data/1
+
+21:32:46.780880 <0.222.0> eh_system_util:fold_set(#Fun<eh_event_handler.0.20189961>, [], {set,0,16,16,8,80,48,
+     {[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]},
+     {{[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]}}})
+
+21:32:46.780975 <0.222.0> eh_system_util:fold_set/3 --> []
+
+21:32:46.781036 <0.222.0>  '--> eh_event_handler:get_msg_data/1
+
+21:32:46.781090 <0.222.0> eh_system_config:get_event_logger({eh_app_config,'ec_n1@centos7-dev',sorted,eh_failure_detector_api,
+               eh_repl_data_manager_api,eh_storage_data_api,
+               eh_write_conflict_resolver_api,eh_unique_id_generator_api,
+               eh_wait_query_handler_api,lager_event,10000,"./","0000000000",
+               "ec_n1_repl.data",standard_io,true,100,1,2000})
+
+21:32:46.782781 <0.222.0> eh_system_config:get_event_logger/1 --> lager_event
+
+21:32:46.783184 <0.222.0>  '--> eh_event:event_notify/3
+
+21:32:46.783446 <0.222.0> eh_event:event_notify/3 --> ok
+
+21:32:46.783798 <0.222.0> eh_event:state/4 --> ok
+
+21:32:46.783886 <0.222.0> eh_system_server:event_state/3 --> ok
+
+21:32:46.783937 <0.222.0>  '--> eh_system_server:handle_cast/2
+
+21:32:46.783978 <0.222.0> eh_system_server:handle_cast/2 --> {noreply,
+    {eh_system_state,eh_ready,0,
+        ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'],
+        ['ec_n1@centos7-dev','ec_n2@centos7-dev','ec_n3@centos7-dev'],
+        'ec_n3@centos7-dev','ec_n2@centos7-dev',#{},#{},
+        {set,0,16,16,8,80,48,
+            {[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]},
+            {{[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]}}},
+        #{},#{},undefined,
+        {eh_app_config,'ec_n1@centos7-dev',sorted,eh_failure_detector_api,
+            eh_repl_data_manager_api,eh_storage_data_api,
+            eh_write_conflict_resolver_api,eh_unique_id_generator_api,
+            eh_wait_query_handler_api,lager_event,10000,"./","0000000000",
+            "ec_n1_repl.data",standard_io,true,100,1,2000}}}
+
+21:32:46.784243 <0.222.0>  '--> gen_server:try_dispatch/4

@@ -1,0 +1,41 @@
+%% 可以按微秒排序 三个节点上的时间可能不太一样
+%% node1 头结点，客户端发来的，最终返回给客户端
+5:45:42.884128 <0.222.0> eh_system_server:handle_cast/2
+5:45:42.884405 <0.222.0> eh_system_server:send_pre_update_msg/4  % 发送到后继节点
+5:45:42.884515 <0.222.0> eh_system_server:send_msg/5             % 这里发送到后继节点 5:45:42.884515
+5:45:42.885332 <0.222.0> eh_system_server:event_state/3
+5:45:42.887233 <0.222.0> eh_system_server:handle_cast/2          % 收到后继节点的 确认消息
+5:45:42.887410 <0.222.0> eh_system_server:process_msg/9
+5:45:42.887559 <0.221.0> eh_data_server:handle_call/3
+5:45:42.887682 <0.222.0> eh_system_server:event_message/4
+5:45:42.887756 <0.222.0> eh_system_server:reply_to_client/4      % 回复客户端
+5:45:42.887809 <0.221.0> eh_data_server:handle_call/3
+5:45:42.887863 <0.221.0> eh_data_server:write_data/5
+5:45:42.888219 <0.222.0> eh_system_server:event_state/3
+
+%% node2 中间节点 中间节点既要接手来自前继节点的消息，又需要把确认消息传递给前继节点
+5:45:42.884578 <0.302.0> eh_system_server:handle_cast/2          %  收到前继节点发来的消息    5:45:42.884578
+5:45:42.884783 <0.302.0> eh_system_server:process_msg/9
+5:45:42.885218 <0.302.0> eh_system_server:event_message/4
+5:45:42.885488 <0.302.0> eh_system_server:send_pre_update_msg/4  % 发送到后继节点    5:45:42.885488
+5:45:42.885707 <0.302.0> eh_system_server:send_msg/5
+5:45:42.885790 <0.302.0> eh_system_server:event_state/3
+5:45:42.886083 <0.302.0> eh_system_server:handle_cast/2          % 收到后继节点的 确认消息
+5:45:42.886307 <0.302.0> eh_system_server:process_msg/9
+5:45:42.886453 <0.301.0> eh_data_server:handle_call/3
+5:45:42.886565 <0.302.0> eh_system_server:event_message/4
+5:45:42.886641 <0.302.0> eh_system_server:send_update_msg/4      % 把确认信息发送给前继节点 
+5:45:42.886712 <0.302.0> eh_system_server:send_msg/5
+5:45:42.886919 <0.301.0> eh_data_server:handle_call/3
+5:45:42.887187 <0.301.0> eh_data_server:write_data/5
+5:45:42.887297 <0.302.0> eh_system_server:event_state/3
+
+%% node3 尾节点: 仅收到来自前继节点的消息，然后回给前继节点
+5:45:42.884802 <0.222.0> eh_system_server:handle_cast/2           % 收到前继节点发来的消息 5:45:42.884802 
+5:45:42.885031 <0.222.0> eh_system_server:process_msg/9
+5:45:42.885167 <0.222.0> eh_system_server:event_message/4
+5:45:42.885715 <0.222.0> eh_system_server:send_update_msg/4       % 把确认信息发送给前继节点 5:45:42.885715
+5:45:42.886002 <0.222.0> eh_system_server:send_msg/5
+5:45:42.886183 <0.221.0> eh_data_server:handle_call/3
+5:45:42.886294 <0.221.0> eh_data_server:write_data/5
+5:45:42.886418 <0.222.0> eh_system_server:event_state/3
