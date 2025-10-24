@@ -1,5 +1,5 @@
 """
-Main entry point for CRAQ MCP Prompt Server.
+Main entry point for CRAQ MCP Source Code Analysis Server.
 
 This module provides the main entry point for running the MCP server
 in stdio mode, handling command line arguments and server lifecycle.
@@ -25,7 +25,7 @@ def create_parser() -> argparse.ArgumentParser:
     """
     parser = argparse.ArgumentParser(
         prog="craq-mcp",
-        description="CRAQ MCP Prompt Server - A FastMCP 2.0 based server for generating prompts",
+        description="CRAQ MCP Source Code Analysis Server - A FastMCP 2.0 based server for analyzing CRAQ protocol",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
@@ -69,7 +69,7 @@ async def async_main(args) -> None:
     in stdio mode for communication with MCP clients.
     """
     if args.debug:
-        print(f"Starting CRAQ MCP Prompt Server v{__version__} in debug mode", file=sys.stderr)
+        print(f"Starting CRAQ MCP Source Code Analysis Server v{__version__} in debug mode", file=sys.stderr)
         print("Server ready for MCP client connections via stdio", file=sys.stderr)
 
     try:
@@ -86,7 +86,7 @@ async def async_main(args) -> None:
 
 def main() -> NoReturn:
     """
-    Main entry point for the CRAQ MCP server.
+    Main entry point for the CRAQ MCP Source Code Analysis server.
 
     This function is called when the package is executed as a script
     or through the console script entry point defined in pyproject.toml.

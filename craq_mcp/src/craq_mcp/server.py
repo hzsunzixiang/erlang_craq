@@ -2,7 +2,7 @@
 FastMCP server implementation for CRAQ MCP.
 
 This module contains the MCP server implementation using FastMCP 2.0
-that provides patent prompt generation tools.
+that provides CRAQ protocol source code analysis tools.
 """
 
 import asyncio
@@ -18,27 +18,35 @@ def create_server() -> FastMCP:
         Configured FastMCP server instance
     """
     # Initialize the MCP server
-    mcp = FastMCP("CRAQ MCP Patent Server")
+    mcp = FastMCP("CRAQ MCP Source Code Analysis Server")
 
     @mcp.tool()
     async def generate_craq(
-        patent_detail: str = Field(description="""专利的详细信息，例如：
-- 专利题目
-- 现有技术痛点
-- 专利创新点
-- 关键概念介绍""")
+        craq_analysis_detail: str = Field(description="""CRAQ源码分析的详细信息，例如：
+- 分析目标：CRAQ协议的Erlang实现
+- 技术重点：链式复制、消息传递、数据持久化
+- 分析深度：源码级别的深度分析
+- 输出格式：完整的技术文档""")
     ) -> str:
-        """分布式协议Craq的erlang实现"""
-        # 从文件读取提示词模板
+        """分析CRAQ协议的Erlang实现源码并生成技术文档"""
+        # 从文件读取CRAQ分析模板
         try:
             import os
             # 获取当前文件所在目录的绝对路径
             current_dir = os.path.dirname(os.path.abspath(__file__))
-            template_path = os.path.join(current_dir, "patent_prompt_template.md")
+            template_path = os.path.join(current_dir, "craq_analysis_template.md")
+            
+            # 如果新模板不存在，尝试使用旧的模板文件
+            if not os.path.exists(template_path):
+                template_path = os.path.join(current_dir, "patent_prompt_template.md")
+            
             with open(template_path, "r", encoding="utf-8") as f:
                 template = f.read()
-            # 直接替换{patent_detail}占位符
-            result = template.replace("{patent_detail}", patent_detail)
+            
+            # 直接替换占位符
+            result = template.replace("{craq_analysis_detail}", craq_analysis_detail)
+            # 兼容旧的占位符
+            result = result.replace("{patent_detail}", craq_analysis_detail)
 
             # 压缩处理：移除多余的空行和空白字符
             lines = result.split('\n')
@@ -53,9 +61,9 @@ def create_server() -> FastMCP:
 
             return compressed_result
         except FileNotFoundError:
-            return f"错误：提示词模板文件未找到，请确保 patent_prompt_template.md 文件存在"
+            return f"错误：CRAQ分析模板文件未找到，请确保 craq_analysis_template.md 或 patent_prompt_template.md 文件存在"
         except Exception as e:
-            return f"错误：读取提示词模板时发生异常: {str(e)}"
+            return f"错误：读取CRAQ分析模板时发生异常: {str(e)}"
 
     return mcp
 

@@ -10,7 +10,7 @@ import time
 
 def test_mcp_server():
     """Test the MCP server connection."""
-    print("🧪 Testing CRAQ MCP Server connection...")
+    print("🧪 Testing CRAQ MCP Source Code Analysis Server connection...")
 
     # MCP initialize message
     init_message = {
