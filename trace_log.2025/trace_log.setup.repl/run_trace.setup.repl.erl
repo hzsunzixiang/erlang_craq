@@ -1,7 +1,7 @@
 
 f().
 File="trace_log.setup.repl.node1.txt".
-%File="trace_log.setup.repl.node2.txt".
+File="trace_log.setup.repl.node2.txt".
 %File="trace_log.setup.repl.node3.txt".
 LogNum=50000.
 Path="/home/ericksun/program/erlang_craq/trace_log.2025/trace_log.setup.repl/".
