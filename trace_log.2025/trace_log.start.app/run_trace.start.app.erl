@@ -1,8 +1,8 @@
 
 f().
 %File="trace_log.start.app.node1.txt".
-File="trace_log.start.app.node2.txt".
-%File="trace_log.start.app.node3.txt".
+%File="trace_log.start.app.node2.txt".
+File="trace_log.start.app.node3.txt".
 LogNum=50000.
 Path="/home/ericksun/program/erlang_craq/trace_log.2025/trace_log.start.app/".
 file:make_dir(FileName).
