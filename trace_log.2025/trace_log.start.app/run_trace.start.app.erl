@@ -1,11 +1,7 @@
 
 f().
-File="trace_log.add.node.txt".
+File="trace_log.start.app.node1.txt".
 Path="/home/ericksun/program/erlang_craq/trace_log.2025/"
-N1 = 'ec_n1@rabbitmq4-1'.
-N2 = 'ec_n2@rabbitmq4-2'.
-N3 = 'ec_n3@rabbitmq4-3'.
-NodeList = [N1, N2, N3].
 file:make_dir(FileName).
 FileName= string:concat(Path, File).
 file:delete(FileName).
@@ -15,3 +11,9 @@ DbgList = lists:foldl(fun(X, Sum) -> [{X, '_', '_'}] ++ Sum end, [], ListMod).
 {ok, Dev} = file:open(FileName,[write]).
 recon_trace:calls(DbgList, 10000, [{scope, local}, {io_server, Dev},{args, arity}]).
 
+
+%N1 = 'ec_n1@rabbitmq4-1'.
+%N2 = 'ec_n2@rabbitmq4-2'.
+%N3 = 'ec_n3@rabbitmq4-3'.
+%NodeList = [N1, N2, N3].
+%erlang_craq:setup_repl(NodeList).
