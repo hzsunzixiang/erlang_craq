@@ -4,7 +4,7 @@ File="trace_log.delete.node1.txt".
 %File="trace_log.delete.node2.txt".
 %File="trace_log.delete.node3.txt".
 LogNum=50000.
-Path="/home/ericksun/program/erlang_craq/trace_log.2025/trace_log.query/".
+Path="/home/ericksun/program/erlang_craq/trace_log.2025/trace_log.delete/".
 file:make_dir(FileName).
 FileName= string:concat(Path, File).
 file:delete(FileName).
