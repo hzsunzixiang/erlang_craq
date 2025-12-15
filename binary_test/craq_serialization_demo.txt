@@ -1,0 +1,63 @@
+1> craq_serialization_demo:demo().
+=== CRAQ Serialization & Deserialization Demo ===
+
+1. Original Data Structure:
+   {eh_storage_data,person,10,1,1,1,name,john}
+
+2. Serialization Process:
+   Step 2a - term_to_binary():
+     Size: 52 bytes
+     Binary: [131,104,8,100,0,15,101,104,95,115,116,111,114,97,103,101,95,100,
+              97,116,97,100,0,6,112,101,114,115,111,110,97,10,97,1,97,1,97,1,
+              100,0,4,110,97,109,101,100,0,4,106,111,104,110]
+   Step 2b - SHA1 Hash Calculation:
+     Hash input: [4-byte size] + [binary data]
+     SHA1 result: <<212,204,244,236,234,4,111,120,51,135,242,228,144,47,17,52,
+                    177,202,185,213>>
+   Step 2c - Final Binary Assembly:
+     Format: [20-byte hash] + [4-byte size] + [data]
+     Total size: 76 bytes
+     Structure: SHA1(20) + Size(4) + Data(52)
+
+3. File Operations:
+   Saved to file: demo_storage.bin
+   Loaded from file: 76 bytes
+   Data integrity: true
+
+4. Deserialization Process:
+   Step 4a - Binary Parsing:
+     Extracted hash: <<212,204,244,236,234,4,111,120,51,135,242,228,144,47,17,
+                       52,177,202,185,213>>
+     Extracted size: 52
+     Data length: 52
+   Step 4b - Hash Verification:
+     Computed hash: <<212,204,244,236,234,4,111,120,51,135,242,228,144,47,17,
+                      52,177,202,185,213>>
+     Hash match: true
+   Step 4c - Data Reconstruction:
+     Success: {eh_storage_data,person,10,1,1,1,name,john}
+     Original match: true
+
+5. Performance Analysis (10000 operations):
+   Full serialization: 0.41 μs/op
+   Full deserialization: 0.61 μs/op
+   Pure term_to_binary: 0.15 μs/op
+   Hash overhead: 0.25 μs/op
+
+6. Corruption Detection Demo:
+   Corrupted last byte
+   Hash verification: false
+   ✓ Successfully detected corruption
+
+7. Demo completed successfully!
+ok
+
+
+# 二进制是对应起来的
+[ericksun@ERICKSUN-MC1:~/workspace/erlang/erlang_craq] (master *%)$ od -t u1 demo_storage.bin
+0000000 212 204 244 236 234   4 111 120  51 135 242 228 144  47  17  52
+0000020 177 202 185 213   0   0   0  52 131 104   8 100   0  15 101 104
+0000040  95 115 116 111 114  97 103 101  95 100  97 116  97 100   0   6
+0000060 112 101 114 115 111 110  97  10  97   1  97   1  97   1 100   0
+0000100   4 110  97 109 101 100   0   4 106 111 104 110
+0000114

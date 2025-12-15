@@ -8,8 +8,7 @@ compile: deps
 
 deps:
 	test -d deps || rebar3 get-deps
-
-clean:
+ean:
 	rebar3 clean
 	rm ebin/*.beam
 
