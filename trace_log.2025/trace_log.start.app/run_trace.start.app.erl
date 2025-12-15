@@ -1,7 +1,7 @@
 
 f().
 File="trace_log.start.app.node1.txt".
-Path="/home/ericksun/program/erlang_craq/trace_log.2025/"
+Path="/home/ericksun/program/erlang_craq/trace_log.2025/trace_log.start.app/".
 file:make_dir(FileName).
 FileName= string:concat(Path, File).
 file:delete(FileName).
