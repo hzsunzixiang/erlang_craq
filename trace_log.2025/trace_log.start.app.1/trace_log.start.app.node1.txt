@@ -1,0 +1,1113 @@
+
+3:21:49.486372 <0.905.0> eh_file_name:get_file_name("ec_n1", "_repl.data")
+
+3:21:49.497089 <0.905.0> eh_file_name:get_file_name/2 --> "ec_n1_repl.data"
+
+3:21:49.497336 <0.905.0>  '--> eh_system_config:get_env/0
+
+3:21:49.497546 <0.905.0> eh_file_name:get_file_name("ec_n1", standard_io)
+
+3:21:49.497621 <0.905.0> eh_file_name:get_file_name/2 --> standard_io
+
+3:21:49.497699 <0.905.0>  '--> eh_system_config:get_env/0
+
+3:21:49.497764 <0.905.0> eh_file_name:get_full_file_name("./", standard_io)
+
+3:21:49.497824 <0.905.0> eh_file_name:get_full_file_name/2 --> standard_io
+
+3:21:49.497887 <0.905.0>  '--> eh_system_config:get_env/0
+
+3:21:49.497923 <0.906.0> eh_file_name:get_file_name("ec_n1", "_repl.data")
+
+3:21:49.498153 <0.906.0> eh_file_name:get_file_name/2 --> "ec_n1_repl.data"
+
+3:21:49.498257 <0.906.0>  '--> eh_system_config:get_env/0
+
+3:21:49.498300 <0.906.0> eh_file_name:get_file_name("ec_n1", standard_io)
+
+3:21:49.498431 <0.906.0> eh_file_name:get_file_name/2 --> standard_io
+
+3:21:49.498511 <0.906.0>  '--> eh_system_config:get_env/0
+
+3:21:49.498553 <0.906.0> eh_file_name:get_full_file_name("./", standard_io)
+
+3:21:49.498667 <0.906.0> eh_file_name:get_full_file_name/2 --> standard_io
+
+3:21:49.498709 <0.906.0>  '--> eh_system_config:get_env/0
+
+3:21:49.498903 <0.906.0> eh_data_server:start_link({eh_app_config,'ec_n1@rabbitmq4-1',sorted,eh_failure_detector_api,
+               eh_repl_data_manager_api,eh_storage_data_api,
+               eh_write_conflict_resolver_api,eh_unique_id_generator_api,
+               eh_wait_query_handler_api,lager_event,10000,"./","0000000000",
+               "ec_n1_repl.data",standard_io,true,100,1,2000})
+
+3:21:49.499089 <0.907.0> eh_data_server:init([{eh_app_config,'ec_n1@rabbitmq4-1',sorted,eh_failure_detector_api,
+                eh_repl_data_manager_api,eh_storage_data_api,
+                eh_write_conflict_resolver_api,eh_unique_id_generator_api,
+                eh_wait_query_handler_api,lager_event,10000,"./","0000000000",
+                "ec_n1_repl.data",standard_io,true,100,1,2000}])
+
+3:21:49.499564 <0.907.0> eh_file_name:get_full_versioned_file_names("./", "ec_n1_repl.data")
+
+3:21:49.499770 <0.907.0> eh_file_name:get_file_names("./", "ec_n1_repl.data")
+
+3:21:49.500066 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'(".git", "ec_n1_repl.data")
+
+3:21:49.500178 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'/2 --> false
+
+3:21:49.500213 <0.907.0>  '--> lists:'-filter/2-lc$^0/1-0-'/2
+
+3:21:49.500274 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'(".vimrc", "ec_n1_repl.data")
+
+3:21:49.500318 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'/2 --> false
+
+3:21:49.500380 <0.907.0>  '--> lists:'-filter/2-lc$^0/1-0-'/2
+
+3:21:49.500416 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'("LICENSE", "ec_n1_repl.data")
+
+3:21:49.500480 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'/2 --> false
+
+3:21:49.500510 <0.907.0>  '--> lists:'-filter/2-lc$^0/1-0-'/2
+
+3:21:49.500546 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'("Makefile", "ec_n1_repl.data")
+
+3:21:49.500627 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'/2 --> false
+
+3:21:49.500710 <0.907.0>  '--> lists:'-filter/2-lc$^0/1-0-'/2
+
+3:21:49.500748 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'("README.md", "ec_n1_repl.data")
+
+3:21:49.500931 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'/2 --> false
+
+3:21:49.501019 <0.907.0>  '--> lists:'-filter/2-lc$^0/1-0-'/2
+
+3:21:49.501092 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'("config", "ec_n1_repl.data")
+
+3:21:49.501157 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'/2 --> false
+
+3:21:49.501183 <0.907.0>  '--> lists:'-filter/2-lc$^0/1-0-'/2
+
+3:21:49.501260 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'("craq_erl.sh", "ec_n1_repl.data")
+
+3:21:49.501318 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'/2 --> false
+
+3:21:49.501420 <0.907.0>  '--> lists:'-filter/2-lc$^0/1-0-'/2
+
+3:21:49.501493 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'("craq_erl_cmd.sh", "ec_n1_repl.data")
+
+3:21:49.501654 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'/2 --> false
+
+3:21:49.501712 <0.907.0>  '--> lists:'-filter/2-lc$^0/1-0-'/2
+
+3:21:49.501811 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'("craq_mcp", "ec_n1_repl.data")
+
+3:21:49.501999 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'/2 --> false
+
+3:21:49.502051 <0.907.0>  '--> lists:'-filter/2-lc$^0/1-0-'/2
+
+3:21:49.502120 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'("craq_paper_mcp", "ec_n1_repl.data")
+
+3:21:49.502204 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'/2 --> false
+
+3:21:49.502388 <0.907.0>  '--> lists:'-filter/2-lc$^0/1-0-'/2
+
+3:21:49.503156 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'("craq_test", "ec_n1_repl.data")
+
+3:21:49.503543 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'/2 --> false
+
+3:21:49.503673 <0.907.0>  '--> lists:'-filter/2-lc$^0/1-0-'/2
+
+3:21:49.503770 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'("create.sh", "ec_n1_repl.data")
+
+3:21:49.503881 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'/2 --> false
+
+3:21:49.503976 <0.907.0>  '--> lists:'-filter/2-lc$^0/1-0-'/2
+
+3:21:49.504078 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'("ebin", "ec_n1_repl.data")
+
+3:21:49.504181 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'/2 --> false
+
+3:21:49.504288 <0.907.0>  '--> lists:'-filter/2-lc$^0/1-0-'/2
+
+3:21:49.504383 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'("erlang_craq.pdf", "ec_n1_repl.data")
+
+3:21:49.504504 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'/2 --> false
+
+3:21:49.504612 <0.907.0>  '--> lists:'-filter/2-lc$^0/1-0-'/2
+
+3:21:49.504703 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'("include", "ec_n1_repl.data")
+
+3:21:49.504818 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'/2 --> false
+
+3:21:49.504913 <0.907.0>  '--> lists:'-filter/2-lc$^0/1-0-'/2
+
+3:21:49.504977 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'("rebar.config", "ec_n1_repl.data")
+
+3:21:49.505051 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'/2 --> false
+
+3:21:49.505139 <0.907.0>  '--> lists:'-filter/2-lc$^0/1-0-'/2
+
+3:21:49.505214 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'("src", "ec_n1_repl.data")
+
+3:21:49.505295 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'/2 --> false
+
+3:21:49.505390 <0.907.0>  '--> lists:'-filter/2-lc$^0/1-0-'/2
+
+3:21:49.505461 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'("trace_script", "ec_n1_repl.data")
+
+3:21:49.505540 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'/2 --> false
+
+3:21:49.505613 <0.907.0>  '--> lists:'-filter/2-lc$^0/1-0-'/2
+
+3:21:49.505691 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'("_build", "ec_n1_repl.data")
+
+3:21:49.505801 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'/2 --> false
+
+3:21:49.505917 <0.907.0>  '--> lists:'-filter/2-lc$^0/1-0-'/2
+
+3:21:49.506015 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'("rebar.lock", "ec_n1_repl.data")
+
+3:21:49.506103 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'/2 --> false
+
+3:21:49.506186 <0.907.0>  '--> lists:'-filter/2-lc$^0/1-0-'/2
+
+3:21:49.506340 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'("trace_log.pre", "ec_n1_repl.data")
+
+3:21:49.506452 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'/2 --> false
+
+3:21:49.506657 <0.907.0>  '--> lists:'-filter/2-lc$^0/1-0-'/2
+
+3:21:49.506755 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'("trace_log.2025", "ec_n1_repl.data")
+
+3:21:49.506861 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'/2 --> false
+
+3:21:49.506958 <0.907.0>  '--> lists:'-filter/2-lc$^0/1-0-'/2
+
+3:21:49.507062 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'("log", "ec_n1_repl.data")
+
+3:21:49.507149 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'/2 --> false
+
+3:21:49.507246 <0.907.0>  '--> lists:'-filter/2-lc$^0/1-0-'/2
+
+3:21:49.507311 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'("ec_n1_repl.data.0000000001", "ec_n1_repl.data")
+
+3:21:49.507416 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'/2 --> true
+
+3:21:49.507479 <0.907.0>  '--> lists:'-filter/2-lc$^0/1-0-'/2
+
+3:21:49.507576 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'("ec_n1_repl.data.0000000002", "ec_n1_repl.data")
+
+3:21:49.507661 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'/2 --> true
+
+3:21:49.507740 <0.907.0>  '--> lists:'-filter/2-lc$^0/1-0-'/2
+
+3:21:49.507819 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'("ec_n1_repl.data.0000000003", "ec_n1_repl.data")
+
+3:21:49.507904 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'/2 --> true
+
+3:21:49.507968 <0.907.0>  '--> lists:'-filter/2-lc$^0/1-0-'/2
+
+3:21:49.508045 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'("ec_n1_repl.data.0000000004", "ec_n1_repl.data")
+
+3:21:49.508130 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'/2 --> true
+
+3:21:49.508220 <0.907.0>  '--> lists:'-filter/2-lc$^0/1-0-'/2
+
+3:21:49.508295 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'("ec_n1_repl.data.0000000005", "ec_n1_repl.data")
+
+3:21:49.508375 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'/2 --> true
+
+3:21:49.508437 <0.907.0>  '--> lists:'-filter/2-lc$^0/1-0-'/2
+
+3:21:49.508506 <0.907.0> eh_file_name:'-get_file_names/2-fun-1-'("ec_n1_repl.data.0000000001", "ec_n1_repl.data.0000000002", "ec_n1_repl.data")
+
+3:21:49.508595 <0.907.0> eh_file_name:get_version("ec_n1_repl.data.0000000001", "ec_n1_repl.data")
+
+3:21:49.508674 <0.907.0> eh_file_name:get_version/2 --> 1
+
+3:21:49.508748 <0.907.0>  '--> eh_file_name:'-get_file_names/2-fun-1-'/3
+
+3:21:49.508813 <0.907.0> eh_file_name:get_version("ec_n1_repl.data.0000000002", "ec_n1_repl.data")
+
+3:21:49.508897 <0.907.0> eh_file_name:get_version/2 --> 2
+
+3:21:49.508973 <0.907.0>  '--> eh_file_name:'-get_file_names/2-fun-1-'/3
+
+3:21:49.509070 <0.907.0> eh_file_name:'-get_file_names/2-fun-1-'/3 --> true
+
+3:21:49.509134 <0.907.0>  '--> lists:sort/2
+
+3:21:49.509197 <0.907.0> eh_file_name:'-get_file_names/2-fun-1-'("ec_n1_repl.data.0000000002", "ec_n1_repl.data.0000000003", "ec_n1_repl.data")
+
+3:21:49.509296 <0.907.0> eh_file_name:get_version("ec_n1_repl.data.0000000002", "ec_n1_repl.data")
+
+3:21:49.509373 <0.907.0> eh_file_name:get_version/2 --> 2
+
+3:21:49.509434 <0.907.0>  '--> eh_file_name:'-get_file_names/2-fun-1-'/3
+
+3:21:49.509498 <0.907.0> eh_file_name:get_version("ec_n1_repl.data.0000000003", "ec_n1_repl.data")
+
+3:21:49.509588 <0.907.0> eh_file_name:get_version/2 --> 3
+
+3:21:49.509658 <0.907.0>  '--> eh_file_name:'-get_file_names/2-fun-1-'/3
+
+3:21:49.509717 <0.907.0> eh_file_name:'-get_file_names/2-fun-1-'/3 --> true
+
+3:21:49.509802 <0.907.0>  '--> lists:fsplit_1/6
+
+3:21:49.509856 <0.907.0> eh_file_name:'-get_file_names/2-fun-1-'("ec_n1_repl.data.0000000003", "ec_n1_repl.data.0000000004", "ec_n1_repl.data")
+
+3:21:49.509938 <0.907.0> eh_file_name:get_version("ec_n1_repl.data.0000000003", "ec_n1_repl.data")
+
+3:21:49.510030 <0.907.0> eh_file_name:get_version/2 --> 3
+
+3:21:49.510123 <0.907.0>  '--> eh_file_name:'-get_file_names/2-fun-1-'/3
+
+3:21:49.510183 <0.907.0> eh_file_name:get_version("ec_n1_repl.data.0000000004", "ec_n1_repl.data")
+
+3:21:49.510264 <0.907.0> eh_file_name:get_version/2 --> 4
+
+3:21:49.510344 <0.907.0>  '--> eh_file_name:'-get_file_names/2-fun-1-'/3
+
+3:21:49.510405 <0.907.0> eh_file_name:'-get_file_names/2-fun-1-'/3 --> true
+
+3:21:49.510482 <0.907.0>  '--> lists:fsplit_1/6
+
+3:21:49.510546 <0.907.0> eh_file_name:'-get_file_names/2-fun-1-'("ec_n1_repl.data.0000000004", "ec_n1_repl.data.0000000005", "ec_n1_repl.data")
+
+3:21:49.510653 <0.907.0> eh_file_name:get_version("ec_n1_repl.data.0000000004", "ec_n1_repl.data")
+
+3:21:49.510725 <0.907.0> eh_file_name:get_version/2 --> 4
+
+3:21:49.510796 <0.907.0>  '--> eh_file_name:'-get_file_names/2-fun-1-'/3
+
+3:21:49.510871 <0.907.0> eh_file_name:get_version("ec_n1_repl.data.0000000005", "ec_n1_repl.data")
+
+3:21:49.510932 <0.907.0> eh_file_name:get_version/2 --> 5
+
+3:21:49.511003 <0.907.0>  '--> eh_file_name:'-get_file_names/2-fun-1-'/3
+
+3:21:49.511069 <0.907.0> eh_file_name:'-get_file_names/2-fun-1-'/3 --> true
+
+3:21:49.511137 <0.907.0>  '--> lists:fsplit_1/6
+
+3:21:49.511193 <0.907.0> eh_file_name:get_file_names/2 --> ["ec_n1_repl.data.0000000001","ec_n1_repl.data.0000000002",
+ "ec_n1_repl.data.0000000003","ec_n1_repl.data.0000000004",
+ "ec_n1_repl.data.0000000005"]
+
+3:21:49.511336 <0.907.0>  '--> eh_file_name:get_full_versioned_file_names/2
+
+3:21:49.511419 <0.907.0> eh_file_name:'-get_full_versioned_file_names/2-fun-0-'("ec_n1_repl.data.0000000001", "./")
+
+3:21:49.511556 <0.907.0> eh_file_name:get_full_file_name("./", "ec_n1_repl.data.0000000001")
+
+3:21:49.511649 <0.907.0> eh_file_name:get_full_file_name/2 --> "./ec_n1_repl.data.0000000001"
+
+3:21:49.511705 <0.907.0> eh_file_name:'-get_full_versioned_file_names/2-fun-0-'/2 --> "./ec_n1_repl.data.0000000001"
+
+3:21:49.511806 <0.907.0>  '--> lists:map/2
+
+3:21:49.511885 <0.907.0> eh_file_name:'-get_full_versioned_file_names/2-fun-0-'("ec_n1_repl.data.0000000002", "./")
+
+3:21:49.511972 <0.907.0> eh_file_name:get_full_file_name("./", "ec_n1_repl.data.0000000002")
+
+3:21:49.512081 <0.907.0> eh_file_name:get_full_file_name/2 --> "./ec_n1_repl.data.0000000002"
+
+3:21:49.512161 <0.907.0> eh_file_name:'-get_full_versioned_file_names/2-fun-0-'/2 --> "./ec_n1_repl.data.0000000002"
+
+3:21:49.512257 <0.907.0>  '--> lists:map_1/2
+
+3:21:49.512329 <0.907.0> eh_file_name:'-get_full_versioned_file_names/2-fun-0-'("ec_n1_repl.data.0000000003", "./")
+
+3:21:49.512410 <0.907.0> eh_file_name:get_full_file_name("./", "ec_n1_repl.data.0000000003")
+
+3:21:49.512500 <0.907.0> eh_file_name:get_full_file_name/2 --> "./ec_n1_repl.data.0000000003"
+
+3:21:49.512594 <0.907.0> eh_file_name:'-get_full_versioned_file_names/2-fun-0-'/2 --> "./ec_n1_repl.data.0000000003"
+
+3:21:49.512668 <0.907.0>  '--> lists:map_1/2
+
+3:21:49.512738 <0.907.0> eh_file_name:'-get_full_versioned_file_names/2-fun-0-'("ec_n1_repl.data.0000000004", "./")
+
+3:21:49.512810 <0.907.0> eh_file_name:get_full_file_name("./", "ec_n1_repl.data.0000000004")
+
+3:21:49.512892 <0.907.0> eh_file_name:get_full_file_name/2 --> "./ec_n1_repl.data.0000000004"
+
+3:21:49.512965 <0.907.0> eh_file_name:'-get_full_versioned_file_names/2-fun-0-'/2 --> "./ec_n1_repl.data.0000000004"
+
+3:21:49.513054 <0.907.0>  '--> lists:map_1/2
+
+3:21:49.513108 <0.907.0> eh_file_name:'-get_full_versioned_file_names/2-fun-0-'("ec_n1_repl.data.0000000005", "./")
+
+3:21:49.513198 <0.907.0> eh_file_name:get_full_file_name("./", "ec_n1_repl.data.0000000005")
+
+3:21:49.513272 <0.907.0> eh_file_name:get_full_file_name/2 --> "./ec_n1_repl.data.0000000005"
+
+3:21:49.513365 <0.907.0> eh_file_name:'-get_full_versioned_file_names/2-fun-0-'/2 --> "./ec_n1_repl.data.0000000005"
+
+3:21:49.513446 <0.907.0>  '--> lists:map_1/2
+
+3:21:49.513516 <0.907.0> eh_file_name:get_full_versioned_file_names/2 --> ["./ec_n1_repl.data.0000000001","./ec_n1_repl.data.0000000002",
+ "./ec_n1_repl.data.0000000003","./ec_n1_repl.data.0000000004",
+ "./ec_n1_repl.data.0000000005"]
+
+3:21:49.513629 <0.907.0>  '--> eh_data_server:init/1
+
+3:21:49.513705 <0.907.0> eh_storage_data_operation_api:read_all({eh_app_config,'ec_n1@rabbitmq4-1',sorted,eh_failure_detector_api,
+               eh_repl_data_manager_api,eh_storage_data_api,
+               eh_write_conflict_resolver_api,eh_unique_id_generator_api,
+               eh_wait_query_handler_api,lager_event,10000,"./","0000000000",
+               "ec_n1_repl.data",standard_io,true,100,1,2000}, ["./ec_n1_repl.data.0000000001","./ec_n1_repl.data.0000000002",
+ "./ec_n1_repl.data.0000000003","./ec_n1_repl.data.0000000004",
+ "./ec_n1_repl.data.0000000005"])
+
+3:21:49.513923 <0.907.0> eh_storage_data_operation_api:read_all(eh_storage_data_api, ["./ec_n1_repl.data.0000000001","./ec_n1_repl.data.0000000002",
+ "./ec_n1_repl.data.0000000003","./ec_n1_repl.data.0000000004",
+ "./ec_n1_repl.data.0000000005"], {ok,0,[],#{}})
+
+3:21:49.514047 <0.907.0> eh_storage_data_operation_api:open("./ec_n1_repl.data.0000000001")
+
+3:21:49.514143 <0.907.0> eh_persist_storage_data:open_data_file("./ec_n1_repl.data.0000000001")
+
+3:21:49.514518 <0.907.0> eh_persist_storage_data:open_data_file/1 --> {ok,{file_descriptor,prim_file,
+                     #{handle => #Ref<0.468240768.1635909645.195567>,
+                       owner => <0.907.0>,
+                       r_buffer => #Ref<0.468240768.1635909633.254546>,
+                       r_ahead_size => 0}}}
+
+3:21:49.514913 <0.907.0> eh_storage_data_operation_api:open/1 --> {ok,{file_descriptor,prim_file,
+                     #{handle => #Ref<0.468240768.1635909645.195567>,
+                       owner => <0.907.0>,
+                       r_buffer => #Ref<0.468240768.1635909633.254546>,
+                       r_ahead_size => 0}}}
+
+3:21:49.515147 <0.907.0>  '--> eh_storage_data_operation_api:read_all/3
+
+3:21:49.515259 <0.907.0> eh_storage_data_operation_api:read(eh_storage_data_api, {file_descriptor,prim_file,
+                 #{handle => #Ref<0.468240768.1635909645.195567>,
+                   owner => <0.907.0>,
+                   r_buffer => #Ref<0.468240768.1635909633.254546>,
+                   r_ahead_size => 0}}, 0, {0,[]}, #{})
+
+3:21:49.515447 <0.907.0> eh_storage_data_api:header_byte_size()
+
+3:21:49.515549 <0.907.0> eh_storage_data_api:compute_bytes(32)
+
+3:21:49.515745 <0.907.0> eh_storage_data_api:compute_bytes/1 --> 4
+
+3:21:49.515927 <0.907.0>  '--> eh_storage_data_api:header_byte_size/0
+
+3:21:49.516041 <0.907.0> eh_storage_data_api:header_byte_size/0 --> 24
+
+3:21:49.516152 <0.907.0>  '--> eh_storage_data_operation_api:read/5
+
+3:21:49.516254 <0.907.0> eh_persist_storage_data:read_data({file_descriptor,prim_file,
+                 #{handle => #Ref<0.468240768.1635909645.195567>,
+                   owner => <0.907.0>,
+                   r_buffer => #Ref<0.468240768.1635909633.254546>,
+                   r_ahead_size => 0}}, 0, 24)
+
+3:21:49.516467 <0.907.0> eh_persist_storage_data:read_data/3 --> eof
+
+3:21:49.516583 <0.907.0>  '--> eh_storage_data_operation_api:read/5
+
+3:21:49.516682 <0.907.0> eh_storage_data_operation_api:read/5 --> {ok,0,[],#{}}
+
+3:21:49.516825 <0.907.0>  '--> eh_storage_data_operation_api:read_all/3
+
+3:21:49.516988 <0.907.0> eh_storage_data_operation_api:close({file_descriptor,prim_file,
+                 #{handle => #Ref<0.468240768.1635909645.195567>,
+                   owner => <0.907.0>,
+                   r_buffer => #Ref<0.468240768.1635909633.254546>,
+                   r_ahead_size => 0}})
+
+3:21:49.517254 <0.907.0> eh_persist_storage_data:close_data_file({file_descriptor,prim_file,
+                 #{handle => #Ref<0.468240768.1635909645.195567>,
+                   owner => <0.907.0>,
+                   r_buffer => #Ref<0.468240768.1635909633.254546>,
+                   r_ahead_size => 0}})
+
+3:21:49.517467 <0.907.0> eh_persist_storage_data:close_data_file/1 --> ok
+
+3:21:49.517602 <0.907.0> eh_storage_data_operation_api:close/1 --> ok
+
+3:21:49.517702 <0.907.0>  '--> eh_storage_data_operation_api:read_all/3
+
+3:21:49.517746 <0.907.0> eh_storage_data_operation_api:read_all(eh_storage_data_api, ["./ec_n1_repl.data.0000000002","./ec_n1_repl.data.0000000003",
+ "./ec_n1_repl.data.0000000004","./ec_n1_repl.data.0000000005"], {ok,0,[],#{}})
+
+3:21:49.517907 <0.907.0> eh_storage_data_operation_api:open("./ec_n1_repl.data.0000000002")
+
+3:21:49.517949 <0.907.0> eh_persist_storage_data:open_data_file("./ec_n1_repl.data.0000000002")
+
+3:21:49.518007 <0.907.0> eh_persist_storage_data:open_data_file/1 --> {ok,{file_descriptor,prim_file,
+                     #{handle => #Ref<0.468240768.1635909640.194720>,
+                       owner => <0.907.0>,
+                       r_buffer => #Ref<0.468240768.1635909633.254547>,
+                       r_ahead_size => 0}}}
+
+3:21:49.518192 <0.907.0> eh_storage_data_operation_api:open/1 --> {ok,{file_descriptor,prim_file,
+                     #{handle => #Ref<0.468240768.1635909640.194720>,
+                       owner => <0.907.0>,
+                       r_buffer => #Ref<0.468240768.1635909633.254547>,
+                       r_ahead_size => 0}}}
+
+3:21:49.518289 <0.907.0>  '--> eh_storage_data_operation_api:read_all/3
+
+3:21:49.518315 <0.907.0> eh_storage_data_operation_api:read(eh_storage_data_api, {file_descriptor,prim_file,
+                 #{handle => #Ref<0.468240768.1635909640.194720>,
+                   owner => <0.907.0>,
+                   r_buffer => #Ref<0.468240768.1635909633.254547>,
+                   r_ahead_size => 0}}, 0, {0,[]}, #{})
+
+3:21:49.518413 <0.907.0> eh_storage_data_api:header_byte_size()
+
+3:21:49.518431 <0.907.0> eh_storage_data_api:compute_bytes(32)
+
+3:21:49.518454 <0.907.0> eh_storage_data_api:compute_bytes/1 --> 4
+
+3:21:49.518490 <0.907.0>  '--> eh_storage_data_api:header_byte_size/0
+
+3:21:49.518517 <0.907.0> eh_storage_data_api:header_byte_size/0 --> 24
+
+3:21:49.518537 <0.907.0>  '--> eh_storage_data_operation_api:read/5
+
+3:21:49.518562 <0.907.0> eh_persist_storage_data:read_data({file_descriptor,prim_file,
+                 #{handle => #Ref<0.468240768.1635909640.194720>,
+                   owner => <0.907.0>,
+                   r_buffer => #Ref<0.468240768.1635909633.254547>,
+                   r_ahead_size => 0}}, 0, 24)
+
+3:21:49.518665 <0.907.0> eh_persist_storage_data:read_data/3 --> eof
+
+3:21:49.518690 <0.907.0>  '--> eh_storage_data_operation_api:read/5
+
+3:21:49.518712 <0.907.0> eh_storage_data_operation_api:read/5 --> {ok,0,[],#{}}
+
+3:21:49.518737 <0.907.0>  '--> eh_storage_data_operation_api:read_all/3
+
+3:21:49.518767 <0.907.0> eh_storage_data_operation_api:close({file_descriptor,prim_file,
+                 #{handle => #Ref<0.468240768.1635909640.194720>,
+                   owner => <0.907.0>,
+                   r_buffer => #Ref<0.468240768.1635909633.254547>,
+                   r_ahead_size => 0}})
+
+3:21:49.518841 <0.907.0> eh_persist_storage_data:close_data_file({file_descriptor,prim_file,
+                 #{handle => #Ref<0.468240768.1635909640.194720>,
+                   owner => <0.907.0>,
+                   r_buffer => #Ref<0.468240768.1635909633.254547>,
+                   r_ahead_size => 0}})
+
+3:21:49.518934 <0.907.0> eh_persist_storage_data:close_data_file/1 --> ok
+
+3:21:49.519002 <0.907.0> eh_storage_data_operation_api:close/1 --> ok
+
+3:21:49.519057 <0.907.0>  '--> eh_storage_data_operation_api:read_all/3
+
+3:21:49.519076 <0.907.0> eh_storage_data_operation_api:read_all(eh_storage_data_api, ["./ec_n1_repl.data.0000000003","./ec_n1_repl.data.0000000004",
+ "./ec_n1_repl.data.0000000005"], {ok,0,[],#{}})
+
+3:21:49.519139 <0.907.0> eh_storage_data_operation_api:open("./ec_n1_repl.data.0000000003")
+
+3:21:49.519167 <0.907.0> eh_persist_storage_data:open_data_file("./ec_n1_repl.data.0000000003")
+
+3:21:49.519193 <0.907.0> eh_persist_storage_data:open_data_file/1 --> {ok,{file_descriptor,prim_file,
+                     #{handle => #Ref<0.468240768.1635909640.194722>,
+                       owner => <0.907.0>,
+                       r_buffer => #Ref<0.468240768.1635909633.254548>,
+                       r_ahead_size => 0}}}
+
+3:21:49.519287 <0.907.0> eh_storage_data_operation_api:open/1 --> {ok,{file_descriptor,prim_file,
+                     #{handle => #Ref<0.468240768.1635909640.194722>,
+                       owner => <0.907.0>,
+                       r_buffer => #Ref<0.468240768.1635909633.254548>,
+                       r_ahead_size => 0}}}
+
+3:21:49.519399 <0.907.0>  '--> eh_storage_data_operation_api:read_all/3
+
+3:21:49.519431 <0.907.0> eh_storage_data_operation_api:read(eh_storage_data_api, {file_descriptor,prim_file,
+                 #{handle => #Ref<0.468240768.1635909640.194722>,
+                   owner => <0.907.0>,
+                   r_buffer => #Ref<0.468240768.1635909633.254548>,
+                   r_ahead_size => 0}}, 0, {0,[]}, #{})
+
+3:21:49.519514 <0.907.0> eh_storage_data_api:header_byte_size()
+
+3:21:49.519533 <0.907.0> eh_storage_data_api:compute_bytes(32)
+
+3:21:49.519551 <0.907.0> eh_storage_data_api:compute_bytes/1 --> 4
+
+3:21:49.519644 <0.907.0>  '--> eh_storage_data_api:header_byte_size/0
+
+3:21:49.519674 <0.907.0> eh_storage_data_api:header_byte_size/0 --> 24
+
+3:21:49.519693 <0.907.0>  '--> eh_storage_data_operation_api:read/5
+
+3:21:49.519716 <0.907.0> eh_persist_storage_data:read_data({file_descriptor,prim_file,
+                 #{handle => #Ref<0.468240768.1635909640.194722>,
+                   owner => <0.907.0>,
+                   r_buffer => #Ref<0.468240768.1635909633.254548>,
+                   r_ahead_size => 0}}, 0, 24)
+
+3:21:49.519807 <0.907.0> eh_persist_storage_data:read_data/3 --> eof
+
+3:21:49.519835 <0.907.0>  '--> eh_storage_data_operation_api:read/5
+
+3:21:49.519873 <0.907.0> eh_storage_data_operation_api:read/5 --> {ok,0,[],#{}}
+
+3:21:49.519904 <0.907.0>  '--> eh_storage_data_operation_api:read_all/3
+
+3:21:49.519934 <0.907.0> eh_storage_data_operation_api:close({file_descriptor,prim_file,
+                 #{handle => #Ref<0.468240768.1635909640.194722>,
+                   owner => <0.907.0>,
+                   r_buffer => #Ref<0.468240768.1635909633.254548>,
+                   r_ahead_size => 0}})
+
+3:21:49.520002 <0.907.0> eh_persist_storage_data:close_data_file({file_descriptor,prim_file,
+                 #{handle => #Ref<0.468240768.1635909640.194722>,
+                   owner => <0.907.0>,
+                   r_buffer => #Ref<0.468240768.1635909633.254548>,
+                   r_ahead_size => 0}})
+
+3:21:49.520083 <0.907.0> eh_persist_storage_data:close_data_file/1 --> ok
+
+3:21:49.520106 <0.907.0> eh_storage_data_operation_api:close/1 --> ok
+
+3:21:49.520130 <0.907.0>  '--> eh_storage_data_operation_api:read_all/3
+
+3:21:49.520156 <0.907.0> eh_storage_data_operation_api:read_all(eh_storage_data_api, ["./ec_n1_repl.data.0000000004","./ec_n1_repl.data.0000000005"], {ok,0,[],#{}})
+
+3:21:49.520218 <0.907.0> eh_storage_data_operation_api:open("./ec_n1_repl.data.0000000004")
+
+3:21:49.520239 <0.907.0> eh_persist_storage_data:open_data_file("./ec_n1_repl.data.0000000004")
+
+3:21:49.520264 <0.907.0> eh_persist_storage_data:open_data_file/1 --> {ok,{file_descriptor,prim_file,
+                     #{handle => #Ref<0.468240768.1635909641.194681>,
+                       owner => <0.907.0>,
+                       r_buffer => #Ref<0.468240768.1635909633.254549>,
+                       r_ahead_size => 0}}}
+
+3:21:49.520368 <0.907.0> eh_storage_data_operation_api:open/1 --> {ok,{file_descriptor,prim_file,
+                     #{handle => #Ref<0.468240768.1635909641.194681>,
+                       owner => <0.907.0>,
+                       r_buffer => #Ref<0.468240768.1635909633.254549>,
+                       r_ahead_size => 0}}}
+
+3:21:49.520451 <0.907.0>  '--> eh_storage_data_operation_api:read_all/3
+
+3:21:49.520481 <0.907.0> eh_storage_data_operation_api:read(eh_storage_data_api, {file_descriptor,prim_file,
+                 #{handle => #Ref<0.468240768.1635909641.194681>,
+                   owner => <0.907.0>,
+                   r_buffer => #Ref<0.468240768.1635909633.254549>,
+                   r_ahead_size => 0}}, 0, {0,[]}, #{})
+
+3:21:49.520556 <0.907.0> eh_storage_data_api:header_byte_size()
+
+3:21:49.520655 <0.907.0> eh_storage_data_api:compute_bytes(32)
+
+3:21:49.520689 <0.907.0> eh_storage_data_api:compute_bytes/1 --> 4
+
+3:21:49.520718 <0.907.0>  '--> eh_storage_data_api:header_byte_size/0
+
+3:21:49.520756 <0.907.0> eh_storage_data_api:header_byte_size/0 --> 24
+
+3:21:49.520784 <0.907.0>  '--> eh_storage_data_operation_api:read/5
+
+3:21:49.520821 <0.907.0> eh_persist_storage_data:read_data({file_descriptor,prim_file,
+                 #{handle => #Ref<0.468240768.1635909641.194681>,
+                   owner => <0.907.0>,
+                   r_buffer => #Ref<0.468240768.1635909633.254549>,
+                   r_ahead_size => 0}}, 0, 24)
+
+3:21:49.520961 <0.907.0> eh_persist_storage_data:read_data/3 --> eof
+
+3:21:49.520990 <0.907.0>  '--> eh_storage_data_operation_api:read/5
+
+3:21:49.521029 <0.907.0> eh_storage_data_operation_api:read/5 --> {ok,0,[],#{}}
+
+3:21:49.521059 <0.907.0>  '--> eh_storage_data_operation_api:read_all/3
+
+3:21:49.521104 <0.907.0> eh_storage_data_operation_api:close({file_descriptor,prim_file,
+                 #{handle => #Ref<0.468240768.1635909641.194681>,
+                   owner => <0.907.0>,
+                   r_buffer => #Ref<0.468240768.1635909633.254549>,
+                   r_ahead_size => 0}})
+
+3:21:49.521205 <0.907.0> eh_persist_storage_data:close_data_file({file_descriptor,prim_file,
+                 #{handle => #Ref<0.468240768.1635909641.194681>,
+                   owner => <0.907.0>,
+                   r_buffer => #Ref<0.468240768.1635909633.254549>,
+                   r_ahead_size => 0}})
+
+3:21:49.521334 <0.907.0> eh_persist_storage_data:close_data_file/1 --> ok
+
+3:21:49.521377 <0.907.0> eh_storage_data_operation_api:close/1 --> ok
+
+3:21:49.521417 <0.907.0>  '--> eh_storage_data_operation_api:read_all/3
+
+3:21:49.521458 <0.907.0> eh_storage_data_operation_api:read_all(eh_storage_data_api, ["./ec_n1_repl.data.0000000005"], {ok,0,[],#{}})
+
+3:21:49.521591 <0.907.0> eh_storage_data_operation_api:open("./ec_n1_repl.data.0000000005")
+
+3:21:49.521635 <0.907.0> eh_persist_storage_data:open_data_file("./ec_n1_repl.data.0000000005")
+
+3:21:49.521681 <0.907.0> eh_persist_storage_data:open_data_file/1 --> {ok,{file_descriptor,prim_file,
+                     #{handle => #Ref<0.468240768.1635909645.195570>,
+                       owner => <0.907.0>,
+                       r_buffer => #Ref<0.468240768.1635909633.254550>,
+                       r_ahead_size => 0}}}
+
+3:21:49.521876 <0.907.0> eh_storage_data_operation_api:open/1 --> {ok,{file_descriptor,prim_file,
+                     #{handle => #Ref<0.468240768.1635909645.195570>,
+                       owner => <0.907.0>,
+                       r_buffer => #Ref<0.468240768.1635909633.254550>,
+                       r_ahead_size => 0}}}
+
+3:21:49.522015 <0.907.0>  '--> eh_storage_data_operation_api:read_all/3
+
+3:21:49.522059 <0.907.0> eh_storage_data_operation_api:read(eh_storage_data_api, {file_descriptor,prim_file,
+                 #{handle => #Ref<0.468240768.1635909645.195570>,
+                   owner => <0.907.0>,
+                   r_buffer => #Ref<0.468240768.1635909633.254550>,
+                   r_ahead_size => 0}}, 0, {0,[]}, #{})
+
+3:21:49.522179 <0.907.0> eh_storage_data_api:header_byte_size()
+
+3:21:49.522206 <0.907.0> eh_storage_data_api:compute_bytes(32)
+
+3:21:49.522238 <0.907.0> eh_storage_data_api:compute_bytes/1 --> 4
+
+3:21:49.522280 <0.907.0>  '--> eh_storage_data_api:header_byte_size/0
+
+3:21:49.522317 <0.907.0> eh_storage_data_api:header_byte_size/0 --> 24
+
+3:21:49.522346 <0.907.0>  '--> eh_storage_data_operation_api:read/5
+
+3:21:49.522388 <0.907.0> eh_persist_storage_data:read_data({file_descriptor,prim_file,
+                 #{handle => #Ref<0.468240768.1635909645.195570>,
+                   owner => <0.907.0>,
+                   r_buffer => #Ref<0.468240768.1635909633.254550>,
+                   r_ahead_size => 0}}, 0, 24)
+
+3:21:49.522558 <0.907.0> eh_persist_storage_data:read_data/3 --> eof
+
+3:21:49.522663 <0.907.0>  '--> eh_storage_data_operation_api:read/5
+
+3:21:49.522800 <0.907.0> eh_storage_data_operation_api:read/5 --> {ok,0,[],#{}}
+
+3:21:49.522939 <0.907.0>  '--> eh_storage_data_operation_api:read_all/3
+
+3:21:49.523057 <0.907.0> eh_storage_data_operation_api:close({file_descriptor,prim_file,
+                 #{handle => #Ref<0.468240768.1635909645.195570>,
+                   owner => <0.907.0>,
+                   r_buffer => #Ref<0.468240768.1635909633.254550>,
+                   r_ahead_size => 0}})
+
+3:21:49.523210 <0.907.0> eh_persist_storage_data:close_data_file({file_descriptor,prim_file,
+                 #{handle => #Ref<0.468240768.1635909645.195570>,
+                   owner => <0.907.0>,
+                   r_buffer => #Ref<0.468240768.1635909633.254550>,
+                   r_ahead_size => 0}})
+
+3:21:49.523424 <0.907.0> eh_persist_storage_data:close_data_file/1 --> ok
+
+3:21:49.523563 <0.907.0> eh_storage_data_operation_api:close/1 --> ok
+
+3:21:49.523663 <0.907.0>  '--> eh_storage_data_operation_api:read_all/3
+
+3:21:49.523743 <0.907.0> eh_storage_data_operation_api:read_all(eh_storage_data_api, [], {ok,0,[],#{}})
+
+3:21:49.523788 <0.907.0> eh_storage_data_operation_api:read_all/3 --> {ok,0,[],#{}}
+
+3:21:49.523829 <0.907.0> eh_storage_data_operation_api:read_all/3 --> {ok,0,[],#{}}
+
+3:21:49.523865 <0.907.0> eh_storage_data_operation_api:read_all/3 --> {ok,0,[],#{}}
+
+3:21:49.523927 <0.907.0> eh_storage_data_operation_api:read_all/3 --> {ok,0,[],#{}}
+
+3:21:49.523966 <0.907.0> eh_storage_data_operation_api:read_all/3 --> {ok,0,[],#{}}
+
+3:21:49.523997 <0.907.0> eh_storage_data_operation_api:read_all/3 --> {ok,0,[],#{}}
+
+3:21:49.524060 <0.907.0> eh_storage_data_operation_api:read_all/2 --> {ok,0,[],#{}}
+
+3:21:49.524093 <0.907.0>  '--> eh_data_server:init/1
+
+3:21:49.524117 <0.907.0> eh_file_name:get_version_num("./", "ec_n1_repl.data")
+
+3:21:49.524145 <0.907.0> eh_file_name:get_file_names("./", "ec_n1_repl.data")
+
+3:21:49.524176 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'(".git", "ec_n1_repl.data")
+
+3:21:49.524201 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'/2 --> false
+
+3:21:49.524225 <0.907.0>  '--> lists:'-filter/2-lc$^0/1-0-'/2
+
+3:21:49.524249 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'(".vimrc", "ec_n1_repl.data")
+
+3:21:49.524276 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'/2 --> false
+
+3:21:49.524300 <0.907.0>  '--> lists:'-filter/2-lc$^0/1-0-'/2
+
+3:21:49.524318 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'("LICENSE", "ec_n1_repl.data")
+
+3:21:49.524348 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'/2 --> false
+
+3:21:49.524372 <0.907.0>  '--> lists:'-filter/2-lc$^0/1-0-'/2
+
+3:21:49.524393 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'("Makefile", "ec_n1_repl.data")
+
+3:21:49.524422 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'/2 --> false
+
+3:21:49.524447 <0.907.0>  '--> lists:'-filter/2-lc$^0/1-0-'/2
+
+3:21:49.524465 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'("README.md", "ec_n1_repl.data")
+
+3:21:49.524491 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'/2 --> false
+
+3:21:49.524521 <0.907.0>  '--> lists:'-filter/2-lc$^0/1-0-'/2
+
+3:21:49.524539 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'("config", "ec_n1_repl.data")
+
+3:21:49.524565 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'/2 --> false
+
+3:21:49.524592 <0.907.0>  '--> lists:'-filter/2-lc$^0/1-0-'/2
+
+3:21:49.524610 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'("craq_erl.sh", "ec_n1_repl.data")
+
+3:21:49.524635 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'/2 --> false
+
+3:21:49.524658 <0.907.0>  '--> lists:'-filter/2-lc$^0/1-0-'/2
+
+3:21:49.524685 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'("craq_erl_cmd.sh", "ec_n1_repl.data")
+
+3:21:49.524711 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'/2 --> false
+
+3:21:49.524750 <0.907.0>  '--> lists:'-filter/2-lc$^0/1-0-'/2
+
+3:21:49.525235 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'("craq_mcp", "ec_n1_repl.data")
+
+3:21:49.525331 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'/2 --> false
+
+3:21:49.525419 <0.907.0>  '--> lists:'-filter/2-lc$^0/1-0-'/2
+
+3:21:49.525506 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'("craq_paper_mcp", "ec_n1_repl.data")
+
+3:21:49.525556 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'/2 --> false
+
+3:21:49.525595 <0.907.0>  '--> lists:'-filter/2-lc$^0/1-0-'/2
+
+3:21:49.525666 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'("craq_test", "ec_n1_repl.data")
+
+3:21:49.525758 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'/2 --> false
+
+3:21:49.525806 <0.907.0>  '--> lists:'-filter/2-lc$^0/1-0-'/2
+
+3:21:49.525840 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'("create.sh", "ec_n1_repl.data")
+
+3:21:49.525909 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'/2 --> false
+
+3:21:49.525967 <0.907.0>  '--> lists:'-filter/2-lc$^0/1-0-'/2
+
+3:21:49.526010 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'("ebin", "ec_n1_repl.data")
+
+3:21:49.526075 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'/2 --> false
+
+3:21:49.526113 <0.907.0>  '--> lists:'-filter/2-lc$^0/1-0-'/2
+
+3:21:49.526157 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'("erlang_craq.pdf", "ec_n1_repl.data")
+
+3:21:49.526197 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'/2 --> false
+
+3:21:49.526261 <0.907.0>  '--> lists:'-filter/2-lc$^0/1-0-'/2
+
+3:21:49.526302 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'("include", "ec_n1_repl.data")
+
+3:21:49.526340 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'/2 --> false
+
+3:21:49.526413 <0.907.0>  '--> lists:'-filter/2-lc$^0/1-0-'/2
+
+3:21:49.526454 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'("rebar.config", "ec_n1_repl.data")
+
+3:21:49.526492 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'/2 --> false
+
+3:21:49.526557 <0.907.0>  '--> lists:'-filter/2-lc$^0/1-0-'/2
+
+3:21:49.526630 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'("src", "ec_n1_repl.data")
+
+3:21:49.526691 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'/2 --> false
+
+3:21:49.526741 <0.907.0>  '--> lists:'-filter/2-lc$^0/1-0-'/2
+
+3:21:49.526822 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'("trace_script", "ec_n1_repl.data")
+
+3:21:49.526896 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'/2 --> false
+
+3:21:49.526961 <0.907.0>  '--> lists:'-filter/2-lc$^0/1-0-'/2
+
+3:21:49.527009 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'("_build", "ec_n1_repl.data")
+
+3:21:49.527093 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'/2 --> false
+
+3:21:49.527142 <0.907.0>  '--> lists:'-filter/2-lc$^0/1-0-'/2
+
+3:21:49.527202 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'("rebar.lock", "ec_n1_repl.data")
+
+3:21:49.527278 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'/2 --> false
+
+3:21:49.527370 <0.907.0>  '--> lists:'-filter/2-lc$^0/1-0-'/2
+
+3:21:49.527424 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'("trace_log.pre", "ec_n1_repl.data")
+
+3:21:49.527487 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'/2 --> false
+
+3:21:49.527551 <0.907.0>  '--> lists:'-filter/2-lc$^0/1-0-'/2
+
+3:21:49.527634 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'("trace_log.2025", "ec_n1_repl.data")
+
+3:21:49.527736 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'/2 --> false
+
+3:21:49.527800 <0.907.0>  '--> lists:'-filter/2-lc$^0/1-0-'/2
+
+3:21:49.527846 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'("log", "ec_n1_repl.data")
+
+3:21:49.527923 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'/2 --> false
+
+3:21:49.527997 <0.907.0>  '--> lists:'-filter/2-lc$^0/1-0-'/2
+
+3:21:49.528045 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'("ec_n1_repl.data.0000000001", "ec_n1_repl.data")
+
+3:21:49.528107 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'/2 --> true
+
+3:21:49.528156 <0.907.0>  '--> lists:'-filter/2-lc$^0/1-0-'/2
+
+3:21:49.528202 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'("ec_n1_repl.data.0000000002", "ec_n1_repl.data")
+
+3:21:49.528288 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'/2 --> true
+
+3:21:49.528335 <0.907.0>  '--> lists:'-filter/2-lc$^0/1-0-'/2
+
+3:21:49.528395 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'("ec_n1_repl.data.0000000003", "ec_n1_repl.data")
+
+3:21:49.528471 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'/2 --> true
+
+3:21:49.528532 <0.907.0>  '--> lists:'-filter/2-lc$^0/1-0-'/2
+
+3:21:49.528582 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'("ec_n1_repl.data.0000000004", "ec_n1_repl.data")
+
+3:21:49.528658 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'/2 --> true
+
+3:21:49.528689 <0.907.0>  '--> lists:'-filter/2-lc$^0/1-0-'/2
+
+3:21:49.528742 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'("ec_n1_repl.data.0000000005", "ec_n1_repl.data")
+
+3:21:49.528816 <0.907.0> eh_file_name:'-get_file_names/2-fun-0-'/2 --> true
+
+3:21:49.528861 <0.907.0>  '--> lists:'-filter/2-lc$^0/1-0-'/2
+
+3:21:49.528900 <0.907.0> eh_file_name:'-get_file_names/2-fun-1-'("ec_n1_repl.data.0000000001", "ec_n1_repl.data.0000000002", "ec_n1_repl.data")
+
+3:21:49.528984 <0.907.0> eh_file_name:get_version("ec_n1_repl.data.0000000001", "ec_n1_repl.data")
+
+3:21:49.529027 <0.907.0> eh_file_name:get_version/2 --> 1
+
+3:21:49.529071 <0.907.0>  '--> eh_file_name:'-get_file_names/2-fun-1-'/3
+
+3:21:49.529112 <0.907.0> eh_file_name:get_version("ec_n1_repl.data.0000000002", "ec_n1_repl.data")
+
+3:21:49.529174 <0.907.0> eh_file_name:get_version/2 --> 2
+
+3:21:49.529214 <0.907.0>  '--> eh_file_name:'-get_file_names/2-fun-1-'/3
+
+3:21:49.529252 <0.907.0> eh_file_name:'-get_file_names/2-fun-1-'/3 --> true
+
+3:21:49.529296 <0.907.0>  '--> lists:sort/2
+
+3:21:49.529329 <0.907.0> eh_file_name:'-get_file_names/2-fun-1-'("ec_n1_repl.data.0000000002", "ec_n1_repl.data.0000000003", "ec_n1_repl.data")
+
+3:21:49.529378 <0.907.0> eh_file_name:get_version("ec_n1_repl.data.0000000002", "ec_n1_repl.data")
+
+3:21:49.529423 <0.907.0> eh_file_name:get_version/2 --> 2
+
+3:21:49.529464 <0.907.0>  '--> eh_file_name:'-get_file_names/2-fun-1-'/3
+
+3:21:49.529504 <0.907.0> eh_file_name:get_version("ec_n1_repl.data.0000000003", "ec_n1_repl.data")
+
+3:21:49.529567 <0.907.0> eh_file_name:get_version/2 --> 3
+
+3:21:49.529601 <0.907.0>  '--> eh_file_name:'-get_file_names/2-fun-1-'/3
+
+3:21:49.529641 <0.907.0> eh_file_name:'-get_file_names/2-fun-1-'/3 --> true
+
+3:21:49.529680 <0.907.0>  '--> lists:fsplit_1/6
+
+3:21:49.529722 <0.907.0> eh_file_name:'-get_file_names/2-fun-1-'("ec_n1_repl.data.0000000003", "ec_n1_repl.data.0000000004", "ec_n1_repl.data")
+
+3:21:49.529783 <0.907.0> eh_file_name:get_version("ec_n1_repl.data.0000000003", "ec_n1_repl.data")
+
+3:21:49.529829 <0.907.0> eh_file_name:get_version/2 --> 3
+
+3:21:49.529864 <0.907.0>  '--> eh_file_name:'-get_file_names/2-fun-1-'/3
+
+3:21:49.529912 <0.907.0> eh_file_name:get_version("ec_n1_repl.data.0000000004", "ec_n1_repl.data")
+
+3:21:49.529953 <0.907.0> eh_file_name:get_version/2 --> 4
+
+3:21:49.530011 <0.907.0>  '--> eh_file_name:'-get_file_names/2-fun-1-'/3
+
+3:21:49.530055 <0.907.0> eh_file_name:'-get_file_names/2-fun-1-'/3 --> true
+
+3:21:49.530105 <0.907.0>  '--> lists:fsplit_1/6
+
+3:21:49.530132 <0.907.0> eh_file_name:'-get_file_names/2-fun-1-'("ec_n1_repl.data.0000000004", "ec_n1_repl.data.0000000005", "ec_n1_repl.data")
+
+3:21:49.530174 <0.907.0> eh_file_name:get_version("ec_n1_repl.data.0000000004", "ec_n1_repl.data")
+
+3:21:49.530205 <0.907.0> eh_file_name:get_version/2 --> 4
+
+3:21:49.530243 <0.907.0>  '--> eh_file_name:'-get_file_names/2-fun-1-'/3
+
+3:21:49.530274 <0.907.0> eh_file_name:get_version("ec_n1_repl.data.0000000005", "ec_n1_repl.data")
+
+3:21:49.530326 <0.907.0> eh_file_name:get_version/2 --> 5
+
+3:21:49.530363 <0.907.0>  '--> eh_file_name:'-get_file_names/2-fun-1-'/3
+
+3:21:49.530394 <0.907.0> eh_file_name:'-get_file_names/2-fun-1-'/3 --> true
+
+3:21:49.530426 <0.907.0>  '--> lists:fsplit_1/6
+
+3:21:49.530463 <0.907.0> eh_file_name:get_file_names/2 --> ["ec_n1_repl.data.0000000001","ec_n1_repl.data.0000000002",
+ "ec_n1_repl.data.0000000003","ec_n1_repl.data.0000000004",
+ "ec_n1_repl.data.0000000005"]
+
+3:21:49.530538 <0.907.0>  '--> eh_file_name:get_version_num/2
+
+3:21:49.530562 <0.907.0> eh_file_name:get_version("ec_n1_repl.data.0000000005", "ec_n1_repl.data")
+
+3:21:49.530597 <0.907.0> eh_file_name:get_version/2 --> 5
+
+3:21:49.530625 <0.907.0> eh_file_name:get_version_num/2 --> 5
+
+3:21:49.530652 <0.907.0>  '--> eh_data_server:init/1
+
+3:21:49.530676 <0.907.0> eh_file_name:get_full_versioned_file_name(6, {eh_app_config,'ec_n1@rabbitmq4-1',sorted,eh_failure_detector_api,
+               eh_repl_data_manager_api,eh_storage_data_api,
+               eh_write_conflict_resolver_api,eh_unique_id_generator_api,
+               eh_wait_query_handler_api,lager_event,10000,"./","0000000000",
+               "ec_n1_repl.data",standard_io,true,100,1,2000})
+
+3:21:49.530806 <0.907.0> eh_file_name:get_full_versioned_file_name("./", "ec_n1_repl.data", "0000000000", 6)
+
+3:21:49.530841 <0.907.0> eh_file_name:get_full_file_name("./", "ec_n1_repl.data")
+
+3:21:49.530876 <0.907.0> eh_file_name:get_full_file_name/2 --> "./ec_n1_repl.data"
+
+3:21:49.530909 <0.907.0>  '--> eh_file_name:get_full_versioned_file_name/4
+
+3:21:49.530953 <0.907.0> eh_file_name:get_full_versioned_file_name/4 --> "./ec_n1_repl.data.0000000006"
+
+3:21:49.531014 <0.907.0> eh_file_name:get_full_versioned_file_name/2 --> "./ec_n1_repl.data.0000000006"
+
+3:21:49.531042 <0.907.0>  '--> eh_data_server:init/1
+
+3:21:49.531077 <0.907.0> eh_storage_data_operation_api:open("./ec_n1_repl.data.0000000006")
+
+3:21:49.531115 <0.907.0> eh_persist_storage_data:open_data_file("./ec_n1_repl.data.0000000006")
+
+3:21:49.531165 <0.907.0> eh_persist_storage_data:open_data_file/1 --> {ok,{file_descriptor,prim_file,
+                     #{handle => #Ref<0.468240768.1635909645.195572>,
+                       owner => <0.907.0>,
+                       r_buffer => #Ref<0.468240768.1635909634.216835>,
+                       r_ahead_size => 0}}}
+
+3:21:49.531258 <0.907.0> eh_storage_data_operation_api:open/1 --> {ok,{file_descriptor,prim_file,
+                     #{handle => #Ref<0.468240768.1635909645.195572>,
+                       owner => <0.907.0>,
+                       r_buffer => #Ref<0.468240768.1635909634.216835>,
+                       r_ahead_size => 0}}}
+
+3:21:49.531361 <0.907.0>  '--> eh_data_server:init/1
+
+3:21:49.531390 <0.907.0> eh_data_server:init/1 --> {ok,{eh_data_state,0,0,[],#{},
+                   {[],[]},
+                   0,6,
+                   {file_descriptor,prim_file,
+                                    #{handle =>
+                                          #Ref<0.468240768.1635909645.195572>,
+                                      owner => <0.907.0>,
+                                      r_buffer =>
+                                          #Ref<0.468240768.1635909634.216835>,
+                                      r_ahead_size => 0}},
+                   {eh_app_config,'ec_n1@rabbitmq4-1',sorted,
+                                  eh_failure_detector_api,
+                                  eh_repl_data_manager_api,
+                                  eh_storage_data_api,
+                                  eh_write_conflict_resolver_api,
+                                  eh_unique_id_generator_api,
+                                  eh_wait_query_handler_api,lager_event,10000,
+                                  "./","0000000000","ec_n1_repl.data",
+                                  standard_io,true,100,1,2000}}}
+
+3:21:49.531638 <0.907.0>  '--> gen_server:init_it/2
+
+3:21:49.531712 <0.906.0> eh_data_server:start_link/1 --> {ok,<0.907.0>}
+
+3:21:49.531750 <0.906.0>  '--> supervisor:do_start_child_i/3
+
+3:21:49.531780 <0.906.0> eh_system_server:start_link({eh_app_config,'ec_n1@rabbitmq4-1',sorted,eh_failure_detector_api,
+               eh_repl_data_manager_api,eh_storage_data_api,
+               eh_write_conflict_resolver_api,eh_unique_id_generator_api,
+               eh_wait_query_handler_api,lager_event,10000,"./","0000000000",
+               "ec_n1_repl.data",standard_io,true,100,1,2000})
+
+3:21:49.531871 <0.908.0> eh_system_server:init([{eh_app_config,'ec_n1@rabbitmq4-1',sorted,eh_failure_detector_api,
+                eh_repl_data_manager_api,eh_storage_data_api,
+                eh_write_conflict_resolver_api,eh_unique_id_generator_api,
+                eh_wait_query_handler_api,lager_event,10000,"./","0000000000",
+                "ec_n1_repl.data",standard_io,true,100,1,2000}])
+
+3:21:49.531977 <0.908.0> eh_system_server:init/1 --> {ok,{eh_system_state,eh_not_ready,0,[],[],undefined,undefined,#{},#{},
+                     {set,0,16,16,8,80,48,
+                          {[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]},
+                          {{[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]}}},
+                     #{},#{},undefined,
+                     {eh_app_config,'ec_n1@rabbitmq4-1',sorted,
+                                    eh_failure_detector_api,
+                                    eh_repl_data_manager_api,
+                                    eh_storage_data_api,
+                                    eh_write_conflict_resolver_api,
+                                    eh_unique_id_generator_api,
+                                    eh_wait_query_handler_api,lager_event,
+                                    10000,"./","0000000000","ec_n1_repl.data",
+                                    standard_io,true,100,1,2000}}}
+
+3:21:49.532159 <0.908.0>  '--> gen_server:init_it/2
+
+3:21:49.532182 <0.906.0> eh_system_server:start_link/1 --> {ok,<0.908.0>}
+
+3:21:49.532210 <0.906.0>  '--> supervisor:do_start_child_i/3
+
+3:21:49.532251 <0.905.0> eh_event:start_link()
+
+3:21:49.532281 <0.905.0> eh_event:start_link/0 --> {ok,<0.909.0>}
+
+3:21:49.532312 <0.905.0>  '--> supervisor:do_start_child_i/3
+
+3:21:49.532354 <0.904.0> eh_file_name:get_file_name("ec_n1", "_repl.data")
+
+3:21:49.532381 <0.904.0> eh_file_name:get_file_name/2 --> "ec_n1_repl.data"
+
+3:21:49.532417 <0.904.0>  '--> eh_system_config:get_env/0
+
+3:21:49.532450 <0.904.0> eh_file_name:get_file_name("ec_n1", standard_io)
+
+3:21:49.532490 <0.904.0> eh_file_name:get_file_name/2 --> standard_io
+
+3:21:49.532524 <0.904.0>  '--> eh_system_config:get_env/0
+
+3:21:49.532558 <0.904.0> eh_file_name:get_full_file_name("./", standard_io)
+
+3:21:49.532592 <0.904.0> eh_file_name:get_full_file_name/2 --> standard_io
+
+3:21:49.532631 <0.904.0>  '--> eh_system_config:get_env/0

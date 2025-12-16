@@ -1,8 +1,8 @@
 
 f().
-File="trace_log.start.app.node1.txt".
+%File="trace_log.start.app.node1.txt".
 %File="trace_log.start.app.node2.txt".
-%File="trace_log.start.app.node3.txt".
+File="trace_log.start.app.node3.txt".
 LogNum=50000.
 Path="/home/ericksun/program/erlang_craq/trace_log.2025/trace_log.start.app/".
 file:make_dir(FileName).
@@ -16,6 +16,9 @@ DbgList = lists:foldl(fun(X, Sum) -> [{X, '_', fun(_) -> return_trace() end}] ++
 recon_trace:calls(DbgList, LogNum, [return_to, {scope, local}, {io_server, Dev}]).
 
 
+%DbgList = lists:foldl(fun(X, Sum) -> [{X, '_', '_'}] ++ Sum end, [], ListMod).
+%{ok, Dev} = file:open(FileName,[write]).
+%recon_trace:calls(DbgList, 10000, [{scope, local}, {io_server, Dev},{args, arity}]).
 %N1 = 'ec_n1@rabbitmq4-1'.
 %N2 = 'ec_n2@rabbitmq4-2'.
 %N3 = 'ec_n3@rabbitmq4-3'.
