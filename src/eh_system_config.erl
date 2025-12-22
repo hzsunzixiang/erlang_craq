@@ -67,7 +67,7 @@
 get_env() ->
   Node         = node(),
   NodeName     = eh_system_util:get_node_name(Node),
-  DataDir      = eh_config:get_env(erlang_craq, data_dir, ?DATA_DIR),
+  DataDir      = eh_config:get_env(erlang_craq, data_directory, ?DATA_DIR),
   FileReplData = eh_config:get_env(erlang_craq, file_repl_data, ?FILE_REPL_DATA),
   FileReplLog  = eh_config:get_env(erlang_craq, file_repl_log, ?FILE_REPL_LOG),
 

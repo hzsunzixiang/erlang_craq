@@ -37,6 +37,7 @@ Object Storage on CRAQ  High-throughput chain replication for read-mostly worklo
 - 要主次分明，对于协议的关键实现，如CRAQ协议中，像前驱结点和后驱结点的消息传递，要重点分析。
 - CRAQ协议中，对需要Commit的数据，在数据库中实际落地时所对应的具体代码要分析出来
 - 最终输出一份完整的技术文档，包括：技术原理，和论文的某些段落结合分析
+- 注意生成的文档中，对于代码的引用要比较友好，比如换行，避免代码引用不清晰。
 
 ## 文档输出要求:
 1. 编写第一章：程序启动
