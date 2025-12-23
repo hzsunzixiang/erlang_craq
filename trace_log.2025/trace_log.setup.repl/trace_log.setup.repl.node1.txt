@@ -1,5 +1,11 @@
 
-2:30:24.922645 <0.264.0> eh_system_server:handle_cast({eh_setup_repl,['ec_n1@rabbitmq4-1','ec_n2@rabbitmq4-2','ec_n3@rabbitmq4-3']}, {eh_system_state,eh_not_ready,0,[],[],undefined,undefined,#{},#{},
+3:46:49.254262 <0.216.0> erlang_craq:setup_repl(['ec_n1@rabbitmq4-1','ec_n2@rabbitmq4-2','ec_n3@rabbitmq4-3'])
+
+3:46:49.255303 <0.216.0> erlang_craq:setup_repl/1 --> abcast
+
+3:46:49.255731 <0.216.0>  '--> erl_eval:do_apply/7
+
+3:46:49.256084 <0.264.0> eh_system_server:handle_cast({eh_setup_repl,['ec_n1@rabbitmq4-1','ec_n2@rabbitmq4-2','ec_n3@rabbitmq4-3']}, {eh_system_state,eh_not_ready,0,[],[],undefined,undefined,#{},#{},
                  {set,0,16,16,8,80,48,
                       {[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]},
                       {{[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]}}},
@@ -13,47 +19,217 @@
                                 "./","0000000000","ec_n1_repl.data",
                                 standard_io,true,100,1,2000}})
 
-2:30:24.940090 <0.264.0> eh_system_config:get_node_id({eh_app_config,'ec_n1@rabbitmq4-1',sorted,eh_failure_detector_api,
+3:46:49.257015 <0.264.0> eh_system_config:get_node_id({eh_app_config,'ec_n1@rabbitmq4-1',sorted,eh_failure_detector_api,
                eh_repl_data_manager_api,eh_storage_data_api,
                eh_write_conflict_resolver_api,eh_unique_id_generator_api,
                eh_wait_query_handler_api,lager_event,10000,"./","0000000000",
                "ec_n1_repl.data",standard_io,true,100,1,2000})
 
-2:30:24.940287 <0.264.0> eh_system_config:get_node_id/1 --> 'ec_n1@rabbitmq4-1'
+3:46:49.257538 <0.264.0> eh_system_config:get_node_id/1 --> 'ec_n1@rabbitmq4-1'
 
-2:30:24.940425 <0.264.0>  '--> eh_system_server:handle_cast/2
+3:46:49.257720 <0.264.0>  '--> eh_system_server:handle_cast/2
 
-2:30:24.940721 <0.264.0> eh_system_config:get_node_order({eh_app_config,'ec_n1@rabbitmq4-1',sorted,eh_failure_detector_api,
+3:46:49.258218 <0.264.0> eh_system_config:get_node_order({eh_app_config,'ec_n1@rabbitmq4-1',sorted,eh_failure_detector_api,
                eh_repl_data_manager_api,eh_storage_data_api,
                eh_write_conflict_resolver_api,eh_unique_id_generator_api,
                eh_wait_query_handler_api,lager_event,10000,"./","0000000000",
                "ec_n1_repl.data",standard_io,true,100,1,2000})
 
-2:30:24.940905 <0.264.0> eh_system_config:get_node_order/1 --> sorted
+3:46:49.258740 <0.264.0> eh_system_config:get_node_order/1 --> sorted
 
-2:30:24.941300 <0.264.0>  '--> eh_system_server:handle_cast/2
+3:46:49.258904 <0.264.0>  '--> eh_system_server:handle_cast/2
 
-2:30:24.941423 <0.264.0> eh_system_config:get_failure_detector({eh_app_config,'ec_n1@rabbitmq4-1',sorted,eh_failure_detector_api,
+3:46:49.259006 <0.264.0> eh_repl_ring:get_ordered_list_pred_succ('ec_n1@rabbitmq4-1', ['ec_n1@rabbitmq4-1','ec_n2@rabbitmq4-2','ec_n3@rabbitmq4-3'], ['ec_n1@rabbitmq4-1','ec_n2@rabbitmq4-2','ec_n3@rabbitmq4-3'], sorted)
+
+3:46:49.259369 <0.264.0> eh_repl_ring:get_ordered_list(['ec_n1@rabbitmq4-1','ec_n2@rabbitmq4-2','ec_n3@rabbitmq4-3'], ['ec_n1@rabbitmq4-1','ec_n2@rabbitmq4-2','ec_n3@rabbitmq4-3'], sorted)
+
+3:46:49.259619 <0.264.0> eh_repl_ring:get_ordered_list(['ec_n1@rabbitmq4-1','ec_n2@rabbitmq4-2','ec_n3@rabbitmq4-3'], ['ec_n1@rabbitmq4-1','ec_n2@rabbitmq4-2','ec_n3@rabbitmq4-3'], user_defined)
+
+3:46:49.259808 <0.264.0> eh_repl_ring:make_ordered_list(['ec_n1@rabbitmq4-1','ec_n2@rabbitmq4-2','ec_n3@rabbitmq4-3'], ['ec_n1@rabbitmq4-1','ec_n2@rabbitmq4-2','ec_n3@rabbitmq4-3'])
+
+3:46:49.259916 <0.264.0> eh_repl_ring:'-make_ordered_list/2-fun-0-'('ec_n1@rabbitmq4-1', ['ec_n1@rabbitmq4-1','ec_n2@rabbitmq4-2','ec_n3@rabbitmq4-3'])
+
+3:46:49.260000 <0.264.0> eh_repl_ring:'-make_ordered_list/2-fun-0-'/2 --> true
+
+3:46:49.260100 <0.264.0>  '--> lists:'-filter/2-lc$^0/1-0-'/2
+
+3:46:49.260344 <0.264.0> eh_repl_ring:'-make_ordered_list/2-fun-0-'('ec_n2@rabbitmq4-2', ['ec_n1@rabbitmq4-1','ec_n2@rabbitmq4-2','ec_n3@rabbitmq4-3'])
+
+3:46:49.260858 <0.264.0> eh_repl_ring:'-make_ordered_list/2-fun-0-'/2 --> true
+
+3:46:49.261149 <0.264.0>  '--> lists:'-filter/2-lc$^0/1-0-'/2
+
+3:46:49.261343 <0.264.0> eh_repl_ring:'-make_ordered_list/2-fun-0-'('ec_n3@rabbitmq4-3', ['ec_n1@rabbitmq4-1','ec_n2@rabbitmq4-2','ec_n3@rabbitmq4-3'])
+
+3:46:49.261425 <0.264.0> eh_repl_ring:'-make_ordered_list/2-fun-0-'/2 --> true
+
+3:46:49.262027 <0.264.0>  '--> lists:'-filter/2-lc$^0/1-0-'/2
+
+3:46:49.262296 <0.264.0> eh_repl_ring:make_ordered_list/2 --> ['ec_n1@rabbitmq4-1','ec_n2@rabbitmq4-2','ec_n3@rabbitmq4-3']
+
+3:46:49.262688 <0.264.0>  '--> eh_repl_ring:get_ordered_list/3
+
+3:46:49.262962 <0.264.0> eh_repl_ring:get_ordered_list/3 --> {['ec_n1@rabbitmq4-1','ec_n2@rabbitmq4-2','ec_n3@rabbitmq4-3'],
+ ['ec_n1@rabbitmq4-1','ec_n2@rabbitmq4-2','ec_n3@rabbitmq4-3']}
+
+3:46:49.263139 <0.264.0> eh_repl_ring:get_ordered_list/3 --> {['ec_n1@rabbitmq4-1','ec_n2@rabbitmq4-2','ec_n3@rabbitmq4-3'],
+ ['ec_n1@rabbitmq4-1','ec_n2@rabbitmq4-2','ec_n3@rabbitmq4-3']}
+
+3:46:49.263464 <0.264.0>  '--> eh_repl_ring:get_ordered_list_pred_succ/4
+
+3:46:49.263647 <0.264.0> eh_repl_ring:predecessor('ec_n1@rabbitmq4-1', ['ec_n1@rabbitmq4-1','ec_n2@rabbitmq4-2','ec_n3@rabbitmq4-3'], ['ec_n1@rabbitmq4-1','ec_n2@rabbitmq4-2','ec_n3@rabbitmq4-3'], sorted)
+
+3:46:49.263818 <0.264.0> eh_repl_ring:add('ec_n1@rabbitmq4-1', ['ec_n1@rabbitmq4-1','ec_n2@rabbitmq4-2','ec_n3@rabbitmq4-3'], ['ec_n1@rabbitmq4-1','ec_n2@rabbitmq4-2','ec_n3@rabbitmq4-3'], sorted)
+
+3:46:49.264033 <0.264.0> eh_repl_ring:get_ordered_list(['ec_n1@rabbitmq4-1','ec_n2@rabbitmq4-2','ec_n3@rabbitmq4-3'], ['ec_n1@rabbitmq4-1','ec_n2@rabbitmq4-2','ec_n3@rabbitmq4-3'], sorted)
+
+3:46:49.264444 <0.264.0> eh_repl_ring:get_ordered_list(['ec_n1@rabbitmq4-1','ec_n2@rabbitmq4-2','ec_n3@rabbitmq4-3'], ['ec_n1@rabbitmq4-1','ec_n2@rabbitmq4-2','ec_n3@rabbitmq4-3'], user_defined)
+
+3:46:49.264684 <0.264.0> eh_repl_ring:make_ordered_list(['ec_n1@rabbitmq4-1','ec_n2@rabbitmq4-2','ec_n3@rabbitmq4-3'], ['ec_n1@rabbitmq4-1','ec_n2@rabbitmq4-2','ec_n3@rabbitmq4-3'])
+
+3:46:49.265020 <0.264.0> eh_repl_ring:'-make_ordered_list/2-fun-0-'('ec_n1@rabbitmq4-1', ['ec_n1@rabbitmq4-1','ec_n2@rabbitmq4-2','ec_n3@rabbitmq4-3'])
+
+3:46:49.265144 <0.264.0> eh_repl_ring:'-make_ordered_list/2-fun-0-'/2 --> true
+
+3:46:49.265223 <0.264.0>  '--> lists:'-filter/2-lc$^0/1-0-'/2
+
+3:46:49.265268 <0.264.0> eh_repl_ring:'-make_ordered_list/2-fun-0-'('ec_n2@rabbitmq4-2', ['ec_n1@rabbitmq4-1','ec_n2@rabbitmq4-2','ec_n3@rabbitmq4-3'])
+
+3:46:49.265382 <0.264.0> eh_repl_ring:'-make_ordered_list/2-fun-0-'/2 --> true
+
+3:46:49.265462 <0.264.0>  '--> lists:'-filter/2-lc$^0/1-0-'/2
+
+3:46:49.265542 <0.264.0> eh_repl_ring:'-make_ordered_list/2-fun-0-'('ec_n3@rabbitmq4-3', ['ec_n1@rabbitmq4-1','ec_n2@rabbitmq4-2','ec_n3@rabbitmq4-3'])
+
+3:46:49.265676 <0.264.0> eh_repl_ring:'-make_ordered_list/2-fun-0-'/2 --> true
+
+3:46:49.265810 <0.264.0>  '--> lists:'-filter/2-lc$^0/1-0-'/2
+
+3:46:49.265922 <0.264.0> eh_repl_ring:make_ordered_list/2 --> ['ec_n1@rabbitmq4-1','ec_n2@rabbitmq4-2','ec_n3@rabbitmq4-3']
+
+3:46:49.266053 <0.264.0>  '--> eh_repl_ring:get_ordered_list/3
+
+3:46:49.266165 <0.264.0> eh_repl_ring:get_ordered_list/3 --> {['ec_n1@rabbitmq4-1','ec_n2@rabbitmq4-2','ec_n3@rabbitmq4-3'],
+ ['ec_n1@rabbitmq4-1','ec_n2@rabbitmq4-2','ec_n3@rabbitmq4-3']}
+
+3:46:49.266249 <0.264.0> eh_repl_ring:get_ordered_list/3 --> {['ec_n1@rabbitmq4-1','ec_n2@rabbitmq4-2','ec_n3@rabbitmq4-3'],
+ ['ec_n1@rabbitmq4-1','ec_n2@rabbitmq4-2','ec_n3@rabbitmq4-3']}
+
+3:46:49.266325 <0.264.0> eh_repl_ring:add/4 --> {['ec_n1@rabbitmq4-1','ec_n2@rabbitmq4-2','ec_n3@rabbitmq4-3'],
+ ['ec_n1@rabbitmq4-1','ec_n2@rabbitmq4-2','ec_n3@rabbitmq4-3']}
+
+3:46:49.266593 <0.264.0>  '--> eh_repl_ring:predecessor/4
+
+3:46:49.266823 <0.264.0> eh_repl_ring:'-predecessor/4-fun-0-'('ec_n1@rabbitmq4-1', 'ec_n1@rabbitmq4-1')
+
+3:46:49.267466 <0.264.0> eh_repl_ring:'-predecessor/4-fun-0-'/2 --> false
+
+3:46:49.268286 <0.264.0>  '--> lists:splitwith_1/3
+
+3:46:49.268661 <0.264.0> eh_repl_ring:predecessor/4 --> 'ec_n3@rabbitmq4-3'
+
+3:46:49.268904 <0.264.0>  '--> eh_repl_ring:get_ordered_list_pred_succ/4
+
+3:46:49.269108 <0.264.0> eh_repl_ring:successor('ec_n1@rabbitmq4-1', ['ec_n1@rabbitmq4-1','ec_n2@rabbitmq4-2','ec_n3@rabbitmq4-3'], ['ec_n1@rabbitmq4-1','ec_n2@rabbitmq4-2','ec_n3@rabbitmq4-3'], sorted)
+
+3:46:49.269502 <0.264.0> eh_repl_ring:add('ec_n1@rabbitmq4-1', ['ec_n1@rabbitmq4-1','ec_n2@rabbitmq4-2','ec_n3@rabbitmq4-3'], ['ec_n1@rabbitmq4-1','ec_n2@rabbitmq4-2','ec_n3@rabbitmq4-3'], sorted)
+
+3:46:49.269931 <0.264.0> eh_repl_ring:get_ordered_list(['ec_n1@rabbitmq4-1','ec_n2@rabbitmq4-2','ec_n3@rabbitmq4-3'], ['ec_n1@rabbitmq4-1','ec_n2@rabbitmq4-2','ec_n3@rabbitmq4-3'], sorted)
+
+3:46:49.270137 <0.264.0> eh_repl_ring:get_ordered_list(['ec_n1@rabbitmq4-1','ec_n2@rabbitmq4-2','ec_n3@rabbitmq4-3'], ['ec_n1@rabbitmq4-1','ec_n2@rabbitmq4-2','ec_n3@rabbitmq4-3'], user_defined)
+
+3:46:49.270254 <0.264.0> eh_repl_ring:make_ordered_list(['ec_n1@rabbitmq4-1','ec_n2@rabbitmq4-2','ec_n3@rabbitmq4-3'], ['ec_n1@rabbitmq4-1','ec_n2@rabbitmq4-2','ec_n3@rabbitmq4-3'])
+
+3:46:49.270339 <0.264.0> eh_repl_ring:'-make_ordered_list/2-fun-0-'('ec_n1@rabbitmq4-1', ['ec_n1@rabbitmq4-1','ec_n2@rabbitmq4-2','ec_n3@rabbitmq4-3'])
+
+3:46:49.270401 <0.264.0> eh_repl_ring:'-make_ordered_list/2-fun-0-'/2 --> true
+
+3:46:49.270559 <0.264.0>  '--> lists:'-filter/2-lc$^0/1-0-'/2
+
+3:46:49.270647 <0.264.0> eh_repl_ring:'-make_ordered_list/2-fun-0-'('ec_n2@rabbitmq4-2', ['ec_n1@rabbitmq4-1','ec_n2@rabbitmq4-2','ec_n3@rabbitmq4-3'])
+
+3:46:49.270725 <0.264.0> eh_repl_ring:'-make_ordered_list/2-fun-0-'/2 --> true
+
+3:46:49.270765 <0.264.0>  '--> lists:'-filter/2-lc$^0/1-0-'/2
+
+3:46:49.270821 <0.264.0> eh_repl_ring:'-make_ordered_list/2-fun-0-'('ec_n3@rabbitmq4-3', ['ec_n1@rabbitmq4-1','ec_n2@rabbitmq4-2','ec_n3@rabbitmq4-3'])
+
+3:46:49.270891 <0.264.0> eh_repl_ring:'-make_ordered_list/2-fun-0-'/2 --> true
+
+3:46:49.270925 <0.264.0>  '--> lists:'-filter/2-lc$^0/1-0-'/2
+
+3:46:49.270960 <0.264.0> eh_repl_ring:make_ordered_list/2 --> ['ec_n1@rabbitmq4-1','ec_n2@rabbitmq4-2','ec_n3@rabbitmq4-3']
+
+3:46:49.271054 <0.264.0>  '--> eh_repl_ring:get_ordered_list/3
+
+3:46:49.271081 <0.264.0> eh_repl_ring:get_ordered_list/3 --> {['ec_n1@rabbitmq4-1','ec_n2@rabbitmq4-2','ec_n3@rabbitmq4-3'],
+ ['ec_n1@rabbitmq4-1','ec_n2@rabbitmq4-2','ec_n3@rabbitmq4-3']}
+
+3:46:49.271184 <0.264.0> eh_repl_ring:get_ordered_list/3 --> {['ec_n1@rabbitmq4-1','ec_n2@rabbitmq4-2','ec_n3@rabbitmq4-3'],
+ ['ec_n1@rabbitmq4-1','ec_n2@rabbitmq4-2','ec_n3@rabbitmq4-3']}
+
+3:46:49.271264 <0.264.0> eh_repl_ring:add/4 --> {['ec_n1@rabbitmq4-1','ec_n2@rabbitmq4-2','ec_n3@rabbitmq4-3'],
+ ['ec_n1@rabbitmq4-1','ec_n2@rabbitmq4-2','ec_n3@rabbitmq4-3']}
+
+3:46:49.271341 <0.264.0>  '--> eh_repl_ring:successor/4
+
+3:46:49.271431 <0.264.0> eh_repl_ring:'-successor/4-fun-0-'('ec_n1@rabbitmq4-1', 'ec_n1@rabbitmq4-1')
+
+3:46:49.271466 <0.264.0> eh_repl_ring:'-successor/4-fun-0-'/2 --> false
+
+3:46:49.271504 <0.264.0>  '--> lists:splitwith_1/3
+
+3:46:49.271535 <0.264.0> eh_repl_ring:successor/4 --> 'ec_n2@rabbitmq4-2'
+
+3:46:49.271574 <0.264.0>  '--> eh_repl_ring:get_ordered_list_pred_succ/4
+
+3:46:49.271600 <0.264.0> eh_repl_ring:get_ordered_list_pred_succ/4 --> {['ec_n1@rabbitmq4-1','ec_n2@rabbitmq4-2','ec_n3@rabbitmq4-3'],
+ ['ec_n1@rabbitmq4-1','ec_n2@rabbitmq4-2','ec_n3@rabbitmq4-3'],
+ 'ec_n3@rabbitmq4-3','ec_n2@rabbitmq4-2'}
+
+3:46:49.271710 <0.264.0>  '--> eh_system_server:handle_cast/2
+
+3:46:49.271865 <0.264.0> eh_system_config:get_failure_detector({eh_app_config,'ec_n1@rabbitmq4-1',sorted,eh_failure_detector_api,
                eh_repl_data_manager_api,eh_storage_data_api,
                eh_write_conflict_resolver_api,eh_unique_id_generator_api,
                eh_wait_query_handler_api,lager_event,10000,"./","0000000000",
                "ec_n1_repl.data",standard_io,true,100,1,2000})
 
-2:30:24.941572 <0.264.0> eh_system_config:get_failure_detector/1 --> eh_failure_detector_api
+3:46:49.272024 <0.264.0> eh_system_config:get_failure_detector/1 --> eh_failure_detector_api
 
-2:30:24.941629 <0.264.0>  '--> eh_system_server:handle_cast/2
+3:46:49.272169 <0.264.0>  '--> eh_system_server:handle_cast/2
 
-2:30:24.941804 <0.264.0> eh_system_config:get_repl_data_manager({eh_app_config,'ec_n1@rabbitmq4-1',sorted,eh_failure_detector_api,
+3:46:49.272203 <0.264.0> eh_system_config:get_repl_data_manager({eh_app_config,'ec_n1@rabbitmq4-1',sorted,eh_failure_detector_api,
                eh_repl_data_manager_api,eh_storage_data_api,
                eh_write_conflict_resolver_api,eh_unique_id_generator_api,
                eh_wait_query_handler_api,lager_event,10000,"./","0000000000",
                "ec_n1_repl.data",standard_io,true,100,1,2000})
 
-2:30:24.941941 <0.264.0> eh_system_config:get_repl_data_manager/1 --> eh_repl_data_manager_api
+3:46:49.272408 <0.264.0> eh_system_config:get_repl_data_manager/1 --> eh_repl_data_manager_api
 
-2:30:24.942111 <0.264.0>  '--> eh_system_server:handle_cast/2
+3:46:49.272637 <0.264.0>  '--> eh_system_server:handle_cast/2
 
-2:30:24.942717 <0.262.0> eh_data_server:handle_call(eh_timestamp, {<0.264.0>,[alias|#Ref<0.0.33795.2375002146.4234477569.91772>]}, {eh_data_state,6,0,
+3:46:49.272712 <0.264.0> eh_failure_detector_api:set('ec_n1@rabbitmq4-1', ['ec_n1@rabbitmq4-1','ec_n2@rabbitmq4-2','ec_n3@rabbitmq4-3'])
+
+3:46:49.272846 <0.264.0> eh_failure_detector_api:'-set/2-fun-0-'('ec_n2@rabbitmq4-2')
+
+3:46:49.272911 <0.264.0> eh_failure_detector_api:'-set/2-fun-0-'/1 --> #Ref<0.3036723828.2367160321.21574>
+
+3:46:49.272963 <0.264.0>  '--> lists:foreach_1/2
+
+3:46:49.272989 <0.264.0> eh_failure_detector_api:'-set/2-fun-0-'('ec_n3@rabbitmq4-3')
+
+3:46:49.273046 <0.264.0> eh_failure_detector_api:'-set/2-fun-0-'/1 --> #Ref<0.3036723828.2367160321.21575>
+
+3:46:49.273076 <0.264.0>  '--> lists:foreach_1/2
+
+3:46:49.273099 <0.264.0> eh_failure_detector_api:set/2 --> ok
+
+3:46:49.273129 <0.264.0>  '--> eh_system_server:handle_cast/2
+
+3:46:49.273153 <0.264.0> eh_repl_data_manager_api:timestamp()
+
+3:46:49.273210 <0.262.0> eh_data_server:handle_call(eh_timestamp, {<0.264.0>,[alias|#Ref<0.0.33795.3036723828.2367225857.21576>]}, {eh_data_state,6,0,
                [{{candidate,10},1}],
                #{{eh_storage_key,candidate,10} =>
                      {[{eh_storage_value,6,1,0,undefined,undefined},
@@ -70,13 +246,13 @@
                        {eh_storage_value,1,2,1,age,30}],
                       [{eh_storage_value,1,1,1,name,john}]}},
                {[],[]},
-               0,2,
+               0,11,
                {file_descriptor,prim_file,
                                 #{handle =>
-                                      #Ref<0.2375002146.4234543118.89164>,
+                                      #Ref<0.3036723828.2367291399.15516>,
                                   owner => <0.262.0>,
                                   r_buffer =>
-                                      #Ref<0.2375002146.4234543106.90666>,
+                                      #Ref<0.3036723828.2367291393.17609>,
                                   r_ahead_size => 0}},
                {eh_app_config,'ec_n1@rabbitmq4-1',sorted,
                               eh_failure_detector_api,
@@ -87,7 +263,7 @@
                               "./","0000000000","ec_n1_repl.data",standard_io,
                               true,100,1,2000}})
 
-2:30:24.943344 <0.262.0> eh_data_server:handle_call/3 --> {reply,
+3:46:49.273807 <0.262.0> eh_data_server:handle_call/3 --> {reply,
     {6,[{{candidate,10},1}]},
     {eh_data_state,6,0,
         [{{candidate,10},1}],
@@ -106,11 +282,11 @@
                 {eh_storage_value,1,2,1,age,30}],
                [{eh_storage_value,1,1,1,name,john}]}},
         {[],[]},
-        0,2,
+        0,11,
         {file_descriptor,prim_file,
-            #{handle => #Ref<0.2375002146.4234543118.89164>,
+            #{handle => #Ref<0.3036723828.2367291399.15516>,
               owner => <0.262.0>,
-              r_buffer => #Ref<0.2375002146.4234543106.90666>,
+              r_buffer => #Ref<0.3036723828.2367291393.17609>,
               r_ahead_size => 0}},
         {eh_app_config,'ec_n1@rabbitmq4-1',sorted,eh_failure_detector_api,
             eh_repl_data_manager_api,eh_storage_data_api,
@@ -118,9 +294,71 @@
             eh_wait_query_handler_api,lager_event,10000,"./","0000000000",
             "ec_n1_repl.data",standard_io,true,100,1,2000}}}
 
-2:30:24.945007 <0.262.0>  '--> gen_server:try_handle_call/4
+3:46:49.274321 <0.262.0>  '--> gen_server:try_handle_call/4
 
-2:30:24.945067 <0.264.0> eh_system_server:event_state("setup_repl.99", {eh_system_state,eh_ready,6,
+3:46:49.274419 <0.264.0> eh_repl_data_manager_api:timestamp/0 --> {6,[{{candidate,10},1}]}
+
+3:46:49.274520 <0.264.0>  '--> eh_system_server:handle_cast/2
+
+3:46:49.274682 <0.264.0> eh_node_state:update_state_ready({eh_system_state,eh_not_ready,0,[],[],undefined,undefined,#{},#{},
+                 {set,0,16,16,8,80,48,
+                      {[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]},
+                      {{[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]}}},
+                 #{},#{},undefined,
+                 {eh_app_config,'ec_n1@rabbitmq4-1',sorted,
+                                eh_failure_detector_api,
+                                eh_repl_data_manager_api,eh_storage_data_api,
+                                eh_write_conflict_resolver_api,
+                                eh_unique_id_generator_api,
+                                eh_wait_query_handler_api,lager_event,10000,
+                                "./","0000000000","ec_n1_repl.data",
+                                standard_io,true,100,1,2000}})
+
+3:46:49.274896 <0.264.0> eh_node_state:update_state(eh_ready, {eh_system_state,eh_not_ready,0,[],[],undefined,undefined,#{},#{},
+                 {set,0,16,16,8,80,48,
+                      {[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]},
+                      {{[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]}}},
+                 #{},#{},undefined,
+                 {eh_app_config,'ec_n1@rabbitmq4-1',sorted,
+                                eh_failure_detector_api,
+                                eh_repl_data_manager_api,eh_storage_data_api,
+                                eh_write_conflict_resolver_api,
+                                eh_unique_id_generator_api,
+                                eh_wait_query_handler_api,lager_event,10000,
+                                "./","0000000000","ec_n1_repl.data",
+                                standard_io,true,100,1,2000}})
+
+3:46:49.275082 <0.264.0> eh_node_state:update_state/2 --> {eh_system_state,eh_ready,0,[],[],undefined,undefined,#{},#{},
+                 {set,0,16,16,8,80,48,
+                      {[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]},
+                      {{[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]}}},
+                 #{},#{},undefined,
+                 {eh_app_config,'ec_n1@rabbitmq4-1',sorted,
+                                eh_failure_detector_api,
+                                eh_repl_data_manager_api,eh_storage_data_api,
+                                eh_write_conflict_resolver_api,
+                                eh_unique_id_generator_api,
+                                eh_wait_query_handler_api,lager_event,10000,
+                                "./","0000000000","ec_n1_repl.data",
+                                standard_io,true,100,1,2000}}
+
+3:46:49.275200 <0.264.0> eh_node_state:update_state_ready/1 --> {eh_system_state,eh_ready,0,[],[],undefined,undefined,#{},#{},
+                 {set,0,16,16,8,80,48,
+                      {[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]},
+                      {{[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]}}},
+                 #{},#{},undefined,
+                 {eh_app_config,'ec_n1@rabbitmq4-1',sorted,
+                                eh_failure_detector_api,
+                                eh_repl_data_manager_api,eh_storage_data_api,
+                                eh_write_conflict_resolver_api,
+                                eh_unique_id_generator_api,
+                                eh_wait_query_handler_api,lager_event,10000,
+                                "./","0000000000","ec_n1_repl.data",
+                                standard_io,true,100,1,2000}}
+
+3:46:49.275347 <0.264.0>  '--> eh_system_server:handle_cast/2
+
+3:46:49.275459 <0.264.0> eh_system_server:event_state("setup_repl.99", {eh_system_state,eh_ready,6,
                  ['ec_n1@rabbitmq4-1','ec_n2@rabbitmq4-2','ec_n3@rabbitmq4-3'],
                  ['ec_n1@rabbitmq4-1','ec_n2@rabbitmq4-2','ec_n3@rabbitmq4-3'],
                  'ec_n3@rabbitmq4-3','ec_n2@rabbitmq4-2',#{},#{},
@@ -141,7 +379,7 @@
                eh_wait_query_handler_api,lager_event,10000,"./","0000000000",
                "ec_n1_repl.data",standard_io,true,100,1,2000})
 
-2:30:24.945290 <0.264.0> eh_event:state(eh_system_server, "setup_repl.99", {eh_system_state,eh_ready,6,
+3:46:49.275754 <0.264.0> eh_event:state(eh_system_server, "setup_repl.99", {eh_system_state,eh_ready,6,
                  ['ec_n1@rabbitmq4-1','ec_n2@rabbitmq4-2','ec_n3@rabbitmq4-3'],
                  ['ec_n1@rabbitmq4-1','ec_n2@rabbitmq4-2','ec_n3@rabbitmq4-3'],
                  'ec_n3@rabbitmq4-3','ec_n2@rabbitmq4-2',#{},#{},
@@ -162,7 +400,7 @@
                eh_wait_query_handler_api,lager_event,10000,"./","0000000000",
                "ec_n1_repl.data",standard_io,true,100,1,2000})
 
-2:30:24.946495 <0.264.0> eh_event:event_notify(state, {eh_system_server,"setup_repl.99",
+3:46:49.275997 <0.264.0> eh_event:event_notify(state, {eh_system_server,"setup_repl.99",
     {eh_system_state,eh_ready,6,
         ['ec_n1@rabbitmq4-1','ec_n2@rabbitmq4-2','ec_n3@rabbitmq4-3'],
         ['ec_n1@rabbitmq4-1','ec_n2@rabbitmq4-2','ec_n3@rabbitmq4-3'],
@@ -181,327 +419,383 @@
                eh_wait_query_handler_api,lager_event,10000,"./","0000000000",
                "ec_n1_repl.data",standard_io,true,100,1,2000})
 
-2:30:24.946676 <0.264.0> eh_system_util:get_node_name('ec_n1@rabbitmq4-1')
+3:46:49.276189 <0.264.0> eh_event_handler:get_msg_data({state,
+    {eh_system_server,"setup_repl.99",
+        {eh_system_state,eh_ready,6,
+            ['ec_n1@rabbitmq4-1','ec_n2@rabbitmq4-2','ec_n3@rabbitmq4-3'],
+            ['ec_n1@rabbitmq4-1','ec_n2@rabbitmq4-2','ec_n3@rabbitmq4-3'],
+            'ec_n3@rabbitmq4-3','ec_n2@rabbitmq4-2',#{},#{},
+            {set,0,16,16,8,80,48,
+                {[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]},
+                {{[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]}}},
+            #{},#{},undefined,
+            {eh_app_config,'ec_n1@rabbitmq4-1',sorted,
+                eh_failure_detector_api,eh_repl_data_manager_api,
+                eh_storage_data_api,eh_write_conflict_resolver_api,
+                eh_unique_id_generator_api,eh_wait_query_handler_api,
+                lager_event,10000,"./","0000000000","ec_n1_repl.data",
+                standard_io,true,100,1,2000}}}})
 
-2:30:24.946727 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'(101)
+3:46:49.276350 <0.264.0> eh_system_util:get_node_name('ec_n1@rabbitmq4-1')
 
-2:30:24.946752 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+3:46:49.276424 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'(101)
 
-2:30:24.946782 <0.264.0>  '--> lists:takewhile_1/2
+3:46:49.276454 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
 
-2:30:24.946808 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'(99)
+3:46:49.276469 <0.264.0>  '--> lists:takewhile_1/2
 
-2:30:24.946830 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+3:46:49.276481 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'(99)
 
-2:30:24.946851 <0.264.0>  '--> lists:takewhile_1/2
+3:46:49.276503 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
 
-2:30:24.946871 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'(95)
+3:46:49.276525 <0.264.0>  '--> lists:takewhile_1/2
 
-2:30:24.946891 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+3:46:49.276545 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'(95)
 
-2:30:24.946913 <0.264.0>  '--> lists:takewhile_1/2
+3:46:49.276566 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
 
-2:30:24.946966 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'(110)
+3:46:49.276584 <0.264.0>  '--> lists:takewhile_1/2
 
-2:30:24.946997 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+3:46:49.276601 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'(110)
 
-2:30:24.947031 <0.264.0>  '--> lists:takewhile_1/2
+3:46:49.276622 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
 
-2:30:24.947051 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'(49)
+3:46:49.276637 <0.264.0>  '--> lists:takewhile_1/2
 
-2:30:24.947068 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+3:46:49.276657 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'(49)
 
-2:30:24.947090 <0.264.0>  '--> lists:takewhile_1/2
+3:46:49.276669 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
 
-2:30:24.947110 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'(64)
+3:46:49.276681 <0.264.0>  '--> lists:takewhile_1/2
 
-2:30:24.947129 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> false
+3:46:49.276703 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'(64)
 
-2:30:24.947150 <0.264.0>  '--> lists:takewhile_1/2
+3:46:49.276717 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> false
 
-2:30:24.947167 <0.264.0> eh_system_util:get_node_name/1 --> "ec_n1"
+3:46:49.276729 <0.264.0>  '--> lists:takewhile_1/2
 
-2:30:24.947187 <0.264.0>  '--> eh_event_handler:get_msg_data/1
+3:46:49.276740 <0.264.0> eh_system_util:get_node_name/1 --> "ec_n1"
 
-2:30:24.947207 <0.264.0> eh_system_util:get_node_name('ec_n3@rabbitmq4-3')
+3:46:49.276763 <0.264.0>  '--> eh_event_handler:get_msg_data/1
 
-2:30:24.947235 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'(101)
+3:46:49.276775 <0.264.0> eh_system_util:get_node_name('ec_n3@rabbitmq4-3')
 
-2:30:24.947334 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+3:46:49.276787 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'(101)
 
-2:30:24.947386 <0.264.0>  '--> lists:takewhile_1/2
+3:46:49.276808 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
 
-2:30:24.947413 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'(99)
+3:46:49.276822 <0.264.0>  '--> lists:takewhile_1/2
 
-2:30:24.947428 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+3:46:49.276833 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'(99)
 
-2:30:24.947455 <0.264.0>  '--> lists:takewhile_1/2
+3:46:49.276863 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
 
-2:30:24.947474 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'(95)
+3:46:49.276878 <0.264.0>  '--> lists:takewhile_1/2
 
-2:30:24.947495 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+3:46:49.276888 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'(95)
 
-2:30:24.947515 <0.264.0>  '--> lists:takewhile_1/2
+3:46:49.276901 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
 
-2:30:24.947532 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'(110)
+3:46:49.276922 <0.264.0>  '--> lists:takewhile_1/2
 
-2:30:24.947553 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+3:46:49.277060 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'(110)
 
-2:30:24.947573 <0.264.0>  '--> lists:takewhile_1/2
+3:46:49.277283 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
 
-2:30:24.947591 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'(51)
+3:46:49.277428 <0.264.0>  '--> lists:takewhile_1/2
 
-2:30:24.947613 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+3:46:49.277470 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'(51)
 
-2:30:24.947631 <0.264.0>  '--> lists:takewhile_1/2
+3:46:49.277599 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
 
-2:30:24.947649 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'(64)
+3:46:49.277684 <0.264.0>  '--> lists:takewhile_1/2
 
-2:30:24.947668 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> false
+3:46:49.277743 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'(64)
 
-2:30:24.947690 <0.264.0>  '--> lists:takewhile_1/2
+3:46:49.277771 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> false
 
-2:30:24.947702 <0.264.0> eh_system_util:get_node_name/1 --> "ec_n3"
+3:46:49.277787 <0.264.0>  '--> lists:takewhile_1/2
 
-2:30:24.947734 <0.264.0>  '--> eh_event_handler:get_msg_data/1
+3:46:49.277801 <0.264.0> eh_system_util:get_node_name/1 --> "ec_n3"
 
-2:30:24.947760 <0.264.0> eh_system_util:get_node_name('ec_n2@rabbitmq4-2')
+3:46:49.277820 <0.264.0>  '--> eh_event_handler:get_msg_data/1
 
-2:30:24.947780 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'(101)
+3:46:49.277832 <0.264.0> eh_system_util:get_node_name('ec_n2@rabbitmq4-2')
 
-2:30:24.947798 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+3:46:49.277855 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'(101)
 
-2:30:24.947817 <0.264.0>  '--> lists:takewhile_1/2
+3:46:49.277867 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
 
-2:30:24.947832 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'(99)
+3:46:49.277879 <0.264.0>  '--> lists:takewhile_1/2
 
-2:30:24.947850 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+3:46:49.277908 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'(99)
 
-2:30:24.947867 <0.264.0>  '--> lists:takewhile_1/2
+3:46:49.277937 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
 
-2:30:24.947886 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'(95)
+3:46:49.277949 <0.264.0>  '--> lists:takewhile_1/2
 
-2:30:24.947901 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+3:46:49.277960 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'(95)
 
-2:30:24.947921 <0.264.0>  '--> lists:takewhile_1/2
+3:46:49.277984 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
 
-2:30:24.947945 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'(110)
+3:46:49.278006 <0.264.0>  '--> lists:takewhile_1/2
 
-2:30:24.947962 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+3:46:49.278024 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'(110)
 
-2:30:24.947984 <0.264.0>  '--> lists:takewhile_1/2
+3:46:49.278035 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
 
-2:30:24.948001 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'(50)
+3:46:49.278071 <0.264.0>  '--> lists:takewhile_1/2
 
-2:30:24.948019 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+3:46:49.278098 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'(50)
 
-2:30:24.948036 <0.264.0>  '--> lists:takewhile_1/2
+3:46:49.278259 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
 
-2:30:24.948053 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'(64)
+3:46:49.278293 <0.264.0>  '--> lists:takewhile_1/2
 
-2:30:24.948068 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> false
+3:46:49.278311 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'(64)
 
-2:30:24.948083 <0.264.0>  '--> lists:takewhile_1/2
+3:46:49.278328 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> false
 
-2:30:24.948101 <0.264.0> eh_system_util:get_node_name/1 --> "ec_n2"
+3:46:49.278348 <0.264.0>  '--> lists:takewhile_1/2
 
-2:30:24.948115 <0.264.0>  '--> eh_event_handler:get_msg_data/1
+3:46:49.278360 <0.264.0> eh_system_util:get_node_name/1 --> "ec_n2"
 
-2:30:24.948132 <0.264.0> eh_system_util:display_atom_to_list(eh_ready)
+3:46:49.278375 <0.264.0>  '--> eh_event_handler:get_msg_data/1
 
-2:30:24.948146 <0.264.0> eh_system_util:display_atom_to_list/1 --> "ready"
+3:46:49.278387 <0.264.0> eh_node_state:display_state({eh_system_state,eh_ready,6,
+                 ['ec_n1@rabbitmq4-1','ec_n2@rabbitmq4-2','ec_n3@rabbitmq4-3'],
+                 ['ec_n1@rabbitmq4-1','ec_n2@rabbitmq4-2','ec_n3@rabbitmq4-3'],
+                 'ec_n3@rabbitmq4-3','ec_n2@rabbitmq4-2',#{},#{},
+                 {set,0,16,16,8,80,48,
+                      {[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]},
+                      {{[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]}}},
+                 #{},#{},undefined,
+                 {eh_app_config,'ec_n1@rabbitmq4-1',sorted,
+                                eh_failure_detector_api,
+                                eh_repl_data_manager_api,eh_storage_data_api,
+                                eh_write_conflict_resolver_api,
+                                eh_unique_id_generator_api,
+                                eh_wait_query_handler_api,lager_event,10000,
+                                "./","0000000000","ec_n1_repl.data",
+                                standard_io,true,100,1,2000}})
 
-2:30:24.948169 <0.264.0>  '--> eh_event_handler:get_msg_data/1
+3:46:49.278597 <0.264.0> eh_system_util:display_atom_to_list(eh_ready)
 
-2:30:24.948203 <0.264.0> eh_system_util:make_list_to_string(fun eh_system_util:get_node_name/1, ['ec_n1@rabbitmq4-1','ec_n2@rabbitmq4-2','ec_n3@rabbitmq4-3'])
+3:46:49.278648 <0.264.0> eh_system_util:display_atom_to_list/1 --> "ready"
 
-2:30:24.948251 <0.264.0> eh_system_util:'-make_list_to_string/2-fun-0-'('ec_n1@rabbitmq4-1', [], fun eh_system_util:get_node_name/1)
+3:46:49.278787 <0.264.0> eh_node_state:display_state/1 --> "ready"
 
-2:30:24.948290 <0.264.0> eh_system_util:get_node_name('ec_n1@rabbitmq4-1')
+3:46:49.278878 <0.264.0>  '--> eh_event_handler:get_msg_data/1
 
-2:30:24.948307 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'(101)
+3:46:49.278993 <0.264.0> eh_system_util:make_list_to_string(fun eh_system_util:get_node_name/1, ['ec_n1@rabbitmq4-1','ec_n2@rabbitmq4-2','ec_n3@rabbitmq4-3'])
 
-2:30:24.948323 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+3:46:49.279123 <0.264.0> eh_system_util:'-make_list_to_string/2-fun-0-'('ec_n1@rabbitmq4-1', [], fun eh_system_util:get_node_name/1)
 
-2:30:24.948340 <0.264.0>  '--> lists:takewhile_1/2
+3:46:49.279246 <0.264.0> eh_system_util:get_node_name('ec_n1@rabbitmq4-1')
 
-2:30:24.948357 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'(99)
+3:46:49.279365 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'(101)
 
-2:30:24.948371 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+3:46:49.279484 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
 
-2:30:24.948388 <0.264.0>  '--> lists:takewhile_1/2
+3:46:49.279616 <0.264.0>  '--> lists:takewhile_1/2
 
-2:30:24.948405 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'(95)
+3:46:49.279839 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'(99)
 
-2:30:24.948422 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+3:46:49.280022 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
 
-2:30:24.948438 <0.264.0>  '--> lists:takewhile_1/2
+3:46:49.280140 <0.264.0>  '--> lists:takewhile_1/2
 
-2:30:24.948452 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'(110)
+3:46:49.280194 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'(95)
 
-2:30:24.948467 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+3:46:49.280219 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
 
-2:30:24.948485 <0.264.0>  '--> lists:takewhile_1/2
+3:46:49.280239 <0.264.0>  '--> lists:takewhile_1/2
 
-2:30:24.948508 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'(49)
+3:46:49.280257 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'(110)
 
-2:30:24.948524 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+3:46:49.280281 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
 
-2:30:24.948542 <0.264.0>  '--> lists:takewhile_1/2
+3:46:49.280294 <0.264.0>  '--> lists:takewhile_1/2
 
-2:30:24.948556 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'(64)
+3:46:49.280316 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'(49)
 
-2:30:24.948571 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> false
+3:46:49.280328 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
 
-2:30:24.948587 <0.264.0>  '--> lists:takewhile_1/2
+3:46:49.280345 <0.264.0>  '--> lists:takewhile_1/2
 
-2:30:24.948602 <0.264.0> eh_system_util:get_node_name/1 --> "ec_n1"
+3:46:49.280362 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'(64)
 
-2:30:24.948619 <0.264.0>  '--> eh_system_util:'-make_list_to_string/2-fun-0-'/3
+3:46:49.280382 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> false
 
-2:30:24.948633 <0.264.0> eh_system_util:'-make_list_to_string/2-fun-0-'/3 --> "ec_n1"
+3:46:49.280396 <0.264.0>  '--> lists:takewhile_1/2
 
-2:30:24.948650 <0.264.0>  '--> lists:foldl/3
+3:46:49.280415 <0.264.0> eh_system_util:get_node_name/1 --> "ec_n1"
 
-2:30:24.948669 <0.264.0> eh_system_util:'-make_list_to_string/2-fun-0-'('ec_n2@rabbitmq4-2', "ec_n1", fun eh_system_util:get_node_name/1)
+3:46:49.280572 <0.264.0>  '--> eh_system_util:'-make_list_to_string/2-fun-0-'/3
 
-2:30:24.948700 <0.264.0> eh_system_util:get_node_name('ec_n2@rabbitmq4-2')
+3:46:49.280716 <0.264.0> eh_system_util:'-make_list_to_string/2-fun-0-'/3 --> "ec_n1"
 
-2:30:24.948813 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'(101)
+3:46:49.280864 <0.264.0>  '--> lists:foldl/3
 
-2:30:24.948893 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+3:46:49.280925 <0.264.0> eh_system_util:'-make_list_to_string/2-fun-0-'('ec_n2@rabbitmq4-2', "ec_n1", fun eh_system_util:get_node_name/1)
 
-2:30:24.948936 <0.264.0>  '--> lists:takewhile_1/2
+3:46:49.281106 <0.264.0> eh_system_util:get_node_name('ec_n2@rabbitmq4-2')
 
-2:30:24.948980 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'(99)
+3:46:49.281205 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'(101)
 
-2:30:24.949022 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+3:46:49.281342 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
 
-2:30:24.949071 <0.264.0>  '--> lists:takewhile_1/2
+3:46:49.281387 <0.264.0>  '--> lists:takewhile_1/2
 
-2:30:24.949104 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'(95)
+3:46:49.281406 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'(99)
 
-2:30:24.949146 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+3:46:49.281425 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
 
-2:30:24.949190 <0.264.0>  '--> lists:takewhile_1/2
+3:46:49.281438 <0.264.0>  '--> lists:takewhile_1/2
 
-2:30:24.949225 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'(110)
+3:46:49.281459 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'(95)
 
-2:30:24.949270 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+3:46:49.281471 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
 
-2:30:24.949312 <0.264.0>  '--> lists:takewhile_1/2
+3:46:49.281485 <0.264.0>  '--> lists:takewhile_1/2
 
-2:30:24.949367 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'(50)
+3:46:49.281496 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'(110)
 
-2:30:24.949416 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+3:46:49.281518 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
 
-2:30:24.949458 <0.264.0>  '--> lists:takewhile_1/2
+3:46:49.281531 <0.264.0>  '--> lists:takewhile_1/2
 
-2:30:24.949485 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'(64)
+3:46:49.281542 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'(50)
 
-2:30:24.949507 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> false
+3:46:49.281563 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
 
-2:30:24.949539 <0.264.0>  '--> lists:takewhile_1/2
+3:46:49.281575 <0.264.0>  '--> lists:takewhile_1/2
 
-2:30:24.949564 <0.264.0> eh_system_util:get_node_name/1 --> "ec_n2"
+3:46:49.281588 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'(64)
 
-2:30:24.949591 <0.264.0>  '--> eh_system_util:'-make_list_to_string/2-fun-0-'/3
+3:46:49.281599 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> false
 
-2:30:24.949617 <0.264.0> eh_system_util:'-make_list_to_string/2-fun-0-'/3 --> "ec_n1,ec_n2"
+3:46:49.281623 <0.264.0>  '--> lists:takewhile_1/2
 
-2:30:24.949647 <0.264.0>  '--> lists:foldl_1/3
+3:46:49.281635 <0.264.0> eh_system_util:get_node_name/1 --> "ec_n2"
 
-2:30:24.949676 <0.264.0> eh_system_util:'-make_list_to_string/2-fun-0-'('ec_n3@rabbitmq4-3', "ec_n1,ec_n2", fun eh_system_util:get_node_name/1)
+3:46:49.281647 <0.264.0>  '--> eh_system_util:'-make_list_to_string/2-fun-0-'/3
 
-2:30:24.949713 <0.264.0> eh_system_util:get_node_name('ec_n3@rabbitmq4-3')
+3:46:49.281669 <0.264.0> eh_system_util:'-make_list_to_string/2-fun-0-'/3 --> "ec_n1,ec_n2"
 
-2:30:24.949741 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'(101)
+3:46:49.281684 <0.264.0>  '--> lists:foldl_1/3
 
-2:30:24.949774 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+3:46:49.281695 <0.264.0> eh_system_util:'-make_list_to_string/2-fun-0-'('ec_n3@rabbitmq4-3', "ec_n1,ec_n2", fun eh_system_util:get_node_name/1)
 
-2:30:24.949805 <0.264.0>  '--> lists:takewhile_1/2
+3:46:49.281723 <0.264.0> eh_system_util:get_node_name('ec_n3@rabbitmq4-3')
 
-2:30:24.949831 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'(99)
+3:46:49.281737 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'(101)
 
-2:30:24.949853 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+3:46:49.281748 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
 
-2:30:24.949885 <0.264.0>  '--> lists:takewhile_1/2
+3:46:49.281770 <0.264.0>  '--> lists:takewhile_1/2
 
-2:30:24.949907 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'(95)
+3:46:49.281781 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'(99)
 
-2:30:24.949929 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+3:46:49.281794 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
 
-2:30:24.949958 <0.264.0>  '--> lists:takewhile_1/2
+3:46:49.281806 <0.264.0>  '--> lists:takewhile_1/2
 
-2:30:24.949982 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'(110)
+3:46:49.281817 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'(95)
 
-2:30:24.950001 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+3:46:49.281837 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
 
-2:30:24.950030 <0.264.0>  '--> lists:takewhile_1/2
+3:46:49.281851 <0.264.0>  '--> lists:takewhile_1/2
 
-2:30:24.950058 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'(51)
+3:46:49.281861 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'(110)
 
-2:30:24.950087 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
+3:46:49.281873 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
 
-2:30:24.950119 <0.264.0>  '--> lists:takewhile_1/2
+3:46:49.281886 <0.264.0>  '--> lists:takewhile_1/2
 
-2:30:24.950183 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'(64)
+3:46:49.281897 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'(51)
 
-2:30:24.950228 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> false
+3:46:49.281937 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> true
 
-2:30:24.950272 <0.264.0>  '--> lists:takewhile_1/2
+3:46:49.282032 <0.264.0>  '--> lists:takewhile_1/2
 
-2:30:24.950305 <0.264.0> eh_system_util:get_node_name/1 --> "ec_n3"
+3:46:49.282196 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'(64)
 
-2:30:24.950970 <0.264.0>  '--> eh_system_util:'-make_list_to_string/2-fun-0-'/3
+3:46:49.282375 <0.264.0> eh_system_util:'-get_node_name/1-fun-0-'/1 --> false
 
-2:30:24.951023 <0.264.0> eh_system_util:'-make_list_to_string/2-fun-0-'/3 --> "ec_n1,ec_n2,ec_n3"
+3:46:49.282479 <0.264.0>  '--> lists:takewhile_1/2
 
-2:30:24.951077 <0.264.0>  '--> lists:foldl_1/3
+3:46:49.282527 <0.264.0> eh_system_util:get_node_name/1 --> "ec_n3"
 
-2:30:24.951460 <0.264.0> eh_system_util:make_list_to_string/2 --> "ec_n1,ec_n2,ec_n3"
+3:46:49.282674 <0.264.0>  '--> eh_system_util:'-make_list_to_string/2-fun-0-'/3
 
-2:30:24.951568 <0.264.0>  '--> eh_event_handler:get_msg_data/1
+3:46:49.282901 <0.264.0> eh_system_util:'-make_list_to_string/2-fun-0-'/3 --> "ec_n1,ec_n2,ec_n3"
 
-2:30:24.951622 <0.264.0> eh_system_util:fold_map(#Fun<eh_event_handler.1.71436237>, [], #{})
+3:46:49.283034 <0.264.0>  '--> lists:foldl_1/3
 
-2:30:24.951739 <0.264.0> eh_system_util:fold_map/3 --> []
+3:46:49.283135 <0.264.0> eh_system_util:make_list_to_string/2 --> "ec_n1,ec_n2,ec_n3"
 
-2:30:24.951783 <0.264.0>  '--> eh_event_handler:get_msg_data/1
+3:46:49.283235 <0.264.0>  '--> eh_event_handler:get_msg_data/1
 
-2:30:24.951862 <0.264.0> eh_system_util:fold_map(#Fun<eh_event_handler.1.71436237>, [], #{})
+3:46:49.283375 <0.264.0> eh_event_handler:list_msg_map(#{})
 
-2:30:24.951950 <0.264.0> eh_system_util:fold_map/3 --> []
+3:46:49.283443 <0.264.0> eh_system_util:fold_map(#Fun<eh_event_handler.1.71436237>, [], #{})
 
-2:30:24.952621 <0.264.0>  '--> eh_event_handler:get_msg_data/1
+3:46:49.283550 <0.264.0> eh_system_util:fold_map/3 --> []
 
-2:30:24.953116 <0.264.0> eh_system_util:fold_set(#Fun<eh_event_handler.0.71436237>, [], {set,0,16,16,8,80,48,
+3:46:49.283665 <0.264.0> eh_event_handler:list_msg_map/1 --> []
+
+3:46:49.283761 <0.264.0>  '--> eh_event_handler:get_msg_data/1
+
+3:46:49.283822 <0.264.0> eh_event_handler:list_msg_map(#{})
+
+3:46:49.284036 <0.264.0> eh_system_util:fold_map(#Fun<eh_event_handler.1.71436237>, [], #{})
+
+3:46:49.284144 <0.264.0> eh_system_util:fold_map/3 --> []
+
+3:46:49.284158 <0.264.0> eh_event_handler:list_msg_map/1 --> []
+
+3:46:49.284170 <0.264.0>  '--> eh_event_handler:get_msg_data/1
+
+3:46:49.284202 <0.264.0> eh_event_handler:list_msg_set_value({set,0,16,16,8,80,48,
      {[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]},
      {{[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]}}})
 
-2:30:24.953198 <0.264.0> eh_system_util:fold_set/3 --> []
+3:46:49.284235 <0.264.0> eh_system_util:fold_set(#Fun<eh_event_handler.0.71436237>, [], {set,0,16,16,8,80,48,
+     {[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]},
+     {{[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]}}})
 
-2:30:24.953355 <0.264.0>  '--> eh_event_handler:get_msg_data/1
+3:46:49.284283 <0.264.0> eh_system_util:fold_set/3 --> []
 
-2:30:24.953423 <0.264.0> eh_system_config:get_event_logger({eh_app_config,'ec_n1@rabbitmq4-1',sorted,eh_failure_detector_api,
+3:46:49.284296 <0.264.0> eh_event_handler:list_msg_set_value/1 --> []
+
+3:46:49.284317 <0.264.0>  '--> eh_event_handler:get_msg_data/1
+
+3:46:49.284329 <0.264.0> eh_event_handler:get_msg_data/1 --> {"[~p] ~p node_status=~p, node_id=~p, repl_ring=~p, pred=~p, succ=~p, timestamp=~p, pre_msg_data=~p, msg_data=~p, completed_set=~p~n",
+ [eh_system_server,"setup_repl.99","ready","ec_n1","ec_n1,ec_n2,ec_n3",
+  "ec_n3","ec_n2",6,[],[],[]]}
+
+3:46:49.284388 <0.264.0>  '--> eh_event:event_notify/3
+
+3:46:49.284400 <0.264.0> eh_system_config:get_event_logger({eh_app_config,'ec_n1@rabbitmq4-1',sorted,eh_failure_detector_api,
                eh_repl_data_manager_api,eh_storage_data_api,
                eh_write_conflict_resolver_api,eh_unique_id_generator_api,
                eh_wait_query_handler_api,lager_event,10000,"./","0000000000",
                "ec_n1_repl.data",standard_io,true,100,1,2000})
 
-2:30:24.953513 <0.264.0> eh_system_config:get_event_logger/1 --> lager_event
+3:46:49.284459 <0.264.0> eh_system_config:get_event_logger/1 --> lager_event
 
-2:30:24.953538 <0.264.0>  '--> eh_event:event_notify/3
+3:46:49.284472 <0.264.0>  '--> eh_event:event_notify/3
 
-2:30:24.953556 <0.264.0> eh_event:event_notify/3 --> ok
+3:46:49.284492 <0.264.0> eh_event:event_notify/3 --> ok
 
-2:30:24.953571 <0.264.0> eh_event:state/4 --> ok
+3:46:49.284505 <0.264.0> eh_event:state/4 --> ok
 
-2:30:24.953586 <0.264.0> eh_system_server:event_state/3 --> ok
+3:46:49.284517 <0.264.0> eh_system_server:event_state/3 --> ok
 
-2:30:24.953604 <0.264.0>  '--> eh_system_server:handle_cast/2
+3:46:49.284529 <0.264.0>  '--> eh_system_server:handle_cast/2
 
-2:30:24.953621 <0.264.0> eh_system_server:handle_cast/2 --> {noreply,
+3:46:49.284541 <0.264.0> eh_system_server:handle_cast/2 --> {noreply,
     {eh_system_state,eh_ready,6,
         ['ec_n1@rabbitmq4-1','ec_n2@rabbitmq4-2','ec_n3@rabbitmq4-3'],
         ['ec_n1@rabbitmq4-1','ec_n2@rabbitmq4-2','ec_n3@rabbitmq4-3'],
@@ -516,4 +810,4 @@
             eh_wait_query_handler_api,lager_event,10000,"./","0000000000",
             "ec_n1_repl.data",standard_io,true,100,1,2000}}}
 
-2:30:24.953773 <0.264.0>  '--> gen_server:try_handle_cast/3
+3:46:49.284629 <0.264.0>  '--> gen_server:try_handle_cast/3
