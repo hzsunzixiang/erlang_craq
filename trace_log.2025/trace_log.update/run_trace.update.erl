@@ -3,6 +3,12 @@ f().
 %File="trace_log.update.node1.txt".
 File="trace_log.update.node2.txt".
 %File="trace_log.update.node3.txt".
+%
+
+%% 加载所有的模块,这里加载的
+LP = fun() -> [code:ensure_loaded(list_to_atom(filename:rootname(filename:basename(F)))) || P <- code:get_path(), F <- filelib:wildcard(P ++ "/*.beam")] end.
+LP().  %% 同步加载
+
 LogNum=50000.
 Path="/home/ericksun/program/erlang_craq/trace_log.2025/trace_log.update/".
 file:make_dir(FileName).
